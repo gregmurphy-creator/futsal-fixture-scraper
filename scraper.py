@@ -6,9 +6,9 @@ import traceback
 from playwright.async_api import async_playwright
 
 urls = {
-    "Liga 5": "https://futsalescocia.co.uk/fixtures/liga-5/",
-    "Liga 6": "https://futsalescocia.co.uk/fixtures/liga-6/",
-    "Liga 7": "https://futsalescocia.co.uk/fixtures/liga-7/"
+    "Liga 5": "https://scheduler.leaguelobster.com/2837382/liga-5/winter-2026-27/?mode=full",
+    "Liga 6": "https://scheduler.leaguelobster.com/2837371/liga-6/winter-2026-27/?mode=full",
+    "Liga 7": "https://scheduler.leaguelobster.com/2837368/liga-7/winter-2026-27/?mode=full"
 }
 
 SEASON_START_DATE = datetime.date(2026, 11, 7)
@@ -43,6 +43,7 @@ def parse_full_schedule(raw_texts, league_name):
         if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
             continue
 
+        # Detect Round or Week headings
         round_heading = re.search(r'\b(?:Week|Round)\s*(\d+)\b', clean_text, re.I)
         if round_heading and not re.search(r'\d{1,2}:\d{2}', clean_text):
             current_round = int(round_heading.group(1))
@@ -54,6 +55,7 @@ def parse_full_schedule(raw_texts, league_name):
             time_str = t_match.group(1).strip() if t_match else "9:00 AM"
 
             curr_min = time_to_minutes(time_str)
+            # Advance to next round when kickoff times cycle back to morning
             if last_minutes != -1 and curr_min < last_minutes and (last_minutes - curr_min) > 60:
                 current_round += 1
                 last_minutes = curr_min
@@ -96,38 +98,22 @@ async def scrape_league(page, league_name, url):
     print(f"==========================================")
     
     await page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    await page.wait_for_selector("table, tr, .match", timeout=30000)
     await page.wait_for_timeout(2000)
 
-    frame_locator = page.frame_locator("iframe").first
-
-    # Target and click 'Reload full schedule'
-    try:
-        reload_btn = frame_locator.locator("button, a, div, span").filter(has_text="Reload full schedule").first
-        if await reload_btn.count() > 0:
-            print(f"[{league_name}] Found 'Reload full schedule' button. Clicking...")
-            await reload_btn.scroll_into_view_if_needed()
-            await reload_btn.click()
-            await page.wait_for_timeout(5000)
-        else:
-            print(f"[{league_name}] 'Reload full schedule' button not found, checking full page...")
-    except Exception as e:
-        print(f"[{league_name}] Note on reload button: {e}")
-
-    # Gather rows using frame_locator (immune to frame detachment)
+    elements = await page.query_selector_all("caption, h2, h3, h4, th, tr, .match, .game-row")
     raw_texts = []
-    try:
-        raw_texts = await frame_locator.locator("caption, h2, h3, h4, th, tr, .match, .game-row").all_inner_texts()
-    except Exception as e:
-        print(f"[{league_name}] Could not extract from iframe: {e}")
+    for el in elements:
+        try:
+            txt = await el.inner_text()
+            if txt:
+                raw_texts.append(" ".join(txt.split()))
+        except Exception:
+            continue
 
-    # Fallback to main page if iframe was empty
-    if not raw_texts:
-        raw_texts = await page.locator("caption, h2, h3, h4, th, tr, .match, .game-row").all_inner_texts()
-
-    clean_texts = [" ".join(t.split()) for t in raw_texts if t.strip()]
-    fixtures = parse_full_schedule(clean_texts, league_name)
+    fixtures = parse_full_schedule(raw_texts, league_name)
     rounds_found = len(set(f["round"] for f in fixtures)) if fixtures else 0
-    print(f"[{league_name}] Captured {len(fixtures)} fixtures across {rounds_found} round(s).")
+    print(f"[{league_name}] Successfully captured {len(fixtures)} fixtures across {rounds_found} round(s).")
     return fixtures
 
 async def main():
