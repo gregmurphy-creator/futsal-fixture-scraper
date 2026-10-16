@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <!-- Date Filters (When) -->
+    <!-- Date Filters -->
     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
       <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">When</div>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5" id="dateFilterGroup">
@@ -71,7 +71,7 @@
       </button>
     </div>
 
-    <!-- Fixture Cards List -->
+    <!-- Fixture List -->
     <div id="fixturesList" class="space-y-3">
       <div class="bg-white rounded-2xl p-10 text-center border border-gray-200">
         <div class="animate-spin inline-block w-8 h-8 border-4 border-current border-t-transparent text-[#FF6600] rounded-full mb-3"></div>
@@ -285,14 +285,12 @@
         const matchLeague = selectedLeague === "ALL" || item.league === selectedLeague;
         const containsTiki = isTiki(home) || isTiki(away);
         
-        // Search bar query check
         const matchesSearch = !q || (
           home.toLowerCase().includes(q) ||
           away.toLowerCase().includes(q) ||
           venue.toLowerCase().includes(q)
         );
 
-        // Player profile filter
         const matchesPlayer = !selectedPlayerTeam || (
           home.toLowerCase().includes(selectedPlayerTeam.toLowerCase()) ||
           away.toLowerCase().includes(selectedPlayerTeam.toLowerCase())
@@ -313,7 +311,7 @@
       if (filtered.length === 0) {
         fixturesContainer.innerHTML = `
           <div class="bg-white rounded-2xl p-10 text-center border border-gray-200">
-            <p class="text-gray-500 font-medium">No matches found matching your filters.</p>
+            <p class="text-gray-500 font-medium">No matches found for the selected filters.</p>
           </div>`;
         return;
       }
@@ -354,7 +352,6 @@
 
             <!-- Straight Aligned Teams Box -->
             <div class="my-2 p-3 bg-gray-50 rounded-xl border border-gray-100 space-y-2">
-              <!-- Team 1 -->
               <div class="flex items-center justify-between gap-2">
                 <div class="flex items-center gap-2.5 min-w-0">
                   <span class="w-2.5 h-2.5 rounded-full flex-shrink-0 ${team1IsTiki ? 'bg-[#FF6600]' : 'bg-gray-300'}"></span>
@@ -363,14 +360,12 @@
                 ${team1IsTiki ? '<span class="text-[10px] font-extrabold uppercase bg-orange-100 text-[#FF6600] px-1.5 py-0.5 rounded flex-shrink-0">Tiki</span>' : ''}
               </div>
 
-              <!-- Centered VS Divider -->
               <div class="flex items-center gap-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">
                 <span class="h-px bg-gray-200 flex-1"></span>
                 <span>vs</span>
                 <span class="h-px bg-gray-200 flex-1"></span>
               </div>
 
-              <!-- Team 2 -->
               <div class="flex items-center justify-between gap-2">
                 <div class="flex items-center gap-2.5 min-w-0">
                   <span class="w-2.5 h-2.5 rounded-full flex-shrink-0 ${team2IsTiki ? 'bg-[#FF6600]' : 'bg-gray-300'}"></span>
@@ -393,7 +388,6 @@
       }).join("");
     }
 
-    // Search Input Events
     searchInput.addEventListener("input", (e) => {
       searchQuery = e.target.value;
       clearSearchBtn.classList.toggle("hidden", !searchQuery);
@@ -407,7 +401,6 @@
       renderFixtures();
     });
 
-    // Modal Events
     openPlayerModalBtn.addEventListener("click", () => {
       populateTeamDropdown();
       renderSavedPlayersModalList();
@@ -436,7 +429,6 @@
       renderFixtures();
     });
 
-    // League Filters
     leagueButtons.forEach(btn => {
       btn.addEventListener("click", () => {
         selectedLeague = btn.dataset.league;
@@ -451,7 +443,6 @@
       });
     });
 
-    // Date Filters
     dateButtons.forEach(btn => {
       btn.addEventListener("click", () => {
         selectedDateFilter = btn.dataset.datefilter;
@@ -466,7 +457,6 @@
       });
     });
 
-    // Tiki Taka Only Toggle
     toggleTikiBtn.addEventListener("click", () => {
       onlyTikiTaka = !onlyTikiTaka;
       if (onlyTikiTaka) {
@@ -479,7 +469,6 @@
       renderFixtures();
     });
 
-    // Fetch JSON Data
     fetch("./fixtures_data.json?t=" + Date.now())
       .then(res => res.json())
       .then(data => {
