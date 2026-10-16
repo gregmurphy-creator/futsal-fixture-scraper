@@ -1,6 +1,7 @@
 import json
 import asyncio
 import re
+import datetime
 from playwright.async_api import async_playwright
 
 urls = {
@@ -9,17 +10,54 @@ urls = {
     "Liga 7": "https://futsalescocia.co.uk/fixtures/liga-7/"
 }
 
-# Matches UK format (7th Nov, Sat 7 Nov), US format (Nov 7), numeric (07/11/2026), or day names (Saturday)
-date_patterns = [
-    r'(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*,?\s+)?\b\d{1,2}(?:st|nd|rd|th)?\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*(?:\s*,?\s*\d{2,4})?',
-    r'(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*,?\s+)?\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}(?:st|nd|rd|th)?(?:\s*,?\s*\d{2,4})?',
-    r'(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*,?\s+)?\b\d{1,2}[/-]\d{1,2}(?:[/-]\d{2,4})?\b',
-    r'\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b'
-]
-master_date_regex = re.compile('|'.join(date_patterns), re.I)
+# Season Kickoff
+SEASON_START_DATE = datetime.date(2026, 11, 7)
+
+def time_to_minutes(time_str):
+    m = re.match(r'(\d{1,2}):(\d{2})\s*(AM|PM)', time_str, re.I)
+    if not m:
+        return 0
+    hr, mn, meridiem = int(m.group(1)), int(m.group(2)), m.group(3).upper()
+    if meridiem == 'PM' and hr != 12:
+        hr += 12
+    elif meridiem == 'AM' and hr == 12:
+        hr = 0
+    return hr * 60 + mn
+
+def format_round_date(round_num):
+    match_date = SEASON_START_DATE + datetime.timedelta(days=(round_num - 1) * 7)
+    day = match_date.day
+    if 11 <= (day % 100) <= 13:
+        suf = "th"
+    else:
+        suf = {1: "st", 2: "nd", 3: "rd"}.get(day % 10, "th")
+    return f"Sat {day}{suf} {match_date.strftime('%b %Y')}"
+
+async def try_expand_full_schedule(target):
+    try:
+        # Check for full schedule links or buttons
+        btn = await target.query_selector("a:has-text('Full Schedule'), button:has-text('Full Schedule'), a:has-text('All Weeks')")
+        if btn:
+            await btn.click()
+            await target.page.wait_for_timeout(2000)
+            return
+
+        # Check for week/round dropdown with "All" or "Full Schedule"
+        select_el = await target.query_selector("select[name*='round'], select[name*='week'], select.schedule-filter")
+        if select_el:
+            options = await select_el.query_selector_all("option")
+            for opt in options:
+                txt = await opt.inner_text()
+                if any(w in txt.lower() for w in ["all", "full schedule", "all rounds"]):
+                    val = await opt.get_attribute("value")
+                    await select_el.select_option(val)
+                    await target.page.wait_for_timeout(2000)
+                    break
+    except Exception as e:
+        print(f"Notice on expanding schedule: {e}")
 
 async def scrape_league(page, league_name, url):
-    print(f"Scraping {league_name} from {url}...")
+    print(f"\nScraping {league_name} from {url}...")
     fixtures = []
     
     await page.goto(url, wait_until="domcontentloaded", timeout=45000)
@@ -32,25 +70,12 @@ async def scrape_league(page, league_name, url):
             target = frame
 
     await target.wait_for_selector("table, tr, .match", timeout=25000)
+    await try_expand_full_schedule(target)
     
-    # Check if a date is present in an active dropdown or round selector
-    default_date = "Saturday"
-    try:
-        round_text = await target.eval_on_selector(
-            "select option:checked, .round-name, .active-round, .date-heading",
-            "el => el.innerText"
-        )
-        if round_text:
-            m = master_date_regex.search(round_text)
-            if m:
-                default_date = m.group(0).strip()
-    except Exception:
-        pass
-
-    # Query all potential heading and row elements
-    elements = await target.query_selector_all("caption, h1, h2, h3, h4, h5, th, tr, .match, .game-row, option")
+    elements = await target.query_selector_all("caption, h2, h3, h4, th, tr, .match, .game-row")
     
-    current_date = default_date
+    current_round = 1
+    last_minutes = -1
 
     for el in elements:
         raw = await el.inner_text()
@@ -59,39 +84,48 @@ async def scrape_league(page, league_name, url):
         if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
             continue
 
-        # Look for date headers
-        d_found = master_date_regex.search(clean_text)
-        if d_found and not re.search(r'\d{1,2}:\d{2}', clean_text):
-            current_date = d_found.group(0).strip()
+        # Check if heading states Week or Round
+        round_heading = re.search(r'\b(?:Week|Round)\s*(\d+)\b', clean_text, re.I)
+        if round_heading and not re.search(r'\d{1,2}:\d{2}', clean_text):
+            current_round = int(round_heading.group(1))
+            last_minutes = -1
+            continue
 
-        # Identify match rows
+        # Check for match rows
         is_match = re.search(r'\bV(?:S)?\b', clean_text, re.I) and re.search(r'\d{1,2}:\d{2}', clean_text)
         if is_match:
             time_match = re.search(r'(\d{1,2}:\d{2}\s*(?:AM|PM)?)', clean_text, re.I)
-            time_str = time_match.group(1).strip() if time_match else "TBD"
+            time_str = time_match.group(1).strip() if time_match else "9:00 AM"
+
+            curr_minutes = time_to_minutes(time_str)
+            
+            # When time resets from afternoon/midday back to 9:00 AM, advance round
+            if last_minutes != -1 and curr_minutes < last_minutes and (last_minutes - curr_minutes) > 60:
+                current_round += 1
+                last_minutes = curr_minutes
+            else:
+                if curr_minutes > last_minutes:
+                    last_minutes = curr_minutes
 
             parts = clean_text.split(time_str, 1)
             venue_raw = parts[0].strip()
             teams_part = parts[1].strip() if len(parts) > 1 else ""
 
-            # Check if this row has its own specific date prefix
-            row_date = current_date
-            row_d_found = master_date_regex.search(venue_raw)
-            if row_d_found:
-                row_date = row_d_found.group(0).strip()
-                venue_raw = venue_raw.replace(row_d_found.group(0), "").strip()
-
-            venue = re.sub(r'^[,\-\s]+|[,\-\s]+$', '', venue_raw) or "TBD"
+            venue = re.sub(r'^(?:Week|Round)\s*\d+[\s,\-]*', '', venue_raw, flags=re.I)
+            venue = re.sub(r'^[,\-\s]+|[,\-\s]+$', '', venue) or "TBD"
 
             teams = re.split(r'\s+V(?:S)?\s+', teams_part, flags=re.I)
             home_team = teams[0].strip() if len(teams) > 0 else "TBD"
             away_team = teams[1].strip() if len(teams) > 1 else "TBD"
             away_team = re.sub(r'\b\d{1,2}:\d{2}.*$', '', away_team).strip()
 
+            date_str = format_round_date(current_round)
+
             fixtures.append({
                 "id": f"{league_name.lower().replace(' ', '')}-{len(fixtures)+1}",
                 "league": league_name,
-                "date": row_date,
+                "round": current_round,
+                "date": date_str,
                 "venue": venue,
                 "time": time_str,
                 "homeTeam": home_team,
@@ -99,7 +133,7 @@ async def scrape_league(page, league_name, url):
                 "raw_fixture": clean_text
             })
 
-    print(f"Extracted {len(fixtures)} fixtures for {league_name}")
+    print(f"Extracted {len(fixtures)} fixtures for {league_name} across {current_round} round(s)")
     return fixtures
 
 async def main():
@@ -120,11 +154,11 @@ async def main():
                 
         await browser.close()
         
-        print(f"Total fixtures captured: {len(all_data)}")
+        print(f"\nTotal fixtures captured across all leagues: {len(all_data)}")
         if len(all_data) > 0:
             with open('fixtures_data.json', 'w') as f:
                 json.dump(all_data, f, indent=2)
-            print("Successfully updated fixtures_data.json.")
+            print("Successfully updated fixtures_data.json with real dates and rounds.")
 
 if __name__ == "__main__":
     asyncio.run(main())
