@@ -122,6 +122,7 @@
     let onlyTikiTaka = true;
     let selectedPlayerObj = null;
     let players = [];
+    let uniqueDates = [];
 
     try {
       players = JSON.parse(localStorage.getItem("tiki_saved_players") || "[]");
@@ -131,6 +132,7 @@
 
     const fixturesContainer = document.getElementById("fixturesList");
     const matchCount = document.getElementById("matchCount");
+    const dateFilterGroup = document.getElementById("dateFilterGroup");
     const toggleTikiBtn = document.getElementById("toggleTikiBtn");
     const searchInput = document.getElementById("teamSearchInput");
     const clearSearchBtn = document.getElementById("clearSearchBtn");
@@ -158,37 +160,50 @@
         .replace(/'/g, "&#039;");
     }
 
-    // Guarantees Sat 7th Nov on opening fixtures
-    function formatDateTimeBadge(dateStr, timeStr) {
-      const time = timeStr || "9:00 AM";
-      const s = String(dateStr || "").trim();
+    function buildDynamicMonthButtons() {
+      const monthsSet = new Set();
+      const datesSet = new Set();
 
-      // If upcoming, week 1, or blank, show opening kickoff date
-      if (!s || s === "Upcoming" || s.toLowerCase() === "week 1" || s.toLowerCase() === "round 1") {
-        return `Sat 7th Nov · ${time}`;
-      }
+      allFixtures.forEach(f => {
+        if (f.date) {
+          datesSet.add(f.date.trim());
+          const monthMatch = f.date.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/i);
+          if (monthMatch) monthsSet.add(monthMatch[0].toUpperCase());
+        }
+      });
 
-      // If week 2 or round 2
-      if (s.toLowerCase().includes("week 2") || s.toLowerCase().includes("round 2")) {
-        return `Sat 14th Nov · ${time}`;
-      }
+      uniqueDates = Array.from(datesSet);
 
-      // Extract day and month if present
-      const dowMatch = s.match(/\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*\b/i);
-      const dow = dowMatch ? dowMatch[1].substring(0, 3) : "Sat";
+      const monthNames = {
+        "NOV": "November", "DEC": "December", "JAN": "January", "FEB": "February", "MAR": "March"
+      };
 
-      const monthMatch = s.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\b/i);
-      const month = monthMatch ? monthMatch[1].substring(0, 3) : "Nov";
+      monthsSet.forEach(mKey => {
+        const fullMonth = monthNames[mKey] || mKey;
+        const btn = document.createElement("button");
+        btn.dataset.datefilter = `MONTH_${mKey}`;
+        btn.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0";
+        btn.textContent = fullMonth;
+        dateFilterGroup.appendChild(btn);
+      });
 
-      const anyNum = s.match(/\b(\d{1,2})(?:st|nd|rd|th)?\b/);
-      let dayStr = "7th";
-      if (anyNum) {
-        const n = parseInt(anyNum[1], 10);
-        const suf = ["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th";
-        dayStr = `${n}${suf}`;
-      }
+      bindDateButtons();
+    }
 
-      return `${dow} ${dayStr} ${month} · ${time}`;
+    function bindDateButtons() {
+      document.querySelectorAll(".date-btn").forEach(btn => {
+        btn.onclick = () => {
+          selectedDateFilter = btn.dataset.datefilter;
+          document.querySelectorAll(".date-btn").forEach(b => {
+            if (b.dataset.datefilter === selectedDateFilter) {
+              b.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm flex-shrink-0";
+            } else {
+              b.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0";
+            }
+          });
+          renderFixtures();
+        };
+      });
     }
 
     function populateTeamDropdown() {
@@ -301,6 +316,7 @@
         const away = item.awayTeam || "";
         const venue = item.venue || "";
         const league = item.league || "";
+        const date = item.date || "";
 
         const matchLeague = selectedLeague === "ALL" || league === selectedLeague;
         const containsTiki = isTiki(home) || isTiki(away);
@@ -321,9 +337,12 @@
 
         let matchesDate = true;
         if (selectedDateFilter === "NEXT_MATCHDAY") {
-          matchesDate = item.date === "Upcoming" || item.date.toLowerCase().includes("week 1") || item.date.toLowerCase().includes("nov 7");
+          matchesDate = uniqueDates.length > 0 ? date === uniqueDates[0] : true;
         } else if (selectedDateFilter === "FOLLOWING_WEEKEND") {
-          matchesDate = item.date.toLowerCase().includes("week 2") || item.date.toLowerCase().includes("nov 14");
+          matchesDate = uniqueDates.length > 1 ? date === uniqueDates[1] : false;
+        } else if (selectedDateFilter.startsWith("MONTH_")) {
+          const targetM = selectedDateFilter.replace("MONTH_", "");
+          matchesDate = date.toUpperCase().includes(targetM);
         }
 
         if (!matchLeague) return false;
@@ -366,7 +385,7 @@
 
         const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue + ', Fife, Scotland')}`;
         const calTitle = encodeURIComponent(`${home} vs ${away} (${league})`);
-        const calDetails = encodeURIComponent(`Futsal Escocia match scheduled on ${date} at ${time}.`);
+        const calDetails = encodeURIComponent(`Futsal Escocia match on ${date} at ${time}.`);
         const calLoc = encodeURIComponent(venue);
         const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&location=${calLoc}&details=${calDetails}`;
 
@@ -377,7 +396,7 @@
                 ${escapeHtml(league)}
               </span>
               <span class="text-[11px] font-bold bg-orange-50 text-[#FF6600] px-2.5 py-1 rounded-lg border border-orange-100 flex items-center gap-1 shadow-sm">
-                📅 ${escapeHtml(formatDateTimeBadge(date, time))}
+                📅 ${escapeHtml(date)} · ${escapeHtml(time)}
               </span>
             </div>
 
@@ -498,20 +517,6 @@
       });
     });
 
-    document.querySelectorAll(".date-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        selectedDateFilter = btn.dataset.datefilter;
-        document.querySelectorAll(".date-btn").forEach(b => {
-          if (b.dataset.datefilter === selectedDateFilter) {
-            b.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm flex-shrink-0";
-          } else {
-            b.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0";
-          }
-        });
-        renderFixtures();
-      });
-    });
-
     if (toggleTikiBtn) {
       toggleTikiBtn.addEventListener("click", () => {
         onlyTikiTaka = !onlyTikiTaka;
@@ -527,28 +532,31 @@
     }
 
     renderPlayerPills();
+    bindDateButtons();
 
-    // Proven fetch loader from earlier build
+    // Load data
     fetch("./fixtures_data.json?t=" + Date.now())
       .then(res => res.json())
       .then(data => {
         allFixtures = Array.isArray(data) ? data : [];
+        buildDynamicMonthButtons();
         populateTeamDropdown();
         renderPlayerPills();
         renderFixtures();
       })
       .catch(() => {
-        fetch("https://raw.githubusercontent.com/gregmurphy-creator/futsal-fixture-scraper/main/fixtures_data.json")
+        fetch("https://raw.githubusercontent.com/gregmurphy-creator/futsal-fixture-scraper/main/fixtures_data.json?t=" + Date.now())
           .then(res => res.json())
           .then(data => {
             allFixtures = Array.isArray(data) ? data : [];
+            buildDynamicMonthButtons();
             populateTeamDropdown();
             renderPlayerPills();
             renderFixtures();
           })
           .catch(err => {
             matchCount.textContent = "Feed unavailable";
-            fixturesContainer.innerHTML = `<div class="bg-white rounded-2xl p-8 text-center text-red-500 font-bold">Could not load fixture data. Tap below to retry.<br><button onclick="location.reload()" class="mt-3 px-3 py-1.5 text-xs bg-[#FF6600] text-white rounded-xl">Retry</button></div>`;
+            fixturesContainer.innerHTML = `<div class="bg-white rounded-2xl p-8 text-center text-red-500 font-bold">Could not load fixture data.<br><button onclick="location.reload()" class="mt-3 px-3 py-1.5 text-xs bg-[#FF6600] text-white rounded-xl">Retry</button></div>`;
           });
       });
   </script>
