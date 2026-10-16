@@ -23,11 +23,9 @@
     </header>
 
     <!-- Player Profiles Quick Bar -->
-    <div id="playerPillsContainer" class="flex items-center gap-2 overflow-x-auto pb-2 mb-4 scrollbar-none">
-      <!-- Injected by JavaScript -->
-    </div>
+    <div id="playerPillsContainer" class="flex items-center gap-2 overflow-x-auto pb-2 mb-4 scrollbar-none"></div>
 
-    <!-- Date Filters (This Week, Next Weekend, All Month, All) -->
+    <!-- Date Filters -->
     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
       <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">When</div>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5" id="dateFilterGroup">
@@ -71,7 +69,6 @@
         <button id="closePlayerModalBtn" class="text-gray-400 hover:text-gray-700 text-2xl font-bold leading-none">&times;</button>
       </div>
 
-      <!-- Add New Player Form -->
       <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 mb-5">
         <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Add Child to Team</h4>
         <div class="space-y-3">
@@ -91,12 +88,9 @@
         </div>
       </div>
 
-      <!-- List of Saved Players -->
       <div>
         <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Saved Players</h4>
-        <div id="savedPlayersList" class="space-y-2 max-h-48 overflow-y-auto">
-          <!-- Injected via JavaScript -->
-        </div>
+        <div id="savedPlayersList" class="space-y-2 max-h-48 overflow-y-auto"></div>
       </div>
     </div>
   </div>
@@ -109,7 +103,6 @@
     let selectedPlayerTeam = "";
     let players = [];
 
-    // Load saved players from localStorage
     try {
       players = JSON.parse(localStorage.getItem("tiki_saved_players") || "[]");
     } catch (e) {
@@ -122,7 +115,6 @@
     const dateButtons = document.querySelectorAll(".date-btn");
     const toggleTikiBtn = document.getElementById("toggleTikiBtn");
     
-    // Modal elements
     const playerModal = document.getElementById("playerModal");
     const openPlayerModalBtn = document.getElementById("openPlayerModalBtn");
     const closePlayerModalBtn = document.getElementById("closePlayerModalBtn");
@@ -145,7 +137,6 @@
         .replace(/'/g, "&#039;");
     }
 
-    // Populate team options inside modal dropdown
     function populateTeamDropdown() {
       const teams = new Set();
       allFixtures.forEach(item => {
@@ -157,7 +148,6 @@
         sortedTeams.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("");
     }
 
-    // Render quick-filter pill buttons at top
     function renderPlayerPills() {
       if (players.length === 0) {
         playerPillsContainer.innerHTML = `
@@ -225,7 +215,6 @@
       renderFixtures();
     };
 
-    // Date matching helpers
     function matchDateFilter(itemDateStr, filter) {
       if (filter === "ALL") return true;
       if (!itemDateStr || itemDateStr === "Upcoming") return true;
@@ -237,8 +226,7 @@
         return itemDateStr.toLowerCase().includes(currentMonthName);
       }
 
-      // Weekend filters
-      const dayOfWeek = now.getDay(); // 0 is Sunday, 6 is Saturday
+      const dayOfWeek = now.getDay();
       const satOffset = (6 - dayOfWeek + 7) % 7;
       
       const thisSat = new Date(now);
@@ -306,6 +294,7 @@
         const team1 = (awayIsTiki && !homeIsTiki) ? away : home;
         const team2 = (awayIsTiki && !homeIsTiki) ? home : away;
         const team1IsTiki = isTiki(team1);
+        const team2IsTiki = isTiki(team2);
 
         const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue + ', Fife, Scotland')}`;
         const calTitle = encodeURIComponent(`${home} vs ${away} (${league})`);
@@ -315,29 +304,42 @@
 
         return `
           <div class="bg-white rounded-2xl p-4 border ${isTikiMatch ? 'border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm' : 'border-gray-200'}">
-            <!-- Card Meta: Date, League, Time -->
-            <div class="flex items-center justify-between mb-2">
-              <div class="flex items-center gap-1.5">
-                <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded-md bg-gray-100 text-gray-700">${escapeHtml(league)}</span>
-                <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded-md bg-blue-50 text-blue-700">📅 ${escapeHtml(date)}</span>
+            <!-- Header: League, Date & Time -->
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-gray-100 text-gray-700">${escapeHtml(league)}</span>
+                <span class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-blue-50 text-blue-700">📅 ${escapeHtml(date)}</span>
               </div>
               <span class="text-xs font-bold bg-orange-50 text-[#FF6600] px-2 py-0.5 rounded">${escapeHtml(time)}</span>
             </div>
 
-            <!-- Teams -->
-            <div class="my-3 space-y-1">
-              <div class="flex items-center gap-2">
-                ${team1IsTiki ? '<span class="w-2 h-2 rounded-full bg-[#FF6600]"></span>' : ''}
-                <span class="text-base ${team1IsTiki ? 'font-black text-gray-900' : 'font-semibold text-gray-800'}">${escapeHtml(team1)}</span>
+            <!-- Aligned Team Match Box -->
+            <div class="my-2 p-3 bg-gray-50 rounded-xl border border-gray-100 space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <span class="w-2.5 h-2.5 rounded-full flex-shrink-0 ${team1IsTiki ? 'bg-[#FF6600]' : 'bg-gray-300'}"></span>
+                  <span class="text-sm truncate ${team1IsTiki ? 'font-black text-gray-900' : 'font-semibold text-gray-800'}">${escapeHtml(team1)}</span>
+                </div>
+                ${team1IsTiki ? '<span class="text-[10px] font-extrabold uppercase bg-orange-100 text-[#FF6600] px-1.5 py-0.5 rounded flex-shrink-0">Tiki</span>' : ''}
               </div>
-              <div class="text-xs font-bold uppercase tracking-wider text-gray-400 pl-4">vs</div>
-              <div class="flex items-center gap-2">
-                <span class="text-sm font-medium text-gray-700 pl-4">${escapeHtml(team2)}</span>
+
+              <div class="relative flex py-0.5 items-center">
+                <div class="flex-grow border-t border-gray-200"></div>
+                <span class="flex-shrink mx-2 text-[10px] font-bold tracking-wider text-gray-400 uppercase">VS</span>
+                <div class="flex-grow border-t border-gray-200"></div>
+              </div>
+
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <span class="w-2.5 h-2.5 rounded-full flex-shrink-0 ${team2IsTiki ? 'bg-[#FF6600]' : 'bg-gray-300'}"></span>
+                  <span class="text-sm truncate ${team2IsTiki ? 'font-black text-gray-900' : 'font-semibold text-gray-700'}">${escapeHtml(team2)}</span>
+                </div>
+                ${team2IsTiki ? '<span class="text-[10px] font-extrabold uppercase bg-orange-100 text-[#FF6600] px-1.5 py-0.5 rounded flex-shrink-0">Tiki</span>' : ''}
               </div>
             </div>
 
-            <!-- Footer: Venue and Buttons -->
-            <div class="pt-3 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2">
+            <!-- Footer: Venue & Buttons -->
+            <div class="pt-2 flex flex-wrap items-center justify-between gap-2">
               <div class="text-xs text-gray-500 font-medium">📍 ${escapeHtml(venue)}</div>
               <div class="flex items-center gap-2">
                 <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700">Directions</a>
@@ -349,7 +351,6 @@
       }).join("");
     }
 
-    // Modal Events
     openPlayerModalBtn.addEventListener("click", () => {
       populateTeamDropdown();
       renderSavedPlayersModalList();
@@ -378,7 +379,6 @@
       renderFixtures();
     });
 
-    // League Filters
     leagueButtons.forEach(btn => {
       btn.addEventListener("click", () => {
         selectedLeague = btn.dataset.league;
@@ -393,7 +393,6 @@
       });
     });
 
-    // Date Filters
     dateButtons.forEach(btn => {
       btn.addEventListener("click", () => {
         selectedDateFilter = btn.dataset.datefilter;
@@ -408,7 +407,6 @@
       });
     });
 
-    // Tiki Taka Only Toggle
     toggleTikiBtn.addEventListener("click", () => {
       onlyTikiTaka = !onlyTikiTaka;
       if (onlyTikiTaka) {
@@ -421,7 +419,6 @@
       renderFixtures();
     });
 
-    // Data Fetcher
     fetch("./fixtures_data.json?t=" + Date.now())
       .then(res => res.json())
       .then(data => {
