@@ -9,53 +9,58 @@ urls = {
     "Liga 7": "https://futsalescocia.co.uk/fixtures/liga-7/"
 }
 
-def parse_fixture(text, fallback_date="Upcoming"):
-    # Guard: if this text contains multiple games concatenated together, skip it
-    vs_count = len(re.findall(r'\bV(?:S)?\b', text, re.I))
-    time_matches = list(re.finditer(r'\b\d{1,2}:\d{2}\s*(?:AM|PM)?\b', text, re.I))
-    
-    if vs_count > 1 or len(time_matches) > 1:
+def parse_cell(text, current_date="Upcoming"):
+    clean = " ".join(text.split())
+    if not clean or len(clean) < 6:
         return None
-    if not time_matches or vs_count == 0:
+        
+    # Ignore league standings rows (e.g., 0 0 0 0 0 0)
+    if re.search(r'\b0\s+0\s+0\s+0\b', clean):
+        return None
+        
+    # Must have a match indicator (V or VS)
+    if not re.search(r'\b(vs?|v)\b', clean, re.I):
         return None
 
-    time_match = time_matches[0]
-    time_str = time_match.group(0).strip()
-    
-    before_time = text[:time_match.start()].strip()
-    after_time = text[time_match.end():].strip()
+    # Must contain a match time (e.g. 9:00 AM, 10:30, 14:00)
+    time_match = re.search(r'\b(\d{1,2}:\d{2}\s*(?:AM|PM)?)\b', clean, re.I)
+    if not time_match:
+        return None
 
-    # Extract date if it is prepended to the venue (e.g. "Saturday, November 14 Balwearie High School")
+    time_str = time_match.group(1).strip()
+    before_time = clean[:time_match.start()].strip()
+    after_time = clean[time_match.end():].strip()
+
+    # Detect date in the text prefix if present
     date_regex = r'((?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*,?\s+)?(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}(?:st|nd|rd|th)?(?:\s*,?\s*\d{4})?)'
     date_found = re.search(date_regex, before_time, re.I)
 
     if date_found:
-        extracted_date = date_found.group(1).strip()
+        date_val = date_found.group(1).strip()
         venue = before_time.replace(date_found.group(1), "").strip()
     else:
-        extracted_date = fallback_date
+        date_val = current_date
         venue = before_time
 
-    # Clean up venue text
     venue = re.sub(r'^[,\-\s]+|[,\-\s]+$', '', venue) or "TBD"
 
-    # Extract Home & Away teams
+    # Split home and away teams
     teams = re.split(r'\s+V(?:S)?\s+', after_time, flags=re.I)
     if len(teams) < 2:
         return None
 
-    home_team = teams[0].strip()
-    away_team = teams[1].strip()
+    home = teams[0].strip()
+    away = teams[1].strip()
 
-    # Ensure no leftover times leaked into team names
-    away_team = re.sub(r'\b\d{1,2}:\d{2}\s*(?:AM|PM)?\b.*$', '', away_team).strip()
+    # Clean away team trailing text
+    away = re.sub(r'\b\d{1,2}:\d{2}.*$', '', away).strip()
 
     return {
-        "date": extracted_date,
+        "date": date_val,
         "venue": venue,
         "time": time_str,
-        "homeTeam": home_team,
-        "awayTeam": away_team
+        "homeTeam": home,
+        "awayTeam": away
     }
 
 async def scrape_league(page, league_name, url):
@@ -71,20 +76,31 @@ async def scrape_league(page, league_name, url):
             if frame:
                 target = frame
 
-        await target.wait_for_selector("tr, .match, .game", timeout=20000)
+        await target.wait_for_selector("table, tr, td, .match, .game", timeout=20000)
+
+        # Query cells (td) and date headings (th, h2, h3, h4) in DOM order
+        elements = await target.query_selector_all("th, td, h2, h3, h4, .date, .match, .game")
         
-        # Select individual match rows only (no round/container divs)
-        elements = await target.query_selector_all("tr, .match, .game-row")
-        
+        # Fall back to tr if the page does not use standard td cells
+        if not elements or len(elements) < 5:
+            elements = await target.query_selector_all("tr, .match, .game-row")
+
+        current_date = "Upcoming"
+
         for el in elements:
-            text = await el.inner_text()
-            clean_text = " ".join(text.split())
-            
-            # Skip standings and blank lines
-            if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
+            raw = await el.inner_text()
+            text = " ".join(raw.split())
+            if not text:
                 continue
 
-            parsed = parse_fixture(clean_text)
+            # Check if this heading element represents a date
+            is_match = re.search(r'\b(vs?|v)\b', text, re.I) and re.search(r'\d{1,2}:\d{2}', text)
+            if not is_match:
+                if re.search(r'(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun|Round|Week|\d{1,2}[/-]\d{1,2}|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)', text, re.I):
+                    current_date = text
+
+            # Parse fixture cell
+            parsed = parse_cell(text, current_date=current_date)
             if parsed:
                 fixtures.append({
                     "id": f"{league_name.lower().replace(' ', '')}-{len(fixtures)+1}",
@@ -94,7 +110,7 @@ async def scrape_league(page, league_name, url):
                     "time": parsed["time"],
                     "homeTeam": parsed["homeTeam"],
                     "awayTeam": parsed["awayTeam"],
-                    "raw_fixture": clean_text
+                    "raw_fixture": text
                 })
     except Exception as e:
         print(f"Error on {league_name}: {e}")
@@ -119,7 +135,7 @@ async def main():
         with open('fixtures_data.json', 'w') as f:
             json.dump(all_data, f, indent=2)
             
-        print(f"Scraping complete! Extracted {len(all_data)} clean individual fixtures.")
+        print(f"Scraping complete! Extracted {len(all_data)} fixtures.")
 
 if __name__ == "__main__":
     asyncio.run(main())
