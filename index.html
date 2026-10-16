@@ -516,6 +516,39 @@
       afterPlayersChanged();
     };
 
+    const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    // Saturdays with no fixtures between two matchdays. The season breaks for
+    // two weeks over Christmas, and without saying so the gap reads as a
+    // broken feed rather than a scheduled rest.
+    function breakMarker(previousGroup, group) {
+      if (!previousGroup.iso || !group.iso) return "";
+
+      const from = new Date(`${previousGroup.iso}T00:00:00`);
+      const to = new Date(`${group.iso}T00:00:00`);
+      if (isNaN(from.getTime()) || isNaN(to.getTime())) return "";
+
+      const days = Math.round((to - from) / 86400000);
+      if (days <= 7) return "";
+
+      const skipped = [];
+      for (let day = new Date(from.getTime() + 7 * 86400000); day < to;
+           day = new Date(day.getTime() + 7 * 86400000)) {
+        skipped.push(`${day.getDate()} ${MONTHS_SHORT[day.getMonth()]}`);
+      }
+      if (skipped.length === 0) return "";
+
+      return `
+        <div class="flex items-center gap-3 py-3 px-1">
+          <span class="h-px flex-1 bg-gray-300"></span>
+          <span class="text-[11px] font-bold text-gray-500 bg-gray-100 border border-gray-200 rounded-xl px-3 py-1.5 text-center">
+            No fixtures ${escapeHtml(skipped.join(" or "))}
+          </span>
+          <span class="h-px flex-1 bg-gray-300"></span>
+        </div>`;
+    }
+
     function renderFixtures() {
       if (!fixturesContainer || !matchCount) return;
 
@@ -574,7 +607,7 @@
         return;
       }
 
-      fixturesContainer.innerHTML = filtered.map(item => {
+      function renderFixtureCard(item) {
         const home = item.homeTeam || "TBD";
         const away = item.awayTeam || "TBD";
         const venue = item.venue || "TBD";
@@ -611,7 +644,7 @@
                 ${escapeHtml(league)}
               </span>
               <span class="text-[11px] font-bold bg-orange-50 text-[#FF6600] px-2.5 py-1 rounded-lg border border-orange-100 flex items-center gap-1 shadow-sm">
-                📅 ${escapeHtml(date)} · ${escapeHtml(time)}
+                🕘 ${escapeHtml(time)}
               </span>
             </div>
 
@@ -666,7 +699,44 @@
             </div>
           </div>
         `;
-      }).join("");
+      }
+
+      // Chronological order, so "All Leagues" reads as a season rather than
+      // Liga 5's whole season followed by Liga 6's.
+      const sorted = filtered.slice().sort((a, b) => {
+        const byDate = String(a.iso_date || "").localeCompare(String(b.iso_date || ""));
+        if (byDate !== 0) return byDate;
+
+        const aTime = timeToMinutes(a.time);
+        const bTime = timeToMinutes(b.time);
+        if (aTime !== null && bTime !== null && aTime !== bTime) return aTime - bTime;
+
+        return String(a.league || "").localeCompare(String(b.league || ""));
+      });
+
+      const groups = [];
+      sorted.forEach(item => {
+        const key = item.iso_date || item.date;
+        const last = groups[groups.length - 1];
+        if (last && last.key === key) {
+          last.items.push(item);
+        } else {
+          groups.push({ key, date: item.date, iso: item.iso_date, items: [item] });
+        }
+      });
+
+      fixturesContainer.innerHTML = groups.map((group, index) => `
+        ${index > 0 ? breakMarker(groups[index - 1], group) : ""}
+        <div class="sticky top-0 z-10 -mx-1 px-1 py-2 bg-gray-50/95 backdrop-blur-sm">
+          <div class="flex items-baseline justify-between gap-2">
+            <h2 class="text-sm font-black text-gray-900">${escapeHtml(group.date)}</h2>
+            <span class="text-[11px] font-bold text-gray-500">
+              ${group.items.length} match${group.items.length === 1 ? "" : "es"}
+            </span>
+          </div>
+        </div>
+        ${group.items.map(renderFixtureCard).join("")}
+      `).join("");
     }
 
     window.resetFilters = function() {
