@@ -43,7 +43,6 @@ def parse_full_schedule(raw_texts, league_name):
         if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
             continue
 
-        # Check for explicit Week/Round headers
         round_heading = re.search(r'\b(?:Week|Round)\s*(\d+)\b', clean_text, re.I)
         if round_heading and not re.search(r'\d{1,2}:\d{2}', clean_text):
             current_round = int(round_heading.group(1))
@@ -55,7 +54,6 @@ def parse_full_schedule(raw_texts, league_name):
             time_str = t_match.group(1).strip() if t_match else "9:00 AM"
 
             curr_min = time_to_minutes(time_str)
-            # Roll over to next week when kickoff times reset back to the morning
             if last_minutes != -1 and curr_min < last_minutes and (last_minutes - curr_min) > 60:
                 current_round += 1
                 last_minutes = curr_min
@@ -92,18 +90,6 @@ def parse_full_schedule(raw_texts, league_name):
 
     return fixtures
 
-async def get_schedule_frame(page):
-    await page.wait_for_selector("iframe", timeout=30000)
-    for frame in page.frames:
-        if "leaguelobster" in frame.url.lower():
-            return frame
-    iframe_el = await page.query_selector("iframe")
-    if iframe_el:
-        content = await iframe_el.content_frame()
-        if content:
-            return content
-    return page
-
 async def scrape_league(page, league_name, url):
     print(f"\n==========================================")
     print(f"Scraping {league_name}: {url}")
@@ -111,36 +97,37 @@ async def scrape_league(page, league_name, url):
     
     await page.goto(url, wait_until="domcontentloaded", timeout=45000)
     await page.wait_for_timeout(2000)
-    frame = await get_schedule_frame(page)
-    await frame.wait_for_selector("table, tr, .match", timeout=25000)
 
-    # Click the exact "Reload full schedule" button shown at the bottom
+    frame_locator = page.frame_locator("iframe").first
+
+    # Target and click 'Reload full schedule'
     try:
-        reload_btn = frame.locator("button, a, div, span").filter(has_text="Reload full schedule").last
+        reload_btn = frame_locator.locator("button, a, div, span").filter(has_text="Reload full schedule").first
         if await reload_btn.count() > 0:
-            print(f"[{league_name}] Found 'Reload full schedule' button! Scrolling and clicking...")
+            print(f"[{league_name}] Found 'Reload full schedule' button. Clicking...")
             await reload_btn.scroll_into_view_if_needed()
             await reload_btn.click()
-            await page.wait_for_timeout(4000)
-            # Re-acquire frame after reload to avoid detached execution context
-            frame = await get_schedule_frame(page)
+            await page.wait_for_timeout(5000)
+        else:
+            print(f"[{league_name}] 'Reload full schedule' button not found, checking full page...")
     except Exception as e:
-        print(f"[{league_name}] Reload full schedule notice: {e}")
+        print(f"[{league_name}] Note on reload button: {e}")
 
-    # Scrape all rows across the full schedule
-    rows = await frame.query_selector_all("caption, h2, h3, h4, th, tr, .match, .game-row")
+    # Gather rows using frame_locator (immune to frame detachment)
     raw_texts = []
-    for r in rows:
-        try:
-            txt = await r.inner_text()
-            if txt:
-                raw_texts.append(" ".join(txt.split()))
-        except Exception:
-            continue
+    try:
+        raw_texts = await frame_locator.locator("caption, h2, h3, h4, th, tr, .match, .game-row").all_inner_texts()
+    except Exception as e:
+        print(f"[{league_name}] Could not extract from iframe: {e}")
 
-    fixtures = parse_full_schedule(raw_texts, league_name)
+    # Fallback to main page if iframe was empty
+    if not raw_texts:
+        raw_texts = await page.locator("caption, h2, h3, h4, th, tr, .match, .game-row").all_inner_texts()
+
+    clean_texts = [" ".join(t.split()) for t in raw_texts if t.strip()]
+    fixtures = parse_full_schedule(clean_texts, league_name)
     rounds_found = len(set(f["round"] for f in fixtures)) if fixtures else 0
-    print(f"[{league_name}] Captured {len(fixtures)} total fixtures across {rounds_found} round(s).")
+    print(f"[{league_name}] Captured {len(fixtures)} fixtures across {rounds_found} round(s).")
     return fixtures
 
 async def main():
@@ -170,9 +157,9 @@ async def main():
         if len(all_data) > 0:
             with open('fixtures_data.json', 'w') as f:
                 json.dump(all_data, f, indent=2)
-            print("Successfully updated fixtures_data.json!")
+            print(f"Successfully wrote {len(all_data)} fixtures to fixtures_data.json!")
         else:
-            print("Error: 0 fixtures collected. File left unchanged.")
+            print("Error: 0 fixtures collected. File left untouched.")
 
 if __name__ == "__main__":
     asyncio.run(main())
