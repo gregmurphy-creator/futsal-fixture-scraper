@@ -25,7 +25,7 @@
     <!-- Player Profiles Quick Bar -->
     <div id="playerPillsContainer" class="flex items-center gap-2 overflow-x-auto pb-2 mb-3 scrollbar-none"></div>
 
-    <!-- Search Input -->
+    <!-- Quick Team / Venue Search Bar -->
     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
       <div class="relative flex items-center">
         <span class="absolute left-3 text-gray-400 text-sm">🔍</span>
@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <!-- Quick Views (Team Toggle + Dates) -->
+    <!-- Quick Views (Tiki Taka Default Toggle + Dates) -->
     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
       <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">Quick Views</div>
       <div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none" id="dateFilterGroup">
@@ -58,7 +58,6 @@
         <button data-datefilter="ALL" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm flex-shrink-0">All Dates</button>
         <button data-datefilter="NEXT_MATCHDAY" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0">Next Matchday</button>
         <button data-datefilter="FOLLOWING_WEEKEND" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0">Following Weekend</button>
-        <!-- Dynamic month buttons inserted via JS -->
       </div>
     </div>
 
@@ -89,4 +88,139 @@
     <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-xl border border-gray-200">
       <div class="flex items-center justify-between mb-4">
         <h3 class="text-lg font-black text-gray-900">Manage Players & Children</h3>
-        <button id="closePlayerModalBtn" class="text-gray-400 hover:
+        <button id="closePlayerModalBtn" class="text-gray-400 hover:text-gray-700 text-2xl font-bold leading-none">&times;</button>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 mb-5">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Add Child to Team</h4>
+        <div class="space-y-3">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">Child's Name</label>
+            <input id="newChildName" type="text" placeholder="e.g. Leo" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600] bg-white" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">Assigned Team & League</label>
+            <select id="newChildTeam" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600] bg-white">
+              <option value="">Select team & league...</option>
+            </select>
+          </div>
+          <button id="savePlayerBtn" class="w-full py-2.5 text-xs font-bold bg-[#FF6600] text-white rounded-xl shadow-sm hover:bg-[#e05a00] transition-all">
+            Save Player
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Saved Players</h4>
+        <div id="savedPlayersList" class="space-y-2 max-h-48 overflow-y-auto"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let allFixtures = [];
+    let searchQuery = "";
+    let selectedLeague = "ALL";
+    let selectedDateFilter = "ALL";
+    let onlyTikiTaka = true; // Enabled by default
+    let selectedPlayerObj = null;
+    let players = [];
+    let uniqueScheduledDates = [];
+
+    try {
+      players = JSON.parse(localStorage.getItem("tiki_saved_players") || "[]");
+    } catch (e) {
+      players = [];
+    }
+
+    const fixturesContainer = document.getElementById("fixturesList");
+    const matchCount = document.getElementById("matchCount");
+    const leagueButtons = document.querySelectorAll(".league-btn");
+    const dateFilterGroup = document.getElementById("dateFilterGroup");
+    const toggleTikiBtn = document.getElementById("toggleTikiBtn");
+    const searchInput = document.getElementById("teamSearchInput");
+    const clearSearchBtn = document.getElementById("clearSearchBtn");
+
+    const playerModal = document.getElementById("playerModal");
+    const openPlayerModalBtn = document.getElementById("openPlayerModalBtn");
+    const closePlayerModalBtn = document.getElementById("closePlayerModalBtn");
+    const savePlayerBtn = document.getElementById("savePlayerBtn");
+    const newChildName = document.getElementById("newChildName");
+    const newChildTeam = document.getElementById("newChildTeam");
+    const savedPlayersList = document.getElementById("savedPlayersList");
+    const playerPillsContainer = document.getElementById("playerPillsContainer");
+
+    function isTiki(team = "") {
+      return team.toLowerCase().includes("tiki") || team.toLowerCase().includes("taka");
+    }
+
+    function escapeHtml(str = "") {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function formatDateTimeBadge(dateStr, timeStr) {
+      if (!dateStr || dateStr === "Upcoming") {
+        return timeStr || "Upcoming";
+      }
+
+      try {
+        const s = String(dateStr);
+        const dowMatch = s.match(/\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*\b/i);
+        const dow = dowMatch ? dowMatch[1].substring(0, 3) : "";
+
+        const monthMatch = s.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\b/i);
+        const month = monthMatch ? monthMatch[1].substring(0, 3) : "";
+
+        let dayNum = null;
+        if (monthMatch) {
+          const pattern = new RegExp('(?:' + monthMatch[0] + '[\\s,]+(\\d{1,2})|(\\d{1,2})[\\s,]+' + monthMatch[0] + ')', 'i');
+          const near = s.match(pattern);
+          if (near) dayNum = parseInt(near[1] || near[2], 10);
+        }
+        if (!dayNum) {
+          const cleanStr = s.replace(/\b(Week|Round)\s*\d+\b/gi, '');
+          const anyNum = cleanStr.match(/\b(\d{1,2})(?:st|nd|rd|th)?\b/);
+          if (anyNum) dayNum = parseInt(anyNum[1], 10);
+        }
+
+        let dayStr = "";
+        if (dayNum) {
+          const suf = ["th", "st", "nd", "rd"];
+          const v = dayNum % 100;
+          dayStr = dayNum + (suf[(v - 20) % 10] || suf[v] || suf[0]);
+        }
+
+        const parts = [];
+        if (dow) parts.push(dow);
+        if (dayStr) parts.push(dayStr);
+        if (month) parts.push(month);
+
+        if (parts.length > 0) {
+          return `${parts.join(" ")} · ${timeStr}`;
+        }
+        return `${s} · ${timeStr}`;
+      } catch (e) {
+        return `${dateStr} · ${timeStr}`;
+      }
+    }
+
+    function populateTeamDropdown() {
+      const teamLeagueMap = new Map();
+
+      allFixtures.forEach(item => {
+        const league = item.league || "Unknown";
+        if (item.homeTeam && item.homeTeam !== "TBD") {
+          teamLeagueMap.set(`${item.homeTeam}|||${league}`, { team: item.homeTeam, league });
+        }
+        if (item.awayTeam && item.awayTeam !== "TBD") {
+          teamLeagueMap.set(`${item.awayTeam}|||${league}`, { team: item.awayTeam, league });
+        }
+      });
+
+      const sortedEntries = Array.from(teamLeagueMap.values()).sort((a, b) => {
+        const cmp
