@@ -91,10 +91,14 @@
             <input id="newChildName" type="text" placeholder="e.g. Leo" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600] bg-white" />
           </div>
           <div>
-            <label class="block text-xs font-bold text-gray-700 mb-1">Assigned Team & League</label>
-            <select id="newChildTeam" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600] bg-white">
-              <option value="">Select team & league...</option>
-            </select>
+            <label class="block text-xs font-bold text-gray-700 mb-1">
+              Squads <span class="font-normal text-gray-500">- tick every squad they play for</span>
+            </label>
+            <input id="squadSearchInput" type="text" placeholder="Filter squads..." class="w-full px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600] bg-white" />
+            <div id="squadPicker" class="mt-2 max-h-44 overflow-y-auto border border-gray-300 rounded-xl bg-white"></div>
+            <p class="mt-1.5 text-[11px] text-gray-500 leading-snug">
+              Squad names repeat across ligas - Tiki Taka Blanco plays in Liga 5, 6 and 7 as three different squads - so pick the right liga.
+            </p>
           </div>
           <button id="savePlayerBtn" class="w-full py-2.5 text-xs font-bold bg-[#FF6600] text-white rounded-xl shadow-sm hover:bg-[#e05a00] transition-all">
             Save Player
@@ -115,11 +119,66 @@
     let selectedLeague = "ALL";
     let selectedDateFilter = "ALL";
     let onlyTikiTaka = true;
-    let selectedPlayerObj = null;
+    let selectedPlayerId = null;
     let players = [];
+    let squadFilterQuery = "";
+    let clashNotes = new Map();
+
+    const PLAYERS_STORAGE_KEY = "tiki_saved_players";
+
+    // A squad is a (team, league) pair, never a team name on its own: the same
+    // name fields a different set of kids in each liga.
+    function squadKey(squad) {
+      return `${squad.team}|||${squad.league}`;
+    }
+
+    function makePlayerId() {
+      return `p${Date.now().toString(36)}${Math.random().toString(36).slice(2, 7)}`;
+    }
+
+    // Saved players used to be one row per squad ({ name, team, league }), so a
+    // child in two squads showed up as two children. They are now
+    // { id, name, squads: [...] }; old rows fold together on name once, here.
+    function migratePlayers(stored) {
+      if (!Array.isArray(stored)) return [];
+      const byName = new Map();
+
+      stored.forEach(entry => {
+        if (!entry || !entry.name) return;
+        const name = String(entry.name).trim();
+        if (!name) return;
+
+        const key = name.toLowerCase();
+        if (!byName.has(key)) byName.set(key, { id: makePlayerId(), name, squads: [] });
+        const player = byName.get(key);
+
+        const squads = Array.isArray(entry.squads)
+          ? entry.squads
+          : (entry.team ? [{ team: entry.team, league: entry.league }] : []);
+
+        squads.forEach(squad => {
+          if (!squad || !squad.team) return;
+          const clean = { team: String(squad.team), league: String(squad.league || "") };
+          if (!player.squads.some(s => squadKey(s) === squadKey(clean))) player.squads.push(clean);
+        });
+      });
+
+      return Array.from(byName.values()).filter(player => player.squads.length > 0);
+    }
+
+    function savePlayers() {
+      try {
+        localStorage.setItem(PLAYERS_STORAGE_KEY, JSON.stringify(players));
+      } catch (e) {}
+    }
+
+    function selectedPlayer() {
+      return players.find(player => player.id === selectedPlayerId) || null;
+    }
 
     try {
-      players = JSON.parse(localStorage.getItem("tiki_saved_players") || "[]");
+      players = migratePlayers(JSON.parse(localStorage.getItem(PLAYERS_STORAGE_KEY) || "[]"));
+      savePlayers();
     } catch (e) {
       players = [];
     }
@@ -135,7 +194,8 @@
     const closePlayerModalBtn = document.getElementById("closePlayerModalBtn");
     const savePlayerBtn = document.getElementById("savePlayerBtn");
     const newChildName = document.getElementById("newChildName");
-    const newChildTeam = document.getElementById("newChildTeam");
+    const squadPicker = document.getElementById("squadPicker");
+    const squadSearchInput = document.getElementById("squadSearchInput");
     const savedPlayersList = document.getElementById("savedPlayersList");
     const playerPillsContainer = document.getElementById("playerPillsContainer");
 
@@ -220,30 +280,139 @@
         .sort();
     }
 
-    function populateTeamDropdown() {
-      if (!newChildTeam) return;
-      const teamLeagueMap = new Map();
-
+    // Every (team, league) pair in the feed. The pair is the unit of identity:
+    // Liga 5 Blanco and Liga 6 Blanco are different squads of kids that happen
+    // to share a name, each playing their own 15-match season.
+    function allSquads() {
+      const squads = new Map();
       allFixtures.forEach(item => {
         const league = item.league || "Unknown";
-        if (item.homeTeam && item.homeTeam !== "TBD") {
-          teamLeagueMap.set(`${item.homeTeam}|||${league}`, { team: item.homeTeam, league });
+        [item.homeTeam, item.awayTeam].forEach(team => {
+          if (!team || team === "TBD") return;
+          squads.set(`${team}|||${league}`, { team, league });
+        });
+      });
+      return Array.from(squads.values()).sort((a, b) =>
+        a.league.localeCompare(b.league) || a.team.localeCompare(b.team)
+      );
+    }
+
+    function pendingSquadKeys() {
+      if (!squadPicker) return new Set();
+      return new Set(
+        Array.from(squadPicker.querySelectorAll("input[type=checkbox]:checked"))
+          .map(input => input.value)
+      );
+    }
+
+    function populateSquadPicker(preselected) {
+      if (!squadPicker) return;
+      const checked = preselected || pendingSquadKeys();
+      const q = squadFilterQuery.toLowerCase().trim();
+      const squads = allSquads().filter(squad =>
+        !q || squad.team.toLowerCase().includes(q) || squad.league.toLowerCase().includes(q)
+      );
+
+      if (squads.length === 0) {
+        squadPicker.innerHTML = `<p class="p-3 text-xs text-gray-400 italic">No squads match that filter.</p>`;
+        return;
+      }
+
+      let html = "";
+      let currentLeague = null;
+      squads.forEach(squad => {
+        if (squad.league !== currentLeague) {
+          currentLeague = squad.league;
+          html += `<div class="px-3 py-1.5 bg-gray-100 text-[10px] font-extrabold uppercase tracking-wider text-gray-600">${escapeHtml(currentLeague)}</div>`;
         }
-        if (item.awayTeam && item.awayTeam !== "TBD") {
-          teamLeagueMap.set(`${item.awayTeam}|||${league}`, { team: item.awayTeam, league });
-        }
+        const key = squadKey(squad);
+        html += `
+          <label class="flex items-center gap-2.5 px-3 py-2 text-xs cursor-pointer hover:bg-orange-50 border-t border-gray-100">
+            <input type="checkbox" value="${escapeHtml(key)}" class="accent-[#FF6600]" ${checked.has(key) ? "checked" : ""} />
+            <span class="font-semibold text-gray-800">${escapeHtml(squad.team)}</span>
+          </label>`;
+      });
+      squadPicker.innerHTML = html;
+    }
+
+    // Does this child turn out for this fixture? Both halves of the squad pair
+    // must match, so a Liga 5 Blanco player is not shown Liga 6 Blanco games.
+    function playsIn(player, fixture) {
+      return player.squads.some(squad =>
+        squad.league === fixture.league &&
+        (squad.team === fixture.homeTeam || squad.team === fixture.awayTeam)
+      );
+    }
+
+    function timeToMinutes(time) {
+      const parts = /^(\d{1,2}):(\d{2})\s*(AM|PM)?$/i.exec(String(time || "").trim());
+      if (!parts) return null;
+      let hours = Number(parts[1]) % 12;
+      if ((parts[3] || "").toUpperCase() === "PM") hours += 12;
+      return hours * 60 + Number(parts[2]);
+    }
+
+    // One slot is 45 minutes, so two kick-offs inside that at different venues
+    // mean a dash across Fife.
+    const TIGHT_TURNAROUND_MINUTES = 45;
+
+    // Where one child's squads are both out on the same day: an identical
+    // kick-off is an outright clash, a near-identical one at another venue is a
+    // tight turnaround. Returns fixture id -> notes.
+    function computeClashes() {
+      const notes = new Map();
+      const addNote = (fixture, note) => {
+        if (!notes.has(fixture.id)) notes.set(fixture.id, []);
+        notes.get(fixture.id).push(note);
+      };
+
+      players.forEach(player => {
+        const byDate = new Map();
+        allFixtures.forEach(fixture => {
+          if (!fixture.id || !playsIn(player, fixture)) return;
+          const day = fixture.iso_date || fixture.date;
+          if (!byDate.has(day)) byDate.set(day, []);
+          byDate.get(day).push(fixture);
+        });
+
+        byDate.forEach(dayFixtures => {
+          for (let i = 0; i < dayFixtures.length; i++) {
+            for (let j = i + 1; j < dayFixtures.length; j++) {
+              const a = dayFixtures[i];
+              const b = dayFixtures[j];
+              const aMinutes = timeToMinutes(a.time);
+              const bMinutes = timeToMinutes(b.time);
+              if (aMinutes === null || bMinutes === null) continue;
+
+              const gap = Math.abs(aMinutes - bMinutes);
+              let type = null;
+              if (gap === 0) type = "clash";
+              else if (gap <= TIGHT_TURNAROUND_MINUTES && a.venue !== b.venue) type = "tight";
+              if (!type) continue;
+
+              addNote(a, { playerId: player.id, playerName: player.name, type, other: b });
+              addNote(b, { playerId: player.id, playerName: player.name, type, other: a });
+            }
+          }
+        });
       });
 
-      const sortedEntries = Array.from(teamLeagueMap.values()).sort((a, b) => {
-        const cmp = a.team.localeCompare(b.team);
-        return cmp !== 0 ? cmp : a.league.localeCompare(b.league);
-      });
+      return notes;
+    }
 
-      newChildTeam.innerHTML = '<option value="">Select team & league...</option>' + 
-        sortedEntries.map(entry => {
-          const val = `${entry.team}|||${entry.league}`;
-          return `<option value="${escapeHtml(val)}">${escapeHtml(entry.team)} - ${escapeHtml(entry.league)}</option>`;
-        }).join("");
+    function refreshClashes() {
+      clashNotes = computeClashes();
+    }
+
+    // Each clash is recorded against both fixtures, so halve the tally.
+    function playerClashCount(player) {
+      let hits = 0;
+      clashNotes.forEach(noteList => {
+        noteList.forEach(note => {
+          if (note.playerId === player.id && note.type === "clash") hits++;
+        });
+      });
+      return Math.round(hits / 2);
     }
 
     function renderPlayerPills() {
@@ -259,19 +428,25 @@
 
       let html = `
         <button onclick="selectPlayer(null)" class="px-3 py-1.5 text-xs font-bold rounded-xl transition-all flex-shrink-0 ${
-          selectedPlayerObj === null ? 'bg-black text-white shadow-sm' : 'bg-white text-gray-700 border border-gray-200'
+          selectedPlayerId === null ? 'bg-black text-white shadow-sm' : 'bg-white text-gray-700 border border-gray-200'
         }">
           All Squads
         </button>
       `;
 
-      players.forEach((p, idx) => {
-        const active = selectedPlayerObj && selectedPlayerObj.team === p.team && selectedPlayerObj.league === p.league;
+      players.forEach(player => {
+        const active = selectedPlayerId === player.id;
+        const squadCount = player.squads.length;
+        const clashes = playerClashCount(player);
         html += `
-          <button onclick="selectPlayer(${idx})" class="px-3 py-1.5 text-xs font-bold rounded-xl transition-all whitespace-nowrap flex items-center gap-1.5 flex-shrink-0 ${
+          <button onclick="selectPlayer('${player.id}')" class="px-3 py-1.5 text-xs font-bold rounded-xl transition-all whitespace-nowrap flex items-center gap-1.5 flex-shrink-0 ${
             active ? 'bg-[#FF6600] text-white shadow-sm' : 'bg-white text-gray-700 border border-gray-200'
           }">
-            <span>👦</span> ${escapeHtml(p.name)} (${escapeHtml(p.team)} · ${escapeHtml(p.league)})
+            <span>👦</span> ${escapeHtml(player.name)}
+            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded ${active ? 'bg-white/25' : 'bg-gray-100 text-gray-600'}">
+              ${squadCount} squad${squadCount === 1 ? '' : 's'}
+            </span>
+            ${clashes ? `<span class="text-[10px] font-extrabold px-1.5 py-0.5 rounded ${active ? 'bg-white/25' : 'bg-red-100 text-red-700'}">⚠ ${clashes}</span>` : ''}
           </button>
         `;
       });
@@ -279,8 +454,8 @@
       playerPillsContainer.innerHTML = html;
     }
 
-    window.selectPlayer = function(index) {
-      selectedPlayerObj = index !== null ? players[index] : null;
+    window.selectPlayer = function(playerId) {
+      selectedPlayerId = playerId;
       renderPlayerPills();
       renderFixtures();
     };
@@ -292,30 +467,53 @@
         return;
       }
 
-      savedPlayersList.innerHTML = players.map((p, idx) => `
-        <div class="flex items-center justify-between p-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs">
-          <div>
-            <span class="font-bold text-gray-900">${escapeHtml(p.name)}</span>
-            <span class="text-gray-500 block text-[11px]">${escapeHtml(p.team)} - <span class="text-[#FF6600] font-semibold">${escapeHtml(p.league || '')}</span></span>
+      savedPlayersList.innerHTML = players.map((player, playerIndex) => `
+        <div class="p-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs">
+          <div class="flex items-center justify-between gap-2">
+            <span class="font-bold text-gray-900">${escapeHtml(player.name)}</span>
+            <button onclick="deletePlayer(${playerIndex})" class="text-red-500 hover:text-red-700 font-bold px-2 py-1">
+              Remove
+            </button>
           </div>
-          <button onclick="deletePlayer(${idx})" class="text-red-500 hover:text-red-700 font-bold px-2 py-1">
-            Remove
-          </button>
+          <div class="mt-1.5 flex flex-wrap gap-1.5">
+            ${player.squads.map((squad, squadIndex) => `
+              <span class="inline-flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-2 py-1">
+                <span class="font-semibold text-gray-800">${escapeHtml(squad.team)}</span>
+                <span class="text-[10px] font-extrabold text-[#FF6600]">${escapeHtml(squad.league)}</span>
+                <button onclick="removeSquad(${playerIndex}, ${squadIndex})" title="Remove this squad"
+                        class="text-gray-400 hover:text-red-600 font-bold leading-none">&times;</button>
+              </span>`).join("")}
+          </div>
         </div>
       `).join("");
     }
 
-    window.deletePlayer = function(index) {
-      players.splice(index, 1);
-      if (selectedPlayerObj && !players.some(p => p.team === selectedPlayerObj.team && p.league === selectedPlayerObj.league)) {
-        selectedPlayerObj = null;
-      }
-      try {
-        localStorage.setItem("tiki_saved_players", JSON.stringify(players));
-      } catch (e) {}
+    function afterPlayersChanged() {
+      savePlayers();
+      refreshClashes();
       renderSavedPlayersModalList();
       renderPlayerPills();
       renderFixtures();
+    }
+
+    window.deletePlayer = function(playerIndex) {
+      const removed = players[playerIndex];
+      players.splice(playerIndex, 1);
+      if (removed && selectedPlayerId === removed.id) selectedPlayerId = null;
+      afterPlayersChanged();
+    };
+
+    // Dropping a child's last squad removes the child: a player with no squad
+    // would match nothing and sit there as a dead pill.
+    window.removeSquad = function(playerIndex, squadIndex) {
+      const player = players[playerIndex];
+      if (!player) return;
+      player.squads.splice(squadIndex, 1);
+      if (player.squads.length === 0) {
+        players.splice(playerIndex, 1);
+        if (selectedPlayerId === player.id) selectedPlayerId = null;
+      }
+      afterPlayersChanged();
     };
 
     function renderFixtures() {
@@ -323,6 +521,7 @@
 
       const q = searchQuery.toLowerCase().trim();
       const matchdays = upcomingMatchdays();
+      const activePlayer = selectedPlayer();
       const hasAnyTiki = allFixtures.some(item => isTiki(item.homeTeam) || isTiki(item.awayTeam));
       const activeTikiFilter = onlyTikiTaka && hasAnyTiki;
 
@@ -341,13 +540,7 @@
           venue.toLowerCase().includes(q)
         );
 
-        let matchesPlayer = true;
-        if (selectedPlayerObj) {
-          const leagueMatches = !selectedPlayerObj.league || league === selectedPlayerObj.league;
-          const teamMatches = home.toLowerCase().includes(selectedPlayerObj.team.toLowerCase()) || 
-                              away.toLowerCase().includes(selectedPlayerObj.team.toLowerCase());
-          matchesPlayer = leagueMatches && teamMatches;
-        }
+        const matchesPlayer = !activePlayer || playsIn(activePlayer, item);
 
         let matchesDate = true;
         if (selectedDateFilter === "NEXT_MATCHDAY") {
@@ -361,7 +554,7 @@
         }
 
         if (!matchLeague) return false;
-        if (activeTikiFilter && !containsTiki) return false;
+        if (activeTikiFilter && !activePlayer && !containsTiki) return false;
         if (!matchesSearch) return false;
         if (!matchesPlayer) return false;
         if (!matchesDate) return false;
@@ -389,6 +582,9 @@
         const date = item.date || "Sat 7th Nov";
         const league = item.league || "Fixture";
 
+        const cardNotes = clashNotes.get(item.id) || [];
+        const hasHardClash = cardNotes.some(note => note.type === "clash");
+
         const homeIsTiki = isTiki(home);
         const awayIsTiki = isTiki(away);
         const isTikiMatch = homeIsTiki || awayIsTiki;
@@ -405,7 +601,11 @@
         const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&location=${calLoc}&details=${calDetails}`;
 
         return `
-          <div class="bg-white rounded-2xl p-4 border ${isTikiMatch ? 'border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm' : 'border-gray-200'}">
+          <div class="bg-white rounded-2xl p-4 border ${
+            hasHardClash
+              ? 'border-l-4 border-l-red-500 border-gray-200 shadow-sm'
+              : (isTikiMatch ? 'border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm' : 'border-gray-200')
+          }">
             <div class="flex items-center justify-between mb-3">
               <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-gray-100 text-gray-700 border border-gray-200">
                 ${escapeHtml(league)}
@@ -414,6 +614,24 @@
                 📅 ${escapeHtml(date)} · ${escapeHtml(time)}
               </span>
             </div>
+
+            ${cardNotes.length ? `
+            <div class="mb-2 space-y-1">
+              ${cardNotes.map(note => `
+                <div class="flex items-start gap-1.5 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border ${
+                  note.type === 'clash'
+                    ? 'bg-red-50 text-red-700 border-red-200'
+                    : 'bg-amber-50 text-amber-800 border-amber-200'
+                }">
+                  <span class="flex-shrink-0">${note.type === 'clash' ? '⚠️' : '⏱️'}</span>
+                  <span>
+                    ${escapeHtml(note.playerName)} ${note.type === 'clash' ? 'also plays' : 'is also due'}
+                    ${escapeHtml(note.other.homeTeam)} v ${escapeHtml(note.other.awayTeam)}
+                    at ${escapeHtml(note.other.time)} · ${escapeHtml(note.other.venue)}
+                    <span class="font-semibold opacity-80">(${escapeHtml(note.other.league)})</span>
+                  </span>
+                </div>`).join("")}
+            </div>` : ""}
 
             <div class="my-2 p-3 bg-gray-50 rounded-xl border border-gray-100 space-y-2">
               <div class="flex items-center justify-between gap-2">
@@ -454,7 +672,7 @@
     window.resetFilters = function() {
       selectedLeague = "ALL";
       selectedDateFilter = "ALL";
-      selectedPlayerObj = null;
+      selectedPlayerId = null;
       searchQuery = "";
       onlyTikiTaka = false;
       if (searchInput) searchInput.value = "";
@@ -485,7 +703,9 @@
 
     if (openPlayerModalBtn && playerModal) {
       openPlayerModalBtn.addEventListener("click", () => {
-        populateTeamDropdown();
+        squadFilterQuery = "";
+        if (squadSearchInput) squadSearchInput.value = "";
+        populateSquadPicker(new Set());
         renderSavedPlayersModalList();
         playerModal.classList.remove("hidden");
       });
@@ -500,21 +720,44 @@
     if (savePlayerBtn) {
       savePlayerBtn.addEventListener("click", () => {
         const name = newChildName ? newChildName.value.trim() : "";
-        const rawVal = newChildTeam ? newChildTeam.value : "";
-        if (!name || !rawVal) {
-          alert("Please enter a child's name and choose their team and league.");
+        const keys = Array.from(pendingSquadKeys());
+
+        if (!name || keys.length === 0) {
+          alert("Please enter a child's name and tick at least one squad.");
           return;
         }
-        const [team, league] = rawVal.split("|||");
-        players.push({ name, team, league });
-        try {
-          localStorage.setItem("tiki_saved_players", JSON.stringify(players));
-        } catch (e) {}
+
+        const squads = keys.map(key => {
+          const [team, league] = key.split("|||");
+          return { team, league };
+        });
+
+        // Saving the same name again tops that child up with the newly ticked
+        // squads rather than creating a second child with the same name.
+        const existing = players.find(player => player.name.toLowerCase() === name.toLowerCase());
+        if (existing) {
+          squads.forEach(squad => {
+            if (!existing.squads.some(s => squadKey(s) === squadKey(squad))) existing.squads.push(squad);
+          });
+        } else {
+          players.push({ id: makePlayerId(), name, squads });
+        }
+
         if (newChildName) newChildName.value = "";
-        if (newChildTeam) newChildTeam.value = "";
+        squadFilterQuery = "";
+        if (squadSearchInput) squadSearchInput.value = "";
+        populateSquadPicker(new Set());
+
+        afterPlayersChanged();
         if (playerModal) playerModal.classList.add("hidden");
-        renderPlayerPills();
-        renderFixtures();
+      });
+    }
+
+    if (squadSearchInput) {
+      squadSearchInput.addEventListener("input", (event) => {
+        squadFilterQuery = event.target.value;
+        // Keep anything already ticked ticked while the list is filtered.
+        populateSquadPicker(pendingSquadKeys());
       });
     }
 
@@ -567,7 +810,7 @@
       .then(res => res.json())
       .then(data => {
         allFixtures = processFixtures(Array.isArray(data) ? data : []);
-        populateTeamDropdown();
+        refreshClashes();
         renderPlayerPills();
         renderFixtures();
       })
@@ -576,7 +819,7 @@
           .then(res => res.json())
           .then(data => {
             allFixtures = processFixtures(Array.isArray(data) ? data : []);
-            populateTeamDropdown();
+            refreshClashes();
             renderPlayerPills();
             renderFixtures();
           })
