@@ -2,22 +2,23 @@ name: Futsal Fixtures Scraper
 
 on:
   schedule:
-    # Runs every 4 hours automatically
     - cron: '0 */4 * * *'
-  # Allows manual triggering from the GitHub UI for testing
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
