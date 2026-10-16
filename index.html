@@ -815,7 +815,7 @@
         renderFixtures();
       })
       .catch(() => {
-        fetch("https://raw.githubusercontent.com/gregmurphy-creator/futsal-fixture-scraper/main/fixtures_data.json")
+        fetch("https://raw.githubusercontent.com/gregmurphy-creator/tiki-taka/main/fixtures_data.json")
           .then(res => res.json())
           .then(data => {
             allFixtures = processFixtures(Array.isArray(data) ? data : []);
