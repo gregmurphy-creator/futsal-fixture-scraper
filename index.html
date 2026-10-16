@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tiki Taka - Winter Futsal 2026</title>
+  <title>Tiki Taka - Winter Futsal 2026/27</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen">
@@ -15,7 +15,7 @@
         <h1 class="text-2xl font-black tracking-tight text-gray-900">
           Tiki Taka <span class="text-[#FF6600]">-</span> Winter Futsal
         </h1>
-        <p class="text-sm text-gray-500 font-medium">Match Fixtures 2026</p>
+        <p class="text-sm text-gray-500 font-medium">Match Fixtures 2026/27</p>
       </div>
       <button id="openPlayerModalBtn" class="px-3 py-1.5 text-xs font-bold bg-[#FF6600] text-white rounded-xl shadow-sm hover:bg-[#e05a00] flex items-center gap-1.5 transition-all">
         <span>👤</span> Manage Players
@@ -68,16 +68,11 @@
 
     <!-- Status Subheader -->
     <div class="flex items-center justify-between mb-3 px-1">
-      <span id="matchCount" class="text-xs font-medium text-gray-500">Connecting to live feed...</span>
+      <span id="matchCount" class="text-xs font-medium text-gray-500">Loading matches...</span>
     </div>
 
     <!-- Fixture List -->
-    <div id="fixturesList" class="space-y-3">
-      <div class="bg-white rounded-2xl p-10 text-center border border-gray-200">
-        <div class="animate-spin inline-block w-8 h-8 border-4 border-current border-t-transparent text-[#FF6600] rounded-full mb-3"></div>
-        <p class="text-sm font-semibold text-gray-600">Loading live fixtures from GitHub...</p>
-      </div>
-    </div>
+    <div id="fixturesList" class="space-y-3"></div>
   </div>
 
   <!-- PLAYER MANAGEMENT MODAL -->
@@ -109,111 +104,4 @@
 
       <div>
         <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Saved Players</h4>
-        <div id="savedPlayersList" class="space-y-2 max-h-48 overflow-y-auto"></div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    let allFixtures = [];
-    let searchQuery = "";
-    let selectedLeague = "ALL";
-    let selectedDateFilter = "ALL";
-    let onlyTikiTaka = true;
-    let selectedPlayerObj = null;
-    let players = [];
-    let uniqueDates = [];
-
-    try {
-      players = JSON.parse(localStorage.getItem("tiki_saved_players") || "[]");
-    } catch (e) {
-      players = [];
-    }
-
-    const fixturesContainer = document.getElementById("fixturesList");
-    const matchCount = document.getElementById("matchCount");
-    const dateFilterGroup = document.getElementById("dateFilterGroup");
-    const toggleTikiBtn = document.getElementById("toggleTikiBtn");
-    const searchInput = document.getElementById("teamSearchInput");
-    const clearSearchBtn = document.getElementById("clearSearchBtn");
-
-    const playerModal = document.getElementById("playerModal");
-    const openPlayerModalBtn = document.getElementById("openPlayerModalBtn");
-    const closePlayerModalBtn = document.getElementById("closePlayerModalBtn");
-    const savePlayerBtn = document.getElementById("savePlayerBtn");
-    const newChildName = document.getElementById("newChildName");
-    const newChildTeam = document.getElementById("newChildTeam");
-    const savedPlayersList = document.getElementById("savedPlayersList");
-    const playerPillsContainer = document.getElementById("playerPillsContainer");
-
-    function isTiki(team = "") {
-      const s = String(team || "").toLowerCase();
-      return s.includes("tiki") || s.includes("taka");
-    }
-
-    function escapeHtml(str = "") {
-      return String(str || "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-    }
-
-    function resolveScheduleDates(rawFixtures) {
-      const startDate = new Date(2026, 10, 7); // Saturday, November 7, 2026
-
-      function timeToMin(tStr) {
-        const m = String(tStr).match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
-        if (!m) return 0;
-        let h = parseInt(m[1], 10);
-        const mn = parseInt(m[2], 10);
-        const mer = m[3].toUpperCase();
-        if (mer === "PM" && h !== 12) h += 12;
-        else if (mer === "AM" && h === 12) h = 0;
-        return h * 60 + mn;
-      }
-
-      function getSuffix(d) {
-        if (d >= 11 && d <= 13) return "th";
-        const rem = d % 10;
-        if (rem === 1) return "st";
-        if (rem === 2) return "nd";
-        if (rem === 3) return "rd";
-        return "th";
-      }
-
-      const leagues = {};
-      rawFixtures.forEach(f => {
-        const lg = f.league || "Unknown";
-        if (!leagues[lg]) leagues[lg] = [];
-        leagues[lg].push(f);
-      });
-
-      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-      const resolved = [];
-
-      Object.keys(leagues).forEach(lg => {
-        const list = leagues[lg];
-        let currRound = 1;
-        let lastMin = -1;
-
-        list.forEach((item, idx) => {
-          const rawDate = String(item.date || "").trim();
-          let finalDate = rawDate;
-
-          if (!rawDate || rawDate === "Upcoming" || rawDate.toLowerCase().startsWith("round") || rawDate.toLowerCase().startsWith("week")) {
-            if (lg === "Liga 7") {
-              currRound = Math.floor(idx / 5) + 1;
-            } else {
-              const tMin = timeToMin(item.time || "");
-              if (lastMin !== -1 && tMin < lastMin && (lastMin - tMin) > 60) {
-                currRound += 1;
-                lastMin = tMin;
-              } else {
-                if (tMin > lastMin) lastMin = tMin;
-              }
-            }
-
-            const matchDate = new Date(startDate.getTime());
-            matchDate.setDate(matchDate.getDate()
+        <div id="savedPlayersList" class="space-y-2 max-
