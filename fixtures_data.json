@@ -2,937 +2,341 @@
   {
     "id": "liga5-1",
     "league": "Liga 5",
-    "venue": "Beath High School",
+    "date": "Week 1",
+    "venue": "Saturday, November 7 Beath High School",
     "time": "9:00 AM",
     "homeTeam": "Inverkeithing United",
-    "awayTeam": "Swifts Raiders",
-    "raw_fixture": "Beath High School 9:00 AM Inverkeithing United V Swifts Raiders"
+    "awayTeam": "Swifts Raiders Caledonia High School, Rosyth 9:00 AM Duloch Juniors - Blacks",
+    "raw_fixture": "Saturday, November 7 Beath High School 9:00 AM Inverkeithing United V Swifts Raiders Caledonia High School, Rosyth 9:00 AM Duloch Juniors - Blacks V WLFA Beath High School 9:45 AM Tiki Taka Blanco V Rosyth Blacks Caledonia High School, Rosyth 9:45 AM DACC Blacks V Futsal Escocia White Beath High School 10:30 AM Swifts Falcons 2017 V DACC Boys 17 Caledonia High School, Rosyth 10:30 AM KSQ Galaxy V Duloch City 2018s Beath High School 11:15 AM Tiki Taka Neranja V Tiki Taka Negra Caledonia High School, Rosyth 11:15 AM Duloch Juniors - Reds V Bayside Bullets 2017s Beath High School 12:00 PM Templehall United Yellows 2018 V KSQ 2018 Galaxy Caledonia High School, Rosyth 12:00 PM Bayside Barcas V DACC Girls 2017 Whites Beath High School 12:45 PM Blue Brazil Blues 2019's V Greig Park Greens Caledonia High School, Rosyth 12:45 PM Futsal Escocia Turquoise V Dunipace Ballerz White Beath High School 1:30 PM Dunipace Ballerz Black V DACC Girls Blacks Beath High School 2:15 PM Bowhill United Yellows V Cairneyhill Ath Maroons Beath High School Refurb 2:15 PM Crossgates Primrose 2016s Blues V Bowhill United Blacks"
   },
   {
     "id": "liga5-2",
     "league": "Liga 5",
-    "venue": "Caledonia High School, Rosyth",
+    "date": "Week 1",
+    "venue": "Saturday, November 7 Beath High School",
     "time": "9:00 AM",
-    "homeTeam": "Duloch Juniors - Blacks",
-    "awayTeam": "WLFA",
-    "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Duloch Juniors - Blacks V WLFA"
-  },
-  {
-    "id": "liga5-3",
-    "league": "Liga 5",
-    "venue": "Beath High School",
-    "time": "9:45 AM",
-    "homeTeam": "Tiki Taka Blanco",
-    "awayTeam": "Rosyth Blacks",
-    "raw_fixture": "Beath High School 9:45 AM Tiki Taka Blanco V Rosyth Blacks"
-  },
-  {
-    "id": "liga5-4",
-    "league": "Liga 5",
-    "venue": "Caledonia High School, Rosyth",
-    "time": "9:45 AM",
-    "homeTeam": "DACC Blacks",
-    "awayTeam": "Futsal Escocia White",
-    "raw_fixture": "Caledonia High School, Rosyth 9:45 AM DACC Blacks V Futsal Escocia White"
-  },
-  {
-    "id": "liga5-5",
-    "league": "Liga 5",
-    "venue": "Beath High School",
-    "time": "10:30 AM",
-    "homeTeam": "Swifts Falcons 2017",
-    "awayTeam": "DACC Boys 17",
-    "raw_fixture": "Beath High School 10:30 AM Swifts Falcons 2017 V DACC Boys 17"
-  },
-  {
-    "id": "liga5-6",
-    "league": "Liga 5",
-    "venue": "Caledonia High School, Rosyth",
-    "time": "10:30 AM",
-    "homeTeam": "KSQ Galaxy",
-    "awayTeam": "Duloch City 2018s",
-    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM KSQ Galaxy V Duloch City 2018s"
-  },
-  {
-    "id": "liga5-7",
-    "league": "Liga 5",
-    "venue": "Beath High School",
-    "time": "11:15 AM",
-    "homeTeam": "Tiki Taka Neranja",
-    "awayTeam": "Tiki Taka Negra",
-    "raw_fixture": "Beath High School 11:15 AM Tiki Taka Neranja V Tiki Taka Negra"
-  },
-  {
-    "id": "liga5-8",
-    "league": "Liga 5",
-    "venue": "Caledonia High School, Rosyth",
-    "time": "11:15 AM",
-    "homeTeam": "Duloch Juniors - Reds",
-    "awayTeam": "Bayside Bullets 2017s",
-    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Duloch Juniors - Reds V Bayside Bullets 2017s"
-  },
-  {
-    "id": "liga5-9",
-    "league": "Liga 5",
-    "venue": "Beath High School",
-    "time": "12:00 PM",
-    "homeTeam": "Templehall United Yellows 2018",
-    "awayTeam": "KSQ 2018 Galaxy",
-    "raw_fixture": "Beath High School 12:00 PM Templehall United Yellows 2018 V KSQ 2018 Galaxy"
-  },
-  {
-    "id": "liga5-10",
-    "league": "Liga 5",
-    "venue": "Caledonia High School, Rosyth",
-    "time": "12:00 PM",
-    "homeTeam": "Bayside Barcas",
-    "awayTeam": "DACC Girls 2017 Whites",
-    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Bayside Barcas V DACC Girls 2017 Whites"
-  },
-  {
-    "id": "liga5-11",
-    "league": "Liga 5",
-    "venue": "Beath High School",
-    "time": "12:45 PM",
-    "homeTeam": "Blue Brazil Blues 2019's",
-    "awayTeam": "Greig Park Greens",
-    "raw_fixture": "Beath High School 12:45 PM Blue Brazil Blues 2019's V Greig Park Greens"
-  },
-  {
-    "id": "liga5-12",
-    "league": "Liga 5",
-    "venue": "Caledonia High School, Rosyth",
-    "time": "12:45 PM",
-    "homeTeam": "Futsal Escocia Turquoise",
-    "awayTeam": "Dunipace Ballerz White",
-    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Futsal Escocia Turquoise V Dunipace Ballerz White"
-  },
-  {
-    "id": "liga5-13",
-    "league": "Liga 5",
-    "venue": "Beath High School",
-    "time": "1:30 PM",
-    "homeTeam": "Dunipace Ballerz Black",
-    "awayTeam": "DACC Girls Blacks",
-    "raw_fixture": "Beath High School 1:30 PM Dunipace Ballerz Black V DACC Girls Blacks"
-  },
-  {
-    "id": "liga5-14",
-    "league": "Liga 5",
-    "venue": "Beath High School",
-    "time": "2:15 PM",
-    "homeTeam": "Bowhill United Yellows",
-    "awayTeam": "Cairneyhill Ath Maroons",
-    "raw_fixture": "Beath High School 2:15 PM Bowhill United Yellows V Cairneyhill Ath Maroons"
-  },
-  {
-    "id": "liga5-15",
-    "league": "Liga 5",
-    "venue": "Beath High School Refurb",
-    "time": "2:15 PM",
-    "homeTeam": "Crossgates Primrose 2016s Blues",
-    "awayTeam": "Bowhill United Blacks",
-    "raw_fixture": "Beath High School Refurb 2:15 PM Crossgates Primrose 2016s Blues V Bowhill United Blacks"
+    "homeTeam": "Inverkeithing United",
+    "awayTeam": "Swifts Raiders Caledonia High School, Rosyth 9:00 AM Duloch Juniors - Blacks",
+    "raw_fixture": "Saturday, November 7 Beath High School 9:00 AM Inverkeithing United V Swifts Raiders Caledonia High School, Rosyth 9:00 AM Duloch Juniors - Blacks V WLFA Beath High School 9:45 AM Tiki Taka Blanco V Rosyth Blacks Caledonia High School, Rosyth 9:45 AM DACC Blacks V Futsal Escocia White Beath High School 10:30 AM Swifts Falcons 2017 V DACC Boys 17 Caledonia High School, Rosyth 10:30 AM KSQ Galaxy V Duloch City 2018s Beath High School 11:15 AM Tiki Taka Neranja V Tiki Taka Negra Caledonia High School, Rosyth 11:15 AM Duloch Juniors - Reds V Bayside Bullets 2017s Beath High School 12:00 PM Templehall United Yellows 2018 V KSQ 2018 Galaxy Caledonia High School, Rosyth 12:00 PM Bayside Barcas V DACC Girls 2017 Whites Beath High School 12:45 PM Blue Brazil Blues 2019's V Greig Park Greens Caledonia High School, Rosyth 12:45 PM Futsal Escocia Turquoise V Dunipace Ballerz White Beath High School 1:30 PM Dunipace Ballerz Black V DACC Girls Blacks Beath High School 2:15 PM Bowhill United Yellows V Cairneyhill Ath Maroons Beath High School Refurb 2:15 PM Crossgates Primrose 2016s Blues V Bowhill United Blacks"
   },
   {
     "id": "liga6-1",
     "league": "Liga 6",
-    "venue": "Beath High School Refurb",
+    "date": "Week 1",
+    "venue": "Saturday, November 7 Beath High School Refurb",
     "time": "9:00 AM",
     "homeTeam": "Cairneyhill Ath Blues",
-    "awayTeam": "Crossgates Blue",
-    "raw_fixture": "Beath High School Refurb 9:00 AM Cairneyhill Ath Blues V Crossgates Blue"
+    "awayTeam": "Crossgates Blue Beath High School Refurb 9:45 AM Dunipace Ballerz Red",
+    "raw_fixture": "Saturday, November 7 Beath High School Refurb 9:00 AM Cairneyhill Ath Blues V Crossgates Blue Beath High School Refurb 9:45 AM Dunipace Ballerz Red V Swifts Thunder Beath High School Refurb 10:30 AM KSQ Thunder V Futsal Escocia Turquoise Balwearie High School 10:30 AM Futsal Escocia White V Templehall Utd Blacks Beath High School Refurb 11:15 AM Crossgates Yellow V Rosyth Reds 2018 Balwearie High School 11:15 AM DACC Whites V Tiki Taka Blanco Lochgelly High School 11:15 AM Kelty Hearts V KSQ Lightning Beath High School Refurb 12:00 PM Swift Hurricanes V Glenrothes Strollers Balwearie High School 12:00 PM Blue Brazil 2018 V Tiki Taka Negra Beath High School Refurb 12:45 PM KSQ Astros V KSQ 2018 Rapids Balwearie High School 12:45 PM Duloch Juniors V Tiki Taka Neranja Beath High School Refurb 1:30 PM Rosyth Blacks 2018 V Duloch Juniors City Balwearie High School 1:30 PM Swifts Lightnings V Greig Park Blues Balwearie High School 2:15 PM Swifts Lightening V Tiki Taka Gris"
   },
   {
     "id": "liga6-2",
     "league": "Liga 6",
-    "venue": "Beath High School Refurb",
-    "time": "9:45 AM",
-    "homeTeam": "Dunipace Ballerz Red",
-    "awayTeam": "Swifts Thunder",
-    "raw_fixture": "Beath High School Refurb 9:45 AM Dunipace Ballerz Red V Swifts Thunder"
-  },
-  {
-    "id": "liga6-3",
-    "league": "Liga 6",
-    "venue": "Beath High School Refurb",
-    "time": "10:30 AM",
-    "homeTeam": "KSQ Thunder",
-    "awayTeam": "Futsal Escocia Turquoise",
-    "raw_fixture": "Beath High School Refurb 10:30 AM KSQ Thunder V Futsal Escocia Turquoise"
-  },
-  {
-    "id": "liga6-4",
-    "league": "Liga 6",
-    "venue": "Balwearie High School",
-    "time": "10:30 AM",
-    "homeTeam": "Futsal Escocia White",
-    "awayTeam": "Templehall Utd Blacks",
-    "raw_fixture": "Balwearie High School 10:30 AM Futsal Escocia White V Templehall Utd Blacks"
-  },
-  {
-    "id": "liga6-5",
-    "league": "Liga 6",
-    "venue": "Beath High School Refurb",
-    "time": "11:15 AM",
-    "homeTeam": "Crossgates Yellow",
-    "awayTeam": "Rosyth Reds 2018",
-    "raw_fixture": "Beath High School Refurb 11:15 AM Crossgates Yellow V Rosyth Reds 2018"
-  },
-  {
-    "id": "liga6-6",
-    "league": "Liga 6",
-    "venue": "Balwearie High School",
-    "time": "11:15 AM",
-    "homeTeam": "DACC Whites",
-    "awayTeam": "Tiki Taka Blanco",
-    "raw_fixture": "Balwearie High School 11:15 AM DACC Whites V Tiki Taka Blanco"
-  },
-  {
-    "id": "liga6-7",
-    "league": "Liga 6",
-    "venue": "Lochgelly High School",
-    "time": "11:15 AM",
-    "homeTeam": "Kelty Hearts",
-    "awayTeam": "KSQ Lightning",
-    "raw_fixture": "Lochgelly High School 11:15 AM Kelty Hearts V KSQ Lightning"
-  },
-  {
-    "id": "liga6-8",
-    "league": "Liga 6",
-    "venue": "Beath High School Refurb",
-    "time": "12:00 PM",
-    "homeTeam": "Swift Hurricanes",
-    "awayTeam": "Glenrothes Strollers",
-    "raw_fixture": "Beath High School Refurb 12:00 PM Swift Hurricanes V Glenrothes Strollers"
-  },
-  {
-    "id": "liga6-9",
-    "league": "Liga 6",
-    "venue": "Balwearie High School",
-    "time": "12:00 PM",
-    "homeTeam": "Blue Brazil 2018",
-    "awayTeam": "Tiki Taka Negra",
-    "raw_fixture": "Balwearie High School 12:00 PM Blue Brazil 2018 V Tiki Taka Negra"
-  },
-  {
-    "id": "liga6-10",
-    "league": "Liga 6",
-    "venue": "Beath High School Refurb",
-    "time": "12:45 PM",
-    "homeTeam": "KSQ Astros",
-    "awayTeam": "KSQ 2018 Rapids",
-    "raw_fixture": "Beath High School Refurb 12:45 PM KSQ Astros V KSQ 2018 Rapids"
-  },
-  {
-    "id": "liga6-11",
-    "league": "Liga 6",
-    "venue": "Balwearie High School",
-    "time": "12:45 PM",
-    "homeTeam": "Duloch Juniors",
-    "awayTeam": "Tiki Taka Neranja",
-    "raw_fixture": "Balwearie High School 12:45 PM Duloch Juniors V Tiki Taka Neranja"
-  },
-  {
-    "id": "liga6-12",
-    "league": "Liga 6",
-    "venue": "Beath High School Refurb",
-    "time": "1:30 PM",
-    "homeTeam": "Rosyth Blacks 2018",
-    "awayTeam": "Duloch Juniors City",
-    "raw_fixture": "Beath High School Refurb 1:30 PM Rosyth Blacks 2018 V Duloch Juniors City"
-  },
-  {
-    "id": "liga6-13",
-    "league": "Liga 6",
-    "venue": "Balwearie High School",
-    "time": "1:30 PM",
-    "homeTeam": "Swifts Lightnings",
-    "awayTeam": "Greig Park Blues",
-    "raw_fixture": "Balwearie High School 1:30 PM Swifts Lightnings V Greig Park Blues"
-  },
-  {
-    "id": "liga6-14",
-    "league": "Liga 6",
-    "venue": "Balwearie High School",
-    "time": "2:15 PM",
-    "homeTeam": "Swifts Lightening",
-    "awayTeam": "Tiki Taka Gris",
-    "raw_fixture": "Balwearie High School 2:15 PM Swifts Lightening V Tiki Taka Gris"
+    "date": "Week 1",
+    "venue": "Saturday, November 7 Beath High School Refurb",
+    "time": "9:00 AM",
+    "homeTeam": "Cairneyhill Ath Blues",
+    "awayTeam": "Crossgates Blue Beath High School Refurb 9:45 AM Dunipace Ballerz Red",
+    "raw_fixture": "Saturday, November 7 Beath High School Refurb 9:00 AM Cairneyhill Ath Blues V Crossgates Blue Beath High School Refurb 9:45 AM Dunipace Ballerz Red V Swifts Thunder Beath High School Refurb 10:30 AM KSQ Thunder V Futsal Escocia Turquoise Balwearie High School 10:30 AM Futsal Escocia White V Templehall Utd Blacks Beath High School Refurb 11:15 AM Crossgates Yellow V Rosyth Reds 2018 Balwearie High School 11:15 AM DACC Whites V Tiki Taka Blanco Lochgelly High School 11:15 AM Kelty Hearts V KSQ Lightning Beath High School Refurb 12:00 PM Swift Hurricanes V Glenrothes Strollers Balwearie High School 12:00 PM Blue Brazil 2018 V Tiki Taka Negra Beath High School Refurb 12:45 PM KSQ Astros V KSQ 2018 Rapids Balwearie High School 12:45 PM Duloch Juniors V Tiki Taka Neranja Beath High School Refurb 1:30 PM Rosyth Blacks 2018 V Duloch Juniors City Balwearie High School 1:30 PM Swifts Lightnings V Greig Park Blues Balwearie High School 2:15 PM Swifts Lightening V Tiki Taka Gris"
   },
   {
     "id": "liga7-1",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
+    "date": "Week 1",
+    "venue": "Saturday, November 7 Balwearie High School",
     "time": "9:00 AM",
     "homeTeam": "KSQ Knights",
-    "awayTeam": "Kennoway Star Hearts 2019's B",
-    "raw_fixture": "Balwearie High School 9:00 AM KSQ Knights V Kennoway Star Hearts 2019's B"
+    "awayTeam": "Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Swifts Tornadoes",
+    "raw_fixture": "Saturday, November 7 Balwearie High School 9:00 AM KSQ Knights V Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Swifts Tornadoes V Futsal Escocia Balwearie High School 9:45 AM Duloch Juniors United V Kennoway Star Hearts 2019's A Lochgelly High School 9:45 AM Swifts Typhoons V Bayside Girls 2018s Lochgelly High School 10:30 AM Tiki Taka Blanco V Kelty Hearts 2020"
   },
   {
     "id": "liga7-2",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
+    "date": "Week 1",
+    "venue": "Saturday, November 7 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Swifts Tornadoes",
-    "awayTeam": "Futsal Escocia",
-    "raw_fixture": "Lochgelly High School 9:00 AM Swifts Tornadoes V Futsal Escocia"
+    "homeTeam": "KSQ Knights",
+    "awayTeam": "Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Swifts Tornadoes",
+    "raw_fixture": "Saturday, November 7 Balwearie High School 9:00 AM KSQ Knights V Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Swifts Tornadoes V Futsal Escocia Balwearie High School 9:45 AM Duloch Juniors United V Kennoway Star Hearts 2019's A Lochgelly High School 9:45 AM Swifts Typhoons V Bayside Girls 2018s Lochgelly High School 10:30 AM Tiki Taka Blanco V Kelty Hearts 2020"
   },
   {
     "id": "liga7-3",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Duloch Juniors United",
-    "awayTeam": "Kennoway Star Hearts 2019's A",
-    "raw_fixture": "Balwearie High School 9:45 AM Duloch Juniors United V Kennoway Star Hearts 2019's A"
+    "date": "Week 2",
+    "venue": "Saturday, November 14 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "Swifts Typhoons Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, November 14 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Swifts Typhoons Lochgelly High School 9:00 AM Futsal Escocia V Kelty Hearts 2020 Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Swifts Tornadoes Lochgelly High School 9:45 AM KSQ Knights V Duloch Juniors United Lochgelly High School 10:30 AM Bayside Girls 2018s V Tiki Taka Blanco"
   },
   {
     "id": "liga7-4",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Swifts Typhoons",
-    "awayTeam": "Bayside Girls 2018s",
-    "raw_fixture": "Lochgelly High School 9:45 AM Swifts Typhoons V Bayside Girls 2018s"
+    "date": "Week 2",
+    "venue": "Saturday, November 14 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "Swifts Typhoons Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, November 14 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Swifts Typhoons Lochgelly High School 9:00 AM Futsal Escocia V Kelty Hearts 2020 Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Swifts Tornadoes Lochgelly High School 9:45 AM KSQ Knights V Duloch Juniors United Lochgelly High School 10:30 AM Bayside Girls 2018s V Tiki Taka Blanco"
   },
   {
     "id": "liga7-5",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Tiki Taka Blanco",
-    "awayTeam": "Kelty Hearts 2020",
-    "raw_fixture": "Lochgelly High School 10:30 AM Tiki Taka Blanco V Kelty Hearts 2020"
+    "date": "Week 3",
+    "venue": "Saturday, November 21 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kelty Hearts 2020",
+    "awayTeam": "Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Tiki Taka Blanco",
+    "raw_fixture": "Saturday, November 21 Balwearie High School 9:00 AM Kelty Hearts 2020 V Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Tiki Taka Blanco V Futsal Escocia Balwearie High School 9:45 AM Bayside Girls 2018s V Kennoway Star Hearts 2019's B Lochgelly High School 9:45 AM Duloch Juniors United V Swifts Typhoons Lochgelly High School 10:30 AM Swifts Tornadoes V KSQ Knights"
   },
   {
     "id": "liga7-6",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
+    "date": "Week 3",
+    "venue": "Saturday, November 21 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's B",
-    "awayTeam": "Swifts Typhoons",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Swifts Typhoons"
+    "homeTeam": "Kelty Hearts 2020",
+    "awayTeam": "Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Tiki Taka Blanco",
+    "raw_fixture": "Saturday, November 21 Balwearie High School 9:00 AM Kelty Hearts 2020 V Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Tiki Taka Blanco V Futsal Escocia Balwearie High School 9:45 AM Bayside Girls 2018s V Kennoway Star Hearts 2019's B Lochgelly High School 9:45 AM Duloch Juniors United V Swifts Typhoons Lochgelly High School 10:30 AM Swifts Tornadoes V KSQ Knights"
   },
   {
     "id": "liga7-7",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
+    "date": "Week 4",
+    "venue": "Saturday, November 28 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "Kelty Hearts 2020",
-    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Kelty Hearts 2020"
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "Tiki Taka Blanco Lochgelly High School 9:00 AM KSQ Knights",
+    "raw_fixture": "Saturday, November 28 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Tiki Taka Blanco Lochgelly High School 9:00 AM KSQ Knights V Kelty Hearts 2020 Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Futsal Escocia Lochgelly High School 9:45 AM Bayside Girls 2018s V Duloch Juniors United Lochgelly High School 10:30 AM Swifts Typhoons V Swifts Tornadoes"
   },
   {
     "id": "liga7-8",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's A",
-    "awayTeam": "Swifts Tornadoes",
-    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Swifts Tornadoes"
+    "date": "Week 4",
+    "venue": "Saturday, November 28 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "Tiki Taka Blanco Lochgelly High School 9:00 AM KSQ Knights",
+    "raw_fixture": "Saturday, November 28 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Tiki Taka Blanco Lochgelly High School 9:00 AM KSQ Knights V Kelty Hearts 2020 Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Futsal Escocia Lochgelly High School 9:45 AM Bayside Girls 2018s V Duloch Juniors United Lochgelly High School 10:30 AM Swifts Typhoons V Swifts Tornadoes"
   },
   {
     "id": "liga7-9",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "KSQ Knights",
-    "awayTeam": "Duloch Juniors United",
-    "raw_fixture": "Lochgelly High School 9:45 AM KSQ Knights V Duloch Juniors United"
+    "date": "Week 5",
+    "venue": "Saturday, December 5 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Duloch Juniors United",
+    "awayTeam": "Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, December 5 Balwearie High School 9:00 AM Duloch Juniors United V Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Futsal Escocia V KSQ Knights Balwearie High School 9:45 AM Tiki Taka Blanco V Kennoway Star Hearts 2019's A Lochgelly High School 9:45 AM Swifts Tornadoes V Bayside Girls 2018s Lochgelly High School 10:30 AM Kelty Hearts 2020 V Swifts Typhoons"
   },
   {
     "id": "liga7-10",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Bayside Girls 2018s",
-    "awayTeam": "Tiki Taka Blanco",
-    "raw_fixture": "Lochgelly High School 10:30 AM Bayside Girls 2018s V Tiki Taka Blanco"
+    "date": "Week 5",
+    "venue": "Saturday, December 5 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Duloch Juniors United",
+    "awayTeam": "Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, December 5 Balwearie High School 9:00 AM Duloch Juniors United V Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Futsal Escocia V KSQ Knights Balwearie High School 9:45 AM Tiki Taka Blanco V Kennoway Star Hearts 2019's A Lochgelly High School 9:45 AM Swifts Tornadoes V Bayside Girls 2018s Lochgelly High School 10:30 AM Kelty Hearts 2020 V Swifts Typhoons"
   },
   {
     "id": "liga7-11",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
+    "date": "Week 6",
+    "venue": "Saturday, December 12 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Kelty Hearts 2020",
-    "awayTeam": "Kennoway Star Hearts 2019's A",
-    "raw_fixture": "Balwearie High School 9:00 AM Kelty Hearts 2020 V Kennoway Star Hearts 2019's A"
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "Swifts Tornadoes Lochgelly High School 9:00 AM Swifts Typhoons",
+    "raw_fixture": "Saturday, December 12 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Swifts Tornadoes Lochgelly High School 9:00 AM Swifts Typhoons V Futsal Escocia Balwearie High School 9:45 AM KSQ Knights V Kennoway Star Hearts 2019's A Lochgelly High School 9:45 AM Duloch Juniors United V Tiki Taka Blanco Lochgelly High School 10:30 AM Bayside Girls 2018s V Kelty Hearts 2020"
   },
   {
     "id": "liga7-12",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
+    "date": "Week 6",
+    "venue": "Saturday, December 12 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Tiki Taka Blanco",
-    "awayTeam": "Futsal Escocia",
-    "raw_fixture": "Lochgelly High School 9:00 AM Tiki Taka Blanco V Futsal Escocia"
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "Swifts Tornadoes Lochgelly High School 9:00 AM Swifts Typhoons",
+    "raw_fixture": "Saturday, December 12 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Swifts Tornadoes Lochgelly High School 9:00 AM Swifts Typhoons V Futsal Escocia Balwearie High School 9:45 AM KSQ Knights V Kennoway Star Hearts 2019's A Lochgelly High School 9:45 AM Duloch Juniors United V Tiki Taka Blanco Lochgelly High School 10:30 AM Bayside Girls 2018s V Kelty Hearts 2020"
   },
   {
     "id": "liga7-13",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Bayside Girls 2018s",
-    "awayTeam": "Kennoway Star Hearts 2019's B",
-    "raw_fixture": "Balwearie High School 9:45 AM Bayside Girls 2018s V Kennoway Star Hearts 2019's B"
+    "date": "Week 7",
+    "venue": "Saturday, December 19 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's A",
+    "awayTeam": "Swifts Typhoons Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, December 19 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Swifts Typhoons Lochgelly High School 9:00 AM Futsal Escocia V Bayside Girls 2018s Balwearie High School 9:45 AM Kelty Hearts 2020 V Kennoway Star Hearts 2019's B Lochgelly High School 9:45 AM Tiki Taka Blanco V KSQ Knights Lochgelly High School 10:30 AM Swifts Tornadoes V Duloch Juniors United"
   },
   {
     "id": "liga7-14",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Duloch Juniors United",
-    "awayTeam": "Swifts Typhoons",
-    "raw_fixture": "Lochgelly High School 9:45 AM Duloch Juniors United V Swifts Typhoons"
+    "date": "Week 7",
+    "venue": "Saturday, December 19 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's A",
+    "awayTeam": "Swifts Typhoons Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, December 19 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Swifts Typhoons Lochgelly High School 9:00 AM Futsal Escocia V Bayside Girls 2018s Balwearie High School 9:45 AM Kelty Hearts 2020 V Kennoway Star Hearts 2019's B Lochgelly High School 9:45 AM Tiki Taka Blanco V KSQ Knights Lochgelly High School 10:30 AM Swifts Tornadoes V Duloch Juniors United"
   },
   {
     "id": "liga7-15",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Swifts Tornadoes",
-    "awayTeam": "KSQ Knights",
-    "raw_fixture": "Lochgelly High School 10:30 AM Swifts Tornadoes V KSQ Knights"
+    "date": "Week 8",
+    "venue": "Saturday, January 9, 2027 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Bayside Girls 2018s",
+    "awayTeam": "Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Swifts Typhoons",
+    "raw_fixture": "Saturday, January 9, 2027 Balwearie High School 9:00 AM Bayside Girls 2018s V Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Swifts Typhoons V KSQ Knights Balwearie High School 9:45 AM Kennoway Star Hearts 2019's B V Futsal Escocia Lochgelly High School 9:45 AM Duloch Juniors United V Kelty Hearts 2020 Lochgelly High School 10:30 AM Swifts Tornadoes V Tiki Taka Blanco"
   },
   {
     "id": "liga7-16",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
+    "date": "Week 8",
+    "venue": "Saturday, January 9, 2027 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's B",
-    "awayTeam": "Tiki Taka Blanco",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Tiki Taka Blanco"
+    "homeTeam": "Bayside Girls 2018s",
+    "awayTeam": "Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Swifts Typhoons",
+    "raw_fixture": "Saturday, January 9, 2027 Balwearie High School 9:00 AM Bayside Girls 2018s V Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Swifts Typhoons V KSQ Knights Balwearie High School 9:45 AM Kennoway Star Hearts 2019's B V Futsal Escocia Lochgelly High School 9:45 AM Duloch Juniors United V Kelty Hearts 2020 Lochgelly High School 10:30 AM Swifts Tornadoes V Tiki Taka Blanco"
   },
   {
     "id": "liga7-17",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
+    "date": "Week 9",
+    "venue": "Saturday, January 16, 2027 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "KSQ Knights",
-    "awayTeam": "Kelty Hearts 2020",
-    "raw_fixture": "Lochgelly High School 9:00 AM KSQ Knights V Kelty Hearts 2020"
+    "homeTeam": "Kennoway Star Hearts 2019's A",
+    "awayTeam": "Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, January 16, 2027 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Futsal Escocia V Duloch Juniors United Balwearie High School 9:45 AM Tiki Taka Blanco V Swifts Typhoons Lochgelly High School 9:45 AM KSQ Knights V Bayside Girls 2018s Lochgelly High School 10:30 AM Kelty Hearts 2020 V Swifts Tornadoes"
   },
   {
     "id": "liga7-18",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
+    "date": "Week 9",
+    "venue": "Saturday, January 16, 2027 Balwearie High School",
+    "time": "9:00 AM",
     "homeTeam": "Kennoway Star Hearts 2019's A",
-    "awayTeam": "Futsal Escocia",
-    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Futsal Escocia"
+    "awayTeam": "Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, January 16, 2027 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Futsal Escocia V Duloch Juniors United Balwearie High School 9:45 AM Tiki Taka Blanco V Swifts Typhoons Lochgelly High School 9:45 AM KSQ Knights V Bayside Girls 2018s Lochgelly High School 10:30 AM Kelty Hearts 2020 V Swifts Tornadoes"
   },
   {
     "id": "liga7-19",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Bayside Girls 2018s",
-    "awayTeam": "Duloch Juniors United",
-    "raw_fixture": "Lochgelly High School 9:45 AM Bayside Girls 2018s V Duloch Juniors United"
+    "date": "Week 10",
+    "venue": "Saturday, January 23, 2027 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "KSQ Knights Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, January 23, 2027 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V KSQ Knights Lochgelly High School 9:00 AM Futsal Escocia V Swifts Tornadoes Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Duloch Juniors United Lochgelly High School 9:45 AM Bayside Girls 2018s V Swifts Typhoons Lochgelly High School 10:30 AM Kelty Hearts 2020 V Tiki Taka Blanco"
   },
   {
     "id": "liga7-20",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Swifts Typhoons",
-    "awayTeam": "Swifts Tornadoes",
-    "raw_fixture": "Lochgelly High School 10:30 AM Swifts Typhoons V Swifts Tornadoes"
+    "date": "Week 10",
+    "venue": "Saturday, January 23, 2027 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "KSQ Knights Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, January 23, 2027 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V KSQ Knights Lochgelly High School 9:00 AM Futsal Escocia V Swifts Tornadoes Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Duloch Juniors United Lochgelly High School 9:45 AM Bayside Girls 2018s V Swifts Typhoons Lochgelly High School 10:30 AM Kelty Hearts 2020 V Tiki Taka Blanco"
   },
   {
     "id": "liga7-21",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
+    "date": "Week 11",
+    "venue": "Saturday, January 30, 2027 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Duloch Juniors United",
-    "awayTeam": "Kennoway Star Hearts 2019's B",
-    "raw_fixture": "Balwearie High School 9:00 AM Duloch Juniors United V Kennoway Star Hearts 2019's B"
+    "homeTeam": "Swifts Tornadoes",
+    "awayTeam": "Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Kelty Hearts 2020",
+    "raw_fixture": "Saturday, January 30, 2027 Balwearie High School 9:00 AM Swifts Tornadoes V Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Kelty Hearts 2020 V Futsal Escocia Balwearie High School 9:45 AM Swifts Typhoons V Kennoway Star Hearts 2019's B Lochgelly High School 9:45 AM Tiki Taka Blanco V Bayside Girls 2018s Lochgelly High School 10:30 AM Duloch Juniors United V KSQ Knights"
   },
   {
     "id": "liga7-22",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
+    "date": "Week 11",
+    "venue": "Saturday, January 30, 2027 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "KSQ Knights",
-    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V KSQ Knights"
+    "homeTeam": "Swifts Tornadoes",
+    "awayTeam": "Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Kelty Hearts 2020",
+    "raw_fixture": "Saturday, January 30, 2027 Balwearie High School 9:00 AM Swifts Tornadoes V Kennoway Star Hearts 2019's A Lochgelly High School 9:00 AM Kelty Hearts 2020 V Futsal Escocia Balwearie High School 9:45 AM Swifts Typhoons V Kennoway Star Hearts 2019's B Lochgelly High School 9:45 AM Tiki Taka Blanco V Bayside Girls 2018s Lochgelly High School 10:30 AM Duloch Juniors United V KSQ Knights"
   },
   {
     "id": "liga7-23",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Tiki Taka Blanco",
-    "awayTeam": "Kennoway Star Hearts 2019's A",
-    "raw_fixture": "Balwearie High School 9:45 AM Tiki Taka Blanco V Kennoway Star Hearts 2019's A"
+    "date": "Week 12",
+    "venue": "Saturday, February 6, 2027 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "Bayside Girls 2018s Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, February 6, 2027 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Bayside Girls 2018s Lochgelly High School 9:00 AM Futsal Escocia V Tiki Taka Blanco Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Kelty Hearts 2020 Lochgelly High School 9:45 AM KSQ Knights V Swifts Tornadoes Lochgelly High School 10:30 AM Swifts Typhoons V Duloch Juniors United"
   },
   {
     "id": "liga7-24",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Swifts Tornadoes",
-    "awayTeam": "Bayside Girls 2018s",
-    "raw_fixture": "Lochgelly High School 9:45 AM Swifts Tornadoes V Bayside Girls 2018s"
+    "date": "Week 12",
+    "venue": "Saturday, February 6, 2027 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "Bayside Girls 2018s Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, February 6, 2027 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Bayside Girls 2018s Lochgelly High School 9:00 AM Futsal Escocia V Tiki Taka Blanco Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Kelty Hearts 2020 Lochgelly High School 9:45 AM KSQ Knights V Swifts Tornadoes Lochgelly High School 10:30 AM Swifts Typhoons V Duloch Juniors United"
   },
   {
     "id": "liga7-25",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Kelty Hearts 2020",
-    "awayTeam": "Swifts Typhoons",
-    "raw_fixture": "Lochgelly High School 10:30 AM Kelty Hearts 2020 V Swifts Typhoons"
+    "date": "Week 13",
+    "venue": "Saturday, February 13, 2027 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Tiki Taka Blanco",
+    "awayTeam": "Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Kelty Hearts 2020",
+    "raw_fixture": "Saturday, February 13, 2027 Balwearie High School 9:00 AM Tiki Taka Blanco V Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Kelty Hearts 2020 V KSQ Knights Balwearie High School 9:45 AM Futsal Escocia V Kennoway Star Hearts 2019's A Lochgelly High School 9:45 AM Swifts Tornadoes V Swifts Typhoons Lochgelly High School 10:30 AM Duloch Juniors United V Bayside Girls 2018s"
   },
   {
     "id": "liga7-26",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
+    "date": "Week 13",
+    "venue": "Saturday, February 13, 2027 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's B",
-    "awayTeam": "Swifts Tornadoes",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Swifts Tornadoes"
+    "homeTeam": "Tiki Taka Blanco",
+    "awayTeam": "Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Kelty Hearts 2020",
+    "raw_fixture": "Saturday, February 13, 2027 Balwearie High School 9:00 AM Tiki Taka Blanco V Kennoway Star Hearts 2019's B Lochgelly High School 9:00 AM Kelty Hearts 2020 V KSQ Knights Balwearie High School 9:45 AM Futsal Escocia V Kennoway Star Hearts 2019's A Lochgelly High School 9:45 AM Swifts Tornadoes V Swifts Typhoons Lochgelly High School 10:30 AM Duloch Juniors United V Bayside Girls 2018s"
   },
   {
     "id": "liga7-27",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
+    "date": "Week 14",
+    "venue": "Saturday, February 20, 2027 Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Swifts Typhoons",
-    "awayTeam": "Futsal Escocia",
-    "raw_fixture": "Lochgelly High School 9:00 AM Swifts Typhoons V Futsal Escocia"
+    "homeTeam": "Kennoway Star Hearts 2019's A",
+    "awayTeam": "Tiki Taka Blanco Lochgelly High School 9:00 AM KSQ Knights",
+    "raw_fixture": "Saturday, February 20, 2027 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Tiki Taka Blanco Lochgelly High School 9:00 AM KSQ Knights V Futsal Escocia Balwearie High School 9:45 AM Kennoway Star Hearts 2019's B V Duloch Juniors United Lochgelly High School 9:45 AM Swifts Typhoons V Kelty Hearts 2020 Lochgelly High School 10:30 AM Bayside Girls 2018s V Swifts Tornadoes"
   },
   {
     "id": "liga7-28",
     "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "KSQ Knights",
-    "awayTeam": "Kennoway Star Hearts 2019's A",
-    "raw_fixture": "Balwearie High School 9:45 AM KSQ Knights V Kennoway Star Hearts 2019's A"
+    "date": "Week 14",
+    "venue": "Saturday, February 20, 2027 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's A",
+    "awayTeam": "Tiki Taka Blanco Lochgelly High School 9:00 AM KSQ Knights",
+    "raw_fixture": "Saturday, February 20, 2027 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Tiki Taka Blanco Lochgelly High School 9:00 AM KSQ Knights V Futsal Escocia Balwearie High School 9:45 AM Kennoway Star Hearts 2019's B V Duloch Juniors United Lochgelly High School 9:45 AM Swifts Typhoons V Kelty Hearts 2020 Lochgelly High School 10:30 AM Bayside Girls 2018s V Swifts Tornadoes"
   },
   {
     "id": "liga7-29",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Duloch Juniors United",
-    "awayTeam": "Tiki Taka Blanco",
-    "raw_fixture": "Lochgelly High School 9:45 AM Duloch Juniors United V Tiki Taka Blanco"
+    "date": "Week 15",
+    "venue": "Saturday, February 27, 2027 Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's A",
+    "awayTeam": "KSQ Knights Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, February 27, 2027 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V KSQ Knights Lochgelly High School 9:00 AM Futsal Escocia V Swifts Typhoons Balwearie High School 9:45 AM Swifts Tornadoes V Kennoway Star Hearts 2019's B Lochgelly High School 9:45 AM Tiki Taka Blanco V Duloch Juniors United Lochgelly High School 10:30 AM Kelty Hearts 2020 V Bayside Girls 2018s"
   },
   {
     "id": "liga7-30",
     "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Bayside Girls 2018s",
-    "awayTeam": "Kelty Hearts 2020",
-    "raw_fixture": "Lochgelly High School 10:30 AM Bayside Girls 2018s V Kelty Hearts 2020"
-  },
-  {
-    "id": "liga7-31",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
+    "date": "Week 15",
+    "venue": "Saturday, February 27, 2027 Balwearie High School",
     "time": "9:00 AM",
     "homeTeam": "Kennoway Star Hearts 2019's A",
-    "awayTeam": "Swifts Typhoons",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Swifts Typhoons"
-  },
-  {
-    "id": "liga7-32",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:00 AM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "Bayside Girls 2018s",
-    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Bayside Girls 2018s"
-  },
-  {
-    "id": "liga7-33",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Kelty Hearts 2020",
-    "awayTeam": "Kennoway Star Hearts 2019's B",
-    "raw_fixture": "Balwearie High School 9:45 AM Kelty Hearts 2020 V Kennoway Star Hearts 2019's B"
-  },
-  {
-    "id": "liga7-34",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Tiki Taka Blanco",
-    "awayTeam": "KSQ Knights",
-    "raw_fixture": "Lochgelly High School 9:45 AM Tiki Taka Blanco V KSQ Knights"
-  },
-  {
-    "id": "liga7-35",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Swifts Tornadoes",
-    "awayTeam": "Duloch Juniors United",
-    "raw_fixture": "Lochgelly High School 10:30 AM Swifts Tornadoes V Duloch Juniors United"
-  },
-  {
-    "id": "liga7-36",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:00 AM",
-    "homeTeam": "Bayside Girls 2018s",
-    "awayTeam": "Kennoway Star Hearts 2019's A",
-    "raw_fixture": "Balwearie High School 9:00 AM Bayside Girls 2018s V Kennoway Star Hearts 2019's A"
-  },
-  {
-    "id": "liga7-37",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:00 AM",
-    "homeTeam": "Swifts Typhoons",
-    "awayTeam": "KSQ Knights",
-    "raw_fixture": "Lochgelly High School 9:00 AM Swifts Typhoons V KSQ Knights"
-  },
-  {
-    "id": "liga7-38",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's B",
-    "awayTeam": "Futsal Escocia",
-    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's B V Futsal Escocia"
-  },
-  {
-    "id": "liga7-39",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Duloch Juniors United",
-    "awayTeam": "Kelty Hearts 2020",
-    "raw_fixture": "Lochgelly High School 9:45 AM Duloch Juniors United V Kelty Hearts 2020"
-  },
-  {
-    "id": "liga7-40",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Swifts Tornadoes",
-    "awayTeam": "Tiki Taka Blanco",
-    "raw_fixture": "Lochgelly High School 10:30 AM Swifts Tornadoes V Tiki Taka Blanco"
-  },
-  {
-    "id": "liga7-41",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:00 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's A",
-    "awayTeam": "Kennoway Star Hearts 2019's B",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Kennoway Star Hearts 2019's B"
-  },
-  {
-    "id": "liga7-42",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:00 AM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "Duloch Juniors United",
-    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Duloch Juniors United"
-  },
-  {
-    "id": "liga7-43",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Tiki Taka Blanco",
-    "awayTeam": "Swifts Typhoons",
-    "raw_fixture": "Balwearie High School 9:45 AM Tiki Taka Blanco V Swifts Typhoons"
-  },
-  {
-    "id": "liga7-44",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "KSQ Knights",
-    "awayTeam": "Bayside Girls 2018s",
-    "raw_fixture": "Lochgelly High School 9:45 AM KSQ Knights V Bayside Girls 2018s"
-  },
-  {
-    "id": "liga7-45",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Kelty Hearts 2020",
-    "awayTeam": "Swifts Tornadoes",
-    "raw_fixture": "Lochgelly High School 10:30 AM Kelty Hearts 2020 V Swifts Tornadoes"
-  },
-  {
-    "id": "liga7-46",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:00 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's B",
-    "awayTeam": "KSQ Knights",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V KSQ Knights"
-  },
-  {
-    "id": "liga7-47",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:00 AM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "Swifts Tornadoes",
-    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Swifts Tornadoes"
-  },
-  {
-    "id": "liga7-48",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's A",
-    "awayTeam": "Duloch Juniors United",
-    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Duloch Juniors United"
-  },
-  {
-    "id": "liga7-49",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Bayside Girls 2018s",
-    "awayTeam": "Swifts Typhoons",
-    "raw_fixture": "Lochgelly High School 9:45 AM Bayside Girls 2018s V Swifts Typhoons"
-  },
-  {
-    "id": "liga7-50",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Kelty Hearts 2020",
-    "awayTeam": "Tiki Taka Blanco",
-    "raw_fixture": "Lochgelly High School 10:30 AM Kelty Hearts 2020 V Tiki Taka Blanco"
-  },
-  {
-    "id": "liga7-51",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:00 AM",
-    "homeTeam": "Swifts Tornadoes",
-    "awayTeam": "Kennoway Star Hearts 2019's A",
-    "raw_fixture": "Balwearie High School 9:00 AM Swifts Tornadoes V Kennoway Star Hearts 2019's A"
-  },
-  {
-    "id": "liga7-52",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:00 AM",
-    "homeTeam": "Kelty Hearts 2020",
-    "awayTeam": "Futsal Escocia",
-    "raw_fixture": "Lochgelly High School 9:00 AM Kelty Hearts 2020 V Futsal Escocia"
-  },
-  {
-    "id": "liga7-53",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Swifts Typhoons",
-    "awayTeam": "Kennoway Star Hearts 2019's B",
-    "raw_fixture": "Balwearie High School 9:45 AM Swifts Typhoons V Kennoway Star Hearts 2019's B"
-  },
-  {
-    "id": "liga7-54",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Tiki Taka Blanco",
-    "awayTeam": "Bayside Girls 2018s",
-    "raw_fixture": "Lochgelly High School 9:45 AM Tiki Taka Blanco V Bayside Girls 2018s"
-  },
-  {
-    "id": "liga7-55",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Duloch Juniors United",
-    "awayTeam": "KSQ Knights",
-    "raw_fixture": "Lochgelly High School 10:30 AM Duloch Juniors United V KSQ Knights"
-  },
-  {
-    "id": "liga7-56",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:00 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's B",
-    "awayTeam": "Bayside Girls 2018s",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Bayside Girls 2018s"
-  },
-  {
-    "id": "liga7-57",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:00 AM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "Tiki Taka Blanco",
-    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Tiki Taka Blanco"
-  },
-  {
-    "id": "liga7-58",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's A",
-    "awayTeam": "Kelty Hearts 2020",
-    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Kelty Hearts 2020"
-  },
-  {
-    "id": "liga7-59",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "KSQ Knights",
-    "awayTeam": "Swifts Tornadoes",
-    "raw_fixture": "Lochgelly High School 9:45 AM KSQ Knights V Swifts Tornadoes"
-  },
-  {
-    "id": "liga7-60",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Swifts Typhoons",
-    "awayTeam": "Duloch Juniors United",
-    "raw_fixture": "Lochgelly High School 10:30 AM Swifts Typhoons V Duloch Juniors United"
-  },
-  {
-    "id": "liga7-61",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:00 AM",
-    "homeTeam": "Tiki Taka Blanco",
-    "awayTeam": "Kennoway Star Hearts 2019's B",
-    "raw_fixture": "Balwearie High School 9:00 AM Tiki Taka Blanco V Kennoway Star Hearts 2019's B"
-  },
-  {
-    "id": "liga7-62",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:00 AM",
-    "homeTeam": "Kelty Hearts 2020",
-    "awayTeam": "KSQ Knights",
-    "raw_fixture": "Lochgelly High School 9:00 AM Kelty Hearts 2020 V KSQ Knights"
-  },
-  {
-    "id": "liga7-63",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "Kennoway Star Hearts 2019's A",
-    "raw_fixture": "Balwearie High School 9:45 AM Futsal Escocia V Kennoway Star Hearts 2019's A"
-  },
-  {
-    "id": "liga7-64",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Swifts Tornadoes",
-    "awayTeam": "Swifts Typhoons",
-    "raw_fixture": "Lochgelly High School 9:45 AM Swifts Tornadoes V Swifts Typhoons"
-  },
-  {
-    "id": "liga7-65",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Duloch Juniors United",
-    "awayTeam": "Bayside Girls 2018s",
-    "raw_fixture": "Lochgelly High School 10:30 AM Duloch Juniors United V Bayside Girls 2018s"
-  },
-  {
-    "id": "liga7-66",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:00 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's A",
-    "awayTeam": "Tiki Taka Blanco",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Tiki Taka Blanco"
-  },
-  {
-    "id": "liga7-67",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:00 AM",
-    "homeTeam": "KSQ Knights",
-    "awayTeam": "Futsal Escocia",
-    "raw_fixture": "Lochgelly High School 9:00 AM KSQ Knights V Futsal Escocia"
-  },
-  {
-    "id": "liga7-68",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's B",
-    "awayTeam": "Duloch Juniors United",
-    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's B V Duloch Juniors United"
-  },
-  {
-    "id": "liga7-69",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Swifts Typhoons",
-    "awayTeam": "Kelty Hearts 2020",
-    "raw_fixture": "Lochgelly High School 9:45 AM Swifts Typhoons V Kelty Hearts 2020"
-  },
-  {
-    "id": "liga7-70",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Bayside Girls 2018s",
-    "awayTeam": "Swifts Tornadoes",
-    "raw_fixture": "Lochgelly High School 10:30 AM Bayside Girls 2018s V Swifts Tornadoes"
-  },
-  {
-    "id": "liga7-71",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:00 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's A",
-    "awayTeam": "KSQ Knights",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V KSQ Knights"
-  },
-  {
-    "id": "liga7-72",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:00 AM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "Swifts Typhoons",
-    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Swifts Typhoons"
-  },
-  {
-    "id": "liga7-73",
-    "league": "Liga 7",
-    "venue": "Balwearie High School",
-    "time": "9:45 AM",
-    "homeTeam": "Swifts Tornadoes",
-    "awayTeam": "Kennoway Star Hearts 2019's B",
-    "raw_fixture": "Balwearie High School 9:45 AM Swifts Tornadoes V Kennoway Star Hearts 2019's B"
-  },
-  {
-    "id": "liga7-74",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "9:45 AM",
-    "homeTeam": "Tiki Taka Blanco",
-    "awayTeam": "Duloch Juniors United",
-    "raw_fixture": "Lochgelly High School 9:45 AM Tiki Taka Blanco V Duloch Juniors United"
-  },
-  {
-    "id": "liga7-75",
-    "league": "Liga 7",
-    "venue": "Lochgelly High School",
-    "time": "10:30 AM",
-    "homeTeam": "Kelty Hearts 2020",
-    "awayTeam": "Bayside Girls 2018s",
-    "raw_fixture": "Lochgelly High School 10:30 AM Kelty Hearts 2020 V Bayside Girls 2018s"
+    "awayTeam": "KSQ Knights Lochgelly High School 9:00 AM Futsal Escocia",
+    "raw_fixture": "Saturday, February 27, 2027 Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V KSQ Knights Lochgelly High School 9:00 AM Futsal Escocia V Swifts Typhoons Balwearie High School 9:45 AM Swifts Tornadoes V Kennoway Star Hearts 2019's B Lochgelly High School 9:45 AM Tiki Taka Blanco V Duloch Juniors United Lochgelly High School 10:30 AM Kelty Hearts 2020 V Bayside Girls 2018s"
   }
 ]
