@@ -12,12 +12,11 @@ urls = {
 date_regex = r'((?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*,?\s+)?(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}(?:st|nd|rd|th)?(?:\s*,?\s*\d{4})?)'
 
 async def scrape_league(page, league_name, url):
-    print(f"\n--- Scraping {league_name} ({url}) ---")
+    print(f"Scraping {league_name} from {url}...")
     fixtures = []
     
     await page.goto(url, wait_until="domcontentloaded", timeout=45000)
     
-    # Wait for the iframe
     iframe_element = await page.wait_for_selector("iframe", timeout=30000)
     target = page
     if iframe_element:
@@ -27,8 +26,7 @@ async def scrape_league(page, league_name, url):
 
     await target.wait_for_selector("table, tr, .match", timeout=25000)
     
-    # Query headings, table rows, and match cells in visual order
-    elements = await target.query_selector_all("caption, h2, h3, h4, h5, th, tr, .match, .game-row")
+    elements = await target.query_selector_all("caption, h2, h3, h4, th, tr, .match, .game-row")
     
     current_date = "Upcoming"
 
@@ -36,28 +34,26 @@ async def scrape_league(page, league_name, url):
         raw = await el.inner_text()
         clean_text = " ".join(raw.split())
         
-        # Skip empty or standings rows (0 0 0 0 0 0)
         if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
             continue
 
-        # 1. Update running date whenever a date heading or date string appears
+        # Carry the date forward across all subsequent matches
         d_found = re.search(date_regex, clean_text, re.I)
         if d_found:
             current_date = d_found.group(1).strip()
         elif re.search(r'\b(Week|Round)\s*\d+\b', clean_text, re.I) and not re.search(r'\d{1,2}:\d{2}', clean_text):
             current_date = clean_text
 
-        # 2. Check if this row is a match fixture
+        # Extract match rows
         is_match = re.search(r'\bV(?:S)?\b', clean_text, re.I) and re.search(r'\d{1,2}:\d{2}', clean_text)
         if is_match:
             time_match = re.search(r'(\d{1,2}:\d{2}\s*(?:AM|PM)?)', clean_text, re.I)
             time_str = time_match.group(1).strip() if time_match else "TBD"
 
-            parts = clean_text.split(time_match.group(1), 1)
+            parts = clean_text.split(time_str, 1)
             venue_raw = parts[0].strip()
-            teams_part = parts[1].strip()
+            teams_part = parts[1].strip() if len(parts) > 1 else ""
 
-            # Clean venue of any date prefix if it was in the same row
             if d_found:
                 venue = venue_raw.replace(d_found.group(1), "").strip()
             else:
@@ -73,7 +69,7 @@ async def scrape_league(page, league_name, url):
             fixtures.append({
                 "id": f"{league_name.lower().replace(' ', '')}-{len(fixtures)+1}",
                 "league": league_name,
-                "date": current_date,  # Uses the inherited date for all matches of that day
+                "date": current_date,
                 "venue": venue,
                 "time": time_str,
                 "homeTeam": home_team,
@@ -98,19 +94,18 @@ async def main():
                 data = await scrape_league(page, league_name, url)
                 all_data.extend(data)
             except Exception as e:
-                print(f"Exception while scraping {league_name}: {e}")
+                print(f"Error scraping {league_name}: {e}")
                 
         await browser.close()
         
-        print(f"\nTotal fixtures captured: {len(all_data)}")
+        print(f"Total fixtures captured: {len(all_data)}")
         
-        if len(all_data) == 0:
-            raise RuntimeError("0 fixtures scraped. Aborting to protect fixtures_data.json.")
-
-        with open('fixtures_data.json', 'w') as f:
-            json.dump(all_data, f, indent=2)
-            
-        print("Successfully updated fixtures_data.json with inherited dates.")
+        if len(all_data) > 0:
+            with open('fixtures_data.json', 'w') as f:
+                json.dump(all_data, f, indent=2)
+            print("Successfully updated fixtures_data.json.")
+        else:
+            print("No new fixtures collected. Leaving existing file intact.")
 
 if __name__ == "__main__":
     asyncio.run(main())
