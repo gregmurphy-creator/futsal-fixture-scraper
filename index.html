@@ -160,6 +160,82 @@
         .replace(/'/g, "&#039;");
     }
 
+    // Resolves individual round dates for every match
+    function resolveScheduleDates(rawFixtures) {
+      const startDate = new Date(2026, 10, 7); // Saturday, November 7, 2026
+
+      function timeToMin(tStr) {
+        const m = String(tStr).match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+        if (!m) return 0;
+        let h = parseInt(m[1], 10);
+        const mn = parseInt(m[2], 10);
+        const mer = m[3].toUpperCase();
+        if (mer === "PM" && h !== 12) h += 12;
+        else if (mer === "AM" && h === 12) h = 0;
+        return h * 60 + mn;
+      }
+
+      function getSuffix(d) {
+        if (d >= 11 && d <= 13) return "th";
+        const rem = d % 10;
+        if (rem === 1) return "st";
+        if (rem === 2) return "nd";
+        if (rem === 3) return "rd";
+        return "th";
+      }
+
+      const leagues = {};
+      rawFixtures.forEach(f => {
+        const lg = f.league || "Unknown";
+        if (!leagues[lg]) leagues[lg] = [];
+        leagues[lg].push(f);
+      });
+
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const resolved = [];
+
+      Object.keys(leagues).forEach(lg => {
+        const list = leagues[lg];
+        let currRound = 1;
+        let lastMin = -1;
+
+        list.forEach((item, idx) => {
+          const rawDate = String(item.date || "").trim();
+          let finalDate = rawDate;
+
+          if (!rawDate || rawDate === "Upcoming" || rawDate.toLowerCase().startsWith("round") || rawDate.toLowerCase().startsWith("week")) {
+            if (lg === "Liga 7") {
+              // Liga 7 has exactly 5 games per Saturday round
+              currRound = Math.floor(idx / 5) + 1;
+            } else {
+              const tMin = timeToMin(item.time || "");
+              if (lastMin !== -1 && tMin < lastMin && (lastMin - tMin) > 60) {
+                currRound += 1;
+                lastMin = tMin;
+              } else {
+                if (tMin > lastMin) lastMin = tMin;
+              }
+            }
+
+            const matchDate = new Date(startDate.getTime());
+            matchDate.setDate(matchDate.getDate() + (currRound - 1) * 7);
+            const d = matchDate.getDate();
+            const suf = getSuffix(d);
+            const m = monthNames[matchDate.getMonth()];
+            finalDate = `Sat ${d}${suf} ${m}`;
+          }
+
+          resolved.push({
+            ...item,
+            date: finalDate,
+            round: currRound
+          });
+        });
+      });
+
+      return resolved;
+    }
+
     function buildDynamicMonthButtons() {
       const monthsSet = new Set();
       const datesSet = new Set();
@@ -257,7 +333,7 @@
           <button onclick="selectPlayer(${idx})" class="px-3 py-1.5 text-xs font-bold rounded-xl transition-all whitespace-nowrap flex items-center gap-1.5 flex-shrink-0 ${
             active ? 'bg-[#FF6600] text-white shadow-sm' : 'bg-white text-gray-700 border border-gray-200'
           }">
-            <span>👦</span> ${escapeHtml(p.name)} (${escapeHtml(p.team)}${p.league ? ' · ' + escapeHtml(p.league) : ''})
+            <span>👦</span> ${escapeHtml(p.name)} (${escapeHtml(p.team)} · ${escapeHtml(p.league)})
           </button>
         `;
       });
@@ -337,9 +413,9 @@
 
         let matchesDate = true;
         if (selectedDateFilter === "NEXT_MATCHDAY") {
-          matchesDate = uniqueDates.length > 0 ? date === uniqueDates[0] : true;
+          matchesDate = item.round === 1;
         } else if (selectedDateFilter === "FOLLOWING_WEEKEND") {
-          matchesDate = uniqueDates.length > 1 ? date === uniqueDates[1] : false;
+          matchesDate = item.round === 2;
         } else if (selectedDateFilter.startsWith("MONTH_")) {
           const targetM = selectedDateFilter.replace("MONTH_", "");
           matchesDate = date.toUpperCase().includes(targetM);
@@ -371,7 +447,7 @@
         const away = item.awayTeam || "TBD";
         const venue = item.venue || "TBD";
         const time = item.time || "TBD";
-        const date = item.date || "Upcoming";
+        const date = item.date || "Sat 7th Nov";
         const league = item.league || "Fixture";
 
         const homeIsTiki = isTiki(home);
@@ -534,11 +610,10 @@
     renderPlayerPills();
     bindDateButtons();
 
-    // Load data
     fetch("./fixtures_data.json?t=" + Date.now())
       .then(res => res.json())
       .then(data => {
-        allFixtures = Array.isArray(data) ? data : [];
+        allFixtures = resolveScheduleDates(Array.isArray(data) ? data : []);
         buildDynamicMonthButtons();
         populateTeamDropdown();
         renderPlayerPills();
@@ -548,7 +623,7 @@
         fetch("https://raw.githubusercontent.com/gregmurphy-creator/futsal-fixture-scraper/main/fixtures_data.json?t=" + Date.now())
           .then(res => res.json())
           .then(data => {
-            allFixtures = Array.isArray(data) ? data : [];
+            allFixtures = resolveScheduleDates(Array.isArray(data) ? data : []);
             buildDynamicMonthButtons();
             populateTeamDropdown();
             renderPlayerPills();
