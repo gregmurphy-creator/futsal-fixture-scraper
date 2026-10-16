@@ -1,17 +1,7 @@
-{
-  "Liga 5": {
-    "source_url": "https://scheduler.leaguelobster.com/o/527519/futsal-escocia/",
-    "status": "Success",
-    "content_preview": "Futsal Escocia\n        on LeagueLobster.com Toggle navigation Sign In Futsal Escocia About Futsal Escocia Futsal Escocia Youth Teams are a non profit organisation operating in Fife Scotland. Teams play in the Futsal Escocia Leagues. Schedules & Standings Past Schedules Schedules & Standings Michael "
-  },
-  "Liga 6": {
-    "source_url": "https://scheduler.leaguelobster.com/o/527519/futsal-escocia/",
-    "status": "Success",
-    "content_preview": "Futsal Escocia\n        on LeagueLobster.com Toggle navigation Sign In Futsal Escocia About Futsal Escocia Futsal Escocia Youth Teams are a non profit organisation operating in Fife Scotland. Teams play in the Futsal Escocia Leagues. Schedules & Standings Past Schedules Schedules & Standings Michael "
-  },
-  "Liga 7": {
-    "source_url": "https://scheduler.leaguelobster.com/o/527519/futsal-escocia/",
-    "status": "Success",
-    "content_preview": "Futsal Escocia\n        on LeagueLobster.com Toggle navigation Sign In Futsal Escocia About Futsal Escocia Futsal Escocia Youth Teams are a non profit organisation operating in Fife Scotland. Teams play in the Futsal Escocia Leagues. Schedules & Standings Past Schedules Schedules & Standings Michael "
+[
+  {
+    "id": "liga5-9",
+    "league": "Liga 5",
+    "match_info": "8 Inverkeithing United 0 0 0 0 0 0 0 0"
   }
-}
+]
