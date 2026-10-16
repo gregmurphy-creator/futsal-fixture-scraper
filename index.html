@@ -3,65 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tiki Taka - Futsal Fixtures</title>
+  <title>Tiki Taka - Parent Match Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen">
-  <div class="max-w-2xl mx-auto px-4 py-6 pb-20">
-    <!-- Header -->
-    <header class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 mb-6 flex items-center justify-between gap-4">
+  <div class="max-w-2xl mx-auto px-4 py-6 pb-24">
+    
+    <!-- Top Header -->
+    <header class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 mb-5 flex items-center justify-between gap-4">
       <div>
         <h1 class="text-2xl font-black tracking-tight text-gray-900">
-          Tiki Taka <span class="text-[#FF6600]">-</span> Futsal Fixtures
+          Tiki Taka <span class="text-[#FF6600]">-</span> Parent Hub
         </h1>
-        <p class="text-sm text-gray-500 font-medium">Automated Parent Match Guide</p>
+        <p class="text-sm text-gray-500 font-medium">Automated Match Fixtures</p>
       </div>
-      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-[#FF6600]">
-        Live Feed
-      </span>
+      <button id="openPlayerModalBtn" class="px-3 py-1.5 text-xs font-bold bg-[#FF6600] text-white rounded-xl shadow-sm hover:bg-[#e05a00] flex items-center gap-1.5">
+        <span>👤</span> Manage Players
+      </button>
     </header>
 
-    <!-- Player Profile Filter -->
-    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 mb-5">
-      <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">
-        Player Profile (Filter to Your Child's Team)
-      </label>
-      <div class="flex gap-2">
-        <input
-          id="teamFilterInput"
-          type="text"
-          placeholder="e.g. Tiki Taka or Swifts"
-          class="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600]"
-        />
-        <button
-          id="clearTeamBtn"
-          class="hidden px-3 py-2 text-xs font-semibold text-gray-500 bg-gray-100 hover:bg-gray-200 rounded-xl"
-        >
-          Clear
-        </button>
+    <!-- Player Profiles Quick Bar -->
+    <div id="playerPillsContainer" class="flex items-center gap-2 overflow-x-auto pb-2 mb-4 scrollbar-none">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <!-- Date Filters (This Week, Next Weekend, All Month, All) -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
+      <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">When</div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5" id="dateFilterGroup">
+        <button data-datefilter="ALL" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm">All Fixtures</button>
+        <button data-datefilter="THIS_WEEK" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200">This Weekend</button>
+        <button data-datefilter="NEXT_WEEK" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200">Next Weekend</button>
+        <button data-datefilter="MONTH" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200">This Month</button>
       </div>
     </div>
 
     <!-- League Filter Buttons -->
     <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-4 scrollbar-none" id="leagueFilters">
-      <button data-league="ALL" class="league-btn px-4 py-2 rounded-xl text-sm font-bold bg-[#FF6600] text-white shadow-sm">ALL</button>
-      <button data-league="Liga 5" class="league-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200">Liga 5</button>
-      <button data-league="Liga 6" class="league-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200">Liga 6</button>
-      <button data-league="Liga 7" class="league-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200">Liga 7</button>
+      <button data-league="ALL" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#FF6600] text-white shadow-sm">All Leagues</button>
+      <button data-league="Liga 5" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200">Liga 5</button>
+      <button data-league="Liga 6" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200">Liga 6</button>
+      <button data-league="Liga 7" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200">Liga 7</button>
     </div>
 
     <!-- Status Bar -->
-    <div class="flex items-center justify-between mb-4 px-1">
+    <div class="flex items-center justify-between mb-3 px-1">
       <span id="matchCount" class="text-xs font-medium text-gray-500">Connecting to live feed...</span>
-      <button
-        id="toggleTikiBtn"
-        class="text-xs font-bold px-3 py-1.5 rounded-lg border border-gray-300 bg-white text-gray-700 hover:border-gray-400"
-      >
+      <button id="toggleTikiBtn" class="text-xs font-bold px-3 py-1.5 rounded-lg border border-gray-300 bg-white text-gray-700 hover:border-gray-400">
         Show All Teams
       </button>
     </div>
 
-    <!-- Fixtures Container -->
+    <!-- Fixture List -->
     <div id="fixturesList" class="space-y-3">
       <div class="bg-white rounded-2xl p-10 text-center border border-gray-200">
         <div class="animate-spin inline-block w-8 h-8 border-4 border-current border-t-transparent text-[#FF6600] rounded-full mb-3"></div>
@@ -70,30 +63,74 @@
     </div>
   </div>
 
+  <!-- PLAYER MANAGEMENT MODAL -->
+  <div id="playerModal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-xl border border-gray-200">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-black text-gray-900">Manage Players & Children</h3>
+        <button id="closePlayerModalBtn" class="text-gray-400 hover:text-gray-700 text-2xl font-bold leading-none">&times;</button>
+      </div>
+
+      <!-- Add New Player Form -->
+      <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 mb-5">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Add Child to Team</h4>
+        <div class="space-y-3">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">Child's Name</label>
+            <input id="newChildName" type="text" placeholder="e.g. Leo" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600]" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">Assigned Team</label>
+            <select id="newChildTeam" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600] bg-white">
+              <option value="">Select a team...</option>
+            </select>
+          </div>
+          <button id="savePlayerBtn" class="w-full py-2.5 text-xs font-bold bg-[#FF6600] text-white rounded-xl shadow-sm hover:bg-[#e05a00]">
+            Save Player
+          </button>
+        </div>
+      </div>
+
+      <!-- List of Saved Players -->
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Saved Players</h4>
+        <div id="savedPlayersList" class="space-y-2 max-h-48 overflow-y-auto">
+          <!-- Injected via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     let allFixtures = [];
     let selectedLeague = "ALL";
+    let selectedDateFilter = "ALL";
     let onlyTikiTaka = false;
-    let childTeamQuery = "";
+    let selectedPlayerTeam = "";
+    let players = [];
 
-    // Safe localStorage retrieval
+    // Load saved players from localStorage
     try {
-      childTeamQuery = localStorage.getItem("tiki_child_team") || "";
+      players = JSON.parse(localStorage.getItem("tiki_saved_players") || "[]");
     } catch (e) {
-      console.warn("Storage not accessible:", e);
+      players = [];
     }
 
-    const teamInput = document.getElementById("teamFilterInput");
-    const clearTeamBtn = document.getElementById("clearTeamBtn");
-    const toggleTikiBtn = document.getElementById("toggleTikiBtn");
-    const leagueButtons = document.querySelectorAll(".league-btn");
     const fixturesContainer = document.getElementById("fixturesList");
     const matchCount = document.getElementById("matchCount");
-
-    if (childTeamQuery && teamInput) {
-      teamInput.value = childTeamQuery;
-      clearTeamBtn.classList.remove("hidden");
-    }
+    const leagueButtons = document.querySelectorAll(".league-btn");
+    const dateButtons = document.querySelectorAll(".date-btn");
+    const toggleTikiBtn = document.getElementById("toggleTikiBtn");
+    
+    // Modal elements
+    const playerModal = document.getElementById("playerModal");
+    const openPlayerModalBtn = document.getElementById("openPlayerModalBtn");
+    const closePlayerModalBtn = document.getElementById("closePlayerModalBtn");
+    const savePlayerBtn = document.getElementById("savePlayerBtn");
+    const newChildName = document.getElementById("newChildName");
+    const newChildTeam = document.getElementById("newChildTeam");
+    const savedPlayersList = document.getElementById("savedPlayersList");
+    const playerPillsContainer = document.getElementById("playerPillsContainer");
 
     function isTiki(team = "") {
       return team.toLowerCase().includes("tiki") || team.toLowerCase().includes("taka");
@@ -108,21 +145,139 @@
         .replace(/'/g, "&#039;");
     }
 
+    // Populate team options inside modal dropdown
+    function populateTeamDropdown() {
+      const teams = new Set();
+      allFixtures.forEach(item => {
+        if (item.homeTeam && item.homeTeam !== "TBD") teams.add(item.homeTeam);
+        if (item.awayTeam && item.awayTeam !== "TBD") teams.add(item.awayTeam);
+      });
+      const sortedTeams = Array.from(teams).sort();
+      newChildTeam.innerHTML = '<option value="">Select a team...</option>' + 
+        sortedTeams.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("");
+    }
+
+    // Render quick-filter pill buttons at top
+    function renderPlayerPills() {
+      if (players.length === 0) {
+        playerPillsContainer.innerHTML = `
+          <button onclick="document.getElementById('openPlayerModalBtn').click()" class="text-xs font-semibold text-gray-500 bg-white border border-dashed border-gray-300 px-3 py-1.5 rounded-xl hover:border-gray-400">
+            + Tap to Add Your Child's Team
+          </button>
+        `;
+        return;
+      }
+
+      let html = `
+        <button onclick="selectPlayerTeam('')" class="px-3 py-1.5 text-xs font-bold rounded-xl transition-all ${
+          selectedPlayerTeam === '' ? 'bg-black text-white shadow-sm' : 'bg-white text-gray-700 border border-gray-200'
+        }">
+          All Squads
+        </button>
+      `;
+
+      players.forEach(p => {
+        const active = selectedPlayerTeam === p.team;
+        html += `
+          <button onclick="selectPlayerTeam('${escapeHtml(p.team)}')" class="px-3 py-1.5 text-xs font-bold rounded-xl transition-all whitespace-nowrap flex items-center gap-1.5 ${
+            active ? 'bg-[#FF6600] text-white shadow-sm' : 'bg-white text-gray-700 border border-gray-200'
+          }">
+            <span>👦</span> ${escapeHtml(p.name)} (${escapeHtml(p.team)})
+          </button>
+        `;
+      });
+
+      playerPillsContainer.innerHTML = html;
+    }
+
+    window.selectPlayerTeam = function(team) {
+      selectedPlayerTeam = team;
+      renderPlayerPills();
+      renderFixtures();
+    };
+
+    function renderSavedPlayersModalList() {
+      if (players.length === 0) {
+        savedPlayersList.innerHTML = `<p class="text-xs text-gray-400 italic">No players added yet.</p>`;
+        return;
+      }
+
+      savedPlayersList.innerHTML = players.map((p, idx) => `
+        <div class="flex items-center justify-between p-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs">
+          <div>
+            <span class="font-bold text-gray-900">${escapeHtml(p.name)}</span>
+            <span class="text-gray-500 block text-[11px]">${escapeHtml(p.team)}</span>
+          </div>
+          <button onclick="deletePlayer(${idx})" class="text-red-500 hover:text-red-700 font-bold px-2 py-1">
+            Remove
+          </button>
+        </div>
+      `).join("");
+    }
+
+    window.deletePlayer = function(index) {
+      players.splice(index, 1);
+      try {
+        localStorage.setItem("tiki_saved_players", JSON.stringify(players));
+      } catch (e) {}
+      renderSavedPlayersModalList();
+      renderPlayerPills();
+      renderFixtures();
+    };
+
+    // Date matching helpers
+    function matchDateFilter(itemDateStr, filter) {
+      if (filter === "ALL") return true;
+      if (!itemDateStr || itemDateStr === "Upcoming") return true;
+
+      const now = new Date();
+      const currentMonthName = now.toLocaleString('en-US', { month: 'short' }).toLowerCase();
+
+      if (filter === "MONTH") {
+        return itemDateStr.toLowerCase().includes(currentMonthName);
+      }
+
+      // Weekend filters
+      const dayOfWeek = now.getDay(); // 0 is Sunday, 6 is Saturday
+      const satOffset = (6 - dayOfWeek + 7) % 7;
+      
+      const thisSat = new Date(now);
+      thisSat.setDate(now.getDate() + satOffset);
+      const thisSun = new Date(thisSat);
+      thisSun.setDate(thisSat.getDate() + 1);
+
+      const nextSat = new Date(thisSat);
+      nextSat.setDate(thisSat.getDate() + 7);
+      const nextSun = new Date(nextSat);
+      nextSun.setDate(nextSat.getDate() + 1);
+
+      const dStr = itemDateStr.toLowerCase();
+
+      if (filter === "THIS_WEEK") {
+        return dStr.includes(thisSat.getDate().toString()) || dStr.includes(thisSun.getDate().toString()) || dStr.includes("round 1") || dStr.includes("week 1");
+      }
+
+      if (filter === "NEXT_WEEK") {
+        return dStr.includes(nextSat.getDate().toString()) || dStr.includes(nextSun.getDate().toString()) || dStr.includes("round 2") || dStr.includes("week 2");
+      }
+
+      return true;
+    }
+
     function renderFixtures() {
       const filtered = allFixtures.filter(item => {
-        const league = item.league || "Unknown";
-        const home = item.homeTeam || "";
-        const away = item.awayTeam || "";
-        
-        const matchLeague = selectedLeague === "ALL" || league === selectedLeague;
-        const containsTiki = isTiki(home) || isTiki(away);
-        const matchesChild = childTeamQuery
-          ? (home.toLowerCase().includes(childTeamQuery.toLowerCase()) || away.toLowerCase().includes(childTeamQuery.toLowerCase()))
-          : true;
+        const matchLeague = selectedLeague === "ALL" || item.league === selectedLeague;
+        const containsTiki = isTiki(item.homeTeam) || isTiki(item.awayTeam);
+        const matchesPlayer = selectedPlayerTeam ? (
+          (item.homeTeam && item.homeTeam.toLowerCase().includes(selectedPlayerTeam.toLowerCase())) ||
+          (item.awayTeam && item.awayTeam.toLowerCase().includes(selectedPlayerTeam.toLowerCase()))
+        ) : true;
+        const matchesDate = matchDateFilter(item.date, selectedDateFilter);
 
         if (!matchLeague) return false;
         if (onlyTikiTaka && !containsTiki) return false;
-        if (childTeamQuery && !matchesChild) return false;
+        if (selectedPlayerTeam && !matchesPlayer) return false;
+        if (!matchesDate) return false;
         return true;
       });
 
@@ -131,7 +286,7 @@
       if (filtered.length === 0) {
         fixturesContainer.innerHTML = `
           <div class="bg-white rounded-2xl p-10 text-center border border-gray-200">
-            <p class="text-gray-500 font-medium">No matches found matching your filters.</p>
+            <p class="text-gray-500 font-medium">No matches found for the selected filters.</p>
           </div>`;
         return;
       }
@@ -141,6 +296,7 @@
         const away = item.awayTeam || "TBD";
         const venue = item.venue || "TBD";
         const time = item.time || "TBD";
+        const date = item.date || "Upcoming";
         const league = item.league || "Fixture";
 
         const homeIsTiki = isTiki(home);
@@ -153,17 +309,22 @@
 
         const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue + ', Fife, Scotland')}`;
         const calTitle = encodeURIComponent(`${home} vs ${away} (${league})`);
-        const calDetails = encodeURIComponent(`Futsal Escocia match scheduled at ${time}.`);
+        const calDetails = encodeURIComponent(`Futsal Escocia match scheduled on ${date} at ${time}.`);
         const calLoc = encodeURIComponent(venue);
         const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&location=${calLoc}&details=${calDetails}`;
 
         return `
           <div class="bg-white rounded-2xl p-4 border ${isTikiMatch ? 'border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm' : 'border-gray-200'}">
+            <!-- Card Meta: Date, League, Time -->
             <div class="flex items-center justify-between mb-2">
-              <span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded-md bg-gray-100 text-gray-700">${escapeHtml(league)}</span>
+              <div class="flex items-center gap-1.5">
+                <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded-md bg-gray-100 text-gray-700">${escapeHtml(league)}</span>
+                <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded-md bg-blue-50 text-blue-700">📅 ${escapeHtml(date)}</span>
+              </div>
               <span class="text-xs font-bold bg-orange-50 text-[#FF6600] px-2 py-0.5 rounded">${escapeHtml(time)}</span>
             </div>
 
+            <!-- Teams -->
             <div class="my-3 space-y-1">
               <div class="flex items-center gap-2">
                 ${team1IsTiki ? '<span class="w-2 h-2 rounded-full bg-[#FF6600]"></span>' : ''}
@@ -175,6 +336,7 @@
               </div>
             </div>
 
+            <!-- Footer: Venue and Buttons -->
             <div class="pt-3 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2">
               <div class="text-xs text-gray-500 font-medium">📍 ${escapeHtml(venue)}</div>
               <div class="flex items-center gap-2">
@@ -187,113 +349,95 @@
       }).join("");
     }
 
-    // Timed fetch helper
-    async function fetchWithTimeout(url, timeoutMs = 6000) {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+    // Modal Events
+    openPlayerModalBtn.addEventListener("click", () => {
+      populateTeamDropdown();
+      renderSavedPlayersModalList();
+      playerModal.classList.remove("hidden");
+    });
+
+    closePlayerModalBtn.addEventListener("click", () => {
+      playerModal.classList.add("hidden");
+    });
+
+    savePlayerBtn.addEventListener("click", () => {
+      const name = newChildName.value.trim();
+      const team = newChildTeam.value;
+      if (!name || !team) {
+        alert("Please enter a child's name and choose their team.");
+        return;
+      }
+      players.push({ name, team });
       try {
-        const response = await fetch(url, { signal: controller.signal });
-        clearTimeout(timeoutId);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return await response.json();
-      } catch (err) {
-        clearTimeout(timeoutId);
-        throw err;
-      }
-    }
+        localStorage.setItem("tiki_saved_players", JSON.stringify(players));
+      } catch (e) {}
+      newChildName.value = "";
+      newChildTeam.value = "";
+      playerModal.classList.add("hidden");
+      renderPlayerPills();
+      renderFixtures();
+    });
 
-    // Sequential fallback loader
-    async function loadData() {
-      const sources = [
-        `./fixtures_data.json?v=${Date.now()}`,
-        `https://raw.githubusercontent.com/gregmurphy-creator/futsal-fixture-scraper/main/fixtures_data.json?v=${Date.now()}`,
-        `https://cdn.jsdelivr.net/gh/gregmurphy-creator/futsal-fixture-scraper@main/fixtures_data.json`
-      ];
-
-      let lastError = null;
-      for (const url of sources) {
-        try {
-          matchCount.textContent = "Fetching fixtures...";
-          const data = await fetchWithTimeout(url, 6000);
-          if (Array.isArray(data) && data.length > 0) {
-            allFixtures = data;
-            renderFixtures();
-            return;
-          }
-        } catch (err) {
-          console.warn(`Failed loading from ${url}:`, err);
-          lastError = err;
-        }
-      }
-
-      // If all three sources fail, show actionable error panel
-      matchCount.textContent = "Data feed unavailable";
-      fixturesContainer.innerHTML = `
-        <div class="bg-white rounded-2xl p-8 text-center border border-red-200">
-          <p class="font-bold text-red-600 mb-1">Could not load fixture data</p>
-          <p class="text-xs text-gray-500 mb-4">${escapeHtml(lastError ? lastError.message : 'Timeout contacting server')}</p>
-          <button onclick="location.reload()" class="px-4 py-2 text-xs font-bold bg-[#FF6600] text-white rounded-xl shadow-sm">
-            Tap to Retry
-          </button>
-        </div>`;
-    }
-
-    // League buttons
+    // League Filters
     leagueButtons.forEach(btn => {
       btn.addEventListener("click", () => {
         selectedLeague = btn.dataset.league;
         leagueButtons.forEach(b => {
           if (b.dataset.league === selectedLeague) {
-            b.className = "league-btn px-4 py-2 rounded-xl text-sm font-bold bg-[#FF6600] text-white shadow-sm";
+            b.className = "league-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#FF6600] text-white shadow-sm";
           } else {
-            b.className = "league-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200";
+            b.className = "league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200";
           }
         });
         renderFixtures();
       });
     });
 
-    // Team search
-    if (teamInput) {
-      teamInput.addEventListener("input", (e) => {
-        childTeamQuery = e.target.value.trim();
-        try {
-          localStorage.setItem("tiki_child_team", childTeamQuery);
-        } catch (err) {}
-        if (clearTeamBtn) clearTeamBtn.classList.toggle("hidden", !childTeamQuery);
+    // Date Filters
+    dateButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        selectedDateFilter = btn.dataset.datefilter;
+        dateButtons.forEach(b => {
+          if (b.dataset.datefilter === selectedDateFilter) {
+            b.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm";
+          } else {
+            b.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200";
+          }
+        });
         renderFixtures();
       });
-    }
+    });
 
-    // Clear team search
-    if (clearTeamBtn) {
-      clearTeamBtn.addEventListener("click", () => {
-        if (teamInput) teamInput.value = "";
-        childTeamQuery = "";
-        try {
-          localStorage.removeItem("tiki_child_team");
-        } catch (err) {}
-        clearTeamBtn.classList.add("hidden");
+    // Tiki Taka Only Toggle
+    toggleTikiBtn.addEventListener("click", () => {
+      onlyTikiTaka = !onlyTikiTaka;
+      if (onlyTikiTaka) {
+        toggleTikiBtn.textContent = "✓ Tiki Taka Only";
+        toggleTikiBtn.className = "text-xs font-bold px-3 py-1.5 rounded-lg border bg-black text-white border-black";
+      } else {
+        toggleTikiBtn.textContent = "Show All Teams";
+        toggleTikiBtn.className = "text-xs font-bold px-3 py-1.5 rounded-lg border border-gray-300 bg-white text-gray-700 hover:border-gray-400";
+      }
+      renderFixtures();
+    });
+
+    // Data Fetcher
+    fetch("./fixtures_data.json?t=" + Date.now())
+      .then(res => res.json())
+      .then(data => {
+        allFixtures = Array.isArray(data) ? data : [];
+        renderPlayerPills();
         renderFixtures();
+      })
+      .catch(err => {
+        fetch("https://raw.githubusercontent.com/gregmurphy-creator/futsal-fixture-scraper/main/fixtures_data.json")
+          .then(res => res.json())
+          .then(data => {
+            allFixtures = Array.isArray(data) ? data : [];
+            renderPlayerPills();
+            renderFixtures();
+          });
       });
-    }
-
-    // Tiki Taka toggle
-    if (toggleTikiBtn) {
-      toggleTikiBtn.addEventListener("click", () => {
-        onlyTikiTaka = !onlyTikiTaka;
-        if (onlyTikiTaka) {
-          toggleTikiBtn.textContent = "✓ Tiki Taka Only";
-          toggleTikiBtn.className = "text-xs font-bold px-3 py-1.5 rounded-lg border bg-black text-white border-black";
-        } else {
-          toggleTikiBtn.textContent = "Show All Teams";
-          toggleTikiBtn.className = "text-xs font-bold px-3 py-1.5 rounded-lg border border-gray-300 bg-white text-gray-700 hover:border-gray-400";
-        }
-        renderFixtures();
-      });
-    }
-
-    loadData();
   </script>
 </body>
 </html>
