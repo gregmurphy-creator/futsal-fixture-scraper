@@ -1,7 +1,3122 @@
 [
   {
+    "id": "liga5-1",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 9:00 AM Inverkeithing United V Swifts Raiders"
+  },
+  {
+    "id": "liga5-2",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 9:00 AM"
+  },
+  {
+    "id": "liga5-3",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 9:00 AM"
+  },
+  {
+    "id": "liga5-4",
+    "league": "Liga 5",
+    "raw_fixture": "Inverkeithing United V Swifts Raiders"
+  },
+  {
+    "id": "liga5-5",
+    "league": "Liga 5",
+    "raw_fixture": "Inverkeithing United V Swifts Raiders"
+  },
+  {
+    "id": "liga5-6",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-7",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Duloch Juniors - Blacks V WLFA"
+  },
+  {
+    "id": "liga5-8",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 9:00 AM"
+  },
+  {
     "id": "liga5-9",
     "league": "Liga 5",
-    "match_info": "8 Inverkeithing United 0 0 0 0 0 0 0 0"
+    "raw_fixture": "Caledonia High School, Rosyth 9:00 AM"
+  },
+  {
+    "id": "liga5-10",
+    "league": "Liga 5",
+    "raw_fixture": "Duloch Juniors - Blacks V WLFA"
+  },
+  {
+    "id": "liga5-11",
+    "league": "Liga 5",
+    "raw_fixture": "Duloch Juniors - Blacks V WLFA"
+  },
+  {
+    "id": "liga5-12",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-13",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 9:45 AM Tiki Taka Blanco V Rosyth Blacks"
+  },
+  {
+    "id": "liga5-14",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 9:45 AM"
+  },
+  {
+    "id": "liga5-15",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 9:45 AM"
+  },
+  {
+    "id": "liga5-16",
+    "league": "Liga 5",
+    "raw_fixture": "Tiki Taka Blanco V Rosyth Blacks"
+  },
+  {
+    "id": "liga5-17",
+    "league": "Liga 5",
+    "raw_fixture": "Tiki Taka Blanco V Rosyth Blacks"
+  },
+  {
+    "id": "liga5-18",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-19",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 9:45 AM DACC Blacks V Futsal Escocia White"
+  },
+  {
+    "id": "liga5-20",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 9:45 AM"
+  },
+  {
+    "id": "liga5-21",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 9:45 AM"
+  },
+  {
+    "id": "liga5-22",
+    "league": "Liga 5",
+    "raw_fixture": "DACC Blacks V Futsal Escocia White"
+  },
+  {
+    "id": "liga5-23",
+    "league": "Liga 5",
+    "raw_fixture": "DACC Blacks V Futsal Escocia White"
+  },
+  {
+    "id": "liga5-24",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-25",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 10:30 AM Swifts Falcons 2017 V DACC Boys 17"
+  },
+  {
+    "id": "liga5-26",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 10:30 AM"
+  },
+  {
+    "id": "liga5-27",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 10:30 AM"
+  },
+  {
+    "id": "liga5-28",
+    "league": "Liga 5",
+    "raw_fixture": "Swifts Falcons 2017 V DACC Boys 17"
+  },
+  {
+    "id": "liga5-29",
+    "league": "Liga 5",
+    "raw_fixture": "Swifts Falcons 2017 V DACC Boys 17"
+  },
+  {
+    "id": "liga5-30",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-31",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM KSQ Galaxy V Duloch City 2018s"
+  },
+  {
+    "id": "liga5-32",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM"
+  },
+  {
+    "id": "liga5-33",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM"
+  },
+  {
+    "id": "liga5-34",
+    "league": "Liga 5",
+    "raw_fixture": "KSQ Galaxy V Duloch City 2018s"
+  },
+  {
+    "id": "liga5-35",
+    "league": "Liga 5",
+    "raw_fixture": "KSQ Galaxy V Duloch City 2018s"
+  },
+  {
+    "id": "liga5-36",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-37",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 11:15 AM Tiki Taka Neranja V Tiki Taka Negra"
+  },
+  {
+    "id": "liga5-38",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 11:15 AM"
+  },
+  {
+    "id": "liga5-39",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 11:15 AM"
+  },
+  {
+    "id": "liga5-40",
+    "league": "Liga 5",
+    "raw_fixture": "Tiki Taka Neranja V Tiki Taka Negra"
+  },
+  {
+    "id": "liga5-41",
+    "league": "Liga 5",
+    "raw_fixture": "Tiki Taka Neranja V Tiki Taka Negra"
+  },
+  {
+    "id": "liga5-42",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-43",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Duloch Juniors - Reds V Bayside Bullets 2017s"
+  },
+  {
+    "id": "liga5-44",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM"
+  },
+  {
+    "id": "liga5-45",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM"
+  },
+  {
+    "id": "liga5-46",
+    "league": "Liga 5",
+    "raw_fixture": "Duloch Juniors - Reds V Bayside Bullets 2017s"
+  },
+  {
+    "id": "liga5-47",
+    "league": "Liga 5",
+    "raw_fixture": "Duloch Juniors - Reds V Bayside Bullets 2017s"
+  },
+  {
+    "id": "liga5-48",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-49",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 12:00 PM Templehall United Yellows 2018 V KSQ 2018 Galaxy"
+  },
+  {
+    "id": "liga5-50",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 12:00 PM"
+  },
+  {
+    "id": "liga5-51",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 12:00 PM"
+  },
+  {
+    "id": "liga5-52",
+    "league": "Liga 5",
+    "raw_fixture": "Templehall United Yellows 2018 V KSQ 2018 Galaxy"
+  },
+  {
+    "id": "liga5-53",
+    "league": "Liga 5",
+    "raw_fixture": "Templehall United Yellows 2018 V KSQ 2018 Galaxy"
+  },
+  {
+    "id": "liga5-54",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-55",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Bayside Barcas V DACC Girls 2017 Whites"
+  },
+  {
+    "id": "liga5-56",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM"
+  },
+  {
+    "id": "liga5-57",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM"
+  },
+  {
+    "id": "liga5-58",
+    "league": "Liga 5",
+    "raw_fixture": "Bayside Barcas V DACC Girls 2017 Whites"
+  },
+  {
+    "id": "liga5-59",
+    "league": "Liga 5",
+    "raw_fixture": "Bayside Barcas V DACC Girls 2017 Whites"
+  },
+  {
+    "id": "liga5-60",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-61",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 12:45 PM Blue Brazil Blues 2019's V Greig Park Greens"
+  },
+  {
+    "id": "liga5-62",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 12:45 PM"
+  },
+  {
+    "id": "liga5-63",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 12:45 PM"
+  },
+  {
+    "id": "liga5-64",
+    "league": "Liga 5",
+    "raw_fixture": "Blue Brazil Blues 2019's V Greig Park Greens"
+  },
+  {
+    "id": "liga5-65",
+    "league": "Liga 5",
+    "raw_fixture": "Blue Brazil Blues 2019's V Greig Park Greens"
+  },
+  {
+    "id": "liga5-66",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-67",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Futsal Escocia Turquoise V Dunipace Ballerz White"
+  },
+  {
+    "id": "liga5-68",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM"
+  },
+  {
+    "id": "liga5-69",
+    "league": "Liga 5",
+    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM"
+  },
+  {
+    "id": "liga5-70",
+    "league": "Liga 5",
+    "raw_fixture": "Futsal Escocia Turquoise V Dunipace Ballerz White"
+  },
+  {
+    "id": "liga5-71",
+    "league": "Liga 5",
+    "raw_fixture": "Futsal Escocia Turquoise V Dunipace Ballerz White"
+  },
+  {
+    "id": "liga5-72",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-73",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 1:30 PM Dunipace Ballerz Black V DACC Girls Blacks"
+  },
+  {
+    "id": "liga5-74",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 1:30 PM"
+  },
+  {
+    "id": "liga5-75",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 1:30 PM"
+  },
+  {
+    "id": "liga5-76",
+    "league": "Liga 5",
+    "raw_fixture": "Dunipace Ballerz Black V DACC Girls Blacks"
+  },
+  {
+    "id": "liga5-77",
+    "league": "Liga 5",
+    "raw_fixture": "Dunipace Ballerz Black V DACC Girls Blacks"
+  },
+  {
+    "id": "liga5-78",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-79",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 2:15 PM Bowhill United Yellows V Cairneyhill Ath Maroons"
+  },
+  {
+    "id": "liga5-80",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 2:15 PM"
+  },
+  {
+    "id": "liga5-81",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School 2:15 PM"
+  },
+  {
+    "id": "liga5-82",
+    "league": "Liga 5",
+    "raw_fixture": "Bowhill United Yellows V Cairneyhill Ath Maroons"
+  },
+  {
+    "id": "liga5-83",
+    "league": "Liga 5",
+    "raw_fixture": "Bowhill United Yellows V Cairneyhill Ath Maroons"
+  },
+  {
+    "id": "liga5-84",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga5-85",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School Refurb 2:15 PM Crossgates Primrose 2016s Blues V Bowhill United Blacks"
+  },
+  {
+    "id": "liga5-86",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School Refurb 2:15 PM"
+  },
+  {
+    "id": "liga5-87",
+    "league": "Liga 5",
+    "raw_fixture": "Beath High School Refurb 2:15 PM"
+  },
+  {
+    "id": "liga5-88",
+    "league": "Liga 5",
+    "raw_fixture": "Crossgates Primrose 2016s Blues V Bowhill United Blacks"
+  },
+  {
+    "id": "liga5-89",
+    "league": "Liga 5",
+    "raw_fixture": "Crossgates Primrose 2016s Blues V Bowhill United Blacks"
+  },
+  {
+    "id": "liga5-90",
+    "league": "Liga 5",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-1",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 9:00 AM Cairneyhill Ath Blues V Crossgates Blue"
+  },
+  {
+    "id": "liga6-2",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 9:00 AM"
+  },
+  {
+    "id": "liga6-3",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 9:00 AM"
+  },
+  {
+    "id": "liga6-4",
+    "league": "Liga 6",
+    "raw_fixture": "Cairneyhill Ath Blues V Crossgates Blue"
+  },
+  {
+    "id": "liga6-5",
+    "league": "Liga 6",
+    "raw_fixture": "Cairneyhill Ath Blues V Crossgates Blue"
+  },
+  {
+    "id": "liga6-6",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-7",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 9:45 AM Dunipace Ballerz Red V Swifts Thunder"
+  },
+  {
+    "id": "liga6-8",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 9:45 AM"
+  },
+  {
+    "id": "liga6-9",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 9:45 AM"
+  },
+  {
+    "id": "liga6-10",
+    "league": "Liga 6",
+    "raw_fixture": "Dunipace Ballerz Red V Swifts Thunder"
+  },
+  {
+    "id": "liga6-11",
+    "league": "Liga 6",
+    "raw_fixture": "Dunipace Ballerz Red V Swifts Thunder"
+  },
+  {
+    "id": "liga6-12",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-13",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 10:30 AM KSQ Thunder V Futsal Escocia Turquoise"
+  },
+  {
+    "id": "liga6-14",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 10:30 AM"
+  },
+  {
+    "id": "liga6-15",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 10:30 AM"
+  },
+  {
+    "id": "liga6-16",
+    "league": "Liga 6",
+    "raw_fixture": "KSQ Thunder V Futsal Escocia Turquoise"
+  },
+  {
+    "id": "liga6-17",
+    "league": "Liga 6",
+    "raw_fixture": "KSQ Thunder V Futsal Escocia Turquoise"
+  },
+  {
+    "id": "liga6-18",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-19",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 10:30 AM Futsal Escocia White V Templehall Utd Blacks"
+  },
+  {
+    "id": "liga6-20",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 10:30 AM"
+  },
+  {
+    "id": "liga6-21",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 10:30 AM"
+  },
+  {
+    "id": "liga6-22",
+    "league": "Liga 6",
+    "raw_fixture": "Futsal Escocia White V Templehall Utd Blacks"
+  },
+  {
+    "id": "liga6-23",
+    "league": "Liga 6",
+    "raw_fixture": "Futsal Escocia White V Templehall Utd Blacks"
+  },
+  {
+    "id": "liga6-24",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-25",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 11:15 AM Crossgates Yellow V Rosyth Reds 2018"
+  },
+  {
+    "id": "liga6-26",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 11:15 AM"
+  },
+  {
+    "id": "liga6-27",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 11:15 AM"
+  },
+  {
+    "id": "liga6-28",
+    "league": "Liga 6",
+    "raw_fixture": "Crossgates Yellow V Rosyth Reds 2018"
+  },
+  {
+    "id": "liga6-29",
+    "league": "Liga 6",
+    "raw_fixture": "Crossgates Yellow V Rosyth Reds 2018"
+  },
+  {
+    "id": "liga6-30",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-31",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 11:15 AM DACC Whites V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga6-32",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 11:15 AM"
+  },
+  {
+    "id": "liga6-33",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 11:15 AM"
+  },
+  {
+    "id": "liga6-34",
+    "league": "Liga 6",
+    "raw_fixture": "DACC Whites V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga6-35",
+    "league": "Liga 6",
+    "raw_fixture": "DACC Whites V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga6-36",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-37",
+    "league": "Liga 6",
+    "raw_fixture": "Lochgelly High School 11:15 AM Kelty Hearts V KSQ Lightning"
+  },
+  {
+    "id": "liga6-38",
+    "league": "Liga 6",
+    "raw_fixture": "Lochgelly High School 11:15 AM"
+  },
+  {
+    "id": "liga6-39",
+    "league": "Liga 6",
+    "raw_fixture": "Lochgelly High School 11:15 AM"
+  },
+  {
+    "id": "liga6-40",
+    "league": "Liga 6",
+    "raw_fixture": "Kelty Hearts V KSQ Lightning"
+  },
+  {
+    "id": "liga6-41",
+    "league": "Liga 6",
+    "raw_fixture": "Kelty Hearts V KSQ Lightning"
+  },
+  {
+    "id": "liga6-42",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-43",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 12:00 PM Swift Hurricanes V Glenrothes Strollers"
+  },
+  {
+    "id": "liga6-44",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 12:00 PM"
+  },
+  {
+    "id": "liga6-45",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 12:00 PM"
+  },
+  {
+    "id": "liga6-46",
+    "league": "Liga 6",
+    "raw_fixture": "Swift Hurricanes V Glenrothes Strollers"
+  },
+  {
+    "id": "liga6-47",
+    "league": "Liga 6",
+    "raw_fixture": "Swift Hurricanes V Glenrothes Strollers"
+  },
+  {
+    "id": "liga6-48",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-49",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 12:00 PM Blue Brazil 2018 V Tiki Taka Negra"
+  },
+  {
+    "id": "liga6-50",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 12:00 PM"
+  },
+  {
+    "id": "liga6-51",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 12:00 PM"
+  },
+  {
+    "id": "liga6-52",
+    "league": "Liga 6",
+    "raw_fixture": "Blue Brazil 2018 V Tiki Taka Negra"
+  },
+  {
+    "id": "liga6-53",
+    "league": "Liga 6",
+    "raw_fixture": "Blue Brazil 2018 V Tiki Taka Negra"
+  },
+  {
+    "id": "liga6-54",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-55",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 12:45 PM KSQ Astros V KSQ 2018 Rapids"
+  },
+  {
+    "id": "liga6-56",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 12:45 PM"
+  },
+  {
+    "id": "liga6-57",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 12:45 PM"
+  },
+  {
+    "id": "liga6-58",
+    "league": "Liga 6",
+    "raw_fixture": "KSQ Astros V KSQ 2018 Rapids"
+  },
+  {
+    "id": "liga6-59",
+    "league": "Liga 6",
+    "raw_fixture": "KSQ Astros V KSQ 2018 Rapids"
+  },
+  {
+    "id": "liga6-60",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-61",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 12:45 PM Duloch Juniors V Tiki Taka Neranja"
+  },
+  {
+    "id": "liga6-62",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 12:45 PM"
+  },
+  {
+    "id": "liga6-63",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 12:45 PM"
+  },
+  {
+    "id": "liga6-64",
+    "league": "Liga 6",
+    "raw_fixture": "Duloch Juniors V Tiki Taka Neranja"
+  },
+  {
+    "id": "liga6-65",
+    "league": "Liga 6",
+    "raw_fixture": "Duloch Juniors V Tiki Taka Neranja"
+  },
+  {
+    "id": "liga6-66",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-67",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 1:30 PM Rosyth Blacks 2018 V Duloch Juniors City"
+  },
+  {
+    "id": "liga6-68",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 1:30 PM"
+  },
+  {
+    "id": "liga6-69",
+    "league": "Liga 6",
+    "raw_fixture": "Beath High School Refurb 1:30 PM"
+  },
+  {
+    "id": "liga6-70",
+    "league": "Liga 6",
+    "raw_fixture": "Rosyth Blacks 2018 V Duloch Juniors City"
+  },
+  {
+    "id": "liga6-71",
+    "league": "Liga 6",
+    "raw_fixture": "Rosyth Blacks 2018 V Duloch Juniors City"
+  },
+  {
+    "id": "liga6-72",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-73",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 1:30 PM Swifts Lightnings V Greig Park Blues"
+  },
+  {
+    "id": "liga6-74",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 1:30 PM"
+  },
+  {
+    "id": "liga6-75",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 1:30 PM"
+  },
+  {
+    "id": "liga6-76",
+    "league": "Liga 6",
+    "raw_fixture": "Swifts Lightnings V Greig Park Blues"
+  },
+  {
+    "id": "liga6-77",
+    "league": "Liga 6",
+    "raw_fixture": "Swifts Lightnings V Greig Park Blues"
+  },
+  {
+    "id": "liga6-78",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga6-79",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 2:15 PM Swifts Lightening V Tiki Taka Gris"
+  },
+  {
+    "id": "liga6-80",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 2:15 PM"
+  },
+  {
+    "id": "liga6-81",
+    "league": "Liga 6",
+    "raw_fixture": "Balwearie High School 2:15 PM"
+  },
+  {
+    "id": "liga6-82",
+    "league": "Liga 6",
+    "raw_fixture": "Swifts Lightening V Tiki Taka Gris"
+  },
+  {
+    "id": "liga6-83",
+    "league": "Liga 6",
+    "raw_fixture": "Swifts Lightening V Tiki Taka Gris"
+  },
+  {
+    "id": "liga6-84",
+    "league": "Liga 6",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-1",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM KSQ Knights V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-2",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-3",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-4",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-5",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-6",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-7",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Swifts Tornadoes V Futsal Escocia"
+  },
+  {
+    "id": "liga7-8",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-9",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-10",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Futsal Escocia"
+  },
+  {
+    "id": "liga7-11",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Futsal Escocia"
+  },
+  {
+    "id": "liga7-12",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-13",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Duloch Juniors United V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-14",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-15",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-16",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-17",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-18",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-19",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Swifts Typhoons V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-20",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-21",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-22",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-23",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-24",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-25",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Tiki Taka Blanco V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-26",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-27",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-28",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-29",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-30",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-31",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-32",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-33",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-34",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-35",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-36",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-37",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-38",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-39",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-40",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-41",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-42",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-43",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-44",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-45",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-46",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-47",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-48",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-49",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM KSQ Knights V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-50",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-51",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-52",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-53",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-54",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-55",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Bayside Girls 2018s V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-56",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-57",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-58",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-59",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-60",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-61",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Kelty Hearts 2020 V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-62",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-63",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-64",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-65",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-66",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-67",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Tiki Taka Blanco V Futsal Escocia"
+  },
+  {
+    "id": "liga7-68",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-69",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-70",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Futsal Escocia"
+  },
+  {
+    "id": "liga7-71",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Futsal Escocia"
+  },
+  {
+    "id": "liga7-72",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-73",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Bayside Girls 2018s V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-74",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-75",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-76",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-77",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-78",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-79",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Duloch Juniors United V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-80",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-81",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-82",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-83",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-84",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-85",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Swifts Tornadoes V KSQ Knights"
+  },
+  {
+    "id": "liga7-86",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-87",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-88",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V KSQ Knights"
+  },
+  {
+    "id": "liga7-89",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V KSQ Knights"
+  },
+  {
+    "id": "liga7-90",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-91",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-92",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-93",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-94",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-95",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-96",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-97",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM KSQ Knights V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-98",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-99",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-100",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-101",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-102",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-103",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Futsal Escocia"
+  },
+  {
+    "id": "liga7-104",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-105",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-106",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Futsal Escocia"
+  },
+  {
+    "id": "liga7-107",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Futsal Escocia"
+  },
+  {
+    "id": "liga7-108",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-109",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Bayside Girls 2018s V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-110",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-111",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-112",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-113",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-114",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-115",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Swifts Typhoons V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-116",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-117",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-118",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-119",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-120",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-121",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Duloch Juniors United V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-122",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-123",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-124",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-125",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-126",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-127",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V KSQ Knights"
+  },
+  {
+    "id": "liga7-128",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-129",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-130",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V KSQ Knights"
+  },
+  {
+    "id": "liga7-131",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V KSQ Knights"
+  },
+  {
+    "id": "liga7-132",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-133",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Tiki Taka Blanco V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-134",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-135",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-136",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-137",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-138",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-139",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Swifts Tornadoes V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-140",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-141",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-142",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-143",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-144",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-145",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Kelty Hearts 2020 V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-146",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-147",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-148",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-149",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-150",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-151",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-152",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-153",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-154",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-155",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-156",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-157",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Swifts Typhoons V Futsal Escocia"
+  },
+  {
+    "id": "liga7-158",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-159",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-160",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Futsal Escocia"
+  },
+  {
+    "id": "liga7-161",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Futsal Escocia"
+  },
+  {
+    "id": "liga7-162",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-163",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM KSQ Knights V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-164",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-165",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-166",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-167",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-168",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-169",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Duloch Juniors United V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-170",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-171",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-172",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-173",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-174",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-175",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Bayside Girls 2018s V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-176",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-177",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-178",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-179",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-180",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-181",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-182",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-183",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-184",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-185",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-186",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-187",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-188",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-189",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-190",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-191",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-192",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-193",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Kelty Hearts 2020 V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-194",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-195",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-196",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-197",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-198",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-199",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Tiki Taka Blanco V KSQ Knights"
+  },
+  {
+    "id": "liga7-200",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-201",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-202",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V KSQ Knights"
+  },
+  {
+    "id": "liga7-203",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V KSQ Knights"
+  },
+  {
+    "id": "liga7-204",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-205",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Swifts Tornadoes V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-206",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-207",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-208",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-209",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-210",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-211",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Bayside Girls 2018s V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-212",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-213",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-214",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-215",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-216",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-217",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Swifts Typhoons V KSQ Knights"
+  },
+  {
+    "id": "liga7-218",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-219",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-220",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V KSQ Knights"
+  },
+  {
+    "id": "liga7-221",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V KSQ Knights"
+  },
+  {
+    "id": "liga7-222",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-223",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's B V Futsal Escocia"
+  },
+  {
+    "id": "liga7-224",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-225",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-226",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Futsal Escocia"
+  },
+  {
+    "id": "liga7-227",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Futsal Escocia"
+  },
+  {
+    "id": "liga7-228",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-229",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Duloch Juniors United V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-230",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-231",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-232",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-233",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-234",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-235",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Swifts Tornadoes V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-236",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-237",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-238",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-239",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-240",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-241",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-242",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-243",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-244",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-245",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-246",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-247",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-248",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-249",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-250",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-251",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-252",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-253",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Tiki Taka Blanco V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-254",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-255",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-256",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-257",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-258",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-259",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM KSQ Knights V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-260",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-261",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-262",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-263",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-264",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-265",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Kelty Hearts 2020 V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-266",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-267",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-268",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-269",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-270",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-271",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V KSQ Knights"
+  },
+  {
+    "id": "liga7-272",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-273",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-274",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V KSQ Knights"
+  },
+  {
+    "id": "liga7-275",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V KSQ Knights"
+  },
+  {
+    "id": "liga7-276",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-277",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-278",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-279",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-280",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-281",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-282",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-283",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-284",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-285",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-286",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-287",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-288",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-289",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Bayside Girls 2018s V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-290",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-291",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-292",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-293",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-294",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-295",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Kelty Hearts 2020 V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-296",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-297",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-298",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-299",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-300",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-301",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Swifts Tornadoes V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-302",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-303",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-304",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-305",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-306",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-307",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Kelty Hearts 2020 V Futsal Escocia"
+  },
+  {
+    "id": "liga7-308",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-309",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-310",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Futsal Escocia"
+  },
+  {
+    "id": "liga7-311",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Futsal Escocia"
+  },
+  {
+    "id": "liga7-312",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-313",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Swifts Typhoons V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-314",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-315",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-316",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-317",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-318",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-319",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Tiki Taka Blanco V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-320",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-321",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-322",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-323",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-324",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-325",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Duloch Juniors United V KSQ Knights"
+  },
+  {
+    "id": "liga7-326",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-327",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-328",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V KSQ Knights"
+  },
+  {
+    "id": "liga7-329",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V KSQ Knights"
+  },
+  {
+    "id": "liga7-330",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-331",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-332",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-333",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-334",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-335",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-336",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-337",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-338",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-339",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-340",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-341",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-342",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-343",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-344",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-345",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-346",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-347",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-348",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-349",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM KSQ Knights V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-350",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-351",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-352",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-353",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-354",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-355",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Swifts Typhoons V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-356",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-357",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-358",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-359",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-360",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-361",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Tiki Taka Blanco V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-362",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-363",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-364",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-365",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-366",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-367",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Kelty Hearts 2020 V KSQ Knights"
+  },
+  {
+    "id": "liga7-368",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-369",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-370",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V KSQ Knights"
+  },
+  {
+    "id": "liga7-371",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V KSQ Knights"
+  },
+  {
+    "id": "liga7-372",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-373",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Futsal Escocia V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-374",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-375",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-376",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-377",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Kennoway Star Hearts 2019's A"
+  },
+  {
+    "id": "liga7-378",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-379",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Swifts Tornadoes V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-380",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-381",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-382",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-383",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-384",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-385",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Duloch Juniors United V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-386",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-387",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-388",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-389",
+    "league": "Liga 7",
+    "raw_fixture": "Duloch Juniors United V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-390",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-391",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-392",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-393",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-394",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-395",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V Tiki Taka Blanco"
+  },
+  {
+    "id": "liga7-396",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-397",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM KSQ Knights V Futsal Escocia"
+  },
+  {
+    "id": "liga7-398",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-399",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-400",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Futsal Escocia"
+  },
+  {
+    "id": "liga7-401",
+    "league": "Liga 7",
+    "raw_fixture": "KSQ Knights V Futsal Escocia"
+  },
+  {
+    "id": "liga7-402",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-403",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's B V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-404",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-405",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-406",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-407",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's B V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-408",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-409",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Swifts Typhoons V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-410",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-411",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-412",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-413",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Typhoons V Kelty Hearts 2020"
+  },
+  {
+    "id": "liga7-414",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-415",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Bayside Girls 2018s V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-416",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-417",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-418",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-419",
+    "league": "Liga 7",
+    "raw_fixture": "Bayside Girls 2018s V Swifts Tornadoes"
+  },
+  {
+    "id": "liga7-420",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-421",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V KSQ Knights"
+  },
+  {
+    "id": "liga7-422",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-423",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:00 AM"
+  },
+  {
+    "id": "liga7-424",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V KSQ Knights"
+  },
+  {
+    "id": "liga7-425",
+    "league": "Liga 7",
+    "raw_fixture": "Kennoway Star Hearts 2019's A V KSQ Knights"
+  },
+  {
+    "id": "liga7-426",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-427",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM Futsal Escocia V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-428",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-429",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:00 AM"
+  },
+  {
+    "id": "liga7-430",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-431",
+    "league": "Liga 7",
+    "raw_fixture": "Futsal Escocia V Swifts Typhoons"
+  },
+  {
+    "id": "liga7-432",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-433",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM Swifts Tornadoes V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-434",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-435",
+    "league": "Liga 7",
+    "raw_fixture": "Balwearie High School 9:45 AM"
+  },
+  {
+    "id": "liga7-436",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-437",
+    "league": "Liga 7",
+    "raw_fixture": "Swifts Tornadoes V Kennoway Star Hearts 2019's B"
+  },
+  {
+    "id": "liga7-438",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-439",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM Tiki Taka Blanco V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-440",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-441",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 9:45 AM"
+  },
+  {
+    "id": "liga7-442",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-443",
+    "league": "Liga 7",
+    "raw_fixture": "Tiki Taka Blanco V Duloch Juniors United"
+  },
+  {
+    "id": "liga7-444",
+    "league": "Liga 7",
+    "raw_fixture": "V"
+  },
+  {
+    "id": "liga7-445",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM Kelty Hearts 2020 V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-446",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-447",
+    "league": "Liga 7",
+    "raw_fixture": "Lochgelly High School 10:30 AM"
+  },
+  {
+    "id": "liga7-448",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-449",
+    "league": "Liga 7",
+    "raw_fixture": "Kelty Hearts 2020 V Bayside Girls 2018s"
+  },
+  {
+    "id": "liga7-450",
+    "league": "Liga 7",
+    "raw_fixture": "V"
   }
 ]
