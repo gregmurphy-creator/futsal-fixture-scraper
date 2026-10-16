@@ -21,20 +21,9 @@ def format_round_date(round_num):
         suf = {1: "st", 2: "nd", 3: "rd"}.get(day % 10, "th")
     return f"Sat {day}{suf} {match_date.strftime('%b %Y')}"
 
-def time_to_minutes(time_str):
-    m = re.match(r'(\d{1,2}):(\d{2})\s*(AM|PM)', time_str, re.I)
-    if not m:
-        return 0
-    hr, mn, meridiem = int(m.group(1)), int(m.group(2)), m.group(3).upper()
-    if meridiem == 'PM' and hr != 12:
-        hr += 12
-    elif meridiem == 'AM' and hr == 12:
-        hr = 0
-    return hr * 60 + mn
-
-def extract_matches_from_elements(elements_text, league_name, week_num, starting_id):
+def extract_matches_from_text(row_texts, league_name, week_num, starting_id):
     fixtures = []
-    for raw in elements_text:
+    for raw in row_texts:
         clean_text = " ".join(raw.split())
         if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
             continue
@@ -72,12 +61,15 @@ def extract_matches_from_elements(elements_text, league_name, week_num, starting
     return fixtures
 
 async def scrape_league(page, league_name, url):
-    print(f"\nScraping {league_name} ({url})...")
+    print(f"\n==========================================")
+    print(f"Scraping {league_name}: {url}")
+    print(f"==========================================")
     fixtures = []
     seen_matches = set()
     
     await page.goto(url, wait_until="domcontentloaded", timeout=45000)
     
+    # Locate iframe
     iframe_element = await page.wait_for_selector("iframe", timeout=30000)
     target = page
     if iframe_element:
@@ -87,64 +79,80 @@ async def scrape_league(page, league_name, url):
 
     await target.wait_for_selector("table, tr, .match", timeout=25000)
 
-    # 1. Check if the page is in paginated mode (e.g. "Week 1 of 7" with arrow buttons)
-    week_info_el = await target.query_selector("text=/Week\\s+\\d+\\s+of\\s+\\d+/i, text=/Round\\s+\\d+\\s+of\\s+\\d+/i")
-    
-    if week_info_el:
-        txt = await week_info_el.inner_text()
-        m = re.search(r'(?:Week|Round)\s*(\d+)\s*of\s*(\d+)', txt, re.I)
-        if m:
-            start_week = int(m.group(1))
-            total_weeks = int(m.group(2))
-            print(f"[{league_name}] Detected paginated arrows: currently on Week {start_week} of {total_weeks}")
+    # 1. Attempt to trigger 'Refresh full schedule' if available
+    try:
+        full_btn = await target.query_selector("a:has-text('full schedule'), button:has-text('full schedule')")
+        if full_btn:
+            print(f"[{league_name}] Found 'Full Schedule' button. Clicking...")
+            await full_btn.click()
+            await page.wait_for_timeout(2500)
+    except Exception:
+        pass
 
-            curr_week = start_week
-            while curr_week <= total_weeks:
-                rows = await target.query_selector_all("table tr, .match, .game-row")
-                row_texts = [await r.inner_text() for r in rows]
-                week_matches = extract_matches_from_elements(row_texts, league_name, curr_week, len(fixtures))
-                
-                added = 0
-                for match in week_matches:
-                    key = (match["league"], match["round"], match["time"], match["homeTeam"], match["awayTeam"])
-                    if key not in seen_matches:
-                        seen_matches.add(key)
-                        fixtures.append(match)
-                        added += 1
+    # 2. Check if the schedule is paginated by week
+    pagination_info = await target.evaluate("""() => {
+        const bodyText = document.body.innerText || "";
+        const m = bodyText.match(/(?:Week|Round)\\s*(\\d+)\\s*of\\s*(\\d+)/i);
+        if (m) {
+            return { current: parseInt(m[1], 10), total: parseInt(m[2], 10) };
+        }
+        return null;
+    }""")
 
-                print(f"[{league_name}] Week {curr_week}/{total_weeks}: captured {added} matches")
+    if pagination_info and pagination_info.get("total", 1) > 1:
+        total_weeks = pagination_info["total"]
+        start_week = pagination_info["current"]
+        print(f"[{league_name}] Paginated mode detected: currently Week {start_week} of {total_weeks}")
 
-                if curr_week >= total_weeks:
-                    break
+        for week in range(start_week, total_weeks + 1):
+            # Extract matches currently visible
+            rows = await target.query_selector_all("table tr, .match, .game-row")
+            row_texts = []
+            for r in rows:
+                txt = await r.inner_text()
+                if txt:
+                    row_texts.append(txt)
 
-                # Click next arrow button (>)
-                clicked = False
-                container = await week_info_el.evaluate_handle("el => el.parentElement")
-                buttons = await container.query_selector_all("button, a")
-                if buttons and len(buttons) > 1:
-                    await buttons[-1].click()
-                    clicked = True
-                    
-                if not clicked:
-                    next_btn = await target.query_selector("button:has(.fa-chevron-right), a:has(.fa-chevron-right), button:has(.fa-angle-right), a:has(.fa-angle-right), button:has-text('>'), a:has-text('>')")
-                    if next_btn:
+            matches = extract_matches_from_text(row_texts, league_name, week, len(fixtures))
+            new_count = 0
+            for m in matches:
+                key = (m["league"], m["round"], m["time"], m["homeTeam"], m["awayTeam"])
+                if key not in seen_matches:
+                    seen_matches.add(key)
+                    fixtures.append(m)
+                    new_count += 1
+
+            print(f"[{league_name}] Week {week}/{total_weeks}: captured {new_count} fixtures")
+
+            if week < total_weeks:
+                # Advance to next week: click arrow button or press ArrowRight
+                advanced = False
+
+                # Option A: Look for right-chevron or next button
+                next_btn = await target.query_selector(
+                    "button:has(.fa-chevron-right), a:has(.fa-chevron-right), "
+                    "button:has(.fa-angle-right), a:has(.fa-angle-right), "
+                    "button:has-text('>'), [aria-label*='next' i]"
+                )
+                if next_btn:
+                    try:
                         await next_btn.click()
-                        clicked = True
+                        advanced = True
+                    except Exception:
+                        pass
 
-                if not clicked:
-                    print(f"[{league_name}] No next arrow found after week {curr_week}. Stopping.")
-                    break
+                # Option B: Use LeagueLobster's native keyboard navigation (ArrowRight)
+                if not advanced:
+                    await page.keyboard.press("ArrowRight")
+                    advanced = True
 
-                curr_week += 1
-                try:
-                    await target.wait_for_selector(f"text=/Week\\s+{curr_week}\\s+of/i, text=/Round\\s+{curr_week}\\s+of/i", timeout=5000)
-                except Exception:
-                    await page.wait_for_timeout(1500)
+                await page.wait_for_timeout(1500)
 
-            print(f"[{league_name}] Total captured across all {total_weeks} weeks: {len(fixtures)}")
-            return fixtures
+        print(f"[{league_name}] Done! Total fixtures captured: {len(fixtures)}")
+        return fixtures
 
-    # 2. If NOT paginated (e.g. Liga 7 which renders full season view on one page)
+    # 3. Non-paginated mode (Full season rendered at once, e.g. Liga 7)
+    print(f"[{league_name}] Full season view detected. Parsing all rows...")
     elements = await target.query_selector_all("caption, h2, h3, h4, th, tr, .match, .game-row")
     current_round = 1
     last_minutes = -1
@@ -167,7 +175,14 @@ async def scrape_league(page, league_name, url):
             time_match = re.search(r'(\d{1,2}:\d{2}\s*(?:AM|PM)?)', clean_text, re.I)
             time_str = time_match.group(1).strip() if time_match else "9:00 AM"
 
-            curr_minutes = time_to_minutes(time_str)
+            # Parse kickoff time
+            m_time = re.match(r'(\d{1,2}):(\d{2})\s*(AM|PM)', time_str, re.I)
+            if m_time:
+                hr, mn, mer = int(m_time.group(1)), int(m_time.group(2)), m_time.group(3).upper()
+                curr_minutes = (hr % 12 + (12 if mer == 'PM' else 0)) * 60 + mn
+            else:
+                curr_minutes = 540
+
             if last_minutes != -1 and curr_minutes < last_minutes and (last_minutes - curr_minutes) > 60:
                 current_round += 1
                 last_minutes = curr_minutes
@@ -201,7 +216,7 @@ async def scrape_league(page, league_name, url):
                 "raw_fixture": clean_text
             })
 
-    print(f"[{league_name}] Extracted {len(fixtures)} fixtures across {current_round} round(s)")
+    print(f"[{league_name}] Done! Extracted {len(fixtures)} fixtures across {current_round} round(s)")
     return fixtures
 
 async def main():
@@ -227,6 +242,8 @@ async def main():
             with open('fixtures_data.json', 'w') as f:
                 json.dump(all_data, f, indent=2)
             print("Successfully updated fixtures_data.json.")
+        else:
+            print("Warning: 0 fixtures collected. File left unchanged.")
 
 if __name__ == "__main__":
     asyncio.run(main())
