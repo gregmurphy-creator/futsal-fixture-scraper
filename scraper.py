@@ -2,6 +2,7 @@ import json
 import asyncio
 import re
 import datetime
+import traceback
 from playwright.async_api import async_playwright
 
 urls = {
@@ -42,7 +43,7 @@ def parse_full_schedule(raw_texts, league_name):
         if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
             continue
 
-        # Detect round/week headers if present
+        # Check for explicit Week/Round headers
         round_heading = re.search(r'\b(?:Week|Round)\s*(\d+)\b', clean_text, re.I)
         if round_heading and not re.search(r'\d{1,2}:\d{2}', clean_text):
             current_round = int(round_heading.group(1))
@@ -54,7 +55,7 @@ def parse_full_schedule(raw_texts, league_name):
             time_str = t_match.group(1).strip() if t_match else "9:00 AM"
 
             curr_min = time_to_minutes(time_str)
-            # Roll over to next week when kickoff times drop back to morning
+            # Roll over to next week when kickoff times reset back to the morning
             if last_minutes != -1 and curr_min < last_minutes and (last_minutes - curr_min) > 60:
                 current_round += 1
                 last_minutes = curr_min
@@ -109,42 +110,33 @@ async def scrape_league(page, league_name, url):
     print(f"==========================================")
     
     await page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    await page.wait_for_timeout(2000)
     frame = await get_schedule_frame(page)
     await frame.wait_for_selector("table, tr, .match", timeout=25000)
 
-    # Click the exact "Reload full schedule" button
-    clicked = False
-    for scope in [frame, page]:
-        for sel in [
-            "button:has-text('Reload full schedule')",
-            "a:has-text('Reload full schedule')",
-            ":has-text('Reload full schedule')"
-        ]:
-            try:
-                btn = await scope.query_selector(sel)
-                if btn:
-                    print(f"[{league_name}] Found 'Reload full schedule' button! Clicking to expand all weeks...")
-                    await btn.scroll_into_view_if_needed()
-                    await btn.click()
-                    clicked = True
-                    break
-            except Exception:
-                continue
-        if clicked:
-            break
+    # Click the exact "Reload full schedule" button shown at the bottom
+    try:
+        reload_btn = frame.locator("button, a, div, span").filter(has_text="Reload full schedule").last
+        if await reload_btn.count() > 0:
+            print(f"[{league_name}] Found 'Reload full schedule' button! Scrolling and clicking...")
+            await reload_btn.scroll_into_view_if_needed()
+            await reload_btn.click()
+            await page.wait_for_timeout(4000)
+            # Re-acquire frame after reload to avoid detached execution context
+            frame = await get_schedule_frame(page)
+    except Exception as e:
+        print(f"[{league_name}] Reload full schedule notice: {e}")
 
-    if clicked:
-        # Give LeagueLobster 4 seconds to pull and display all weeks
-        await page.wait_for_timeout(4000)
-        frame = await get_schedule_frame(page)
-
-    # Scrape all rendered elements across the full expanded schedule
-    elements = await frame.query_selector_all("caption, h2, h3, h4, th, tr, .match, .game-row")
+    # Scrape all rows across the full schedule
+    rows = await frame.query_selector_all("caption, h2, h3, h4, th, tr, .match, .game-row")
     raw_texts = []
-    for el in elements:
-        txt = await el.inner_text()
-        if txt:
-            raw_texts.append(" ".join(txt.split()))
+    for r in rows:
+        try:
+            txt = await r.inner_text()
+            if txt:
+                raw_texts.append(" ".join(txt.split()))
+        except Exception:
+            continue
 
     fixtures = parse_full_schedule(raw_texts, league_name)
     rounds_found = len(set(f["round"] for f in fixtures)) if fixtures else 0
@@ -163,15 +155,18 @@ async def main():
         for league_name, url in urls.items():
             try:
                 data = await scrape_league(page, league_name, url)
-                all_data.extend(data)
+                if data:
+                    all_data.extend(data)
             except Exception as e:
                 print(f"Error scraping {league_name}: {e}")
+                traceback.print_exc()
 
         await browser.close()
 
         print(f"\n==========================================")
         print(f"Total fixtures captured across all leagues: {len(all_data)}")
         print(f"==========================================")
+
         if len(all_data) > 0:
             with open('fixtures_data.json', 'w') as f:
                 json.dump(all_data, f, indent=2)
