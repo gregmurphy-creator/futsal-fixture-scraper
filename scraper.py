@@ -1,5 +1,6 @@
 import json
 import asyncio
+import re
 from playwright.async_api import async_playwright
 
 urls = {
@@ -12,33 +13,37 @@ async def scrape_league(page, league_name, url):
     print(f"Loading {league_name}...")
     fixtures = []
     try:
-        await page.goto(url, wait_until="networkidle", timeout=30000)
+        await page.goto(url, wait_until="networkidle", timeout=35000)
         
-        # Check if page embeds an iframe
+        # Target the embedded iframe
         iframe_element = await page.query_selector("iframe")
         target = page
-        
         if iframe_element:
             frame = await iframe_element.content_frame()
             if frame:
                 target = frame
 
-        # Wait for schedule elements/tables to load
-        await target.wait_for_selector("table, .game, .match, .fixture-row", timeout=15000)
+        # Wait for schedule elements to render
+        await target.wait_for_selector(".match, .game, table, tr", timeout=20000)
         
-        # Extract rows
-        rows = await target.query_selector_all("tr, .game, .match")
-        for idx, row in enumerate(rows):
-            text = await row.inner_text()
+        # Grab all text elements inside the schedule container
+        elements = await target.query_selector_all("tr, .match, .game-row, div[class*='match']")
+        
+        for idx, el in enumerate(elements):
+            text = await el.inner_text()
             clean_text = " ".join(text.split())
-            if len(clean_text) > 10 and ("vs" in clean_text.lower() or "v" in clean_text.lower() or ":" in clean_text):
-                fixtures.append({
-                    "id": f"{league_name.lower().replace(' ', '')}-{idx+1}",
-                    "league": league_name,
-                    "match_info": clean_text
-                })
+            
+            # Filter out Standings/Rankings (e.g., "0 0 0 0 0 0") and keep actual Match Fixtures
+            if clean_text and not re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
+                # Ensure it contains match indicators like 'vs', 'v', or time format '10:00'
+                if re.search(r'\b(vs?|v)\b', clean_text, re.I) or re.search(r'\d{1,2}:\d{2}', clean_text):
+                    fixtures.append({
+                        "id": f"{league_name.lower().replace(' ', '')}-{len(fixtures)+1}",
+                        "league": league_name,
+                        "raw_fixture": clean_text
+                    })
     except Exception as e:
-        print(f"Note for {league_name}: {e}")
+        print(f"Notice for {league_name}: {e}")
         
     return fixtures
 
@@ -60,7 +65,7 @@ async def main():
         with open('fixtures_data.json', 'w') as f:
             json.dump(all_data, f, indent=2)
             
-        print(f"Extraction complete. Saved {len(all_data)} fixtures to fixtures_data.json.")
+        print(f"Scraping complete! Extracted {len(all_data)} fixture records.")
 
 if __name__ == "__main__":
     asyncio.run(main())
