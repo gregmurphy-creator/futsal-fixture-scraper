@@ -43,7 +43,6 @@ def parse_full_schedule(raw_texts, league_name):
         if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
             continue
 
-        # Check for explicit Week or Round section headers
         round_heading = re.search(r'\b(?:Week|Round)\s*(\d+)\b', clean_text, re.I)
         if round_heading and not re.search(r'\d{1,2}:\d{2}', clean_text):
             current_round = int(round_heading.group(1))
@@ -55,7 +54,6 @@ def parse_full_schedule(raw_texts, league_name):
             time_str = t_match.group(1).strip() if t_match else "9:00 AM"
 
             curr_min = time_to_minutes(time_str)
-            # Roll over to next week when kickoff times reset back to morning
             if last_minutes != -1 and curr_min < last_minutes and (last_minutes - curr_min) > 60:
                 current_round += 1
                 last_minutes = curr_min
@@ -97,32 +95,58 @@ async def scrape_league(page, league_name, url):
     print(f"Scraping {league_name}: {url}")
     print(f"==========================================")
     
-    await page.goto(url, wait_until="domcontentloaded", timeout=45000)
-    # Wait for the match tables to render
-    await page.wait_for_selector("table, tr", timeout=30000)
-    await page.wait_for_timeout(3000)
+    try:
+        await page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    except Exception as e:
+        print(f"[{league_name}] Page load notice: {e}")
 
-    # Extract all table rows and section headers across the full schedule
-    elements = await page.query_selector_all("caption, h2, h3, h4, th, tr, .match, .game-row")
-    raw_texts = []
-    for el in elements:
-        try:
-            txt = await el.inner_text()
-            if txt:
-                raw_texts.append(" ".join(txt.split()))
-        except Exception:
-            continue
+    # Give client-side JS 5 seconds to populate match elements
+    await page.wait_for_timeout(5000)
 
-    fixtures = parse_full_schedule(raw_texts, league_name)
+    title = await page.title()
+    body_len = await page.evaluate("() => document.body ? document.body.innerText.length : 0")
+    print(f"[{league_name}] Page title: '{title}' | Body characters: {body_len}")
+
+    # Extract all single-match containers (div, tr, li, p)
+    extracted_texts = await page.evaluate("""() => {
+        const results = [];
+        const elements = document.querySelectorAll('tr, .game, .match, .fixture, [class*="game"], [class*="match"], [class*="row"], li, div');
+        for (const el of elements) {
+            const text = el.innerText ? el.innerText.trim() : '';
+            if (text && /\\bV(?:S)?\\b/i.test(text) && /\\d{1,2}:\\d{2}/.test(text)) {
+                const vCount = (text.match(/\\bV(?:S)?\\b/gi) || []).length;
+                if (vCount === 1) {
+                    results.push(text.replace(/\\s+/g, ' '));
+                }
+            }
+        }
+        if (document.body && document.body.innerText) {
+            for (const line of document.body.innerText.split('\\n')) {
+                const trimmed = line.trim();
+                if (trimmed && /\\bV(?:S)?\\b/i.test(trimmed) && /\\d{1,2}:\\d{2}/.test(trimmed)) {
+                    results.push(trimmed.replace(/\\s+/g, ' '));
+                }
+            }
+        }
+        return Array.from(new Set(results));
+    }""")
+
+    print(f"[{league_name}] Found {len(extracted_texts)} match text candidates.")
+
+    fixtures = parse_full_schedule(extracted_texts, league_name)
     rounds_found = len(set(f["round"] for f in fixtures)) if fixtures else 0
-    print(f"[{league_name}] Successfully captured {len(fixtures)} fixtures across {rounds_found} round(s).")
+    print(f"[{league_name}] Successfully parsed {len(fixtures)} fixtures across {rounds_found} round(s).")
     return fixtures
 
 async def main():
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        browser = await p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+        )
         context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            viewport={"width": 1280, "height": 800}
         )
         page = await context.new_page()
 
