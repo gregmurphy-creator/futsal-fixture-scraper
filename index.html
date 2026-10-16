@@ -25,7 +25,7 @@
     <!-- Player Profiles Quick Bar -->
     <div id="playerPillsContainer" class="flex items-center gap-2 overflow-x-auto pb-2 mb-3 scrollbar-none"></div>
 
-    <!-- Quick Team / Venue Search Bar -->
+    <!-- Search Input -->
     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
       <div class="relative flex items-center">
         <span class="absolute left-3 text-gray-400 text-sm">🔍</span>
@@ -44,23 +44,23 @@
       </div>
     </div>
 
-    <!-- Date Filters -->
+    <!-- Smart Schedule-Aware Date Filters -->
     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
       <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">When</div>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5" id="dateFilterGroup">
-        <button data-datefilter="ALL" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm">All Fixtures</button>
-        <button data-datefilter="THIS_WEEK" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200">This Weekend</button>
-        <button data-datefilter="NEXT_WEEK" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200">Next Weekend</button>
-        <button data-datefilter="MONTH" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200">This Month</button>
+      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none" id="dateFilterGroup">
+        <button data-datefilter="ALL" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm flex-shrink-0">All Fixtures</button>
+        <button data-datefilter="NEXT_MATCHDAY" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0">Next Matchday</button>
+        <button data-datefilter="FOLLOWING_WEEKEND" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0">Following Weekend</button>
+        <!-- Dynamic month buttons inserted via JS -->
       </div>
     </div>
 
     <!-- League Filter Tabs -->
     <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-3 scrollbar-none" id="leagueFilters">
-      <button data-league="ALL" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#FF6600] text-white shadow-sm">All Leagues</button>
-      <button data-league="Liga 5" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200">Liga 5</button>
-      <button data-league="Liga 6" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200">Liga 6</button>
-      <button data-league="Liga 7" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200">Liga 7</button>
+      <button data-league="ALL" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#FF6600] text-white shadow-sm flex-shrink-0">All Leagues</button>
+      <button data-league="Liga 5" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 flex-shrink-0">Liga 5</button>
+      <button data-league="Liga 6" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 flex-shrink-0">Liga 6</button>
+      <button data-league="Liga 7" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 flex-shrink-0">Liga 7</button>
     </div>
 
     <!-- Status Subheader -->
@@ -96,9 +96,9 @@
             <input id="newChildName" type="text" placeholder="e.g. Leo" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600] bg-white" />
           </div>
           <div>
-            <label class="block text-xs font-bold text-gray-700 mb-1">Assigned Team</label>
+            <label class="block text-xs font-bold text-gray-700 mb-1">Assigned Team & League</label>
             <select id="newChildTeam" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600] bg-white">
-              <option value="">Select a team...</option>
+              <option value="">Select team & league...</option>
             </select>
           </div>
           <button id="savePlayerBtn" class="w-full py-2.5 text-xs font-bold bg-[#FF6600] text-white rounded-xl shadow-sm hover:bg-[#e05a00] transition-all">
@@ -120,8 +120,9 @@
     let selectedLeague = "ALL";
     let selectedDateFilter = "ALL";
     let onlyTikiTaka = false;
-    let selectedPlayerTeam = "";
+    let selectedPlayerObj = null; // { name, team, league }
     let players = [];
+    let uniqueScheduledDates = [];
 
     try {
       players = JSON.parse(localStorage.getItem("tiki_saved_players") || "[]");
@@ -132,7 +133,7 @@
     const fixturesContainer = document.getElementById("fixturesList");
     const matchCount = document.getElementById("matchCount");
     const leagueButtons = document.querySelectorAll(".league-btn");
-    const dateButtons = document.querySelectorAll(".date-btn");
+    const dateFilterGroup = document.getElementById("dateFilterGroup");
     const toggleTikiBtn = document.getElementById("toggleTikiBtn");
     const searchInput = document.getElementById("teamSearchInput");
     const clearSearchBtn = document.getElementById("clearSearchBtn");
@@ -159,17 +160,86 @@
         .replace(/'/g, "&#039;");
     }
 
+    // Populate team options tagged with - Liga X
     function populateTeamDropdown() {
-      const teams = new Set();
+      // Map of "Team Name|||League Name"
+      const teamLeagueMap = new Map();
+
       allFixtures.forEach(item => {
-        if (item.homeTeam && item.homeTeam !== "TBD") teams.add(item.homeTeam);
-        if (item.awayTeam && item.awayTeam !== "TBD") teams.add(item.awayTeam);
+        const league = item.league || "Unknown";
+        if (item.homeTeam && item.homeTeam !== "TBD") {
+          teamLeagueMap.set(`${item.homeTeam}|||${league}`, { team: item.homeTeam, league });
+        }
+        if (item.awayTeam && item.awayTeam !== "TBD") {
+          teamLeagueMap.set(`${item.awayTeam}|||${league}`, { team: item.awayTeam, league });
+        }
       });
-      const sortedTeams = Array.from(teams).sort();
-      newChildTeam.innerHTML = '<option value="">Select a team...</option>' + 
-        sortedTeams.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("");
+
+      const sortedEntries = Array.from(teamLeagueMap.values()).sort((a, b) => {
+        const cmp = a.team.localeCompare(b.team);
+        return cmp !== 0 ? cmp : a.league.localeCompare(b.league);
+      });
+
+      newChildTeam.innerHTML = '<option value="">Select team & league...</option>' + 
+        sortedEntries.map(entry => {
+          const val = `${entry.team}|||${entry.league}`;
+          return `<option value="${escapeHtml(val)}">${escapeHtml(entry.team)} - ${escapeHtml(entry.league)}</option>`;
+        }).join("");
     }
 
+    // Dynamic month tabs based on actual match dates in fixtures
+    function buildDynamicDateButtons() {
+      const datesSet = new Set();
+      const monthsSet = new Set();
+
+      allFixtures.forEach(f => {
+        if (f.date && f.date !== "Upcoming") {
+          datesSet.add(f.date.trim());
+          const monthMatch = f.date.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\b/i);
+          if (monthMatch) {
+            monthsSet.add(monthMatch[0].substring(0, 3).toUpperCase());
+          }
+        }
+      });
+
+      uniqueScheduledDates = Array.from(datesSet);
+
+      // Append dynamic month buttons
+      const monthNames = {
+        "JAN": "January", "FEB": "February", "MAR": "March", "APR": "April",
+        "MAY": "May", "JUN": "June", "JUL": "July", "AUG": "August",
+        "SEP": "September", "OCT": "October", "NOV": "November", "DEC": "December"
+      };
+
+      monthsSet.forEach(mKey => {
+        const fullMonth = monthNames[mKey] || mKey;
+        const btn = document.createElement("button");
+        btn.dataset.datefilter = `MONTH_${mKey}`;
+        btn.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0";
+        btn.textContent = fullMonth;
+        dateFilterGroup.appendChild(btn);
+      });
+
+      bindDateButtonEvents();
+    }
+
+    function bindDateButtonEvents() {
+      document.querySelectorAll(".date-btn").forEach(btn => {
+        btn.onclick = () => {
+          selectedDateFilter = btn.dataset.datefilter;
+          document.querySelectorAll(".date-btn").forEach(b => {
+            if (b.dataset.datefilter === selectedDateFilter) {
+              b.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm flex-shrink-0";
+            } else {
+              b.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0";
+            }
+          });
+          renderFixtures();
+        };
+      });
+    }
+
+    // Render quick-filter pill buttons at top
     function renderPlayerPills() {
       if (players.length === 0) {
         playerPillsContainer.innerHTML = `
@@ -181,20 +251,20 @@
       }
 
       let html = `
-        <button onclick="selectPlayerTeam('')" class="px-3 py-1.5 text-xs font-bold rounded-xl transition-all ${
-          selectedPlayerTeam === '' ? 'bg-black text-white shadow-sm' : 'bg-white text-gray-700 border border-gray-200'
+        <button onclick="selectPlayer(null)" class="px-3 py-1.5 text-xs font-bold rounded-xl transition-all flex-shrink-0 ${
+          selectedPlayerObj === null ? 'bg-black text-white shadow-sm' : 'bg-white text-gray-700 border border-gray-200'
         }">
           All Squads
         </button>
       `;
 
-      players.forEach(p => {
-        const active = selectedPlayerTeam === p.team;
+      players.forEach((p, idx) => {
+        const active = selectedPlayerObj && selectedPlayerObj.team === p.team && selectedPlayerObj.league === p.league;
         html += `
-          <button onclick="selectPlayerTeam('${escapeHtml(p.team)}')" class="px-3 py-1.5 text-xs font-bold rounded-xl transition-all whitespace-nowrap flex items-center gap-1.5 ${
+          <button onclick="selectPlayer(${idx})" class="px-3 py-1.5 text-xs font-bold rounded-xl transition-all whitespace-nowrap flex items-center gap-1.5 flex-shrink-0 ${
             active ? 'bg-[#FF6600] text-white shadow-sm' : 'bg-white text-gray-700 border border-gray-200'
           }">
-            <span>👦</span> ${escapeHtml(p.name)} (${escapeHtml(p.team)})
+            <span>👦</span> ${escapeHtml(p.name)} (${escapeHtml(p.team)} · ${escapeHtml(p.league)})
           </button>
         `;
       });
@@ -202,8 +272,8 @@
       playerPillsContainer.innerHTML = html;
     }
 
-    window.selectPlayerTeam = function(team) {
-      selectedPlayerTeam = team;
+    window.selectPlayer = function(index) {
+      selectedPlayerObj = index !== null ? players[index] : null;
       renderPlayerPills();
       renderFixtures();
     };
@@ -218,7 +288,7 @@
         <div class="flex items-center justify-between p-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs">
           <div>
             <span class="font-bold text-gray-900">${escapeHtml(p.name)}</span>
-            <span class="text-gray-500 block text-[11px]">${escapeHtml(p.team)}</span>
+            <span class="text-gray-500 block text-[11px]">${escapeHtml(p.team)} - <span class="text-[#FF6600] font-semibold">${escapeHtml(p.league)}</span></span>
           </div>
           <button onclick="deletePlayer(${idx})" class="text-red-500 hover:text-red-700 font-bold px-2 py-1">
             Remove
@@ -229,6 +299,9 @@
 
     window.deletePlayer = function(index) {
       players.splice(index, 1);
+      if (selectedPlayerObj && !players.some(p => p.team === selectedPlayerObj.team && p.league === selectedPlayerObj.league)) {
+        selectedPlayerObj = null;
+      }
       try {
         localStorage.setItem("tiki_saved_players", JSON.stringify(players));
       } catch (e) {}
@@ -237,38 +310,28 @@
       renderFixtures();
     };
 
+    // Schedule-aware date filtering
     function matchDateFilter(itemDateStr, filter) {
       if (filter === "ALL") return true;
-      if (!itemDateStr || itemDateStr === "Upcoming") return true;
 
-      const now = new Date();
-      const currentMonthName = now.toLocaleString('en-US', { month: 'short' }).toLowerCase();
-
-      if (filter === "MONTH") {
-        return itemDateStr.toLowerCase().includes(currentMonthName);
+      // Month matching (MONTH_NOV, MONTH_DEC, etc.)
+      if (filter.startsWith("MONTH_")) {
+        const targetMonth = filter.replace("MONTH_", "").toUpperCase();
+        return itemDateStr ? itemDateStr.toUpperCase().includes(targetMonth) : false;
       }
 
-      const dayOfWeek = now.getDay();
-      const satOffset = (6 - dayOfWeek + 7) % 7;
-      
-      const thisSat = new Date(now);
-      thisSat.setDate(now.getDate() + satOffset);
-      const thisSun = new Date(thisSat);
-      thisSun.setDate(thisSat.getDate() + 1);
-
-      const nextSat = new Date(thisSat);
-      nextSat.setDate(thisSat.getDate() + 7);
-      const nextSun = new Date(nextSat);
-      nextSun.setDate(nextSat.getDate() + 1);
-
-      const dStr = itemDateStr.toLowerCase();
-
-      if (filter === "THIS_WEEK") {
-        return dStr.includes(thisSat.getDate().toString()) || dStr.includes(thisSun.getDate().toString()) || dStr.includes("round 1") || dStr.includes("week 1");
+      // Next matchday: the very first date in the scheduled fixture list
+      if (filter === "NEXT_MATCHDAY") {
+        if (uniqueScheduledDates.length === 0) return true;
+        const firstScheduledDate = uniqueScheduledDates[0];
+        return itemDateStr === firstScheduledDate;
       }
 
-      if (filter === "NEXT_WEEK") {
-        return dStr.includes(nextSat.getDate().toString()) || dStr.includes(nextSun.getDate().toString()) || dStr.includes("round 2") || dStr.includes("week 2");
+      // Following weekend: the second date in the scheduled list
+      if (filter === "FOLLOWING_WEEKEND") {
+        if (uniqueScheduledDates.length < 2) return false;
+        const secondScheduledDate = uniqueScheduledDates[1];
+        return itemDateStr === secondScheduledDate;
       }
 
       return true;
@@ -281,20 +344,26 @@
         const home = item.homeTeam || "";
         const away = item.awayTeam || "";
         const venue = item.venue || "";
+        const league = item.league || "";
 
-        const matchLeague = selectedLeague === "ALL" || item.league === selectedLeague;
+        const matchLeague = selectedLeague === "ALL" || league === selectedLeague;
         const containsTiki = isTiki(home) || isTiki(away);
         
+        // Search bar
         const matchesSearch = !q || (
           home.toLowerCase().includes(q) ||
           away.toLowerCase().includes(q) ||
           venue.toLowerCase().includes(q)
         );
 
-        const matchesPlayer = !selectedPlayerTeam || (
-          home.toLowerCase().includes(selectedPlayerTeam.toLowerCase()) ||
-          away.toLowerCase().includes(selectedPlayerTeam.toLowerCase())
-        );
+        // Player profile filter (matches both Team AND League)
+        let matchesPlayer = true;
+        if (selectedPlayerObj) {
+          const leagueMatches = league === selectedPlayerObj.league;
+          const teamMatches = home.toLowerCase().includes(selectedPlayerObj.team.toLowerCase()) || 
+                              away.toLowerCase().includes(selectedPlayerObj.team.toLowerCase());
+          matchesPlayer = leagueMatches && teamMatches;
+        }
 
         const matchesDate = matchDateFilter(item.date, selectedDateFilter);
 
@@ -413,12 +482,13 @@
 
     savePlayerBtn.addEventListener("click", () => {
       const name = newChildName.value.trim();
-      const team = newChildTeam.value;
-      if (!name || !team) {
-        alert("Please enter a child's name and choose their team.");
+      const rawVal = newChildTeam.value;
+      if (!name || !rawVal) {
+        alert("Please enter a child's name and choose their team and league.");
         return;
       }
-      players.push({ name, team });
+      const [team, league] = rawVal.split("|||");
+      players.push({ name, team, league });
       try {
         localStorage.setItem("tiki_saved_players", JSON.stringify(players));
       } catch (e) {}
@@ -434,23 +504,9 @@
         selectedLeague = btn.dataset.league;
         leagueButtons.forEach(b => {
           if (b.dataset.league === selectedLeague) {
-            b.className = "league-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#FF6600] text-white shadow-sm";
+            b.className = "league-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#FF6600] text-white shadow-sm flex-shrink-0";
           } else {
-            b.className = "league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200";
-          }
-        });
-        renderFixtures();
-      });
-    });
-
-    dateButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        selectedDateFilter = btn.dataset.datefilter;
-        dateButtons.forEach(b => {
-          if (b.dataset.datefilter === selectedDateFilter) {
-            b.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm";
-          } else {
-            b.className = "date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200";
+            b.className = "league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 flex-shrink-0";
           }
         });
         renderFixtures();
@@ -473,6 +529,7 @@
       .then(res => res.json())
       .then(data => {
         allFixtures = Array.isArray(data) ? data : [];
+        buildDynamicDateButtons();
         renderPlayerPills();
         renderFixtures();
       })
@@ -481,6 +538,7 @@
           .then(res => res.json())
           .then(data => {
             allFixtures = Array.isArray(data) ? data : [];
+            buildDynamicDateButtons();
             renderPlayerPills();
             renderFixtures();
           });
