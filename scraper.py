@@ -43,7 +43,6 @@ def parse_full_schedule(raw_texts, league_name):
         if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
             continue
 
-        # Detect Round or Week headings
         round_heading = re.search(r'\b(?:Week|Round)\s*(\d+)\b', clean_text, re.I)
         if round_heading and not re.search(r'\d{1,2}:\d{2}', clean_text):
             current_round = int(round_heading.group(1))
@@ -55,7 +54,6 @@ def parse_full_schedule(raw_texts, league_name):
             time_str = t_match.group(1).strip() if t_match else "9:00 AM"
 
             curr_min = time_to_minutes(time_str)
-            # Advance to next round when kickoff times cycle back to morning
             if last_minutes != -1 and curr_min < last_minutes and (last_minutes - curr_min) > 60:
                 current_round += 1
                 last_minutes = curr_min
@@ -97,23 +95,34 @@ async def scrape_league(page, league_name, url):
     print(f"Scraping {league_name}: {url}")
     print(f"==========================================")
     
-    await page.goto(url, wait_until="domcontentloaded", timeout=45000)
-    await page.wait_for_selector("table, tr, .match", timeout=30000)
-    await page.wait_for_timeout(2000)
+    # 1. Wait for page network to go idle so all matches finish loading
+    try:
+        await page.goto(url, wait_until="networkidle", timeout=45000)
+    except Exception:
+        await page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    
+    await page.wait_for_timeout(3000)
+    print(f"[{league_name}] Page loaded: '{await page.title()}'")
 
-    elements = await page.query_selector_all("caption, h2, h3, h4, th, tr, .match, .game-row")
+    # 2. Check if schedule content is inside page or nested frame
+    targets_to_check = [page] + page.frames
+
     raw_texts = []
-    for el in elements:
+    for target in targets_to_check:
         try:
-            txt = await el.inner_text()
-            if txt:
-                raw_texts.append(" ".join(txt.split()))
+            elements = await target.query_selector_all("tr, .match, .game, .game-row, li, div")
+            for el in elements:
+                txt = await el.inner_text()
+                if txt and (" V " in txt or " VS " in txt or " v " in txt) and re.search(r'\d{1,2}:\d{2}', txt):
+                    raw_texts.append(" ".join(txt.split()))
         except Exception:
             continue
 
+    print(f"[{league_name}] Found {len(raw_texts)} candidate match elements in DOM.")
+
     fixtures = parse_full_schedule(raw_texts, league_name)
     rounds_found = len(set(f["round"] for f in fixtures)) if fixtures else 0
-    print(f"[{league_name}] Successfully captured {len(fixtures)} fixtures across {rounds_found} round(s).")
+    print(f"[{league_name}] Captured {len(fixtures)} fixtures across {rounds_found} round(s).")
     return fixtures
 
 async def main():
