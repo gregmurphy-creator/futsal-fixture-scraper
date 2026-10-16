@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tiki Taka - Futsal Fixtures</title>
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen">
@@ -51,9 +50,9 @@
       <button data-league="Liga 7" class="league-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200">Liga 7</button>
     </div>
 
-    <!-- Subheader with match count and Tiki Taka filter -->
+    <!-- Status Bar -->
     <div class="flex items-center justify-between mb-4 px-1">
-      <span id="matchCount" class="text-xs font-medium text-gray-500">Loading fixtures...</span>
+      <span id="matchCount" class="text-xs font-medium text-gray-500">Connecting to live feed...</span>
       <button
         id="toggleTikiBtn"
         class="text-xs font-bold px-3 py-1.5 rounded-lg border border-gray-300 bg-white text-gray-700 hover:border-gray-400"
@@ -75,7 +74,14 @@
     let allFixtures = [];
     let selectedLeague = "ALL";
     let onlyTikiTaka = false;
-    let childTeamQuery = localStorage.getItem("tiki_child_team") || "";
+    let childTeamQuery = "";
+
+    // Safe localStorage retrieval
+    try {
+      childTeamQuery = localStorage.getItem("tiki_child_team") || "";
+    } catch (e) {
+      console.warn("Storage not accessible:", e);
+    }
 
     const teamInput = document.getElementById("teamFilterInput");
     const clearTeamBtn = document.getElementById("clearTeamBtn");
@@ -84,7 +90,7 @@
     const fixturesContainer = document.getElementById("fixturesList");
     const matchCount = document.getElementById("matchCount");
 
-    if (childTeamQuery) {
+    if (childTeamQuery && teamInput) {
       teamInput.value = childTeamQuery;
       clearTeamBtn.classList.remove("hidden");
     }
@@ -149,4 +155,145 @@
         const calTitle = encodeURIComponent(`${home} vs ${away} (${league})`);
         const calDetails = encodeURIComponent(`Futsal Escocia match scheduled at ${time}.`);
         const calLoc = encodeURIComponent(venue);
-        const calUrl = `
+        const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&location=${calLoc}&details=${calDetails}`;
+
+        return `
+          <div class="bg-white rounded-2xl p-4 border ${isTikiMatch ? 'border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm' : 'border-gray-200'}">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded-md bg-gray-100 text-gray-700">${escapeHtml(league)}</span>
+              <span class="text-xs font-bold bg-orange-50 text-[#FF6600] px-2 py-0.5 rounded">${escapeHtml(time)}</span>
+            </div>
+
+            <div class="my-3 space-y-1">
+              <div class="flex items-center gap-2">
+                ${team1IsTiki ? '<span class="w-2 h-2 rounded-full bg-[#FF6600]"></span>' : ''}
+                <span class="text-base ${team1IsTiki ? 'font-black text-gray-900' : 'font-semibold text-gray-800'}">${escapeHtml(team1)}</span>
+              </div>
+              <div class="text-xs font-bold uppercase tracking-wider text-gray-400 pl-4">vs</div>
+              <div class="flex items-center gap-2">
+                <span class="text-sm font-medium text-gray-700 pl-4">${escapeHtml(team2)}</span>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2">
+              <div class="text-xs text-gray-500 font-medium">📍 ${escapeHtml(venue)}</div>
+              <div class="flex items-center gap-2">
+                <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700">Directions</a>
+                <a href="${calUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-orange-500 hover:bg-orange-600 text-white">+ Calendar</a>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // Timed fetch helper
+    async function fetchWithTimeout(url, timeoutMs = 6000) {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const response = await fetch(url, { signal: controller.signal });
+        clearTimeout(timeoutId);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return await response.json();
+      } catch (err) {
+        clearTimeout(timeoutId);
+        throw err;
+      }
+    }
+
+    // Sequential fallback loader
+    async function loadData() {
+      const sources = [
+        `./fixtures_data.json?v=${Date.now()}`,
+        `https://raw.githubusercontent.com/gregmurphy-creator/futsal-fixture-scraper/main/fixtures_data.json?v=${Date.now()}`,
+        `https://cdn.jsdelivr.net/gh/gregmurphy-creator/futsal-fixture-scraper@main/fixtures_data.json`
+      ];
+
+      let lastError = null;
+      for (const url of sources) {
+        try {
+          matchCount.textContent = "Fetching fixtures...";
+          const data = await fetchWithTimeout(url, 6000);
+          if (Array.isArray(data) && data.length > 0) {
+            allFixtures = data;
+            renderFixtures();
+            return;
+          }
+        } catch (err) {
+          console.warn(`Failed loading from ${url}:`, err);
+          lastError = err;
+        }
+      }
+
+      // If all three sources fail, show actionable error panel
+      matchCount.textContent = "Data feed unavailable";
+      fixturesContainer.innerHTML = `
+        <div class="bg-white rounded-2xl p-8 text-center border border-red-200">
+          <p class="font-bold text-red-600 mb-1">Could not load fixture data</p>
+          <p class="text-xs text-gray-500 mb-4">${escapeHtml(lastError ? lastError.message : 'Timeout contacting server')}</p>
+          <button onclick="location.reload()" class="px-4 py-2 text-xs font-bold bg-[#FF6600] text-white rounded-xl shadow-sm">
+            Tap to Retry
+          </button>
+        </div>`;
+    }
+
+    // League buttons
+    leagueButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        selectedLeague = btn.dataset.league;
+        leagueButtons.forEach(b => {
+          if (b.dataset.league === selectedLeague) {
+            b.className = "league-btn px-4 py-2 rounded-xl text-sm font-bold bg-[#FF6600] text-white shadow-sm";
+          } else {
+            b.className = "league-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200";
+          }
+        });
+        renderFixtures();
+      });
+    });
+
+    // Team search
+    if (teamInput) {
+      teamInput.addEventListener("input", (e) => {
+        childTeamQuery = e.target.value.trim();
+        try {
+          localStorage.setItem("tiki_child_team", childTeamQuery);
+        } catch (err) {}
+        if (clearTeamBtn) clearTeamBtn.classList.toggle("hidden", !childTeamQuery);
+        renderFixtures();
+      });
+    }
+
+    // Clear team search
+    if (clearTeamBtn) {
+      clearTeamBtn.addEventListener("click", () => {
+        if (teamInput) teamInput.value = "";
+        childTeamQuery = "";
+        try {
+          localStorage.removeItem("tiki_child_team");
+        } catch (err) {}
+        clearTeamBtn.classList.add("hidden");
+        renderFixtures();
+      });
+    }
+
+    // Tiki Taka toggle
+    if (toggleTikiBtn) {
+      toggleTikiBtn.addEventListener("click", () => {
+        onlyTikiTaka = !onlyTikiTaka;
+        if (onlyTikiTaka) {
+          toggleTikiBtn.textContent = "✓ Tiki Taka Only";
+          toggleTikiBtn.className = "text-xs font-bold px-3 py-1.5 rounded-lg border bg-black text-white border-black";
+        } else {
+          toggleTikiBtn.textContent = "Show All Teams";
+          toggleTikiBtn.className = "text-xs font-bold px-3 py-1.5 rounded-lg border border-gray-300 bg-white text-gray-700 hover:border-gray-400";
+        }
+        renderFixtures();
+      });
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
