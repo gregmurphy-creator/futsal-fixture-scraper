@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiki Taka - Futsal Fixtures</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- React & Babel CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    :root {
+      --brand-orange: #FF6600;
+      --brand-black: #111827;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useMemo } = React;
+
+    function App() {
+      const [fixtures, setFixtures] = useState([]);
+      const [loading, setLoading] = useState(true);
+      const [selectedLeague, setSelectedLeague] = useState("ALL");
+      const [onlyTikiTaka, setOnlyTikiTaka] = useState(false);
+      const [savedChildTeam, setSavedChildTeam] = useState(() => {
+        return localStorage.getItem("tiki_child_team") || "";
+      });
+
+      useEffect(() => {
+        // Fetch fixtures_data.json from the same repository directory
+        fetch("./fixtures_data.json")
+          .then((res) => {
+            if (!res.ok) throw new Error("Could not load fixtures data.");
+            return res.json();
+          })
+          .then((data) => {
+            setFixtures(data);
+            setLoading(false);
+          })
+          .catch((err) => {
+            console.error(err);
+            setLoading(false);
+          });
+      }, []);
+
+      const handleSaveChildTeam = (teamName) => {
+        setSavedChildTeam(teamName);
+        localStorage.setItem("tiki_child_team", teamName);
+      };
+
+      const isTikiTaka = (teamName = "") => {
+        return teamName.toLowerCase().includes("tiki") || teamName.toLowerCase().includes("taka");
+      };
+
+      // Filter fixtures
+      const filteredFixtures = useMemo(() => {
+        return fixtures.filter((item) => {
+          const matchLeague = selectedLeague === "ALL" || item.league === selectedLeague;
+          const containsTiki = isTikiTaka(item.homeTeam) || isTikiTaka(item.awayTeam);
+          const matchesChild = savedChildTeam ? (
+            item.homeTeam.toLowerCase().includes(savedChildTeam.toLowerCase()) ||
+            item.awayTeam.toLowerCase().includes(savedChildTeam.toLowerCase())
+          ) : true;
+
+          if (!matchLeague) return false;
+          if (onlyTikiTaka && !containsTiki) return false;
+          if (savedChildTeam && !matchesChild) return false;
+          return true;
+        });
+      }, [fixtures, selectedLeague, onlyTikiTaka, savedChildTeam]);
+
+      const openGoogleMaps = (venue) => {
+        const query = encodeURIComponent(`${venue}, Fife, Scotland`);
+        window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, "_blank");
+      };
+
+      const addToCalendar = (item) => {
+        const title = encodeURIComponent(`${item.homeTeam} vs ${item.awayTeam} (${item.league})`);
+        const location = encodeURIComponent(item.venue);
+        const details = encodeURIComponent(`Futsal Escocia match scheduled at ${item.time}.`);
+        const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&location=${location}&details=${details}`;
+        window.open(gcalUrl, "_blank");
+      };
+
+      return (
+        <div class="max-w-2xl mx-auto px-4 py-6 pb-20">
+          {/* Header */}
+          <header class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h1 class="text-2xl font-black tracking-tight text-gray-900">
+                Tiki Taka <span class="text-[#FF6600]">-</span> Futsal Fixtures
+              </h1>
+              <p class="text-sm text-gray-500 font-medium">Automated Parent Match Guide</p>
+            </div>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-[#FF6600]">
+              Live Feed
+            </span>
+          </header>
+
+          {/* Child Tagging / Player Profile */}
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 mb-5">
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">
+              Player Profile (Filter to Your Child's Team)
+            </label>
+            <div class="flex gap-2">
+              <input
+                type="text"
+                placeholder="e.g. Tiki Taka or Swifts"
+                value={savedChildTeam}
+                onChange={(e) => handleSaveChildTeam(e.target.value)}
+                class="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6600]"
+              />
+              {savedChildTeam && (
+                <button
+                  onClick={() => handleSaveChildTeam("")}
+                  class="px-3 py-2 text-xs font-semibold text-gray-500 bg-gray-100 hover:bg-gray-200 rounded-xl"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* League Filter Tabs */}
+          <div class="flex items-center gap-2 overflow-x-
