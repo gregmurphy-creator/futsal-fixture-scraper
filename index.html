@@ -153,7 +153,10 @@
         .replace(/'/g, "&#039;");
     }
 
-    // Resolves individual round dates for every match
+    // Normalises round + date for every match. The scraper supplies both
+    // (including the two-week Christmas break, which simple weekly
+    // arithmetic gets wrong from round 8 on), so they are used as-is and
+    // only reconstructed when absent.
     function processFixtures(rawFixtures) {
       const startDate = new Date(2026, 10, 7); // Saturday, November 7, 2026
       const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -174,10 +177,13 @@
         leagueIndices[lg] = (leagueIndices[lg] || 0) + 1;
         const idx = leagueIndices[lg] - 1;
 
-        // In Liga 7 each Saturday round contains 5 matches
-        let roundNum = 1;
-        if (lg === "Liga 7") {
-          roundNum = Math.floor(idx / 5) + 1;
+        // The feed now carries a real round number for every fixture, read
+        // from the league's own schedule. Only derive one if it is missing,
+        // which is the case for feed files written before that change.
+        let roundNum = Number(item.round);
+        if (!Number.isFinite(roundNum) || roundNum < 1) {
+          const matchesPerRound = { "Liga 5": 15, "Liga 6": 14, "Liga 7": 5 };
+          roundNum = Math.floor(idx / (matchesPerRound[lg] || 5)) + 1;
         }
 
         let formattedDate = item.date;
@@ -196,6 +202,22 @@
           date: formattedDate
         };
       });
+    }
+
+    // Matchdays still to come, soonest first, as ISO date strings. Every
+    // league plays the same Saturdays, so one list covers them all.
+    function upcomingMatchdays() {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      return Array.from(
+        new Set(allFixtures.map(item => item.iso_date).filter(Boolean))
+      )
+        .filter(iso => {
+          const date = new Date(`${iso}T00:00:00`);
+          return !isNaN(date.getTime()) && date >= today;
+        })
+        .sort();
     }
 
     function populateTeamDropdown() {
@@ -300,6 +322,7 @@
       if (!fixturesContainer || !matchCount) return;
 
       const q = searchQuery.toLowerCase().trim();
+      const matchdays = upcomingMatchdays();
       const hasAnyTiki = allFixtures.some(item => isTiki(item.homeTeam) || isTiki(item.awayTeam));
       const activeTikiFilter = onlyTikiTaka && hasAnyTiki;
 
@@ -328,9 +351,13 @@
 
         let matchesDate = true;
         if (selectedDateFilter === "NEXT_MATCHDAY") {
-          matchesDate = item.round === 1;
+          matchesDate = matchdays.length
+            ? item.iso_date === matchdays[0]
+            : item.round === 1;
         } else if (selectedDateFilter === "FOLLOWING_WEEKEND") {
-          matchesDate = item.round === 2;
+          matchesDate = matchdays.length > 1
+            ? item.iso_date === matchdays[1]
+            : item.round === 2;
         }
 
         if (!matchLeague) return false;

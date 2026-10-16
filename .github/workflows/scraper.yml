@@ -8,34 +8,40 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: fixtures-scraper
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.12'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install playwright
-          playwright install chromium
+      # No dependency install step: the scraper reads LeagueLobster's schedule
+      # backend using only the Python standard library. There is no Playwright
+      # and no browser download, which is what used to make this job slow and
+      # flaky (headless Chromium saw an empty, htmx-populated schedule
+      # container and captured 0 fixtures).
 
-      - name: Run Scraper
+      - name: Run scraper
         run: python scraper.py
 
       - name: Commit and push updated fixtures data
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- fixtures_data.json; then
+            echo "No fixture changes to commit."
+            exit 0
+          fi
           git add fixtures_data.json
-          git commit -m "Auto-update fixtures data" || echo "No changes to commit"
-          git pull --rebase origin main
-          git push origin main
+          git commit -m "Auto-update fixtures data"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
