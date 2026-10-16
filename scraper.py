@@ -9,23 +9,49 @@ urls = {
     "Liga 7": "https://futsalescocia.co.uk/fixtures/liga-7/"
 }
 
-def parse_fixture_text(text):
-    time_match = re.search(r'(\d{1,2}:\d{2}\s*(?:AM|PM)?)', text, re.I)
-    time_str = time_match.group(1) if time_match else "TBD"
+def parse_fixture(text, fallback_date="Upcoming"):
+    # Guard: if this text contains multiple games concatenated together, skip it
+    vs_count = len(re.findall(r'\bV(?:S)?\b', text, re.I))
+    time_matches = list(re.finditer(r'\b\d{1,2}:\d{2}\s*(?:AM|PM)?\b', text, re.I))
     
-    if time_match:
-        parts = text.split(time_match.group(1), 1)
-        venue = parts[0].strip()
-        teams_part = parts[1].strip()
-    else:
-        venue = "TBD"
-        teams_part = text
+    if vs_count > 1 or len(time_matches) > 1:
+        return None
+    if not time_matches or vs_count == 0:
+        return None
 
-    teams = re.split(r'\s+V(?:S)?\s+', teams_part, flags=re.I)
-    home_team = teams[0].strip() if len(teams) > 0 else "TBD"
-    away_team = teams[1].strip() if len(teams) > 1 else "TBD"
+    time_match = time_matches[0]
+    time_str = time_match.group(0).strip()
+    
+    before_time = text[:time_match.start()].strip()
+    after_time = text[time_match.end():].strip()
+
+    # Extract date if it is prepended to the venue (e.g. "Saturday, November 14 Balwearie High School")
+    date_regex = r'((?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*,?\s+)?(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}(?:st|nd|rd|th)?(?:\s*,?\s*\d{4})?)'
+    date_found = re.search(date_regex, before_time, re.I)
+
+    if date_found:
+        extracted_date = date_found.group(1).strip()
+        venue = before_time.replace(date_found.group(1), "").strip()
+    else:
+        extracted_date = fallback_date
+        venue = before_time
+
+    # Clean up venue text
+    venue = re.sub(r'^[,\-\s]+|[,\-\s]+$', '', venue) or "TBD"
+
+    # Extract Home & Away teams
+    teams = re.split(r'\s+V(?:S)?\s+', after_time, flags=re.I)
+    if len(teams) < 2:
+        return None
+
+    home_team = teams[0].strip()
+    away_team = teams[1].strip()
+
+    # Ensure no leftover times leaked into team names
+    away_team = re.sub(r'\b\d{1,2}:\d{2}\s*(?:AM|PM)?\b.*$', '', away_team).strip()
 
     return {
+        "date": extracted_date,
         "venue": venue,
         "time": time_str,
         "homeTeam": home_team,
@@ -45,35 +71,25 @@ async def scrape_league(page, league_name, url):
             if frame:
                 target = frame
 
-        await target.wait_for_selector(".match, .game, table, tr", timeout=20000)
+        await target.wait_for_selector("tr, .match, .game", timeout=20000)
         
-        # Select headers, date rows, and game rows in visual order
-        elements = await target.query_selector_all("h2, h3, h4, h5, th, tr, .match, .game-row, .date, div[class*='date'], div[class*='round']")
+        # Select individual match rows only (no round/container divs)
+        elements = await target.query_selector_all("tr, .match, .game-row")
         
-        current_date = "Upcoming"
-
         for el in elements:
             text = await el.inner_text()
             clean_text = " ".join(text.split())
-            if not clean_text or len(clean_text) < 3:
+            
+            # Skip standings and blank lines
+            if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
                 continue
 
-            # 1. Detect if this element is a Date or Round header
-            is_match = re.search(r'\bV(?:S)?\b', clean_text, re.I) and re.search(r'\d{1,2}:\d{2}', clean_text)
-            is_standings = re.search(r'\b0\s+0\s+0\s+0\b', clean_text)
-
-            if not is_match and not is_standings:
-                # Common date patterns (e.g., "Saturday, Oct 17", "Week 3", "24/10/2026")
-                if re.search(r'(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun|Round|Week|\d{1,2}[/-]\d{1,2}|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)', clean_text, re.I):
-                    current_date = clean_text
-
-            # 2. Extract match if row contains teams and time
-            if is_match and not is_standings:
-                parsed = parse_fixture_text(clean_text)
+            parsed = parse_fixture(clean_text)
+            if parsed:
                 fixtures.append({
                     "id": f"{league_name.lower().replace(' ', '')}-{len(fixtures)+1}",
                     "league": league_name,
-                    "date": current_date,
+                    "date": parsed["date"],
                     "venue": parsed["venue"],
                     "time": parsed["time"],
                     "homeTeam": parsed["homeTeam"],
@@ -103,7 +119,7 @@ async def main():
         with open('fixtures_data.json', 'w') as f:
             json.dump(all_data, f, indent=2)
             
-        print(f"Extraction successful! Saved {len(all_data)} fixtures with dates.")
+        print(f"Scraping complete! Extracted {len(all_data)} clean individual fixtures.")
 
 if __name__ == "__main__":
     asyncio.run(main())
