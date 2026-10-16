@@ -3,22 +3,25 @@ import asyncio
 import re
 from playwright.async_api import async_playwright
 
+# Direct LeagueLobster URLs (bypasses WordPress iframe completely)
 urls = {
-    "Liga 5": "https://futsalescocia.co.uk/fixtures/liga-5/",
-    "Liga 6": "https://futsalescocia.co.uk/fixtures/liga-6/",
-    "Liga 7": "https://futsalescocia.co.uk/fixtures/liga-7/"
+    "Liga 5": "https://scheduler.leaguelobster.com/embedded/2376293/",
+    "Liga 6": "https://scheduler.leaguelobster.com/embedded/2376309/",
+    "Liga 7": "https://scheduler.leaguelobster.com/embedded/2376344/"
 }
 
 date_regex = r'((?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*,?\s+)?(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}(?:st|nd|rd|th)?(?:\s*,?\s*\d{4})?)'
 
-def parse_fixture_row(text, fallback_date="Upcoming"):
+def parse_fixture(text, current_date="Upcoming"):
     clean = " ".join(text.split())
     if not clean or len(clean) < 6:
         return None
-    # Skip standings table rows (e.g. 0 0 0 0 0 0)
+        
+    # Skip standings table rows
     if re.search(r'\b0\s+0\s+0\s+0\b', clean):
         return None
-    # Must have match indicator (v or vs)
+        
+    # Must contain a match indicator (V or VS)
     if not re.search(r'\b(vs?|v)\b', clean, re.I):
         return None
 
@@ -31,88 +34,80 @@ def parse_fixture_row(text, fallback_date="Upcoming"):
     before_time = clean[:time_match.start()].strip()
     after_time = clean[time_match.end():].strip()
 
-    # Detect if date is part of the text before the time
+    # Extract date if prepended to venue
     d_found = re.search(date_regex, before_time, re.I)
     if d_found:
         match_date = d_found.group(1).strip()
         venue = before_time.replace(d_found.group(1), "").strip()
     else:
-        match_date = fallback_date
+        match_date = current_date
         venue = before_time
 
     venue = re.sub(r'^[,\-\s]+|[,\-\s]+$', '', venue) or "TBD"
 
-    # Split home and away teams
+    # Split teams
     teams = re.split(r'\s+V(?:S)?\s+', after_time, flags=re.I)
     if len(teams) < 2:
         return None
 
-    home_team = teams[0].strip()
-    away_team = teams[1].strip()
+    home = teams[0].strip()
+    away = teams[1].strip()
 
-    # Prevent secondary game details from leaking into the away team
-    away_team = re.sub(r'\b\d{1,2}:\d{2}.*$', '', away_team).strip()
+    # Strip any trailing secondary time
+    away = re.sub(r'\b\d{1,2}:\d{2}.*$', '', away).strip()
 
-    if not home_team or not away_team:
+    if not home or not away:
         return None
 
     return {
         "date": match_date,
         "venue": venue,
         "time": time_str,
-        "homeTeam": home_team,
-        "awayTeam": away_team
+        "homeTeam": home,
+        "awayTeam": away
     }
 
 async def scrape_league(page, league_name, url):
-    print(f"Scraping {league_name}...")
+    print(f"Scraping {league_name} from {url}...")
     fixtures = []
-    try:
-        await page.goto(url, wait_until="networkidle", timeout=35000)
-        
-        iframe_element = await page.query_selector("iframe")
-        target = page
-        if iframe_element:
-            frame = await iframe_element.content_frame()
-            if frame:
-                target = frame
+    
+    # Load direct page
+    await page.goto(url, wait_until="domcontentloaded", timeout=40000)
+    
+    # Wait for schedule elements to appear
+    await page.wait_for_selector("table, tr, .match, .game", timeout=25000)
+    
+    elements = await page.query_selector_all("h2, h3, h4, th, tr, .match, .game-row")
+    current_date = "Upcoming"
 
-        await target.wait_for_selector(".match, .game, table, tr", timeout=20000)
-        
-        # Target individual match rows and headings only (no outer round wrappers)
-        elements = await target.query_selector_all("h2, h3, h4, caption, tr, .match, .game-row")
+    for el in elements:
+        raw = await el.inner_text()
+        text = " ".join(raw.split())
+        if not text:
+            continue
 
-        current_date = "Upcoming"
+        # Check for date or round headings
+        is_match = re.search(r'\b(vs?|v)\b', text, re.I) and re.search(r'\d{1,2}:\d{2}', text)
+        if not is_match:
+            if re.search(r'(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun|Round|Week|\d{1,2}[/-]\d{1,2}|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)', text, re.I):
+                current_date = text
+            continue
 
-        for el in elements:
-            raw = await el.inner_text()
-            text = " ".join(raw.split())
-            if not text:
-                continue
-
-            # Update date if element is a round/date heading
-            is_match = re.search(r'\b(vs?|v)\b', text, re.I) and re.search(r'\d{1,2}:\d{2}', text)
-            if not is_match:
-                if re.search(r'(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun|Round|Week|\d{1,2}[/-]\d{1,2}|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)', text, re.I):
-                    current_date = text
-                continue
-
-            # Parse individual fixture row
-            parsed = parse_fixture_row(text, fallback_date=current_date)
-            if parsed:
-                fixtures.append({
-                    "id": f"{league_name.lower().replace(' ', '')}-{len(fixtures)+1}",
-                    "league": league_name,
-                    "date": parsed["date"],
-                    "venue": parsed["venue"],
-                    "time": parsed["time"],
-                    "homeTeam": parsed["homeTeam"],
-                    "awayTeam": parsed["awayTeam"],
-                    "raw_fixture": text
-                })
-    except Exception as e:
-        print(f"Error on {league_name}: {e}")
-        
+        # Parse match row
+        parsed = parse_fixture(text, current_date=current_date)
+        if parsed:
+            fixtures.append({
+                "id": f"{league_name.lower().replace(' ', '')}-{len(fixtures)+1}",
+                "league": league_name,
+                "date": parsed["date"],
+                "venue": parsed["venue"],
+                "time": parsed["time"],
+                "homeTeam": parsed["homeTeam"],
+                "awayTeam": parsed["awayTeam"],
+                "raw_fixture": text
+            })
+            
+    print(f"-> Extracted {len(fixtures)} fixtures for {league_name}")
     return fixtures
 
 async def main():
@@ -125,15 +120,23 @@ async def main():
         
         all_data = []
         for league_name, url in urls.items():
-            data = await scrape_league(page, league_name, url)
-            all_data.extend(data)
-            
+            try:
+                data = await scrape_league(page, league_name, url)
+                all_data.extend(data)
+            except Exception as e:
+                print(f"Error scraping {league_name}: {e}")
+                
         await browser.close()
         
+        # Guard: Never overwrite data with empty list if scraping fails
+        if len(all_data) == 0:
+            print("WARNING: No fixtures extracted. Keeping existing data.")
+            return
+
         with open('fixtures_data.json', 'w') as f:
             json.dump(all_data, f, indent=2)
             
-        print(f"Scraping complete! Extracted {len(all_data)} fixtures.")
+        print(f"Done! Successfully wrote {len(all_data)} fixtures to fixtures_data.json.")
 
 if __name__ == "__main__":
     asyncio.run(main())
