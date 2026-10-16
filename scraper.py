@@ -32,55 +32,66 @@ def time_to_minutes(time_str):
         hr = 0
     return hr * 60 + mn
 
-def assign_rounds_by_kickoff_reset(fixtures):
+def parse_full_schedule(raw_texts, league_name):
+    fixtures = []
     current_round = 1
     last_minutes = -1
-    for f in fixtures:
-        curr_min = time_to_minutes(f["time"])
-        if last_minutes != -1 and curr_min < last_minutes and (last_minutes - curr_min) > 60:
-            current_round += 1
-            last_minutes = curr_min
-        else:
-            if curr_min > last_minutes:
+    seen = set()
+
+    for clean_text in raw_texts:
+        if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
+            continue
+
+        # Detect round/week headers if present
+        round_heading = re.search(r'\b(?:Week|Round)\s*(\d+)\b', clean_text, re.I)
+        if round_heading and not re.search(r'\d{1,2}:\d{2}', clean_text):
+            current_round = int(round_heading.group(1))
+            last_minutes = -1
+            continue
+
+        if re.search(r'\bV(?:S)?\b', clean_text, re.I) and re.search(r'\d{1,2}:\d{2}', clean_text):
+            t_match = re.search(r'(\d{1,2}:\d{2}\s*(?:AM|PM)?)', clean_text, re.I)
+            time_str = t_match.group(1).strip() if t_match else "9:00 AM"
+
+            curr_min = time_to_minutes(time_str)
+            # Roll over to next week when kickoff times drop back to morning
+            if last_minutes != -1 and curr_min < last_minutes and (last_minutes - curr_min) > 60:
+                current_round += 1
                 last_minutes = curr_min
-        f["round"] = current_round
-        f["date"] = format_round_date(current_round)
+            else:
+                if curr_min > last_minutes:
+                    last_minutes = curr_min
+
+            parts = clean_text.split(time_str, 1)
+            venue_raw = parts[0].strip()
+            teams_part = parts[1].strip() if len(parts) > 1 else ""
+
+            venue = re.sub(r'^(?:Week|Round)\s*\d+[\s,\-]*', '', venue_raw, flags=re.I)
+            venue = re.sub(r'^[,\-\s]+|[,\-\s]+$', '', venue) or "TBD"
+
+            teams = re.split(r'\s+V(?:S)?\s+', teams_part, flags=re.I)
+            home = teams[0].strip() if len(teams) > 0 else "TBD"
+            away = teams[1].strip() if len(teams) > 1 else "TBD"
+            away = re.sub(r'\b\d{1,2}:\d{2}.*$', '', away).strip()
+
+            key = (current_round, time_str, home, away)
+            if key not in seen:
+                seen.add(key)
+                fixtures.append({
+                    "id": f"{league_name.lower().replace(' ', '')}-{len(fixtures)+1}",
+                    "league": league_name,
+                    "round": current_round,
+                    "date": format_round_date(current_round),
+                    "venue": venue,
+                    "time": time_str,
+                    "homeTeam": home,
+                    "awayTeam": away,
+                    "raw_fixture": clean_text
+                })
+
     return fixtures
 
-def parse_fixture_text(clean_text, league_name, week_num, fixture_index):
-    if not clean_text or re.search(r'\b0\s+0\s+0\s+0\b', clean_text):
-        return None
-
-    if re.search(r'\bV(?:S)?\b', clean_text, re.I) and re.search(r'\d{1,2}:\d{2}', clean_text):
-        t_match = re.search(r'(\d{1,2}:\d{2}\s*(?:AM|PM)?)', clean_text, re.I)
-        time_str = t_match.group(1).strip() if t_match else "9:00 AM"
-
-        parts = clean_text.split(time_str, 1)
-        venue_raw = parts[0].strip()
-        teams_part = parts[1].strip() if len(parts) > 1 else ""
-
-        venue = re.sub(r'^(?:Week|Round)\s*\d+[\s,\-]*', '', venue_raw, flags=re.I)
-        venue = re.sub(r'^[,\-\s]+|[,\-\s]+$', '', venue) or "TBD"
-
-        teams = re.split(r'\s+V(?:S)?\s+', teams_part, flags=re.I)
-        home = teams[0].strip() if len(teams) > 0 else "TBD"
-        away = teams[1].strip() if len(teams) > 1 else "TBD"
-        away = re.sub(r'\b\d{1,2}:\d{2}.*$', '', away).strip()
-
-        return {
-            "id": f"{league_name.lower().replace(' ', '')}-{fixture_index + 1}",
-            "league": league_name,
-            "round": week_num,
-            "date": format_round_date(week_num),
-            "venue": venue,
-            "time": time_str,
-            "homeTeam": home,
-            "awayTeam": away,
-            "raw_fixture": clean_text
-        }
-    return None
-
-async def find_schedule_frame(page):
+async def get_schedule_frame(page):
     await page.wait_for_selector("iframe", timeout=30000)
     for frame in page.frames:
         if "leaguelobster" in frame.url.lower():
@@ -98,68 +109,46 @@ async def scrape_league(page, league_name, url):
     print(f"==========================================")
     
     await page.goto(url, wait_until="domcontentloaded", timeout=45000)
-    frame = await find_schedule_frame(page)
+    frame = await get_schedule_frame(page)
     await frame.wait_for_selector("table, tr, .match", timeout=25000)
 
-    try:
-        full_schedule_link = await frame.query_selector("a:has-text('full schedule'), button:has-text('full schedule')")
-        if full_schedule_link:
-            print(f"[{league_name}] Found 'Full Schedule' button. Clicking...")
-            await full_schedule_link.click()
-            await page.wait_for_timeout(3000)
-            frame = await find_schedule_frame(page)
-    except Exception as e:
-        print(f"[{league_name}] Notice: {e}")
-
-    fixtures = []
-    seen = set()
-
-    for week in range(1, 16):
-        rows = await frame.query_selector_all("table tr, .match, .game-row")
-        row_texts = []
-        for r in rows:
-            txt = await r.inner_text()
-            if txt:
-                row_texts.append(txt)
-
-        new_in_week = 0
-        for raw in row_texts:
-            clean = " ".join(raw.split())
-            parsed = parse_fixture_text(clean, league_name, week, len(fixtures))
-            if parsed:
-                key = (parsed["league"], parsed["time"], parsed["homeTeam"], parsed["awayTeam"])
-                if key not in seen:
-                    seen.add(key)
-                    fixtures.append(parsed)
-                    new_in_week += 1
-
-        print(f"[{league_name}] Week {week}: captured {new_in_week} fixtures")
-
-        if new_in_week == 0:
-            break
-
-        arrow = await frame.query_selector(
-            "button:has(.fa-chevron-right), a:has(.fa-chevron-right), "
-            "button:has(.fa-angle-right), a:has(.fa-angle-right), "
-            "button:has-text('>'), a:has-text('>'), [aria-label*='next' i]"
-        )
-
-        if arrow:
+    # Click the exact "Reload full schedule" button
+    clicked = False
+    for scope in [frame, page]:
+        for sel in [
+            "button:has-text('Reload full schedule')",
+            "a:has-text('Reload full schedule')",
+            ":has-text('Reload full schedule')"
+        ]:
             try:
-                await arrow.click()
-                await page.wait_for_timeout(1500)
-                frame = await find_schedule_frame(page)
+                btn = await scope.query_selector(sel)
+                if btn:
+                    print(f"[{league_name}] Found 'Reload full schedule' button! Clicking to expand all weeks...")
+                    await btn.scroll_into_view_if_needed()
+                    await btn.click()
+                    clicked = True
+                    break
             except Exception:
-                break
-        else:
+                continue
+        if clicked:
             break
 
-    # If all fixtures were collected under round 1 (e.g. single-page view like Liga 7)
-    if len(fixtures) > 15 and all(f.get("round") == 1 for f in fixtures):
-        print(f"[{league_name}] Single-page full schedule detected ({len(fixtures)} matches). Recalculating rounds...")
-        fixtures = assign_rounds_by_kickoff_reset(fixtures)
+    if clicked:
+        # Give LeagueLobster 4 seconds to pull and display all weeks
+        await page.wait_for_timeout(4000)
+        frame = await get_schedule_frame(page)
 
-    print(f"[{league_name}] Extracted {len(fixtures)} fixtures across {len(set(f['round'] for f in fixtures))} round(s)")
+    # Scrape all rendered elements across the full expanded schedule
+    elements = await frame.query_selector_all("caption, h2, h3, h4, th, tr, .match, .game-row")
+    raw_texts = []
+    for el in elements:
+        txt = await el.inner_text()
+        if txt:
+            raw_texts.append(" ".join(txt.split()))
+
+    fixtures = parse_full_schedule(raw_texts, league_name)
+    rounds_found = len(set(f["round"] for f in fixtures)) if fixtures else 0
+    print(f"[{league_name}] Captured {len(fixtures)} total fixtures across {rounds_found} round(s).")
     return fixtures
 
 async def main():
@@ -180,7 +169,9 @@ async def main():
 
         await browser.close()
 
-        print(f"\nTotal fixtures captured across all leagues: {len(all_data)}")
+        print(f"\n==========================================")
+        print(f"Total fixtures captured across all leagues: {len(all_data)}")
+        print(f"==========================================")
         if len(all_data) > 0:
             with open('fixtures_data.json', 'w') as f:
                 json.dump(all_data, f, indent=2)
