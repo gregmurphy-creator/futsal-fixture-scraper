@@ -2,8 +2,11 @@
 """
 Futsal Escocia Winter League 2026/27 fixture scraper.
 
-Pulls the complete season schedule for Liga 5, Liga 6 and Liga 7 straight from
+Pulls the complete season schedule for Liga 3 to Liga 7 straight from
 LeagueLobster's own schedule backend and writes it to fixtures_data.json.
+
+Liga 3 and Liga 4 play on Sundays; Liga 5, 6 and 7 play on Saturdays. Nothing
+here assumes a matchday weekday - dates are read from the feed.
 
 Why there is no browser here
 ----------------------------
@@ -42,6 +45,8 @@ BASE = "https://scheduler.leaguelobster.com"
 
 # season_id -> league label. The public URL is kept for traceability only.
 LEAGUES = [
+    ("Liga 3", "2837395", f"{BASE}/2837395/liga-3/winter-2026-27/?mode=full"),
+    ("Liga 4", "2837392", f"{BASE}/2837392/liga-4/winter-2026-27/?mode=full"),
     ("Liga 5", "2837382", f"{BASE}/2837382/liga-5/winter-2026-27/?mode=full"),
     ("Liga 6", "2837371", f"{BASE}/2837371/liga-6/winter-2026-27/?mode=full"),
     ("Liga 7", "2837368", f"{BASE}/2837368/liga-7/winter-2026-27/?mode=full"),
@@ -61,9 +66,11 @@ HEADERS = {
 
 OUTPUT_FILE = os.environ.get("FIXTURES_OUTPUT", "fixtures_data.json")
 
-# Refuse to overwrite a good file with a partial scrape. The season is 510
-# fixtures; anything under this means the source changed or a request failed.
-MIN_TOTAL_FIXTURES = 200
+# Refuse to overwrite a good file with a partial scrape. The five leagues carry
+# 975 fixtures; anything under this means the source changed or a request
+# failed. The per-league floor is the stricter guard - it catches one league
+# dropping out, which a total on its own would hide.
+MIN_TOTAL_FIXTURES = 600
 MIN_FIXTURES_PER_LEAGUE = 50
 
 REQUEST_ATTEMPTS = 4

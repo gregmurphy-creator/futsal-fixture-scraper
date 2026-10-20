@@ -56,14 +56,16 @@
         </button>
         <div class="w-px h-6 bg-gray-200 mx-1 flex-shrink-0"></div>
         <button data-datefilter="ALL" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm flex-shrink-0">All Dates</button>
-        <button data-datefilter="NEXT_MATCHDAY" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0">Next Matchday</button>
+        <button data-datefilter="NEXT_WEEKEND" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0">Next Weekend</button>
         <button data-datefilter="FOLLOWING_WEEKEND" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0">Following Weekend</button>
       </div>
     </div>
 
     <!-- League Filter Tabs -->
-    <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-3 scrollbar-none" id="leagueFilters">
+    <div class="flex flex-wrap items-center gap-2 mb-3" id="leagueFilters">
       <button data-league="ALL" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#FF6600] text-white shadow-sm flex-shrink-0">All Leagues</button>
+      <button data-league="Liga 3" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 flex-shrink-0">Liga 3</button>
+      <button data-league="Liga 4" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 flex-shrink-0">Liga 4</button>
       <button data-league="Liga 5" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 flex-shrink-0">Liga 5</button>
       <button data-league="Liga 6" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 flex-shrink-0">Liga 6</button>
       <button data-league="Liga 7" class="league-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 flex-shrink-0">Liga 7</button>
@@ -253,7 +255,7 @@
         // which is the case for feed files written before that change.
         let roundNum = Number(item.round);
         if (!Number.isFinite(roundNum) || roundNum < 1) {
-          const matchesPerRound = { "Liga 5": 15, "Liga 6": 14, "Liga 7": 5 };
+          const matchesPerRound = { "Liga 3": 14, "Liga 4": 17, "Liga 5": 15, "Liga 6": 14, "Liga 7": 5 };
           roundNum = Math.floor(idx / (matchesPerRound[lg] || 5)) + 1;
         }
 
@@ -657,27 +659,46 @@
       renderFixtures();
     };
 
+    function localIsoDate(date) {
+      const pad = (n) => String(n).padStart(2, "0");
+      return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+    }
+
+    // The Monday starting a date's week. Saturday and Sunday fixtures of one
+    // weekend share a key, which matters now Liga 3 and Liga 4 play Sundays
+    // while Liga 5, 6 and 7 play Saturdays.
+    function weekStartKey(iso) {
+      if (!iso) return null;
+      const date = new Date(`${iso}T00:00:00`);
+      if (isNaN(date.getTime())) return null;
+      date.setDate(date.getDate() - ((date.getDay() + 6) % 7));
+      return localIsoDate(date);
+    }
+
     const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    // Saturdays with no fixtures between two matchdays. The season breaks for
-    // two weeks over Christmas, and without saying so the gap reads as a
-    // broken feed rather than a scheduled rest.
+    // Weekends with no fixtures at all between two matchdays. Counting whole
+    // weekends rather than a day gap stops Saturday and Sunday fixtures of the
+    // same weekend reading as a break, and names a blank weekend by its
+    // Saturday even when the fixtures either side of it are Sunday ones.
     function breakMarker(previousGroup, group) {
-      if (!previousGroup.iso || !group.iso) return "";
-
-      const from = new Date(`${previousGroup.iso}T00:00:00`);
-      const to = new Date(`${group.iso}T00:00:00`);
-      if (isNaN(from.getTime()) || isNaN(to.getTime())) return "";
-
-      const days = Math.round((to - from) / 86400000);
-      if (days <= 7) return "";
+      const fromWeek = weekStartKey(previousGroup.iso);
+      const toWeek = weekStartKey(group.iso);
+      if (!fromWeek || !toWeek || fromWeek === toWeek) return "";
 
       const skipped = [];
-      for (let day = new Date(from.getTime() + 7 * 86400000); day < to;
-           day = new Date(day.getTime() + 7 * 86400000)) {
-        skipped.push(`${day.getDate()} ${MONTHS_SHORT[day.getMonth()]}`);
+      const cursor = new Date(`${fromWeek}T00:00:00`);
+      const end = new Date(`${toWeek}T00:00:00`);
+      cursor.setDate(cursor.getDate() + 7);
+
+      while (cursor < end) {
+        const saturday = new Date(cursor.getTime());
+        saturday.setDate(saturday.getDate() + 5);
+        skipped.push(`${saturday.getDate()} ${MONTHS_SHORT[saturday.getMonth()]}`);
+        cursor.setDate(cursor.getDate() + 7);
       }
+
       if (skipped.length === 0) return "";
 
       return `
@@ -827,6 +848,13 @@
       const q = searchQuery.toLowerCase().trim();
       const matchdays = upcomingMatchdays();
       const activePlayer = selectedPlayer();
+
+      // Both quick views work in weekends: with Saturday and Sunday leagues
+      // running together, a single "next matchday" would show a Sunday parent
+      // an empty list whenever the soonest fixture was a Saturday one.
+      const nextWeekend = matchdays.length ? weekStartKey(matchdays[0]) : null;
+      const laterDay = matchdays.find(iso => weekStartKey(iso) !== nextWeekend);
+      const followingWeekend = laterDay ? weekStartKey(laterDay) : null;
       const hasAnyTiki = allFixtures.some(item => isTiki(item.homeTeam) || isTiki(item.awayTeam));
       const activeTikiFilter = onlyTikiTaka && hasAnyTiki;
 
@@ -849,13 +877,13 @@
         const matchesRound = selectedRound === null || item.round === selectedRound;
 
         let matchesDate = true;
-        if (selectedDateFilter === "NEXT_MATCHDAY") {
-          matchesDate = matchdays.length
-            ? item.iso_date === matchdays[0]
+        if (selectedDateFilter === "NEXT_WEEKEND") {
+          matchesDate = nextWeekend
+            ? weekStartKey(item.iso_date) === nextWeekend
             : item.round === 1;
         } else if (selectedDateFilter === "FOLLOWING_WEEKEND") {
-          matchesDate = matchdays.length > 1
-            ? item.iso_date === matchdays[1]
+          matchesDate = followingWeekend
+            ? weekStartKey(item.iso_date) === followingWeekend
             : item.round === 2;
         }
 
