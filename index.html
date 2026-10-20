@@ -75,7 +75,10 @@
     </div>
 
     <!-- Week Selector -->
-    <div class="flex flex-wrap items-center gap-1.5 mb-3" id="roundFilters"></div>
+    <div id="weekSelectorCard" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
+      <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">Match Weeks</div>
+      <div class="flex flex-wrap items-center gap-1.5" id="roundFilters"></div>
+    </div>
 
     <!-- Status Subheader -->
     <div class="flex items-center justify-between gap-2 mb-3 px-1">
@@ -622,11 +625,16 @@
 
     function renderRoundFilters() {
       const host = document.getElementById("roundFilters");
+      const card = document.getElementById("weekSelectorCard");
       if (!host) return;
 
       const rounds = [...new Set(allFixtures.map(item => item.round))]
         .filter(round => Number.isFinite(round))
         .sort((a, b) => a - b);
+
+      // The card carries a heading, so an empty list would otherwise leave a
+      // titled empty box sitting on the page.
+      if (card) card.classList.toggle("hidden", rounds.length === 0);
 
       if (rounds.length === 0) {
         host.innerHTML = "";
@@ -696,18 +704,38 @@
       return `${short(first)} - ${short(last)}`;
     }
 
+    // Which weekends the two quick views currently point at.
+    function currentWeekendKeys() {
+      const matchdays = upcomingMatchdays();
+      const next = matchdays.length ? weekStartKey(matchdays[0]) : null;
+      const later = matchdays.find(iso => weekStartKey(iso) !== next);
+      return { next, following: later ? weekStartKey(later) : null };
+    }
+
     // "Next" and "Following" read as synonyms, so the buttons simply carry the
     // dates they resolve to. Sat beside "All Dates" under the Quick Views
     // heading, a bare date reads plainly as "show me that weekend".
     function renderDateFilterLabels(nextKey, followingKey) {
+      // With real dates in the feed and nothing upcoming, the season is done:
+      // the round-based fallback would quietly serve weeks 1 and 2 from months
+      // ago, so the buttons are hidden instead.
+      const dated = allFixtures.some(item => item.iso_date);
+      const finished = dated && !nextKey;
+
       const apply = (filterValue, weekKey, fallback) => {
         const button = document.querySelector(`[data-datefilter="${filterValue}"]`);
         if (!button) return;
-        button.textContent = weekendLabel(weekKey) || fallback;
+
+        const show = !finished && !(dated && !weekKey);
+        button.classList.toggle("hidden", !show);
+        if (show) button.textContent = weekendLabel(weekKey) || fallback;
       };
 
       apply("NEXT_WEEKEND", nextKey, "Next Weekend");
       apply("FOLLOWING_WEEKEND", followingKey, "The Weekend After");
+
+      // Don't strand the view on a filter whose button just disappeared.
+      if (finished && selectedDateFilter !== "ALL") setDateFilter("ALL");
     }
 
     const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -887,9 +915,7 @@
       // Both quick views work in weekends: with Saturday and Sunday leagues
       // running together, a single "next matchday" would show a Sunday parent
       // an empty list whenever the soonest fixture was a Saturday one.
-      const nextWeekend = matchdays.length ? weekStartKey(matchdays[0]) : null;
-      const laterDay = matchdays.find(iso => weekStartKey(iso) !== nextWeekend);
-      const followingWeekend = laterDay ? weekStartKey(laterDay) : null;
+      const { next: nextWeekend, following: followingWeekend } = currentWeekendKeys();
       renderDateFilterLabels(nextWeekend, followingWeekend);
       const hasAnyTiki = allFixtures.some(item => isTiki(item.homeTeam) || isTiki(item.awayTeam));
       const activeTikiFilter = onlyTikiTaka && hasAnyTiki;
@@ -1215,8 +1241,13 @@
 
     renderPlayerPills();
 
-    // Keep the countdown honest without re-rendering the whole list.
-    setInterval(renderNextMatchHero, 60000);
+    // Keep the countdown and the weekend labels honest on a page left open
+    // overnight, without re-rendering the whole list.
+    setInterval(() => {
+      renderNextMatchHero();
+      const { next, following } = currentWeekendKeys();
+      renderDateFilterLabels(next, following);
+    }, 60000);
 
     // Proven fetch loader
     fetch("./fixtures_data.json?t=" + Date.now())
