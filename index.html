@@ -693,18 +693,18 @@
       return `${short(first)} - ${short(last)}`;
     }
 
-    // "Next" and "Following" read as synonyms, so the buttons carry the dates
-    // they actually resolve to instead.
+    // "Next" and "Following" read as synonyms, so the buttons simply carry the
+    // dates they resolve to. Sat beside "All Dates" under the Quick Views
+    // heading, a bare date reads plainly as "show me that weekend".
     function renderDateFilterLabels(nextKey, followingKey) {
-      const apply = (filterValue, prefix, weekKey, fallback) => {
+      const apply = (filterValue, weekKey, fallback) => {
         const button = document.querySelector(`[data-datefilter="${filterValue}"]`);
         if (!button) return;
-        const label = weekendLabel(weekKey);
-        button.textContent = label ? `${prefix} ${label}` : fallback;
+        button.textContent = weekendLabel(weekKey) || fallback;
       };
 
-      apply("NEXT_WEEKEND", "Next:", nextKey, "Next Weekend");
-      apply("FOLLOWING_WEEKEND", "Then:", followingKey, "The Weekend After");
+      apply("NEXT_WEEKEND", nextKey, "Next Weekend");
+      apply("FOLLOWING_WEEKEND", followingKey, "The Weekend After");
     }
 
     const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
