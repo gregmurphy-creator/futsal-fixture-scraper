@@ -57,7 +57,7 @@
         <div class="w-px h-6 bg-gray-200 mx-1 flex-shrink-0"></div>
         <button data-datefilter="ALL" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm flex-shrink-0">All Dates</button>
         <button data-datefilter="NEXT_WEEKEND" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0">Next Weekend</button>
-        <button data-datefilter="FOLLOWING_WEEKEND" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0">Following Weekend</button>
+        <button data-datefilter="FOLLOWING_WEEKEND" class="date-btn py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0">The Weekend After</button>
       </div>
     </div>
 
@@ -675,6 +675,38 @@
       return localIsoDate(date);
     }
 
+    // "7-8 Nov", or "9 Jan" when only one day of that weekend has fixtures.
+    function weekendLabel(weekKey) {
+      if (!weekKey) return null;
+
+      const days = upcomingMatchdays().filter(iso => weekStartKey(iso) === weekKey);
+      if (days.length === 0) return null;
+
+      const first = new Date(`${days[0]}T00:00:00`);
+      const last = new Date(`${days[days.length - 1]}T00:00:00`);
+      const short = (date) => `${date.getDate()} ${MONTHS_SHORT[date.getMonth()]}`;
+
+      if (days.length === 1) return short(first);
+      if (first.getMonth() === last.getMonth()) {
+        return `${first.getDate()}-${last.getDate()} ${MONTHS_SHORT[last.getMonth()]}`;
+      }
+      return `${short(first)} - ${short(last)}`;
+    }
+
+    // "Next" and "Following" read as synonyms, so the buttons carry the dates
+    // they actually resolve to instead.
+    function renderDateFilterLabels(nextKey, followingKey) {
+      const apply = (filterValue, prefix, weekKey, fallback) => {
+        const button = document.querySelector(`[data-datefilter="${filterValue}"]`);
+        if (!button) return;
+        const label = weekendLabel(weekKey);
+        button.textContent = label ? `${prefix} ${label}` : fallback;
+      };
+
+      apply("NEXT_WEEKEND", "Next:", nextKey, "Next Weekend");
+      apply("FOLLOWING_WEEKEND", "Then:", followingKey, "The Weekend After");
+    }
+
     const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -855,6 +887,7 @@
       const nextWeekend = matchdays.length ? weekStartKey(matchdays[0]) : null;
       const laterDay = matchdays.find(iso => weekStartKey(iso) !== nextWeekend);
       const followingWeekend = laterDay ? weekStartKey(laterDay) : null;
+      renderDateFilterLabels(nextWeekend, followingWeekend);
       const hasAnyTiki = allFixtures.some(item => isTiki(item.homeTeam) || isTiki(item.awayTeam));
       const activeTikiFilter = onlyTikiTaka && hasAnyTiki;
 
