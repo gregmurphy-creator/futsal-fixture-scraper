@@ -1,0 +1,79 @@
+name: Pitreavie 7s Fixtures
+
+on:
+  # The league adds the new Saturday tab on a Wednesday or Thursday, so check
+  # hourly across Wed, Thu and Fri. Friday is the safety net: a tab that slips
+  # a day would otherwise go unseen until the following week, by which point
+  # the Saturday has gone.
+  schedule:
+    - cron: '0 * * * 3,4,5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: pitreavie-fixtures
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # No dependency install: the scraper reads the shared workbook with the
+      # Python standard library alone, and only ever issues GET requests.
+      - name: Read the league workbook
+        id: scrape
+        env:
+          PITREAVIE_SHARE_URL: ${{ secrets.PITREAVIE_SHARE_URL }}
+        run: python pitreavie_scraper.py
+
+      - name: Commit updated fixtures
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- pitreavie_data.json; then
+            echo "No fixture changes to commit."
+            exit 0
+          fi
+          git add pitreavie_data.json
+          git commit -m "Pitreavie 7s: ${{ steps.scrape.outputs.week_tab }}"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      # Opening an issue is what sends the email: GitHub notifies the
+      # repository owner, so there is no third-party service and no credential
+      # beyond the token Actions already provides.
+      - name: Raise an issue for the new week
+        if: steps.scrape.outputs.new_week == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WEEK: ${{ steps.scrape.outputs.week_tab }}
+          HEADING: ${{ steps.scrape.outputs.heading }}
+          OUR_COUNT: ${{ steps.scrape.outputs.our_count }}
+          SUMMARY: ${{ steps.scrape.outputs.summary }}
+        run: |
+          {
+            echo "**${HEADING}** fixtures are up."
+            echo
+            echo "Tiki Taka matches this week: **${OUR_COUNT}**"
+            echo
+            echo "${SUMMARY}" | tr '|' '\n' | sed 's/^ *//;s/^/- /'
+            echo
+            echo "Full list: https://gregmurphy-creator.github.io/futsal-fixture-scraper/pitreavie.html"
+            echo
+            echo "_Close this issue once you have read it - a new one is raised each week._"
+          } > body.md
+          gh issue create \
+            --title "Pitreavie 7s: ${WEEK} fixtures are up" \
+            --body-file body.md

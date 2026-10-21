@@ -1,0 +1,158 @@
+{
+  "updated": "2026-10-21T08:02:56+00:00",
+  "week_tab": "Week 29 - 17th October",
+  "heading": "17th October - Week 29",
+  "known_tabs": [
+    "Week 29 - 17th October",
+    "Week 28 - 10th October",
+    "Week 27 - 3rd October",
+    "Week 26 - 26th September",
+    "Week 25 - 19th September",
+    "Week 24 - 12th September",
+    "Week 23 5th September",
+    "Week 22 - 29th August",
+    "Week 21 - 22nd August",
+    "Week 20 - 15th August",
+    "Week 19 - 8th August",
+    "Week 18 - 1st August",
+    "Week 17 - 27th June",
+    "Week  16 - 20th June",
+    "Week 15 - 13th June",
+    "Week 14 - 6th June",
+    "Week 13 - 30th May",
+    "Week 12 - 23rd May",
+    "Week 11 - 16th May",
+    "Week 10 - 9th May",
+    "Week 9 - 2nd May",
+    "Week 8 - 25th April",
+    "Week 7 - 18th April",
+    "Week 6 - 11th April",
+    "Week 5 - 4th April",
+    "Week 4 28th March",
+    "Week Three 21st March",
+    "Week Two - 14th March",
+    "Week One - 7th March"
+  ],
+  "fixtures": [
+    {
+      "id": "1",
+      "time": "9:00 AM",
+      "pitch": "1",
+      "tier": "1",
+      "homeTeam": "BB Blues",
+      "awayTeam": "Tiki Taka Negra",
+      "lastPlayed": "NP",
+      "isOurs": true
+    },
+    {
+      "id": "2",
+      "time": "9:00 AM",
+      "pitch": "2",
+      "tier": "2",
+      "homeTeam": "Swifts Falcons",
+      "awayTeam": "IUFC Blues",
+      "lastPlayed": "Wk 18",
+      "isOurs": false
+    },
+    {
+      "id": "3",
+      "time": "9:00 AM",
+      "pitch": "3",
+      "tier": "2",
+      "homeTeam": "Bowhill Greys",
+      "awayTeam": "Tiki Taka Amarillo",
+      "lastPlayed": "NP",
+      "isOurs": true
+    },
+    {
+      "id": "4",
+      "time": "9:00 AM",
+      "pitch": "4",
+      "tier": "1",
+      "homeTeam": "Pitreavie Reds",
+      "awayTeam": "Tiki Taka Neranja",
+      "lastPlayed": "WK 2",
+      "isOurs": true
+    },
+    {
+      "id": "5",
+      "time": "10:00 AM",
+      "pitch": "1",
+      "tier": "3",
+      "homeTeam": "IUFC Whites",
+      "awayTeam": "Rosyth Blacks",
+      "lastPlayed": "Wk 18",
+      "isOurs": false
+    },
+    {
+      "id": "6",
+      "time": "10:00 AM",
+      "pitch": "2",
+      "tier": "2",
+      "homeTeam": "Bowhill Blacks",
+      "awayTeam": "Raith Rovers Whites",
+      "lastPlayed": "Wk 20",
+      "isOurs": false
+    },
+    {
+      "id": "7",
+      "time": "10:00 AM",
+      "pitch": "3",
+      "tier": "3",
+      "homeTeam": "DACC Girls Whites",
+      "awayTeam": "Cowie",
+      "lastPlayed": "Wk 14",
+      "isOurs": false
+    },
+    {
+      "id": "8",
+      "time": "10:00 AM",
+      "pitch": "4",
+      "tier": "2",
+      "homeTeam": "Swifts Hawks",
+      "awayTeam": "Oakley Black",
+      "lastPlayed": "Wk 10",
+      "isOurs": false
+    },
+    {
+      "id": "9",
+      "time": "11:00 AM",
+      "pitch": "1",
+      "tier": "3",
+      "homeTeam": "Oakley Gold",
+      "awayTeam": "Kelty Blues",
+      "lastPlayed": "Wk 23",
+      "isOurs": false
+    },
+    {
+      "id": "10",
+      "time": "11:00 AM",
+      "pitch": "2",
+      "tier": "2",
+      "homeTeam": "Crossgates Yellows",
+      "awayTeam": "Rosyth Reds",
+      "lastPlayed": "Wk 22",
+      "isOurs": false
+    },
+    {
+      "id": "11",
+      "time": "11:00 AM",
+      "pitch": "3",
+      "tier": "3",
+      "homeTeam": "DACC Girls Blacks",
+      "awayTeam": "Clunie Royal Hearts Blue NEW",
+      "lastPlayed": "NP",
+      "isOurs": false
+    },
+    {
+      "id": "12",
+      "time": "11:00 AM",
+      "pitch": "4",
+      "tier": "2",
+      "homeTeam": "Raith Rovers Blues",
+      "awayTeam": "DACC Boys",
+      "lastPlayed": "Wk 3",
+      "isOurs": false
+    }
+  ]
+}
