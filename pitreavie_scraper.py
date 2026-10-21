@@ -53,6 +53,13 @@ USER_AGENT = (
 
 OUR_CLUB = "tiki taka"
 
+# The availability tab is filled in before fixtures are published, so it tells
+# us which of our teams are out this Saturday while the opponents, times and
+# pitches are still unknown.
+AVAILABILITY_TAB = "Availability Current"
+AVAILABILITY_TEAM_COLUMN = "A"
+AVAILABILITY_HEADER_ROW = 1
+
 # Fixture rows: home in B, "v" in D, away in F, then kick-off, pitch and tier.
 COL_HOME, COL_AWAY = "B", "F"
 COL_KICKOFF, COL_PITCH, COL_TIER, COL_LAST_PLAYED = "G", "H", "I", "J"
@@ -193,7 +200,12 @@ def fixture_date(*texts):
         if not found:
             continue
 
-        month = MONTHS.get(found.group(2).lower())
+        # Fixture tabs spell months out ("17th October") while the
+        # availability headers abbreviate them ("24th Oct"), so match on
+        # prefix rather than exact name.
+        token = found.group(2).lower()
+        month = next((number for name, number in MONTHS.items()
+                      if len(token) >= 3 and name.startswith(token)), None)
         if not month:
             continue
 
@@ -265,6 +277,51 @@ def parse_week(cells, tab_name):
     }
 
 
+def parse_availability(cells):
+    """{week label: {our team: status}} from the availability grid.
+
+    Row 1 carries a label per week ("Week 30 24th Oct") across the columns,
+    column A lists every team, and the cells hold Y, N or a code such as LCO
+    for a late call-off.
+    """
+    weeks = {
+        column: value
+        for (row, column), value in cells.items()
+        if row == AVAILABILITY_HEADER_ROW
+        and column != AVAILABILITY_TEAM_COLUMN
+        and re.match(r"\s*week\b", value, re.I)
+    }
+
+    teams = {
+        row: value
+        for (row, column), value in cells.items()
+        if column == AVAILABILITY_TEAM_COLUMN and OUR_CLUB in value.lower()
+    }
+
+    table = {}
+    for column, label in weeks.items():
+        statuses = {}
+        for row, team in teams.items():
+            status = cells.get((row, column), "")
+            if status:
+                statuses[team] = status
+        if statuses:
+            table[label] = {"date": fixture_date(label), "teams": statuses}
+    return table
+
+
+def next_availability(table, after_date):
+    """The soonest availability week later than the published fixtures."""
+    candidates = [
+        {"week_label": label, "date": entry["date"], "teams": entry["teams"]}
+        for label, entry in table.items()
+        if entry["date"] and (not after_date or entry["date"] > after_date)
+    ]
+    if not candidates:
+        return None
+    return sorted(candidates, key=lambda entry: entry["date"])[0]
+
+
 # -------------------------------------------------------------------- output
 
 
@@ -295,21 +352,41 @@ def main():
     if not tabs:
         raise SystemExit("No tabs starting with 'Week' - the workbook layout changed.")
 
-    newest_tab, newest_path = next((n, p) for n, p in sheets if is_fixture_tab(n))
-    week = parse_week(read_cells(book, newest_path, strings), newest_tab)
+    # The two newest tabs: the latest published week, plus the one before it
+    # to look back at while the next week is still unpublished.
+    fixture_sheets = [(n, p) for n, p in sheets if is_fixture_tab(n)][:2]
+    weeks = [parse_week(read_cells(book, path, strings), name)
+             for name, path in fixture_sheets]
 
-    if not week["fixtures"]:
+    newest_tab = weeks[0]["tab"]
+    if not weeks[0]["fixtures"]:
         raise SystemExit(
             f"Parsed 0 fixtures from {newest_tab!r}. Refusing to overwrite "
             f"{OUTPUT_FILE}, which would wipe a good file."
         )
 
-    ours = [f for f in week["fixtures"] if f["isOurs"]]
-    print(f"\n{week['heading']}  (fixtures played {week['date'] or 'date unknown'})")
-    print(f"  {len(week['fixtures'])} fixtures, {len(ours)} involving {OUR_CLUB.title()}")
+    sheet_paths = dict(sheets)
+    availability = {}
+    if AVAILABILITY_TAB in sheet_paths:
+        availability = parse_availability(
+            read_cells(book, sheet_paths[AVAILABILITY_TAB], strings))
+    upcoming = next_availability(availability, weeks[0]["date"])
+
+    for entry in weeks:
+        mine = [f for f in entry["fixtures"] if f["isOurs"]]
+        print(f"\n{entry['heading']}  ({entry['date'] or 'date unknown'})")
+        print(f"  {len(entry['fixtures'])} fixtures, {len(mine)} ours")
+
+    ours = [f for f in weeks[0]["fixtures"] if f["isOurs"]]
     for fixture in ours:
         print(f"    {fixture['time']:>9}  Pitch {fixture['pitch']:<14} "
               f"{fixture['homeTeam']} v {fixture['awayTeam']}")
+
+    if upcoming:
+        playing = [t for t, s in upcoming["teams"].items() if s.upper() == "Y"]
+        print(f"\nNot yet published: {upcoming['week_label']} ({upcoming['date']})")
+        print(f"  available: {len(playing)} of {len(upcoming['teams'])} -> "
+              f"{', '.join(sorted(playing)) or 'none'}")
 
     is_new_week = bool(previous) and previous.get("week_tab") != newest_tab
     first_run = not previous
@@ -318,10 +395,12 @@ def main():
         "updated": datetime.datetime.now(datetime.timezone.utc)
                    .replace(microsecond=0).isoformat(),
         "week_tab": newest_tab,
-        "heading": week["heading"],
-        "fixture_date": week["date"],
+        "heading": weeks[0]["heading"],
+        "fixture_date": weeks[0]["date"],
         "known_tabs": tabs,
-        "fixtures": week["fixtures"],
+        "fixtures": weeks[0]["fixtures"],
+        "previous_week": weeks[1] if len(weeks) > 1 else None,
+        "upcoming": upcoming,
     }
 
     # "updated" means when the fixtures last CHANGED, not when we last looked.
@@ -336,7 +415,7 @@ def main():
             new_week="false",
             first_run="false",
             week_tab=newest_tab,
-            heading=week["heading"],
+            heading=weeks[0]["heading"],
             our_count=str(len(ours)),
             summary="unchanged",
         )
@@ -346,7 +425,7 @@ def main():
         json.dump(payload, handle, indent=2, ensure_ascii=False)
         handle.write("\n")
 
-    print(f"\nWrote {len(week['fixtures'])} fixtures to {OUTPUT_FILE}")
+    print(f"\nWrote {len(weeks[0]['fixtures'])} fixtures to {OUTPUT_FILE}")
     if is_new_week:
         print(f"NEW WEEK: {previous.get('week_tab')!r} -> {newest_tab!r}")
 
@@ -359,7 +438,7 @@ def main():
         new_week="true" if is_new_week else "false",
         first_run="true" if first_run else "false",
         week_tab=newest_tab,
-        heading=week["heading"],
+        heading=weeks[0]["heading"],
         our_count=str(len(ours)),
         summary=summary,
     )

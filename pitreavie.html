@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pitreavie 7s League - 2017s</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { background: #f9fafb; }
-    .scrollbar-none::-webkit-scrollbar { display: none; }
-  </style>
+  <style> body { background: #f9fafb; } </style>
 </head>
 <body class="font-sans text-gray-900">
   <div class="max-w-2xl mx-auto px-4 py-6 pb-24">
@@ -21,18 +18,14 @@
       <p id="weekHeading" class="text-sm text-gray-500 font-medium">Loading fixtures...</p>
     </header>
 
-    <!-- Says plainly whether these games are still to come or already played -->
+    <div id="viewTabs" class="flex items-center gap-1.5 mb-3"></div>
     <div id="statusBanner" class="mb-4"></div>
 
-    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
+    <div id="showCard" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4 hidden">
       <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">Show</div>
       <div class="flex flex-wrap items-center gap-1.5">
-        <button id="toggleOursBtn" class="py-2 px-3 text-xs font-bold rounded-xl bg-[#FF6600] text-white shadow-sm transition-all">
-          &#10003; Tiki Taka
-        </button>
-        <button id="toggleAllBtn" class="py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
-          All Teams
-        </button>
+        <button id="toggleOursBtn" class="py-2 px-3 text-xs font-bold rounded-xl bg-[#FF6600] text-white shadow-sm transition-all">&#10003; Tiki Taka</button>
+        <button id="toggleAllBtn" class="py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">All Teams</button>
       </div>
     </div>
 
@@ -42,30 +35,23 @@
     </div>
 
     <div id="fixturesList" class="space-y-3"></div>
-
-    <p class="mt-6 text-center text-[11px] text-gray-400">
-      Fixtures read from the league workbook. Pitch numbers as published.
-    </p>
   </div>
 
   <script>
     let data = null;
     let onlyOurs = true;
+    let view = "upcoming";   // "upcoming" | "last"
 
-    const fixturesList = document.getElementById("fixturesList");
-    const matchCount = document.getElementById("matchCount");
-    const weekHeading = document.getElementById("weekHeading");
-    const updatedAt = document.getElementById("updatedAt");
-    const toggleOursBtn = document.getElementById("toggleOursBtn");
-    const toggleAllBtn = document.getElementById("toggleAllBtn");
+    const el = (id) => document.getElementById(id);
+    const fixturesList = el("fixturesList"), matchCount = el("matchCount");
+    const weekHeading = el("weekHeading"), updatedAt = el("updatedAt");
+    const statusBanner = el("statusBanner"), viewTabs = el("viewTabs"), showCard = el("showCard");
 
     function escapeHtml(value = "") {
-      return String(value || "")
-        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+      return String(value || "").replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
     }
 
-    // "9:00 AM" -> minutes, so kick-offs group and sort properly.
     function timeToMinutes(time) {
       const parts = /^(\d{1,2}):(\d{2})\s*(AM|PM)?$/i.exec(String(time || "").trim());
       if (!parts) return Number.MAX_SAFE_INTEGER;
@@ -74,116 +60,179 @@
       return hour * 60 + Number(parts[2]);
     }
 
-    function setToggle(ours) {
-      onlyOurs = ours;
-      const on = "py-2 px-3 text-xs font-bold rounded-xl bg-[#FF6600] text-white shadow-sm transition-all";
-      const off = "py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all";
-      toggleOursBtn.className = ours ? on : off;
-      toggleAllBtn.className = ours ? off : on;
-      render();
-    }
-
-    // Whole days from today to the fixture date; negative means it has passed.
     function daysUntil(iso) {
       if (!iso) return null;
       const target = new Date(`${iso}T00:00:00`);
       if (isNaN(target.getTime())) return null;
-
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       return Math.round((target - today) / 86400000);
     }
 
-    function longDate(iso) {
+    function shortDate(iso) {
       const date = new Date(`${iso}T00:00:00`);
-      if (isNaN(date.getTime())) return "";
-      return date.toLocaleDateString("en-GB",
-        { weekday: "long", day: "numeric", month: "long" });
+      return isNaN(date.getTime()) ? ""
+        : date.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
     }
 
-    // The league adds next Saturday's tab on the Wednesday or Thursday before,
-    // so for part of each week the newest tab is still last week's games. Say
-    // which it is rather than leaving people to work it out from the date.
-    function renderStatus() {
-      const banner = document.getElementById("statusBanner");
-      const days = daysUntil(data && data.fixture_date);
+    function longDate(iso) {
+      const date = new Date(`${iso}T00:00:00`);
+      return isNaN(date.getTime()) ? ""
+        : date.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+    }
 
-      if (days === null) {
-        banner.innerHTML = "";
+    // The league publishes next Saturday's tab on the Wednesday or Thursday
+    // before, so the newest tab is sometimes the week ahead and sometimes the
+    // week just gone. Work out which, and fall back to the availability tab
+    // for the week ahead when its fixtures are not out yet.
+    function views() {
+      const publishedAhead = (daysUntil(data.fixture_date) ?? -1) >= 0;
+      const published = {
+        kind: "fixtures", date: data.fixture_date,
+        heading: data.heading, fixtures: data.fixtures || [],
+      };
+      const prior = data.previous_week ? {
+        kind: "fixtures", date: data.previous_week.date,
+        heading: data.previous_week.heading, fixtures: data.previous_week.fixtures || [],
+      } : null;
+
+      if (publishedAhead) return { upcoming: published, last: prior };
+
+      const pending = data.upcoming ? {
+        kind: "tbc", date: data.upcoming.date,
+        heading: data.upcoming.week_label, teams: data.upcoming.teams || {},
+      } : null;
+      return { upcoming: pending, last: published };
+    }
+
+    function renderTabs(available) {
+      const on = "flex-1 py-2.5 px-3 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm";
+      const off = "flex-1 py-2.5 px-3 text-xs font-bold rounded-xl bg-white text-gray-700 border border-gray-200 hover:bg-gray-50";
+
+      viewTabs.innerHTML = ["upcoming", "last"].map(name => {
+        const entry = available[name];
+        if (!entry) return "";
+        const label = name === "upcoming" ? "This Saturday" : "Last week";
+        return `<button onclick="setView('${name}')" class="${view === name ? on : off}">
+            ${label}<span class="block text-[10px] font-semibold opacity-70">${escapeHtml(shortDate(entry.date))}</span>
+          </button>`;
+      }).join("");
+    }
+
+    function renderBanner(entry) {
+      if (!entry) { statusBanner.innerHTML = ""; return; }
+      const days = daysUntil(entry.date);
+      const when = longDate(entry.date);
+
+      if (entry.kind === "tbc") {
+        const playing = Object.entries(entry.teams).filter(([, s]) => String(s).toUpperCase() === "Y");
+        statusBanner.innerHTML = `
+          <div class="rounded-2xl border border-blue-200 bg-blue-50 px-4 py-3">
+            <div class="flex items-center gap-2">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-blue-700">Not published yet</span>
+              <span class="text-[11px] font-bold bg-blue-600 text-white rounded-lg px-2 py-0.5">
+                ${days === 0 ? "Today" : days === 1 ? "Tomorrow" : `In ${days} days`}
+              </span>
+            </div>
+            <p class="mt-1 text-sm font-bold text-blue-900">${escapeHtml(when)}</p>
+            <p class="mt-1 text-xs font-medium text-blue-800">
+              The league usually posts fixtures on a Wednesday or Thursday. From the
+              availability sheet, <strong>${playing.length} of ${Object.keys(entry.teams).length}</strong>
+              teams are down to play - opponents, times and pitches follow when it is published.
+            </p>
+          </div>`;
         return;
       }
 
-      const when = longDate(data.fixture_date);
-
       if (days >= 0) {
-        const lead = days === 0 ? "Today" : days === 1 ? "Tomorrow" : `In ${days} days`;
-        banner.innerHTML = `
+        statusBanner.innerHTML = `
           <div class="rounded-2xl border border-green-200 bg-green-50 px-4 py-3">
             <div class="flex items-center gap-2">
               <span class="text-[11px] font-extrabold uppercase tracking-wider text-green-700">Coming up</span>
-              <span class="text-[11px] font-bold bg-green-600 text-white rounded-lg px-2 py-0.5">${lead}</span>
+              <span class="text-[11px] font-bold bg-green-600 text-white rounded-lg px-2 py-0.5">
+                ${days === 0 ? "Today" : days === 1 ? "Tomorrow" : `In ${days} days`}
+              </span>
             </div>
             <p class="mt-1 text-sm font-bold text-green-900">${escapeHtml(when)}</p>
           </div>`;
         return;
       }
 
-      const ago = days === -1 ? "Yesterday" : `${Math.abs(days)} days ago`;
-      banner.innerHTML = `
+      statusBanner.innerHTML = `
         <div class="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3">
           <div class="flex items-center gap-2">
             <span class="text-[11px] font-extrabold uppercase tracking-wider text-amber-700">Already played</span>
-            <span class="text-[11px] font-bold bg-amber-600 text-white rounded-lg px-2 py-0.5">${ago}</span>
+            <span class="text-[11px] font-bold bg-amber-600 text-white rounded-lg px-2 py-0.5">
+              ${days === -1 ? "Yesterday" : `${Math.abs(days)} days ago`}
+            </span>
           </div>
           <p class="mt-1 text-sm font-bold text-amber-900">${escapeHtml(when)}</p>
-          <p class="mt-1 text-xs font-medium text-amber-800">
-            This is the most recent list the league has published. The next set usually
-            appears on a Wednesday or Thursday, and this page updates on its own.
-          </p>
         </div>`;
     }
 
     function fixtureCard(fixture) {
-      const home = escapeHtml(fixture.homeTeam);
-      const away = escapeHtml(fixture.awayTeam);
       const ourHome = fixture.isOurs && /tiki taka/i.test(fixture.homeTeam);
       const ourAway = fixture.isOurs && /tiki taka/i.test(fixture.awayTeam);
+      const side = (name, mine, weight) => `
+        <div class="flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="w-2.5 h-2.5 rounded-full flex-shrink-0 ${mine ? "bg-[#FF6600]" : "bg-gray-300"}"></span>
+            <span class="text-sm truncate ${mine ? "font-black text-gray-900" : weight}">${escapeHtml(name)}</span>
+          </div>
+          ${mine ? '<span class="text-[10px] font-extrabold uppercase bg-orange-100 text-[#FF6600] px-1.5 py-0.5 rounded flex-shrink-0">Tiki</span>' : ""}
+        </div>`;
 
       return `
         <div class="bg-white rounded-2xl p-4 border ${fixture.isOurs
-          ? "border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm"
-          : "border-gray-200"}">
+          ? "border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm" : "border-gray-200"}">
           <div class="flex items-center justify-between gap-2 mb-3">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gray-900 text-white text-xs font-black">
+            <span class="inline-flex items-center px-3 py-1.5 rounded-xl bg-gray-900 text-white text-xs font-black">
               Pitch ${escapeHtml(fixture.pitch)}
             </span>
             <div class="flex items-center gap-1.5">
               ${fixture.tier ? `<span class="text-[11px] font-bold text-gray-500 bg-gray-100 border border-gray-200 rounded-lg px-2 py-1">Tier ${escapeHtml(fixture.tier)}</span>` : ""}
-              <span class="text-[11px] font-bold bg-orange-50 text-[#FF6600] px-2.5 py-1 rounded-lg border border-orange-100">
-                ${escapeHtml(fixture.time)}
-              </span>
+              <span class="text-[11px] font-bold bg-orange-50 text-[#FF6600] px-2.5 py-1 rounded-lg border border-orange-100">${escapeHtml(fixture.time)}</span>
             </div>
           </div>
-
           <div class="p-3 bg-gray-50 rounded-xl border border-gray-100 space-y-2">
-            <div class="flex items-center justify-between gap-2">
-              <div class="flex items-center gap-2.5 min-w-0">
-                <span class="w-2.5 h-2.5 rounded-full flex-shrink-0 ${ourHome ? "bg-[#FF6600]" : "bg-gray-300"}"></span>
-                <span class="text-sm truncate ${ourHome ? "font-black text-gray-900" : "font-semibold text-gray-800"}">${home}</span>
-              </div>
-              ${ourHome ? '<span class="text-[10px] font-extrabold uppercase bg-orange-100 text-[#FF6600] px-1.5 py-0.5 rounded flex-shrink-0">Tiki</span>' : ""}
-            </div>
-
+            ${side(fixture.homeTeam, ourHome, "font-semibold text-gray-800")}
             <div class="flex items-center gap-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">
               <span class="h-px bg-gray-200 flex-1"></span><span>vs</span><span class="h-px bg-gray-200 flex-1"></span>
             </div>
+            ${side(fixture.awayTeam, ourAway, "font-semibold text-gray-700")}
+          </div>
+        </div>`;
+    }
 
-            <div class="flex items-center justify-between gap-2">
-              <div class="flex items-center gap-2.5 min-w-0">
-                <span class="w-2.5 h-2.5 rounded-full flex-shrink-0 ${ourAway ? "bg-[#FF6600]" : "bg-gray-300"}"></span>
-                <span class="text-sm truncate ${ourAway ? "font-black text-gray-900" : "font-semibold text-gray-700"}">${away}</span>
-              </div>
-              ${ourAway ? '<span class="text-[10px] font-extrabold uppercase bg-orange-100 text-[#FF6600] px-1.5 py-0.5 rounded flex-shrink-0">Tiki</span>' : ""}
+    // Placeholder for a team we know is playing but whose fixture is not out.
+    function pendingCard(team, status) {
+      const available = String(status).toUpperCase() === "Y";
+      return `
+        <div class="bg-white rounded-2xl p-4 border ${available
+          ? "border-l-4 border-l-blue-400 border-gray-200" : "border-gray-200 opacity-70"}">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="inline-flex items-center px-3 py-1.5 rounded-xl ${available
+              ? "bg-gray-200 text-gray-600" : "bg-gray-100 text-gray-400"} text-xs font-black">
+              Pitch TBC
+            </span>
+            <span class="text-[11px] font-bold px-2.5 py-1 rounded-lg border ${available
+              ? "bg-blue-50 text-blue-700 border-blue-200" : "bg-gray-100 text-gray-500 border-gray-200"}">
+              ${available ? "Time TBC" : escapeHtml(status)}
+            </span>
+          </div>
+          <div class="p-3 bg-gray-50 rounded-xl border border-gray-100 space-y-2">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="w-2.5 h-2.5 rounded-full flex-shrink-0 bg-[#FF6600]"></span>
+              <span class="text-sm font-black text-gray-900 truncate">${escapeHtml(team)}</span>
+            </div>
+            <div class="flex items-center gap-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">
+              <span class="h-px bg-gray-200 flex-1"></span><span>vs</span><span class="h-px bg-gray-200 flex-1"></span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-2.5 h-2.5 rounded-full flex-shrink-0 bg-gray-300"></span>
+              <span class="text-sm font-semibold ${available ? "text-gray-500" : "text-gray-400"} italic">
+                ${available ? "Opponent to be confirmed" : "Not playing this week"}
+              </span>
             </div>
           </div>
         </div>`;
@@ -191,29 +240,50 @@
 
     function render() {
       if (!data) return;
+      const available = views();
+      if (!available[view]) view = available.upcoming ? "upcoming" : "last";
+      const entry = available[view];
 
-      const fixtures = (data.fixtures || [])
+      renderTabs(available);
+      renderBanner(entry);
+      weekHeading.textContent = entry ? entry.heading : "";
+
+      if (!entry) {
+        showCard.classList.add("hidden");
+        matchCount.textContent = "Nothing to show";
+        fixturesList.innerHTML = "";
+        return;
+      }
+
+      if (entry.kind === "tbc") {
+        showCard.classList.add("hidden");
+        const teams = Object.entries(entry.teams)
+          .sort(([a], [b]) => a.localeCompare(b));
+        const playing = teams.filter(([, s]) => String(s).toUpperCase() === "Y");
+        matchCount.textContent = `${playing.length} of ${teams.length} teams down to play`;
+        fixturesList.innerHTML = teams.map(([team, status]) => pendingCard(team, status)).join("");
+        return;
+      }
+
+      showCard.classList.remove("hidden");
+      const fixtures = entry.fixtures
         .filter(fixture => !onlyOurs || fixture.isOurs)
         .slice()
         .sort((a, b) => timeToMinutes(a.time) - timeToMinutes(b.time)
           || String(a.pitch).localeCompare(String(b.pitch), undefined, { numeric: true }));
 
-      renderStatus();
       matchCount.textContent = `Showing ${fixtures.length} ${fixtures.length === 1 ? "match" : "matches"}`;
 
       if (fixtures.length === 0) {
         fixturesList.innerHTML = `
           <div class="bg-white rounded-2xl p-8 text-center border border-gray-200">
-            <p class="text-gray-500 font-medium">No Tiki Taka fixtures listed for this week.</p>
+            <p class="text-gray-500 font-medium">No Tiki Taka fixtures in this week.</p>
             <button onclick="document.getElementById('toggleAllBtn').click()"
-                    class="mt-3 px-3 py-1.5 text-xs font-bold bg-[#FF6600] text-white rounded-xl shadow-sm">
-              Show all teams
-            </button>
+                    class="mt-3 px-3 py-1.5 text-xs font-bold bg-[#FF6600] text-white rounded-xl shadow-sm">Show all teams</button>
           </div>`;
         return;
       }
 
-      // Group by kick-off, so the pitch numbers for a given time sit together.
       const groups = [];
       fixtures.forEach(fixture => {
         const last = groups[groups.length - 1];
@@ -225,23 +295,29 @@
         <div class="sticky top-0 z-10 -mx-1 px-1 py-2 bg-gray-50/95 backdrop-blur-sm">
           <div class="flex items-baseline justify-between gap-2">
             <h2 class="text-sm font-black text-gray-900">${escapeHtml(group.time)}</h2>
-            <span class="text-[11px] font-bold text-gray-500">
-              ${group.items.length} ${group.items.length === 1 ? "match" : "matches"}
-            </span>
+            <span class="text-[11px] font-bold text-gray-500">${group.items.length} ${group.items.length === 1 ? "match" : "matches"}</span>
           </div>
         </div>
-        ${group.items.map(fixtureCard).join("")}
-      `).join("");
+        ${group.items.map(fixtureCard).join("")}`).join("");
     }
 
-    toggleOursBtn.addEventListener("click", () => setToggle(true));
-    toggleAllBtn.addEventListener("click", () => setToggle(false));
+    window.setView = function(name) { view = name; render(); };
+
+    function setToggle(ours) {
+      onlyOurs = ours;
+      const on = "py-2 px-3 text-xs font-bold rounded-xl bg-[#FF6600] text-white shadow-sm transition-all";
+      const off = "py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all";
+      el("toggleOursBtn").className = ours ? on : off;
+      el("toggleAllBtn").className = ours ? off : on;
+      render();
+    }
+    el("toggleOursBtn").addEventListener("click", () => setToggle(true));
+    el("toggleAllBtn").addEventListener("click", () => setToggle(false));
 
     fetch("./pitreavie_data.json?t=" + Date.now())
       .then(response => response.json())
       .then(payload => {
         data = payload;
-        weekHeading.textContent = payload.heading || payload.week_tab || "";
         if (payload.updated) {
           const when = new Date(payload.updated);
           if (!isNaN(when.getTime())) {
