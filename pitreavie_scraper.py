@@ -175,6 +175,44 @@ def is_fixture_tab(name):
     return bool(re.match(r"\s*week\b", name or "", re.I))
 
 
+MONTHS = {m.lower(): i for i, m in enumerate(
+    ["January", "February", "March", "April", "May", "June", "July",
+     "August", "September", "October", "November", "December"], start=1)}
+
+
+def fixture_date(*texts):
+    """The Saturday a tab's fixtures are played on, as an ISO date.
+
+    Tabs name a day and month but never a year ("Week 29 - 17th October"), so
+    the year is the one that puts the date nearest today. That stays right
+    across the new year, where a January tab would otherwise be read as
+    eleven months in the past.
+    """
+    for text in texts:
+        found = re.search(r"(\d{1,2})\s*(?:st|nd|rd|th)?\s+([A-Za-z]+)", text or "", re.I)
+        if not found:
+            continue
+
+        month = MONTHS.get(found.group(2).lower())
+        if not month:
+            continue
+
+        day = int(found.group(1))
+        today = datetime.date.today()
+        best = None
+        for year in (today.year - 1, today.year, today.year + 1):
+            try:
+                candidate = datetime.date(year, month, day)
+            except ValueError:
+                continue
+            if best is None or abs((candidate - today).days) < abs((best - today).days):
+                best = candidate
+        if best:
+            return best.isoformat()
+
+    return ""
+
+
 def excel_time(value):
     """Excel stores 9am as the fraction 0.375 of a day."""
     try:
@@ -219,7 +257,12 @@ def parse_week(cells, tab_name):
             "isOurs": OUR_CLUB in home.lower() or OUR_CLUB in away.lower(),
         })
 
-    return {"tab": tab_name, "heading": heading or tab_name, "fixtures": fixtures}
+    return {
+        "tab": tab_name,
+        "heading": heading or tab_name,
+        "date": fixture_date(heading, tab_name),
+        "fixtures": fixtures,
+    }
 
 
 # -------------------------------------------------------------------- output
@@ -262,7 +305,7 @@ def main():
         )
 
     ours = [f for f in week["fixtures"] if f["isOurs"]]
-    print(f"\n{week['heading']}")
+    print(f"\n{week['heading']}  (fixtures played {week['date'] or 'date unknown'})")
     print(f"  {len(week['fixtures'])} fixtures, {len(ours)} involving {OUR_CLUB.title()}")
     for fixture in ours:
         print(f"    {fixture['time']:>9}  Pitch {fixture['pitch']:<14} "
@@ -276,6 +319,7 @@ def main():
                    .replace(microsecond=0).isoformat(),
         "week_tab": newest_tab,
         "heading": week["heading"],
+        "fixture_date": week["date"],
         "known_tabs": tabs,
         "fixtures": week["fixtures"],
     }

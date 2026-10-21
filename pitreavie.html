@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pitreavie 7s League</title>
+  <title>Pitreavie 7s League - 2017s</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { background: #f9fafb; }
@@ -16,9 +16,13 @@
     <header class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 mb-4">
       <h1 class="text-2xl font-black tracking-tight text-gray-900">
         Pitreavie <span class="text-[#FF6600]">7s</span> League
+        <span class="text-gray-400 font-bold">- 2017s</span>
       </h1>
       <p id="weekHeading" class="text-sm text-gray-500 font-medium">Loading fixtures...</p>
     </header>
+
+    <!-- Says plainly whether these games are still to come or already played -->
+    <div id="statusBanner" class="mb-4"></div>
 
     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
       <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">Show</div>
@@ -79,6 +83,66 @@
       render();
     }
 
+    // Whole days from today to the fixture date; negative means it has passed.
+    function daysUntil(iso) {
+      if (!iso) return null;
+      const target = new Date(`${iso}T00:00:00`);
+      if (isNaN(target.getTime())) return null;
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return Math.round((target - today) / 86400000);
+    }
+
+    function longDate(iso) {
+      const date = new Date(`${iso}T00:00:00`);
+      if (isNaN(date.getTime())) return "";
+      return date.toLocaleDateString("en-GB",
+        { weekday: "long", day: "numeric", month: "long" });
+    }
+
+    // The league adds next Saturday's tab on the Wednesday or Thursday before,
+    // so for part of each week the newest tab is still last week's games. Say
+    // which it is rather than leaving people to work it out from the date.
+    function renderStatus() {
+      const banner = document.getElementById("statusBanner");
+      const days = daysUntil(data && data.fixture_date);
+
+      if (days === null) {
+        banner.innerHTML = "";
+        return;
+      }
+
+      const when = longDate(data.fixture_date);
+
+      if (days >= 0) {
+        const lead = days === 0 ? "Today" : days === 1 ? "Tomorrow" : `In ${days} days`;
+        banner.innerHTML = `
+          <div class="rounded-2xl border border-green-200 bg-green-50 px-4 py-3">
+            <div class="flex items-center gap-2">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-green-700">Coming up</span>
+              <span class="text-[11px] font-bold bg-green-600 text-white rounded-lg px-2 py-0.5">${lead}</span>
+            </div>
+            <p class="mt-1 text-sm font-bold text-green-900">${escapeHtml(when)}</p>
+          </div>`;
+        return;
+      }
+
+      const ago = days === -1 ? "Yesterday" : `${Math.abs(days)} days ago`;
+      banner.innerHTML = `
+        <div class="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3">
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-amber-700">Already played</span>
+            <span class="text-[11px] font-bold bg-amber-600 text-white rounded-lg px-2 py-0.5">${ago}</span>
+          </div>
+          <p class="mt-1 text-sm font-bold text-amber-900">${escapeHtml(when)}</p>
+          <p class="mt-1 text-xs font-medium text-amber-800">
+            This is the most recent list the league has published. The next set usually
+            appears on a Wednesday or Thursday, and this page updates on its own.
+          </p>
+        </div>`;
+    }
+
     function fixtureCard(fixture) {
       const home = escapeHtml(fixture.homeTeam);
       const away = escapeHtml(fixture.awayTeam);
@@ -134,6 +198,7 @@
         .sort((a, b) => timeToMinutes(a.time) - timeToMinutes(b.time)
           || String(a.pitch).localeCompare(String(b.pitch), undefined, { numeric: true }));
 
+      renderStatus();
       matchCount.textContent = `Showing ${fixtures.length} ${fixtures.length === 1 ? "match" : "matches"}`;
 
       if (fixtures.length === 0) {
