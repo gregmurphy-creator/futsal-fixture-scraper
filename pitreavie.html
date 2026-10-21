@@ -47,6 +47,24 @@
     const weekHeading = el("weekHeading"), updatedAt = el("updatedAt");
     const statusBanner = el("statusBanner"), viewTabs = el("viewTabs"), showCard = el("showCard");
 
+    // Every 7s game is at the same ground, so the venue is fixed rather than
+    // read per fixture. Coordinates from the league's own map link, with its
+    // Facebook click-tracking stripped off.
+    const VENUE = {
+      // Short on the card so it sits on one line beside the calendar button,
+      // like the futsal page; the full address goes into the calendar entry.
+      label: "Pitreavie",
+      address: "Queensferry Road, Dunfermline",
+      postcode: "KY11 8PP",
+      lat: 56.052997,
+      lng: -3.430008,
+    };
+    const VENUE_MAP_URL =
+      `https://www.google.com/maps/search/?api=1&query=${VENUE.lat},${VENUE.lng}`;
+
+    // Kick-offs here run on the hour, so an hour is the slot length.
+    const SLOT_MINUTES = 60;
+
     function escapeHtml(value = "") {
       return String(value || "").replace(/&/g, "&amp;").replace(/</g, "&lt;")
         .replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
@@ -170,7 +188,34 @@
         </div>`;
     }
 
-    function fixtureCard(fixture) {
+    // Google Calendar wants a local start and end plus the zone, which keeps
+    // it right either side of the October clock change.
+    function calendarUrl(fixture, isoDate) {
+      if (!isoDate) return null;
+      const minutes = timeToMinutes(fixture.time);
+      if (minutes === Number.MAX_SAFE_INTEGER) return null;
+
+      const stamp = (offset) => {
+        const at = new Date(`${isoDate}T00:00:00`);
+        at.setMinutes(minutes + offset);
+        const pad = (n) => String(n).padStart(2, "0");
+        return `${at.getFullYear()}${pad(at.getMonth() + 1)}${pad(at.getDate())}`
+             + `T${pad(at.getHours())}${pad(at.getMinutes())}00`;
+      };
+
+      const params = new URLSearchParams({
+        action: "TEMPLATE",
+        text: `${fixture.homeTeam} v ${fixture.awayTeam} (Pitreavie 7s)`,
+        dates: `${stamp(0)}/${stamp(SLOT_MINUTES)}`,
+        ctz: "Europe/London",
+        location: `${VENUE.label}, ${VENUE.address}, ${VENUE.postcode}`,
+        details: `Pitch ${fixture.pitch}${fixture.tier ? ` - Tier ${fixture.tier}` : ""}`,
+      });
+      return `https://calendar.google.com/calendar/render?${params}`;
+    }
+
+    function fixtureCard(fixture, isoDate) {
+      const calendar = calendarUrl(fixture, isoDate);
       const ourHome = fixture.isOurs && /tiki taka/i.test(fixture.homeTeam);
       const ourAway = fixture.isOurs && /tiki taka/i.test(fixture.awayTeam);
       const side = (name, mine, weight) => `
@@ -200,6 +245,15 @@
               <span class="h-px bg-gray-200 flex-1"></span><span>vs</span><span class="h-px bg-gray-200 flex-1"></span>
             </div>
             ${side(fixture.awayTeam, ourAway, "font-semibold text-gray-700")}
+          </div>
+
+          <div class="pt-3 flex flex-wrap items-center justify-between gap-2">
+            <a href="${VENUE_MAP_URL}" target="_blank" rel="noopener noreferrer"
+               class="text-xs text-gray-500 font-medium hover:text-gray-700">
+              &#128205; ${escapeHtml(VENUE.label)} &middot; ${escapeHtml(VENUE.postcode)}
+            </a>
+            ${calendar ? `<a href="${calendar}" target="_blank" rel="noopener noreferrer"
+               class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-orange-500 hover:bg-orange-600 text-white">+ Calendar</a>` : ""}
           </div>
         </div>`;
     }
@@ -298,7 +352,7 @@
             <span class="text-[11px] font-bold text-gray-500">${group.items.length} ${group.items.length === 1 ? "match" : "matches"}</span>
           </div>
         </div>
-        ${group.items.map(fixtureCard).join("")}`).join("");
+        ${group.items.map(fixture => fixtureCard(fixture, entry.date)).join("")}`).join("");
     }
 
     window.setView = function(name) { view = name; render(); };
