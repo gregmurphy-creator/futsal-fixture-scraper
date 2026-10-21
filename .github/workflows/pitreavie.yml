@@ -70,7 +70,7 @@ jobs:
             echo
             echo "${SUMMARY}" | tr '|' '\n' | sed 's/^ *//;s/^/- /'
             echo
-            echo "Full list: https://gregmurphy-creator.github.io/futsal-fixture-scraper/pitreavie.html"
+            echo "Full list: https://gregmurphy-creator.github.io/futsal-fixture-scraper/pitreavie/"
             echo
             echo "_Close this issue once you have read it - a new one is raised each week._"
           } > body.md
