@@ -280,6 +280,24 @@ def main():
         "fixtures": week["fixtures"],
     }
 
+    # "updated" means when the fixtures last CHANGED, not when we last looked.
+    # Stamping every check would rewrite the file on every run, so each hourly
+    # check would commit and rebuild the site for nothing.
+    def content(doc):
+        return {key: value for key, value in doc.items() if key != "updated"}
+
+    if previous and content(previous) == content(payload):
+        print("\nNo change since the last check - leaving the file untouched.")
+        emit_action_output(
+            new_week="false",
+            first_run="false",
+            week_tab=newest_tab,
+            heading=week["heading"],
+            our_count=str(len(ours)),
+            summary="unchanged",
+        )
+        return 0
+
     with open(OUTPUT_FILE, "w", encoding="utf-8") as handle:
         json.dump(payload, handle, indent=2, ensure_ascii=False)
         handle.write("\n")
