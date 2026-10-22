@@ -32,6 +32,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -52,6 +53,11 @@ USER_AGENT = (
 )
 
 OUR_CLUB = "tiki taka"
+
+# A 4MB download over a redeemed share link is an occasional transient
+# failure: a reset connection or a brief 5xx is enough to lose a whole run.
+# Retry rather than fail the check and raise a false alarm.
+REQUEST_ATTEMPTS = 4
 
 # The availability tab is filled in before fixtures are published, so it tells
 # us which of our teams are out this Saturday while the opponents, times and
@@ -76,6 +82,31 @@ def open_workbook():
             "view-only share link, kept out of the repository."
         )
 
+    last_error = None
+    for attempt in range(1, REQUEST_ATTEMPTS + 1):
+        try:
+            return fetch_workbook()
+        except SystemExit:
+            # A clear verdict - no link, or the share stopped working. Retrying
+            # that just delays an answer we already have.
+            raise
+        except Exception as error:  # noqa: BLE001 - retry anything transport-ish
+            last_error = error
+            print(f"  attempt {attempt}/{REQUEST_ATTEMPTS} failed: "
+                  f"{type(error).__name__}: {error}")
+            if attempt < REQUEST_ATTEMPTS:
+                time.sleep(2 ** attempt)
+
+    raise SystemExit(
+        f"Could not read the workbook after {REQUEST_ATTEMPTS} attempts: "
+        f"{type(last_error).__name__}: {last_error}"
+    )
+
+
+def fetch_workbook():
+    """One attempt: redeem the share link, then download the .xlsx."""
+    # A fresh cookie jar per attempt - a half-redeemed session is worse than
+    # no session, and carrying one over would make a retry fail the same way.
     jar = http.cookiejar.CookieJar()
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
     opener.addheaders = [("User-Agent", USER_AGENT), ("Accept", "text/html,*/*")]
