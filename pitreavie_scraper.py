@@ -271,10 +271,14 @@ def excel_time(value):
 
 def parse_week(cells, tab_name):
     """Fixtures from one week's tab, in sheet order."""
+    # The heading sits a few rows down ("Week 30 - 24th October"), under
+    # notices that also talk about weeks and numbers - "Rota for last 5 weeks
+    # will be 1,2,3..." once matched instead. Requiring "Week" immediately
+    # followed by its number, on a short line, picks the heading not the notice.
     heading = ""
-    for row in range(1, 12):
+    for row in range(1, 14):
         text = cells.get((row, "B"), "")
-        if re.search(r"week", text, re.I) and re.search(r"\d", text):
+        if len(text) <= 60 and re.search(r"\bweek\s*\d+\b", text, re.I):
             heading = text
             break
 
