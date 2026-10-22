@@ -73,7 +73,10 @@ jobs:
             echo "Full list: https://www.ttfixtures.uk/football/"
             echo
             echo "_Close this issue once you have read it - a new one is raised each week._"
+            echo
+            echo "cc @${GITHUB_REPOSITORY_OWNER}"
           } > body.md
           gh issue create \
             --title "Pitreavie 7s: ${WEEK} fixtures are up" \
-            --body-file body.md
+            --body-file body.md \
+            --assignee "${GITHUB_REPOSITORY_OWNER}"
