@@ -1003,8 +1003,16 @@
           <div class="bg-white rounded-2xl p-4 border ${
             hasHardClash
               ? 'border-l-4 border-l-red-500 border-gray-200 shadow-sm'
-              : (isTikiMatch ? 'border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm' : 'border-gray-200')
+              : (item.updated
+                ? 'border-l-4 border-l-amber-500 border-gray-200 shadow-sm'
+                : (isTikiMatch ? 'border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm' : 'border-gray-200'))
           }">
+
+            ${item.updated ? `
+            <div class="mb-2 flex items-start gap-1.5 text-[11px] font-bold px-2.5 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200">
+              <span class="flex-shrink-0">&#9888;&#65039;</span>
+              <span><span class="uppercase tracking-wide">Updated</span> &middot; ${escapeHtml(item.updated)}</span>
+            </div>` : ""}
             <div class="flex items-center justify-between mb-3">
               <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-gray-100 text-gray-700 border border-gray-200">
                 ${escapeHtml(league)}

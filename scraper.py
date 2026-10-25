@@ -76,6 +76,10 @@ MIN_FIXTURES_PER_LEAGUE = 50
 REQUEST_ATTEMPTS = 4
 REQUEST_TIMEOUT = 90
 
+# Whose fixtures are worth being told about. Everything is scraped and shown;
+# only these raise an alert, or every rescheduling in five leagues would.
+OUR_CLUB = "tiki taka"
+
 
 # ---------------------------------------------------------------- http
 
@@ -223,6 +227,81 @@ def parse_season(markup, league):
     return fixtures
 
 
+# ------------------------------------------------------------------ changes
+
+
+def load_previous(path):
+    """Last run's fixtures, keyed by LeagueLobster's own match id.
+
+    The match id is the only identity that survives a rescheduling: keying on
+    the teams or the round would read a changed fixture as one removed and
+    another added.
+    """
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, encoding="utf-8") as handle:
+            previous = json.load(handle)
+    except (OSError, ValueError):
+        return {}
+    return {f["match_id"]: f for f in previous if f.get("match_id")}
+
+
+def is_ours(fixture):
+    return (OUR_CLUB in fixture["homeTeam"].lower()
+            or OUR_CLUB in fixture["awayTeam"].lower())
+
+
+def our_team_in(fixture):
+    for side in ("homeTeam", "awayTeam"):
+        if OUR_CLUB in fixture[side].lower():
+            return fixture[side]
+    return ""
+
+
+def describe_changes(previous, fixtures):
+    """What moved for our teams since the last run, as {match_id: detail}."""
+    moved = {}
+    for fixture in fixtures:
+        if not is_ours(fixture):
+            continue
+        was = previous.get(fixture["match_id"])
+        if not was:
+            continue
+
+        notes = []
+        if was.get("iso_date") != fixture["iso_date"]:
+            notes.append(f"{was.get('date')} -> {fixture['date']}")
+        if was.get("time") != fixture["time"]:
+            notes.append(f"{was.get('time')} -> {fixture['time']}")
+        if was.get("venue") != fixture["venue"]:
+            notes.append(f"{was.get('venue')} -> {fixture['venue']}")
+        if (was.get("homeTeam"), was.get("awayTeam")) != \
+                (fixture["homeTeam"], fixture["awayTeam"]):
+            notes.append(f"now {fixture['homeTeam']} v {fixture['awayTeam']}")
+
+        if notes:
+            moved[fixture["match_id"]] = ", ".join(notes)
+    return moved
+
+
+def carry_flags(previous, fixtures, moved):
+    """Mark changed fixtures, keeping earlier marks until the game is played.
+
+    A later quiet run would otherwise clear the badge while the fixture is
+    still the rearranged one. Once it has been played the mark is dropped, so
+    old changes do not accumulate across a season.
+    """
+    today = datetime.date.today().isoformat()
+    for fixture in fixtures:
+        detail = moved.get(fixture["match_id"])
+        if not detail:
+            was = previous.get(fixture["match_id"]) or {}
+            detail = was.get("updated")
+        if detail and fixture.get("iso_date", "") >= today:
+            fixture["updated"] = detail
+
+
 # ---------------------------------------------------------------- driver
 
 
@@ -242,6 +321,16 @@ def scrape_league(league, season_id, public_url):
         print(f"  rounds {rounds[0]}-{rounds[-1]} | "
               f"{fixtures[0]['date']} -> {fixtures[-1]['date']}")
     return fixtures
+
+
+def emit_action_output(**values):
+    """Hand results to the workflow step that decides whether to alert."""
+    path = os.environ.get("GITHUB_OUTPUT")
+    if not path:
+        return
+    with open(path, "a", encoding="utf-8") as handle:
+        for key, value in values.items():
+            handle.write(f"{key}={value}\n")
 
 
 def main():
@@ -295,6 +384,23 @@ def main():
             print(f"  - {problem}")
         print(f"{OUTPUT_FILE} left untouched.")
         return 1
+
+    previous = load_previous(OUTPUT_FILE)
+    moved = describe_changes(previous, all_fixtures) if previous else {}
+    carry_flags(previous, all_fixtures, moved)
+
+    if moved:
+        print("\nChanged since the last run:")
+        lines = []
+        for fixture in all_fixtures:
+            if fixture["match_id"] in moved:
+                team = our_team_in(fixture).replace("Tiki Taka ", "")
+                line = f"{team} ({fixture['league']}): {moved[fixture['match_id']]}"
+                lines.append(line)
+                print(f"  {line}")
+        emit_action_output(changed="true", changes=" | ".join(lines))
+    else:
+        emit_action_output(changed="false", changes="")
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as handle:
         json.dump(all_fixtures, handle, indent=2, ensure_ascii=False)

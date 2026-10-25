@@ -31,7 +31,31 @@ jobs:
       # container and captured 0 fixtures).
 
       - name: Run scraper
+        id: scrape
         run: python scraper.py
+
+      # The season was published in one go, so a change here means a fixture
+      # has been rearranged - worth knowing, and easy to miss in 975 of them.
+      # Only our own teams raise a push; everything else still updates quietly.
+      - name: Push a phone notification
+        if: steps.scrape.outputs.changed == 'true'
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          CHANGES: ${{ steps.scrape.outputs.changes }}
+        run: |
+          if [ -z "${NTFY_TOPIC}" ]; then
+            echo "NTFY_TOPIC is not set - skipping the push."
+            exit 0
+          fi
+          printf '%s\n' "${CHANGES}" | tr '|' '\n' | sed 's/^ *//;s/ *$//' > push.txt
+          curl --retry 3 --retry-delay 2 -fsS \
+            -H "Title: FUTSAL FIXTURE CHANGE" \
+            -H "Click: https://www.ttfixtures.uk/futsal/" \
+            -H "Tags: warning" \
+            -H "Priority: high" \
+            --data-binary @push.txt \
+            "https://ntfy.sh/${NTFY_TOPIC}" > /dev/null
+          echo "Pushed to ntfy."
 
       - name: Commit and push updated fixtures data
         run: |
