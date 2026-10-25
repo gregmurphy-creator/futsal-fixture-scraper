@@ -360,6 +360,65 @@ def next_availability(table, after_date):
 # -------------------------------------------------------------------- output
 
 
+def our_fixtures(fixtures):
+    """Our teams' fixtures keyed by the team, for comparing week to week."""
+    mine = {}
+    for fixture in fixtures or []:
+        if not fixture.get("isOurs"):
+            continue
+        for side in ("homeTeam", "awayTeam"):
+            if OUR_CLUB in fixture[side].lower():
+                mine[fixture[side]] = fixture
+    return mine
+
+
+def describe_changes(previous_fixtures, fixtures):
+    """Plain-English list of what moved for our teams, newest state winning.
+
+    A new week is not the only thing worth knowing about. The league edits the
+    current week too - a pitch swap or a kick-off moved the night before - and
+    that matters more to a parent than the original publication did.
+    """
+    before = our_fixtures(previous_fixtures)
+    after = our_fixtures(fixtures)
+    notes = []
+
+    for team, fixture in sorted(after.items()):
+        short = team.replace("Tiki Taka ", "")
+        opponent = (fixture["awayTeam"] if fixture["homeTeam"] == team
+                    else fixture["homeTeam"])
+
+        if team not in before:
+            notes.append({"team": team,
+                          "detail": "New fixture",
+                          "line": f"{short} added: {fixture['time']} "
+                                  f"Pitch {fixture['pitch']} v {opponent}"})
+            continue
+
+        old = before[team]
+        old_opponent = (old["awayTeam"] if old["homeTeam"] == team
+                        else old["homeTeam"])
+        moved = []
+        if old["time"] != fixture["time"]:
+            moved.append(f"{old['time']} -> {fixture['time']}")
+        if str(old["pitch"]) != str(fixture["pitch"]):
+            moved.append(f"Pitch {old['pitch']} -> {fixture['pitch']}")
+        if old_opponent != opponent:
+            moved.append(f"now v {opponent}")
+        if moved:
+            notes.append({"team": team,
+                          "detail": ", ".join(moved),
+                          "line": f"{short}: " + ", ".join(moved)})
+
+    for team in sorted(before):
+        if team not in after:
+            notes.append({"team": team,
+                          "detail": "Removed",
+                          "line": f"{team.replace('Tiki Taka ', '')} no longer listed"})
+
+    return notes
+
+
 def emit_action_output(**values):
     """Hand results to the workflow step that decides whether to alert."""
     path = os.environ.get("GITHUB_OUTPUT")
@@ -426,6 +485,34 @@ def main():
     is_new_week = bool(previous) and previous.get("week_tab") != newest_tab
     first_run = not previous
 
+    changes = []
+    if previous and not is_new_week:
+        changes = describe_changes(previous.get("fixtures"), weeks[0]["fixtures"])
+        if changes:
+            print("\nChanged since the last check:")
+            for note in changes:
+                print(f"  {note['line']}")
+
+    # Mark what moved so the page can badge it. Flags set on an earlier check
+    # are carried forward, otherwise the next quiet check would clear the badge
+    # while the fixture is still the changed one. A new week starts clean.
+    if not is_new_week and previous:
+        carried = {
+            fixture["homeTeam"] if OUR_CLUB in fixture["homeTeam"].lower()
+            else fixture["awayTeam"]: fixture["updated"]
+            for fixture in (previous.get("fixtures") or [])
+            if fixture.get("isOurs") and fixture.get("updated")
+        }
+        fresh = {note["team"]: note["detail"] for note in changes}
+        carried.update(fresh)
+
+        for fixture in weeks[0]["fixtures"]:
+            if not fixture.get("isOurs"):
+                continue
+            for side in ("homeTeam", "awayTeam"):
+                if fixture[side] in carried:
+                    fixture["updated"] = carried[fixture[side]]
+
     payload = {
         "updated": datetime.datetime.now(datetime.timezone.utc)
                    .replace(microsecond=0).isoformat(),
@@ -448,11 +535,13 @@ def main():
         print("\nNo change since the last check - leaving the file untouched.")
         emit_action_output(
             new_week="false",
+            changed="false",
             first_run="false",
             week_tab=newest_tab,
             heading=weeks[0]["heading"],
             our_count=str(len(ours)),
             summary="unchanged",
+            changes="",
         )
         return 0
 
@@ -469,13 +558,16 @@ def main():
         for f in ours
     ) or "No Tiki Taka fixtures listed this week."
 
+    # An edit inside the current week is worth a ping too, so say what moved.
     emit_action_output(
         new_week="true" if is_new_week else "false",
+        changed="true" if changes else "false",
         first_run="true" if first_run else "false",
         week_tab=newest_tab,
         heading=weeks[0]["heading"],
         our_count=str(len(ours)),
         summary=summary,
+        changes=" | ".join(note["line"] for note in changes) if changes else "",
     )
     return 0
 

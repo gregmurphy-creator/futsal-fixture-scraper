@@ -56,26 +56,45 @@ jobs:
       # of which silently swallowed the first week's alert. ntfy has neither:
       # the topic name is the only configuration, and it is held as a secret
       # because anyone who knows it can read these notifications.
+      # Two things are worth a ping: a new week being published, and the
+      # league editing the week already out. The second matters more - a pitch
+      # or kick-off moved the night before is exactly what you need to know.
       - name: Push a phone notification
-        if: steps.scrape.outputs.new_week == 'true'
+        if: steps.scrape.outputs.new_week == 'true' || steps.scrape.outputs.changed == 'true'
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NEW_WEEK: ${{ steps.scrape.outputs.new_week }}
           WEEK: ${{ steps.scrape.outputs.week_tab }}
           OUR_COUNT: ${{ steps.scrape.outputs.our_count }}
           SUMMARY: ${{ steps.scrape.outputs.summary }}
+          CHANGES: ${{ steps.scrape.outputs.changes }}
         run: |
           if [ -z "${NTFY_TOPIC}" ]; then
             echo "NTFY_TOPIC is not set - skipping the push."
             exit 0
           fi
-          printf '%s\n' "${SUMMARY}" | tr '|' '\n' | sed 's/^ *//;s/ *$//' > push.txt
+
+          if [ "${NEW_WEEK}" = "true" ]; then
+            TITLE="${WEEK} - ${OUR_COUNT} Tiki Taka games"
+            TAGS="soccer"
+            PRIORITY="default"
+            printf '%s\n' "${SUMMARY}" | tr '|' '\n' | sed 's/^ *//;s/ *$//' > push.txt
+          else
+            # An edit to fixtures already published deserves to stand out.
+            TITLE="FIXTURE CHANGE - ${WEEK}"
+            TAGS="warning"
+            PRIORITY="high"
+            printf '%s\n' "${CHANGES}" | tr '|' '\n' | sed 's/^ *//;s/ *$//' > push.txt
+          fi
+
           curl --retry 3 --retry-delay 2 -fsS \
-            -H "Title: ${WEEK} - ${OUR_COUNT} Tiki Taka games" \
+            -H "Title: ${TITLE}" \
             -H "Click: https://www.ttfixtures.uk/football/" \
-            -H "Tags: soccer" \
+            -H "Tags: ${TAGS}" \
+            -H "Priority: ${PRIORITY}" \
             --data-binary @push.txt \
             "https://ntfy.sh/${NTFY_TOPIC}" > /dev/null
-          echo "Pushed to ntfy."
+          echo "Pushed to ntfy (new_week=${NEW_WEEK})."
 
       # The issue is kept as a written record per week, independent of whether
       # its notification ever reaches an inbox.

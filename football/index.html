@@ -228,8 +228,17 @@
         </div>`;
 
       return `
-        <div class="bg-white rounded-2xl p-4 border ${fixture.isOurs
-          ? "border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm" : "border-gray-200"}">
+        <div class="bg-white rounded-2xl p-4 border ${fixture.updated
+          ? "border-l-4 border-l-amber-500 border-gray-200 shadow-sm"
+          : (fixture.isOurs
+            ? "border-l-4 border-l-[#FF6600] border-gray-200 shadow-sm" : "border-gray-200")}">
+
+          ${fixture.updated ? `
+          <div class="mb-3 flex items-start gap-1.5 text-[11px] font-bold px-2.5 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200">
+            <span class="flex-shrink-0">&#9888;&#65039;</span>
+            <span><span class="uppercase tracking-wide">Updated</span> &middot; ${escapeHtml(fixture.updated)}</span>
+          </div>` : ""}
+
           <div class="flex items-center justify-between gap-2 mb-3">
             <span class="inline-flex items-center px-3 py-1.5 rounded-xl bg-gray-900 text-white text-xs font-black">
               Pitch ${escapeHtml(fixture.pitch)}
