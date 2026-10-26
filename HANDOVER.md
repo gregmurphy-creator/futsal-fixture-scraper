@@ -18,7 +18,20 @@ the thing between accounts.
 Nothing runs on anyone's computer. Everything happens in GitHub Actions, so
 whoever owns the repository owns the system.
 
-## Moving it to another account
+## Moving between Claude accounts: nothing to do
+
+A Claude account and a GitHub account are unrelated. Claude Code works on a
+folder on the Mac and pushes with the git credential already in the keychain,
+so switching to a different Claude account needs no change here at all: the
+repository, the secrets, the DNS and Pages all stay exactly as they are.
+
+All a new Claude session needs is this folder and a prompt pointing it at
+`CLAUDE.md`.
+
+The rest of this file applies only if the **GitHub** owner actually changes,
+which is a separate decision and not required by anything above.
+
+## If the GitHub owner does change
 
 **Transfer the repository rather than copying it.** Settings → General →
 Danger Zone → Transfer ownership. That keeps the history, the Actions, the
@@ -58,9 +71,13 @@ AAAA  2606:50c0:8003::153
 
 Plus `CNAME  www  →  gregmurphy-creator.github.io.`
 
-`www` is the canonical address, so the bare domain redirects to it. That is
-set by the `CNAME` file in the repo, and the `www` CNAME record must then be
-updated to point at the new account's `<username>.github.io`.
+`www` is the canonical address, so the bare domain redirects to it, set by the
+`CNAME` file in the repo.
+
+The A and AAAA records point at GitHub itself and never change. The `www`
+CNAME points at `gregmurphy-creator.github.io` — **that one, and only that
+one, must be repointed if the repository ever moves to a different GitHub
+username.** Miss it and the site goes dark.
 
 ## The ntfy topic
 
