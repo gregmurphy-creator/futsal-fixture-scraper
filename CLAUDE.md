@@ -76,6 +76,14 @@ tabs spell them out (`17th October`). Month names are matched on prefix.
 knows which of our teams play next Saturday. That is what powers the "This
 Saturday" placeholders while the league has published nothing.
 
+**A futsal league can be redrawn, not just rearranged.** On 26 Oct 2026
+LeagueLobster replaced Liga 5 and 6 wholesale: every match got a new id, so
+following fixtures by id saw nothing and 101 of ours changed with no push and
+no badge. Now a league losing most of its ids at once is treated as redrawn
+(its own `FUTSAL LEAGUE REDRAWN` push, one line per squad), and any of our
+fixtures that appears or vanishes is paired by squad and date, badged, and
+pushed — including a match simply removed.
+
 **Excel stores 9am as `0.375`.** Kick-offs are day fractions. Pitches are not
 always numbers — some read `1 - New Astro`.
 

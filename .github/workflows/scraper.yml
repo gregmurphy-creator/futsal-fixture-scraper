@@ -41,6 +41,7 @@ jobs:
         if: steps.scrape.outputs.changed == 'true'
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          TITLE: ${{ steps.scrape.outputs.title }}
           CHANGES: ${{ steps.scrape.outputs.changes }}
         run: |
           if [ -z "${NTFY_TOPIC}" ]; then
@@ -49,7 +50,7 @@ jobs:
           fi
           printf '%s\n' "${CHANGES}" | tr '|' '\n' | sed 's/^ *//;s/ *$//' > push.txt
           curl --retry 3 --retry-delay 2 -fsS \
-            -H "Title: FUTSAL FIXTURE CHANGE" \
+            -H "Title: ${TITLE:-FUTSAL FIXTURE CHANGE}" \
             -H "Click: https://www.ttfixtures.uk/futsal/" \
             -H "Tags: warning" \
             -H "Priority: high" \

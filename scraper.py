@@ -285,6 +285,121 @@ def describe_changes(previous, fixtures):
     return moved
 
 
+def short_name(team):
+    return team.replace("Tiki Taka ", "")
+
+
+def our_teams_in(fixture):
+    return [fixture[side] for side in ("homeTeam", "awayTeam")
+            if OUR_CLUB in fixture[side].lower()]
+
+
+def find_redrawn_leagues(previous, fixtures):
+    """Leagues whose schedule was thrown away and published again.
+
+    A redraw gives every match a new id, so describe_changes - which follows
+    a fixture by its id - sees nothing at all. Most of a league's ids
+    vanishing in one go is the tell. 26 Oct 2026 redrew Liga 5 and Liga 6
+    this way and 101 of our fixtures changed without an alert or a badge.
+    """
+    current_ids = {f["match_id"] for f in fixtures}
+    totals, kept = {}, {}
+    for match_id, was in previous.items():
+        league = was.get("league")
+        totals[league] = totals.get(league, 0) + 1
+        if match_id in current_ids:
+            kept[league] = kept.get(league, 0) + 1
+    return {league for league, total in totals.items()
+            if total >= MIN_FIXTURES_PER_LEAGUE and kept.get(league, 0) * 2 < total}
+
+
+def describe_replacements(previous, fixtures, redrawn):
+    """Our fixtures that appeared or vanished, rather than moved.
+
+    Returns ({match_id: badge detail}, [push lines]). An old fixture is paired
+    with its replacement by squad and date - a squad is (team, league), and
+    no squad plays twice on one day. Unpaired old ones were removed, unpaired
+    new ones are new. Only future games count. Nothing is reported on the
+    first run, when there is no previous file to compare with.
+    """
+    if not previous:
+        return {}, []
+    today = datetime.date.today().isoformat()
+    current_ids = {f["match_id"] for f in fixtures}
+    known_leagues = {was.get("league") for was in previous.values()}
+
+    gone = {}
+    for match_id, was in previous.items():
+        if match_id in current_ids or was.get("iso_date", "") < today:
+            continue
+        for team in our_teams_in(was):
+            gone[(team, was["league"], was["iso_date"])] = was
+
+    badges, lines = {}, []
+    for fixture in fixtures:
+        if (fixture["match_id"] in previous or fixture["league"] not in known_leagues
+                or fixture["iso_date"] < today or not is_ours(fixture)):
+            continue
+        teams = our_teams_in(fixture)
+        keys = [(team, fixture["league"], fixture["iso_date"]) for team in teams]
+        was = next((gone[key] for key in keys if key in gone), None)
+        for key in keys:
+            gone.pop(key, None)
+
+        prefix = "League redrawn" if fixture["league"] in redrawn else "Rearranged"
+        now = f"{fixture['homeTeam']} v {fixture['awayTeam']}, {fixture['time']}"
+        if was is None:
+            badges[fixture["match_id"]] = f"{prefix} - new fixture"
+            line = f"new fixture {fixture['date']}: {now}, {fixture['venue']}"
+        else:
+            if all(was.get(k) == fixture[k]
+                   for k in ("homeTeam", "awayTeam", "time", "venue")):
+                continue
+            then = f"{was['homeTeam']} v {was['awayTeam']}, {was['time']}, {was['venue']}"
+            badges[fixture["match_id"]] = f"{prefix} - was {then}"
+            line = f"{fixture['date']} now {now}, {fixture['venue']} (was {then})"
+        if fixture["league"] not in redrawn:
+            lines.append(f"{short_name(teams[0])} ({fixture['league']}): {line}")
+
+    removed = {}
+    for (team, league, _date), was in gone.items():
+        removed.setdefault(was["match_id"], (team, was))
+    for team, was in sorted(removed.values(), key=lambda pair: pair[1]["iso_date"]):
+        lines.append(f"{short_name(team)} ({was['league']}): REMOVED {was['date']} "
+                     f"{was['homeTeam']} v {was['awayTeam']}, {was['time']}")
+    return badges, lines
+
+
+def redraw_summary(fixtures, redrawn):
+    """One push line per squad in a redrawn league, naming its next game.
+
+    Listing every fixture of a redraw would run past what a phone shows - the
+    first one moved over a hundred of ours - so this says what happened and
+    leaves the detail to the badged page.
+    """
+    today = datetime.date.today().isoformat()
+    first = {}
+    for fixture in fixtures:
+        if fixture["league"] not in redrawn or fixture["iso_date"] < today:
+            continue
+        for team in our_teams_in(fixture):
+            squad = (team, fixture["league"])
+            if squad not in first or fixture["iso_date"] < first[squad]["iso_date"]:
+                first[squad] = fixture
+
+    lines = []
+    for league in sorted(redrawn):
+        lines.append(f"{league} has been redrawn - every fixture is new. Check your games.")
+        for (team, squad_league), fixture in sorted(first.items()):
+            if squad_league != league:
+                continue
+            opponent = (fixture["awayTeam"] if fixture["homeTeam"] == team
+                        else fixture["homeTeam"])
+            lines.append(f"{short_name(team)} ({league}) first game: {fixture['date']}, "
+                         f"{fixture['time']} v {opponent}")
+    return lines
+
+
 def carry_flags(previous, fixtures, moved):
     """Mark changed fixtures, keeping earlier marks until the game is played.
 
@@ -387,20 +502,27 @@ def main():
 
     previous = load_previous(OUTPUT_FILE)
     moved = describe_changes(previous, all_fixtures) if previous else {}
-    carry_flags(previous, all_fixtures, moved)
+    redrawn = find_redrawn_leagues(previous, all_fixtures)
+    replaced, replacement_lines = describe_replacements(previous, all_fixtures, redrawn)
+    carry_flags(previous, all_fixtures, {**replaced, **moved})
 
-    if moved:
+    lines = redraw_summary(all_fixtures, redrawn)
+    for fixture in all_fixtures:
+        if fixture["match_id"] in moved:
+            team = short_name(our_team_in(fixture))
+            lines.append(f"{team} ({fixture['league']}): {moved[fixture['match_id']]}")
+    lines.extend(replacement_lines)
+
+    if lines:
         print("\nChanged since the last run:")
-        lines = []
-        for fixture in all_fixtures:
-            if fixture["match_id"] in moved:
-                team = our_team_in(fixture).replace("Tiki Taka ", "")
-                line = f"{team} ({fixture['league']}): {moved[fixture['match_id']]}"
-                lines.append(line)
-                print(f"  {line}")
-        emit_action_output(changed="true", changes=" | ".join(lines))
+        for line in lines:
+            print(f"  {line}")
+        # A redraw is a different kind of news from a moved kick-off, so it
+        # gets its own headline on the phone.
+        title = "FUTSAL LEAGUE REDRAWN" if redrawn else "FUTSAL FIXTURE CHANGE"
+        emit_action_output(changed="true", title=title, changes=" | ".join(lines))
     else:
-        emit_action_output(changed="false", changes="")
+        emit_action_output(changed="false", title="", changes="")
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as handle:
         json.dump(all_fixtures, handle, indent=2, ensure_ascii=False)

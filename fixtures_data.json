@@ -5973,7 +5973,8 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273142226",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Tiki Taka Blanco V Futsal Escocia White",
-    "id": "liga5-2"
+    "id": "liga5-2",
+    "updated": "League redrawn - was Tiki Taka Blanco v Rosyth Blacks, 9:45 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -6012,7 +6013,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142230",
     "raw_fixture": "Beath High School 11:15 AM Bayside Bullets 2017s V Tiki Taka Neranja",
-    "id": "liga5-5"
+    "id": "liga5-5",
+    "updated": "League redrawn - was Tiki Taka Neranja v Tiki Taka Negra, 11:15 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -6025,7 +6027,8 @@
     "awayTeam": "DACC Girls 2017 Whites",
     "match_id": "273142228",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Tiki Taka Negra V DACC Girls 2017 Whites",
-    "id": "liga5-6"
+    "id": "liga5-6",
+    "updated": "League redrawn - was Tiki Taka Neranja v Tiki Taka Negra, 11:15 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -6168,7 +6171,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142235",
     "raw_fixture": "Beath High School 10:30 AM DACC Girls 2017 Whites V Tiki Taka Blanco",
-    "id": "liga5-17"
+    "id": "liga5-17",
+    "updated": "League redrawn - was Swifts Raiders v Tiki Taka Blanco, 10:30 AM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -6220,7 +6224,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142244",
     "raw_fixture": "Beath High School 12:00 PM Crossgates Primrose 2016s Blues V Tiki Taka Negra",
-    "id": "liga5-21"
+    "id": "liga5-21",
+    "updated": "League redrawn - was Tiki Taka Negra v KSQ Galaxy, 1:30 PM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -6233,7 +6238,8 @@
     "awayTeam": "Dunipace Ballerz White",
     "match_id": "273142237",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Tiki Taka Neranja V Dunipace Ballerz White",
-    "id": "liga5-22"
+    "id": "liga5-22",
+    "updated": "League redrawn - was Dunipace Ballerz White v Tiki Taka Neranja, 12:00 PM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -6324,7 +6330,8 @@
     "awayTeam": "Crossgates Primrose 2016s Blues",
     "match_id": "273142252",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Tiki Taka Blanco V Crossgates Primrose 2016s Blues",
-    "id": "liga5-29"
+    "id": "liga5-29",
+    "updated": "League redrawn - was Tiki Taka Blanco v Bayside Bullets 2017s, 12:00 PM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -6363,7 +6370,8 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273142256",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Tiki Taka Negra V Futsal Escocia Turquoise",
-    "id": "liga5-32"
+    "id": "liga5-32",
+    "updated": "League redrawn - was DACC Boys 17 v Tiki Taka Negra, 9:00 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -6402,7 +6410,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142257",
     "raw_fixture": "Beath High School 12:00 PM Bowhill United Yellows V Tiki Taka Neranja",
-    "id": "liga5-35"
+    "id": "liga5-35",
+    "updated": "League redrawn - was Tiki Taka Neranja v Greig Park Greens, 9:00 AM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -6519,7 +6528,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142274",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Futsal Escocia Turquoise V Tiki Taka Blanco",
-    "id": "liga5-44"
+    "id": "liga5-44",
+    "updated": "League redrawn - was WLFA v Tiki Taka Blanco, 1:30 PM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -6532,7 +6542,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142264",
     "raw_fixture": "Beath High School 10:30 AM Greig Park Greens V Tiki Taka Negra",
-    "id": "liga5-45"
+    "id": "liga5-45",
+    "updated": "League redrawn - was Tiki Taka Negra v Duloch City 2018s, 2:15 PM, Beath High School Refurb"
   },
   {
     "league": "Liga 5",
@@ -6584,7 +6595,8 @@
     "awayTeam": "KSQ 2018 Galaxy",
     "match_id": "273142271",
     "raw_fixture": "Beath High School 12:00 PM Tiki Taka Neranja V KSQ 2018 Galaxy",
-    "id": "liga5-49"
+    "id": "liga5-49",
+    "updated": "League redrawn - was DACC Girls 2017 Whites v Tiki Taka Neranja, 9:45 AM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -6753,7 +6765,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142283",
     "raw_fixture": "Beath High School 12:00 PM DACC Girls Blacks V Tiki Taka Neranja",
-    "id": "liga5-62"
+    "id": "liga5-62",
+    "updated": "League redrawn - was Tiki Taka Neranja v KSQ 2018 Galaxy, 11:15 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -6818,7 +6831,8 @@
     "awayTeam": "Bayside Barcas",
     "match_id": "273142282",
     "raw_fixture": "Beath High School 2:15 PM Tiki Taka Negra V Bayside Barcas",
-    "id": "liga5-67"
+    "id": "liga5-67",
+    "updated": "League redrawn - was Swifts Falcons 2017 v Tiki Taka Negra, 10:30 AM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -6844,7 +6858,8 @@
     "awayTeam": "Greig Park Greens",
     "match_id": "273142279",
     "raw_fixture": "Beath High School 3:45 PM Tiki Taka Blanco V Greig Park Greens",
-    "id": "liga5-69"
+    "id": "liga5-69",
+    "updated": "League redrawn - was Tiki Taka Blanco v Cairneyhill Ath Maroons, 2:15 PM, Beath High School Refurb"
   },
   {
     "league": "Liga 5",
@@ -6896,7 +6911,8 @@
     "awayTeam": "Templehall United Yellows 2018",
     "match_id": "273142295",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Tiki Taka Negra V Templehall United Yellows 2018",
-    "id": "liga5-73"
+    "id": "liga5-73",
+    "updated": "League redrawn - was Dunipace Ballerz White v Tiki Taka Negra, 11:15 AM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -6909,7 +6925,8 @@
     "awayTeam": "Swifts Falcons 2017",
     "match_id": "273142291",
     "raw_fixture": "Beath High School 11:15 AM Tiki Taka Neranja V Swifts Falcons 2017",
-    "id": "liga5-74"
+    "id": "liga5-74",
+    "updated": "League redrawn - was Bowhill United Blacks v Tiki Taka Neranja, 12:00 PM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -6974,7 +6991,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142300",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Bayside Barcas V Tiki Taka Blanco",
-    "id": "liga5-79"
+    "id": "liga5-79",
+    "updated": "League redrawn - was Futsal Escocia White v Tiki Taka Blanco, 12:45 PM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -7065,7 +7083,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142311",
     "raw_fixture": "Beath High School 10:30 AM Duloch Juniors - Blacks V Tiki Taka Negra",
-    "id": "liga5-86"
+    "id": "liga5-86",
+    "updated": "League redrawn - was Tiki Taka Negra v Greig Park Greens, 10:30 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7143,7 +7162,8 @@
     "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142305",
     "raw_fixture": "Beath High School 12:45 PM Tiki Taka Neranja V Cairneyhill Ath Maroons",
-    "id": "liga5-92"
+    "id": "liga5-92",
+    "updated": "League redrawn - was Tiki Taka Neranja v DACC Blacks, 11:15 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7169,7 +7189,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142309",
     "raw_fixture": "Beath High School 1:30 PM Templehall United Yellows 2018 V Tiki Taka Blanco",
-    "id": "liga5-94"
+    "id": "liga5-94",
+    "updated": "League redrawn - was Crossgates Primrose 2016s Blues v Tiki Taka Blanco, 2:15 PM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7247,7 +7268,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142324",
     "raw_fixture": "Beath High School 10:30 AM KSQ Galaxy V Tiki Taka Neranja",
-    "id": "liga5-100"
+    "id": "liga5-100",
+    "updated": "League redrawn - was Bowhill United Yellows v Tiki Taka Neranja, 2:15 PM, Beath High School Refurb"
   },
   {
     "league": "Liga 5",
@@ -7338,7 +7360,8 @@
     "awayTeam": "DACC Blacks",
     "match_id": "273142319",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Tiki Taka Negra V DACC Blacks",
-    "id": "liga5-107"
+    "id": "liga5-107",
+    "updated": "League redrawn - was DACC Girls 2017 Whites v Tiki Taka Negra, 2:15 PM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7377,7 +7400,8 @@
     "awayTeam": "Duloch Juniors - Blacks",
     "match_id": "273142326",
     "raw_fixture": "Beath High School 3:00 PM Tiki Taka Blanco V Duloch Juniors - Blacks",
-    "id": "liga5-110"
+    "id": "liga5-110",
+    "updated": "League redrawn - was Tiki Taka Blanco v Templehall United Yellows 2018, 12:45 PM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7416,7 +7440,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142339",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM DACC Blacks V Tiki Taka Blanco",
-    "id": "liga5-113"
+    "id": "liga5-113",
+    "updated": "League redrawn - was Bayside Barcas v Tiki Taka Blanco, 9:45 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7468,7 +7493,8 @@
     "awayTeam": "DACC Boys 17",
     "match_id": "273142334",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Tiki Taka Neranja V DACC Boys 17",
-    "id": "liga5-117"
+    "id": "liga5-117",
+    "updated": "League redrawn - was Tiki Taka Neranja v Duloch Juniors - Blacks, 12:00 PM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7546,7 +7572,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142345",
     "raw_fixture": "Beath High School 2:15 PM Dunipace Ballerz Black V Tiki Taka Negra",
-    "id": "liga5-123"
+    "id": "liga5-123",
+    "updated": "League redrawn - was Tiki Taka Negra v KSQ 2018 Galaxy, 10:30 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7689,7 +7716,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142350",
     "raw_fixture": "Beath High School 12:45 PM Duloch City 2018s V Tiki Taka Neranja",
-    "id": "liga5-134"
+    "id": "liga5-134",
+    "updated": "League redrawn - was Duloch Juniors - Reds v Tiki Taka Neranja, 12:00 PM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -7728,7 +7756,8 @@
     "awayTeam": "Dunipace Ballerz Black",
     "match_id": "273142348",
     "raw_fixture": "Beath High School 2:15 PM Tiki Taka Blanco V Dunipace Ballerz Black",
-    "id": "liga5-137"
+    "id": "liga5-137",
+    "updated": "League redrawn - was Tiki Taka Blanco v Blue Brazil Blues 2019's, 9:00 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7741,7 +7770,8 @@
     "awayTeam": "Bayside Bullets 2017s",
     "match_id": "273142352",
     "raw_fixture": "Beath High School 3:00 PM Tiki Taka Negra V Bayside Bullets 2017s",
-    "id": "liga5-138"
+    "id": "liga5-138",
+    "updated": "League redrawn - was Bowhill United Blacks v Tiki Taka Negra, 11:15 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7832,7 +7862,8 @@
     "awayTeam": "Inverkeithing United",
     "match_id": "273142370",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Tiki Taka Neranja V Inverkeithing United",
-    "id": "liga5-145"
+    "id": "liga5-145",
+    "updated": "League redrawn - was Tiki Taka Neranja v Inverkeithing United, 2:15 PM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7858,7 +7889,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142369",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Bayside Bullets 2017s V Tiki Taka Blanco",
-    "id": "liga5-147"
+    "id": "liga5-147",
+    "updated": "League redrawn - was Futsal Escocia Turquoise v Tiki Taka Blanco, 12:00 PM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -7897,7 +7929,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142367",
     "raw_fixture": "Beath High School 1:30 PM Dunipace Ballerz White V Tiki Taka Negra",
-    "id": "liga5-150"
+    "id": "liga5-150",
+    "updated": "League redrawn - was Tiki Taka Negra v DACC Blacks, 9:45 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -7949,7 +7982,8 @@
     "awayTeam": "Bowhill United Yellows",
     "match_id": "273142379",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Tiki Taka Negra V Bowhill United Yellows",
-    "id": "liga5-154"
+    "id": "liga5-154",
+    "updated": "League redrawn - was Bowhill United Yellows v Tiki Taka Negra, 12:45 PM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -8053,7 +8087,8 @@
     "awayTeam": "Dunipace Ballerz White",
     "match_id": "273142383",
     "raw_fixture": "Beath High School 12:45 PM Tiki Taka Blanco V Dunipace Ballerz White",
-    "id": "liga5-162"
+    "id": "liga5-162",
+    "updated": "League redrawn - was Tiki Taka Blanco v Tiki Taka Neranja, 10:30 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -8092,7 +8127,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142388",
     "raw_fixture": "Beath High School 2:15 PM Bowhill United Blacks V Tiki Taka Neranja",
-    "id": "liga5-165"
+    "id": "liga5-165",
+    "updated": "League redrawn - was Tiki Taka Blanco v Tiki Taka Neranja, 10:30 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -8170,7 +8206,8 @@
     "awayTeam": "Duloch Juniors - Reds",
     "match_id": "273142389",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Tiki Taka Neranja V Duloch Juniors - Reds",
-    "id": "liga5-171"
+    "id": "liga5-171",
+    "updated": "League redrawn - was Tiki Taka Neranja v Dunipace Ballerz Black, 9:00 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -8235,7 +8272,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142396",
     "raw_fixture": "Beath High School 12:45 PM Bowhill United Yellows V Tiki Taka Blanco",
-    "id": "liga5-176"
+    "id": "liga5-176",
+    "updated": "League redrawn - was KSQ Galaxy v Tiki Taka Blanco, 9:45 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -8261,7 +8299,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142393",
     "raw_fixture": "Beath High School 1:30 PM KSQ 2018 Galaxy V Tiki Taka Negra",
-    "id": "liga5-178"
+    "id": "liga5-178",
+    "updated": "League redrawn - was Tiki Taka Negra v Duloch Juniors - Blacks, 10:30 AM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -8313,7 +8352,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142416",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM WLFA V Tiki Taka Neranja",
-    "id": "liga5-182"
+    "id": "liga5-182",
+    "updated": "League redrawn - was DACC Girls Blacks v Tiki Taka Neranja, 11:15 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -8326,7 +8366,8 @@
     "awayTeam": "DACC Girls Blacks",
     "match_id": "273142408",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Tiki Taka Negra V DACC Girls Blacks",
-    "id": "liga5-183"
+    "id": "liga5-183",
+    "updated": "League redrawn - was Duloch Juniors - Reds v Tiki Taka Negra, 9:45 AM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -8378,7 +8419,8 @@
     "awayTeam": "KSQ 2018 Galaxy",
     "match_id": "273142411",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Tiki Taka Blanco V KSQ 2018 Galaxy",
-    "id": "liga5-187"
+    "id": "liga5-187",
+    "updated": "League redrawn - was Tiki Taka Blanco v DACC Boys 17, 12:00 PM, Beath High School"
   },
   {
     "league": "Liga 5",
@@ -8599,7 +8641,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142429",
     "raw_fixture": "Beath High School 12:45 PM Tiki Taka Neranja V Tiki Taka Negra",
-    "id": "liga5-204"
+    "id": "liga5-204",
+    "updated": "League redrawn - was Tiki Taka Neranja v Rosyth Blacks, 12:45 PM, Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -8664,7 +8707,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142417",
     "raw_fixture": "Beath High School 3:45 PM DACC Girls Blacks V Tiki Taka Blanco",
-    "id": "liga5-209"
+    "id": "liga5-209",
+    "updated": "League redrawn - was Duloch City 2018s v Tiki Taka Blanco, 1:30 PM, Beath High School"
   },
   {
     "league": "Liga 6",
@@ -8677,7 +8721,8 @@
     "awayTeam": "Duloch Juniors",
     "match_id": "273141747",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Neranja V Duloch Juniors",
-    "id": "liga6-1"
+    "id": "liga6-1",
+    "updated": "League redrawn - was Duloch Juniors v Tiki Taka Neranja, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -8729,7 +8774,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141753",
     "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Blanco V Tiki Taka Negra",
-    "id": "liga6-5"
+    "id": "liga6-5",
+    "updated": "League redrawn - was DACC Whites v Tiki Taka Blanco, 11:15 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -8833,7 +8879,8 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141751",
     "raw_fixture": "Balwearie High School 2:15 PM KSQ Astros V Tiki Taka Gris",
-    "id": "liga6-13"
+    "id": "liga6-13",
+    "updated": "League redrawn - was Swifts Lightening v Tiki Taka Gris, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -8872,7 +8919,8 @@
     "awayTeam": "Greig Park Blues",
     "match_id": "273141765",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Negra V Greig Park Blues",
-    "id": "liga6-16"
+    "id": "liga6-16",
+    "updated": "League redrawn - was Tiki Taka Negra v Swift Hurricanes, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -8898,7 +8946,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141761",
     "raw_fixture": "Balwearie High School 10:30 AM Swift Hurricanes V Tiki Taka Neranja",
-    "id": "liga6-18"
+    "id": "liga6-18",
+    "updated": "League redrawn - was Tiki Taka Neranja v Swifts Lightening, 11:15 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -8924,7 +8973,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141771",
     "raw_fixture": "Balwearie High School 11:15 AM Futsal Escocia White V Tiki Taka Blanco",
-    "id": "liga6-20"
+    "id": "liga6-20",
+    "updated": "League redrawn - was Tiki Taka Blanco v Futsal Escocia White, 10:30 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -8976,7 +9026,8 @@
     "awayTeam": "Crossgates Yellow",
     "match_id": "273141764",
     "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Gris V Crossgates Yellow",
-    "id": "liga6-24"
+    "id": "liga6-24",
+    "updated": "League redrawn - was Tiki Taka Gris v Templehall Utd Blacks, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9067,7 +9118,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141777",
     "raw_fixture": "Beath High School 9:00 AM Kelty Hearts V Tiki Taka Negra",
-    "id": "liga6-31"
+    "id": "liga6-31",
+    "updated": "League redrawn - was Cairneyhill Ath Blues v Tiki Taka Negra, 12:00 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9080,7 +9132,8 @@
     "awayTeam": "Swifts Thunder",
     "match_id": "273141784",
     "raw_fixture": "Beath High School 9:45 AM Tiki Taka Neranja V Swifts Thunder",
-    "id": "liga6-32"
+    "id": "liga6-32",
+    "updated": "League redrawn - was Templehall Utd Blacks v Tiki Taka Neranja, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9197,7 +9250,8 @@
     "awayTeam": "Duloch Juniors",
     "match_id": "273141783",
     "raw_fixture": "Balwearie High School 1:30 PM Tiki Taka Blanco V Duloch Juniors",
-    "id": "liga6-41"
+    "id": "liga6-41",
+    "updated": "League redrawn - was Tiki Taka Blanco v Swifts Thunder, 1:30 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9223,7 +9277,8 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141775",
     "raw_fixture": "Balwearie High School 2:15 PM Rosyth Blacks 2018 V Tiki Taka Gris",
-    "id": "liga6-43"
+    "id": "liga6-43",
+    "updated": "League redrawn - was Futsal Escocia White v Tiki Taka Gris, 10:30 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9262,7 +9317,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141789",
     "raw_fixture": "Beath High School 9:00 AM Swift Hurricanes V Tiki Taka Blanco",
-    "id": "liga6-46"
+    "id": "liga6-46",
+    "updated": "League redrawn - was KSQ 2018 Rapids v Tiki Taka Blanco, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9314,7 +9370,8 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141797",
     "raw_fixture": "Balwearie High School 11:15 AM Glenrothes Strollers V Tiki Taka Gris",
-    "id": "liga6-50"
+    "id": "liga6-50",
+    "updated": "League redrawn - was Tiki Taka Neranja v Tiki Taka Gris, 11:15 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9366,7 +9423,8 @@
     "awayTeam": "Rosyth Blacks 2018",
     "match_id": "273141790",
     "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Negra V Rosyth Blacks 2018",
-    "id": "liga6-54"
+    "id": "liga6-54",
+    "updated": "League redrawn - was Tiki Taka Negra v Duloch Juniors, 12:00 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9392,7 +9450,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141791",
     "raw_fixture": "Balwearie High School 1:30 PM Rosyth Blacks 2017 V Tiki Taka Neranja",
-    "id": "liga6-56"
+    "id": "liga6-56",
+    "updated": "League redrawn - was Tiki Taka Neranja v Tiki Taka Gris, 11:15 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9457,7 +9516,8 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273141810",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Negra V Futsal Escocia White",
-    "id": "liga6-61"
+    "id": "liga6-61",
+    "updated": "League redrawn - was Swifts Lightening v Tiki Taka Negra, 12:00 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9470,7 +9530,8 @@
     "awayTeam": "Cairneyhill Ath Blues",
     "match_id": "273141803",
     "raw_fixture": "Beath High School 9:45 AM Tiki Taka Gris V Cairneyhill Ath Blues",
-    "id": "liga6-62"
+    "id": "liga6-62",
+    "updated": "League redrawn - was Tiki Taka Gris v Crossgates Blue, 1:30 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9483,7 +9544,8 @@
     "awayTeam": "Swifts Thunder",
     "match_id": "273141806",
     "raw_fixture": "Balwearie High School 10:30 AM Tiki Taka Blanco V Swifts Thunder",
-    "id": "liga6-63"
+    "id": "liga6-63",
+    "updated": "League redrawn - was Tiki Taka Blanco v KSQ Lightning, 10:30 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9613,7 +9675,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141814",
     "raw_fixture": "Balwearie High School 2:15 PM DACC Whites V Tiki Taka Neranja",
-    "id": "liga6-73"
+    "id": "liga6-73",
+    "updated": "League redrawn - was Futsal Escocia White v Tiki Taka Neranja, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9652,7 +9715,8 @@
     "awayTeam": "Blue Brazil 2018",
     "match_id": "273141820",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Neranja V Blue Brazil 2018",
-    "id": "liga6-76"
+    "id": "liga6-76",
+    "updated": "League redrawn - was Crossgates Blue v Tiki Taka Neranja, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9730,7 +9794,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141830",
     "raw_fixture": "Balwearie High School 12:00 PM Duloch Juniors V Tiki Taka Negra",
-    "id": "liga6-82"
+    "id": "liga6-82",
+    "updated": "League redrawn - was Tiki Taka Negra v Templehall Utd Blacks, 10:30 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9756,7 +9821,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141817",
     "raw_fixture": "Balwearie High School 12:45 PM Rosyth Blacks 2017 V Tiki Taka Blanco",
-    "id": "liga6-84"
+    "id": "liga6-84",
+    "updated": "League redrawn - was Rosyth Reds 2018 v Tiki Taka Blanco, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9782,7 +9848,8 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141824",
     "raw_fixture": "Balwearie High School 1:30 PM KSQ 2018 Rapids V Tiki Taka Gris",
-    "id": "liga6-86"
+    "id": "liga6-86",
+    "updated": "League redrawn - was Glenrothes Strollers v Tiki Taka Gris, 1:30 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9847,7 +9914,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141837",
     "raw_fixture": "Beath High School 9:00 AM KSQ Lightning V Tiki Taka Neranja",
-    "id": "liga6-91"
+    "id": "liga6-91",
+    "updated": "League redrawn - was Tiki Taka Neranja v Glenrothes Strollers, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9899,7 +9967,8 @@
     "awayTeam": "Swift Hurricanes",
     "match_id": "273141846",
     "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Negra V Swift Hurricanes",
-    "id": "liga6-95"
+    "id": "liga6-95",
+    "updated": "League redrawn - was Tiki Taka Gris v Tiki Taka Negra, 11:15 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -9977,7 +10046,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141839",
     "raw_fixture": "Balwearie High School 1:30 PM DACC Whites V Tiki Taka Blanco",
-    "id": "liga6-101"
+    "id": "liga6-101",
+    "updated": "League redrawn - was Tiki Taka Blanco v Greig Park Blues, 12:00 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10003,7 +10073,8 @@
     "awayTeam": "Crossgates Blue",
     "match_id": "273141832",
     "raw_fixture": "Balwearie High School 2:15 PM Tiki Taka Gris V Crossgates Blue",
-    "id": "liga6-103"
+    "id": "liga6-103",
+    "updated": "League redrawn - was Tiki Taka Gris v Tiki Taka Negra, 11:15 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10042,7 +10113,8 @@
     "awayTeam": "Blue Brazil 2018",
     "match_id": "273141860",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Blanco V Blue Brazil 2018",
-    "id": "liga6-106"
+    "id": "liga6-106",
+    "updated": "League redrawn - was Duloch Juniors City v Tiki Taka Blanco, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10055,7 +10127,8 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273141851",
     "raw_fixture": "Beath High School 9:45 AM Tiki Taka Neranja V Futsal Escocia Turquoise",
-    "id": "liga6-107"
+    "id": "liga6-107",
+    "updated": "League redrawn - was Tiki Taka Negra v Tiki Taka Neranja, 12:00 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10068,7 +10141,8 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141847",
     "raw_fixture": "Balwearie High School 10:30 AM Dunipace Ballerz Red V Tiki Taka Gris",
-    "id": "liga6-108"
+    "id": "liga6-108",
+    "updated": "League redrawn - was Futsal Escocia Turquoise v Tiki Taka Gris, 10:30 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10172,7 +10246,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141849",
     "raw_fixture": "Balwearie High School 1:30 PM Swifts Thunder V Tiki Taka Negra",
-    "id": "liga6-116"
+    "id": "liga6-116",
+    "updated": "League redrawn - was Tiki Taka Negra v Tiki Taka Neranja, 12:00 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10289,7 +10364,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141865",
     "raw_fixture": "Balwearie High School 11:15 AM Swifts Lightnings V Tiki Taka Neranja",
-    "id": "liga6-125"
+    "id": "liga6-125",
+    "updated": "League redrawn - was Tiki Taka Neranja v Futsal Escocia Turquoise, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10315,7 +10391,8 @@
     "awayTeam": "Blue Brazil Blue 2019",
     "match_id": "273141870",
     "raw_fixture": "Balwearie High School 12:00 PM Tiki Taka Gris V Blue Brazil Blue 2019",
-    "id": "liga6-127"
+    "id": "liga6-127",
+    "updated": "League redrawn - was Rosyth Blacks 2018 v Tiki Taka Gris, 1:30 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10341,7 +10418,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141868",
     "raw_fixture": "Balwearie High School 12:45 PM KSQ Lightning V Tiki Taka Blanco",
-    "id": "liga6-129"
+    "id": "liga6-129",
+    "updated": "League redrawn - was Tiki Taka Blanco v KSQ Thunder, 10:30 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10393,7 +10471,8 @@
     "awayTeam": "Rosyth Blacks 2017",
     "match_id": "273141873",
     "raw_fixture": "Balwearie High School 2:15 PM Tiki Taka Negra V Rosyth Blacks 2017",
-    "id": "liga6-133"
+    "id": "liga6-133",
+    "updated": "League redrawn - was Crossgates Blue v Tiki Taka Negra, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10432,7 +10511,8 @@
     "awayTeam": "DACC Whites",
     "match_id": "273141885",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Negra V DACC Whites",
-    "id": "liga6-136"
+    "id": "liga6-136",
+    "updated": "League redrawn - was Tiki Taka Negra v Glenrothes Strollers, 12:00 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10484,7 +10564,8 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273141888",
     "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Blanco V Futsal Escocia Turquoise",
-    "id": "liga6-140"
+    "id": "liga6-140",
+    "updated": "League redrawn - was Blue Brazil 2018 v Tiki Taka Blanco, 10:30 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10536,7 +10617,8 @@
     "awayTeam": "KSQ Thunder",
     "match_id": "273141887",
     "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Neranja V KSQ Thunder",
-    "id": "liga6-144"
+    "id": "liga6-144",
+    "updated": "League redrawn - was Tiki Taka Neranja v Rosyth Blacks 2018, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10562,7 +10644,8 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141884",
     "raw_fixture": "Balwearie High School 1:30 PM Rosyth Reds 2018 V Tiki Taka Gris",
-    "id": "liga6-146"
+    "id": "liga6-146",
+    "updated": "League redrawn - was Tiki Taka Gris v Swifts Lightnings, 11:15 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10627,7 +10710,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141903",
     "raw_fixture": "Beath High School 9:00 AM Swifts Lightnings V Tiki Taka Blanco",
-    "id": "liga6-151"
+    "id": "liga6-151",
+    "updated": "League redrawn - was Tiki Taka Blanco v Swift Hurricanes, 1:30 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10640,7 +10724,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141895",
     "raw_fixture": "Beath High School 9:45 AM Blue Brazil 2018 V Tiki Taka Negra",
-    "id": "liga6-152"
+    "id": "liga6-152",
+    "updated": "League redrawn - was Futsal Escocia White v Tiki Taka Negra, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10731,7 +10816,8 @@
     "awayTeam": "Duloch Juniors City",
     "match_id": "273141893",
     "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Gris V Duloch Juniors City",
-    "id": "liga6-159"
+    "id": "liga6-159",
+    "updated": "League redrawn - was Crossgates Yellow v Tiki Taka Gris, 10:30 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10757,7 +10843,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141904",
     "raw_fixture": "Balwearie High School 1:30 PM KSQ Astros V Tiki Taka Neranja",
-    "id": "liga6-161"
+    "id": "liga6-161",
+    "updated": "League redrawn - was Swifts Lightnings v Tiki Taka Neranja, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10822,7 +10909,8 @@
     "awayTeam": "KSQ Lightning",
     "match_id": "273141909",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Negra V KSQ Lightning",
-    "id": "liga6-166"
+    "id": "liga6-166",
+    "updated": "League redrawn - was Futsal Escocia Turquoise v Tiki Taka Negra, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10874,7 +10962,8 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141912",
     "raw_fixture": "Balwearie High School 11:15 AM Swifts Lightening V Tiki Taka Gris",
-    "id": "liga6-170"
+    "id": "liga6-170",
+    "updated": "League redrawn - was Tiki Taka Gris v Kelty Hearts, 12:00 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10926,7 +11015,8 @@
     "awayTeam": "Crossgates Yellow",
     "match_id": "273141916",
     "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Neranja V Crossgates Yellow",
-    "id": "liga6-174"
+    "id": "liga6-174",
+    "updated": "League redrawn - was Tiki Taka Neranja v Crossgates Yellow, 1:30 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -10978,7 +11068,8 @@
     "awayTeam": "KSQ Thunder",
     "match_id": "273141918",
     "raw_fixture": "Balwearie High School 2:15 PM Tiki Taka Blanco V KSQ Thunder",
-    "id": "liga6-178"
+    "id": "liga6-178",
+    "updated": "League redrawn - was Cairneyhill Ath Blues v Tiki Taka Blanco, 11:15 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -11095,7 +11186,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141923",
     "raw_fixture": "Balwearie High School 12:00 PM KSQ Astros V Tiki Taka Blanco",
-    "id": "liga6-187"
+    "id": "liga6-187",
+    "updated": "League redrawn - was Tiki Taka Blanco v Duloch Juniors, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -11121,7 +11213,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141925",
     "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Gris V Tiki Taka Neranja",
-    "id": "liga6-189"
+    "id": "liga6-189",
+    "updated": "League redrawn - was KSQ Astros v Tiki Taka Gris, 10:30 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -11147,7 +11240,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141933",
     "raw_fixture": "Balwearie High School 1:30 PM Futsal Escocia Turquoise V Tiki Taka Negra",
-    "id": "liga6-191"
+    "id": "liga6-191",
+    "updated": "League redrawn - was Rosyth Blacks 2018 v Tiki Taka Negra, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -11212,7 +11306,8 @@
     "awayTeam": "Crossgates Yellow",
     "match_id": "273141946",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Blanco V Crossgates Yellow",
-    "id": "liga6-196"
+    "id": "liga6-196",
+    "updated": "League redrawn - was Swifts Lightening v Tiki Taka Blanco, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -11238,7 +11333,8 @@
     "awayTeam": "Glenrothes Strollers",
     "match_id": "273141950",
     "raw_fixture": "Balwearie High School 10:30 AM Tiki Taka Neranja V Glenrothes Strollers",
-    "id": "liga6-198"
+    "id": "liga6-198",
+    "updated": "League redrawn - was Tiki Taka Neranja v KSQ Astros, 1:30 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -11290,7 +11386,8 @@
     "awayTeam": "Swifts Lightnings",
     "match_id": "273141945",
     "raw_fixture": "Balwearie High School 12:00 PM Tiki Taka Negra V Swifts Lightnings",
-    "id": "liga6-202"
+    "id": "liga6-202",
+    "updated": "League redrawn - was Tiki Taka Negra v Swifts Lightnings, 2:15 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -11342,7 +11439,8 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141944",
     "raw_fixture": "Balwearie High School 1:30 PM Templehall Utd Blacks V Tiki Taka Gris",
-    "id": "liga6-206"
+    "id": "liga6-206",
+    "updated": "League redrawn - was Tiki Taka Gris v Dunipace Ballerz Red, 12:00 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -11433,7 +11531,8 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141952",
     "raw_fixture": "Balwearie High School 10:30 AM KSQ Thunder V Tiki Taka Negra",
-    "id": "liga6-213"
+    "id": "liga6-213",
+    "updated": "League redrawn - was Crossgates Yellow v Tiki Taka Negra, 12:45 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -11511,7 +11610,8 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141962",
     "raw_fixture": "Balwearie High School 12:45 PM Cairneyhill Ath Blues V Tiki Taka Neranja",
-    "id": "liga6-219"
+    "id": "liga6-219",
+    "updated": "League redrawn - was Dunipace Ballerz Red v Tiki Taka Neranja, 11:15 AM, Balwearie High School"
   },
   {
     "league": "Liga 6",
@@ -11537,7 +11637,8 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141961",
     "raw_fixture": "Balwearie High School 1:30 PM Tiki Taka Gris V Tiki Taka Blanco",
-    "id": "liga6-221"
+    "id": "liga6-221",
+    "updated": "League redrawn - was DACC Whites v Tiki Taka Gris, 12:00 PM, Balwearie High School"
   },
   {
     "league": "Liga 6",
