@@ -342,20 +342,32 @@ def describe_replacements(previous, fixtures, redrawn):
             continue
         teams = our_teams_in(fixture)
         keys = [(team, fixture["league"], fixture["iso_date"]) for team in teams]
-        was = next((gone[key] for key in keys if key in gone), None)
-        for key in keys:
-            gone.pop(key, None)
+        olds = [gone.pop(key, None) for key in keys]
 
         prefix = "League redrawn" if fixture["league"] in redrawn else "Rearranged"
         now = f"{fixture['homeTeam']} v {fixture['awayTeam']}, {fixture['time']}"
-        if was is None:
+        describe = lambda was: (f"{was['homeTeam']} v {was['awayTeam']}, "
+                                f"{was['time']}, {was['venue']}")
+        if not any(olds):
             badges[fixture["match_id"]] = f"{prefix} - new fixture"
             line = f"new fixture {fixture['date']}: {now}, {fixture['venue']}"
+        elif len(teams) > 1:
+            # Two of our squads now meet, and each had its own game before -
+            # the 26 Oct redraw turned Blanco v DACC Whites and Negra v Blue
+            # Brazil into Blanco v Negra. Name both, or one squad's parents
+            # read only the other squad's old game.
+            then = "; ".join(
+                f"{short_name(team)} was {describe(was)}" if was
+                else f"{short_name(team)} had no game that day"
+                for team, was in zip(teams, olds))
+            badges[fixture["match_id"]] = f"{prefix} - {then}"
+            line = f"{fixture['date']} now {now}, {fixture['venue']} ({then})"
         else:
+            was = olds[0]
             if all(was.get(k) == fixture[k]
                    for k in ("homeTeam", "awayTeam", "time", "venue")):
                 continue
-            then = f"{was['homeTeam']} v {was['awayTeam']}, {was['time']}, {was['venue']}"
+            then = describe(was)
             badges[fixture["match_id"]] = f"{prefix} - was {then}"
             line = f"{fixture['date']} now {now}, {fixture['venue']} (was {then})"
         if fixture["league"] not in redrawn:
