@@ -20,13 +20,25 @@ whoever owns the repository owns the system.
 
 ## Moving between Claude accounts: nothing to do
 
-A Claude account and a GitHub account are unrelated. Claude Code works on a
-folder on the Mac and pushes with the git credential already in the keychain,
-so switching to a different Claude account needs no change here at all: the
-repository, the secrets, the DNS and Pages all stay exactly as they are.
+A Claude account and a GitHub account are unrelated, so switching to a
+different Claude account needs no change here at all: the repository, the
+secrets, the DNS and Pages all stay exactly as they are.
 
-All a new Claude session needs is this folder and a prompt pointing it at
+All a new Claude session needs is this repository and a prompt pointing it at
 `CLAUDE.md`.
+
+Claude now works in a **cloud session** (claude.ai/code), not a folder on the
+Mac. Two things that session needs, neither of which touches GitHub's own
+settings:
+
+- **The repository attached with push access**, so it can push changes and
+  read workflow run results. Without it the session can clone (the repo is
+  public) but not push or see Actions.
+- **`www.ttfixtures.uk` on the environment's network allow-list** (session
+  title bar → environment → Edit → Network access → Allowed domains). The
+  default policy blocks it, which means Claude cannot check the live page
+  after a push. A DNS error from Claude's web fetcher on this domain means
+  the same thing, not that the site is down.
 
 The rest of this file applies only if the **GitHub** owner actually changes,
 which is a separate decision and not required by anything above.

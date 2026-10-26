@@ -84,7 +84,9 @@ always numbers — some read `1 - New Astro`.
 **GitHub's own notifications do not reach Greg.** A bot-raised issue produced
 no email, and assigning it to him directly produced none either. Do not build
 alerting on issues, watching or mentions. Workflow-*failure* emails do arrive,
-so they work as a safety net for genuine errors.
+so they work as a safety net for genuine errors. The 7s workflow used to raise
+a weekly issue as well; it was removed, and the workflow no longer has
+`issues: write`.
 
 Alerts go by **ntfy** push instead, to the topic in the `NTFY_TOPIC` secret.
 Two kinds, deliberately distinguishable: a new week (normal priority), and a
@@ -130,7 +132,10 @@ There is no test suite. What has actually caught bugs:
 3. Serve the repo (`python3 -m http.server`) and open the page; check the
    console is clean and the layout holds at 375px wide.
 4. After pushing, give Pages a few minutes, then confirm the live page, not
-   just the commit.
+   just the commit. From a cloud session this needs `www.ttfixtures.uk` on
+   the network allow-list (see `HANDOVER.md`); until then, the "pages build
+   and deployment" run in Actions shows the publish went through, and Greg
+   checks the page on a phone.
 
 A green workflow run is not proof an alert works: when nothing changed, the
 push step is **skipped**, and that is the correct result.

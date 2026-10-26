@@ -11,7 +11,6 @@ on:
 
 permissions:
   contents: write
-  issues: write
 
 concurrency:
   group: pitreavie-fixtures
@@ -95,33 +94,3 @@ jobs:
             --data-binary @push.txt \
             "https://ntfy.sh/${NTFY_TOPIC}" > /dev/null
           echo "Pushed to ntfy (new_week=${NEW_WEEK})."
-
-      # The issue is kept as a written record per week, independent of whether
-      # its notification ever reaches an inbox.
-      #
-      - name: Raise an issue for the new week
-        if: steps.scrape.outputs.new_week == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WEEK: ${{ steps.scrape.outputs.week_tab }}
-          HEADING: ${{ steps.scrape.outputs.heading }}
-          OUR_COUNT: ${{ steps.scrape.outputs.our_count }}
-          SUMMARY: ${{ steps.scrape.outputs.summary }}
-        run: |
-          {
-            echo "**${HEADING}** fixtures are up."
-            echo
-            echo "Tiki Taka matches this week: **${OUR_COUNT}**"
-            echo
-            echo "${SUMMARY}" | tr '|' '\n' | sed 's/^ *//;s/^/- /'
-            echo
-            echo "Full list: https://www.ttfixtures.uk/football/"
-            echo
-            echo "_Close this issue once you have read it - a new one is raised each week._"
-            echo
-            echo "cc @${GITHUB_REPOSITORY_OWNER}"
-          } > body.md
-          gh issue create \
-            --title "Pitreavie 7s: ${WEEK} fixtures are up" \
-            --body-file body.md \
-            --assignee "${GITHUB_REPOSITORY_OWNER}"
