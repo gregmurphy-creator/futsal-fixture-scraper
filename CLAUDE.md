@@ -119,6 +119,11 @@ not a workbook, which will not improve on a second go.
 later quiet runs, or the next check clears the badge minutes after it appears.
 A new week starts clean.
 
+**No futsal badges until a week before each league's first game.** Before
+2026/27 began the draw was redrawn and reshuffled repeatedly, and Greg had the
+resulting 130 notes cleared as noise. Badges start 7 days before a league's
+earliest fixture (Liga 3/4 open a day after 5–7); pushes are not held back.
+
 ## Secrets and configuration
 
 | Secret | What it is |

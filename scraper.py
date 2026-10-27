@@ -80,6 +80,9 @@ REQUEST_TIMEOUT = 90
 # only these raise an alert, or every rescheduling in five leagues would.
 OUR_CLUB = "tiki taka"
 
+# Changes are not marked on the page until this close to a league's first game.
+PRESEASON_QUIET_DAYS = 7
+
 
 # ---------------------------------------------------------------- http
 
@@ -420,7 +423,26 @@ def carry_flags(previous, fixtures, moved):
     old changes do not accumulate across a season.
     """
     today = datetime.date.today().isoformat()
+
+    # Before a league's first game the draw is still being shuffled - it was
+    # redrawn twice in the fortnight before 2026/27 began - and a page full of
+    # notes about a draft nobody played is noise. Notes start a week out,
+    # counted per league because Liga 3 and 4 open on a Sunday. Pushes are
+    # not held back; only the page notes are.
+    first_game = {}
     for fixture in fixtures:
+        league, date = fixture["league"], fixture["iso_date"]
+        if league not in first_game or date < first_game[league]:
+            first_game[league] = date
+    notes_from = {
+        league: (datetime.date.fromisoformat(date)
+                 - datetime.timedelta(days=PRESEASON_QUIET_DAYS)).isoformat()
+        for league, date in first_game.items()
+    }
+
+    for fixture in fixtures:
+        if today < notes_from[fixture["league"]]:
+            continue
         detail = moved.get(fixture["match_id"])
         if not detail:
             was = previous.get(fixture["match_id"]) or {}
