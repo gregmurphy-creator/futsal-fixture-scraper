@@ -8664,10 +8664,10 @@
     "iso_date": "2026-11-07",
     "venue": "Beath High School",
     "time": "9:00 AM",
-    "homeTeam": "Rosyth Blacks 2018",
-    "awayTeam": "Crossgates Yellow",
-    "match_id": "273141749",
-    "raw_fixture": "Beath High School 9:00 AM Rosyth Blacks 2018 V Crossgates Yellow",
+    "homeTeam": "Futsal Escocia Turquoise",
+    "awayTeam": "KSQ 2018 Rapids",
+    "match_id": "273141748",
+    "raw_fixture": "Beath High School 9:00 AM Futsal Escocia Turquoise V KSQ 2018 Rapids",
     "id": "liga6-1"
   },
   {
@@ -8677,10 +8677,10 @@
     "iso_date": "2026-11-07",
     "venue": "Beath High School",
     "time": "9:45 AM",
-    "homeTeam": "KSQ Lightning",
-    "awayTeam": "Crossgates Blue",
-    "match_id": "273141745",
-    "raw_fixture": "Beath High School 9:45 AM KSQ Lightning V Crossgates Blue",
+    "homeTeam": "Templehall Utd Blacks",
+    "awayTeam": "Futsal Escocia White",
+    "match_id": "273141746",
+    "raw_fixture": "Beath High School 9:45 AM Templehall Utd Blacks V Futsal Escocia White",
     "id": "liga6-2"
   },
   {
@@ -8703,10 +8703,10 @@
     "iso_date": "2026-11-07",
     "venue": "Beath High School Refurb",
     "time": "11:15 AM",
-    "homeTeam": "Rosyth Reds 2018",
-    "awayTeam": "Rosyth Blacks 2017",
-    "match_id": "273141754",
-    "raw_fixture": "Beath High School Refurb 11:15 AM Rosyth Reds 2018 V Rosyth Blacks 2017",
+    "homeTeam": "KSQ Lightning",
+    "awayTeam": "Crossgates Blue",
+    "match_id": "273141745",
+    "raw_fixture": "Beath High School Refurb 11:15 AM KSQ Lightning V Crossgates Blue",
     "id": "liga6-4"
   },
   {
@@ -8742,10 +8742,10 @@
     "iso_date": "2026-11-07",
     "venue": "Balwearie High School",
     "time": "12:00 PM",
-    "homeTeam": "Swifts Lightnings 2019",
-    "awayTeam": "Cairneyhill Ath Blues",
-    "match_id": "273141756",
-    "raw_fixture": "Balwearie High School 12:00 PM Swifts Lightnings 2019 V Cairneyhill Ath Blues",
+    "homeTeam": "Blue Brazil 2018",
+    "awayTeam": "ABC 2018",
+    "match_id": "273141744",
+    "raw_fixture": "Balwearie High School 12:00 PM Blue Brazil 2018 V ABC 2018",
     "id": "liga6-7"
   },
   {
@@ -8781,10 +8781,10 @@
     "iso_date": "2026-11-07",
     "venue": "Beath High School Refurb",
     "time": "1:30 PM",
-    "homeTeam": "Blue Brazil 2018",
-    "awayTeam": "Dunipace Ballerz Red",
-    "match_id": "273141744",
-    "raw_fixture": "Beath High School Refurb 1:30 PM Blue Brazil 2018 V Dunipace Ballerz Red",
+    "homeTeam": "Swifts Lightnings 2019",
+    "awayTeam": "Cairneyhill Ath Blues",
+    "match_id": "273141756",
+    "raw_fixture": "Beath High School Refurb 1:30 PM Swifts Lightnings 2019 V Cairneyhill Ath Blues",
     "id": "liga6-10"
   },
   {
@@ -8794,10 +8794,10 @@
     "iso_date": "2026-11-07",
     "venue": "Balwearie High School",
     "time": "1:30 PM",
-    "homeTeam": "Templehall Utd Blacks",
-    "awayTeam": "Futsal Escocia White",
-    "match_id": "273141746",
-    "raw_fixture": "Balwearie High School 1:30 PM Templehall Utd Blacks V Futsal Escocia White",
+    "homeTeam": "KSQ Thunder",
+    "awayTeam": "Glenrothes Strollers",
+    "match_id": "273141752",
+    "raw_fixture": "Balwearie High School 1:30 PM KSQ Thunder V Glenrothes Strollers",
     "id": "liga6-11"
   },
   {
@@ -8807,10 +8807,10 @@
     "iso_date": "2026-11-07",
     "venue": "Beath High School Refurb",
     "time": "2:15 PM",
-    "homeTeam": "Futsal Escocia Turquoise",
-    "awayTeam": "KSQ 2018 Rapids",
-    "match_id": "273141748",
-    "raw_fixture": "Beath High School Refurb 2:15 PM Futsal Escocia Turquoise V KSQ 2018 Rapids",
+    "homeTeam": "Rosyth Blacks 2018",
+    "awayTeam": "Crossgates Yellow",
+    "match_id": "273141749",
+    "raw_fixture": "Beath High School Refurb 2:15 PM Rosyth Blacks 2018 V Crossgates Yellow",
     "id": "liga6-12"
   },
   {
@@ -8833,10 +8833,10 @@
     "iso_date": "2026-11-07",
     "venue": "Beath High School Refurb",
     "time": "3:00 PM",
-    "homeTeam": "KSQ Thunder",
-    "awayTeam": "Glenrothes Strollers",
-    "match_id": "273141752",
-    "raw_fixture": "Beath High School Refurb 3:00 PM KSQ Thunder V Glenrothes Strollers",
+    "homeTeam": "Rosyth Reds 2018",
+    "awayTeam": "Rosyth Blacks 2017",
+    "match_id": "273141754",
+    "raw_fixture": "Beath High School Refurb 3:00 PM Rosyth Reds 2018 V Rosyth Blacks 2017",
     "id": "liga6-14"
   },
   {
@@ -8846,10 +8846,10 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School",
     "time": "9:00 AM",
-    "homeTeam": "Tiki Taka Negra",
-    "awayTeam": "Greig Park Blues",
-    "match_id": "273141765",
-    "raw_fixture": "Beath High School 9:00 AM Tiki Taka Negra V Greig Park Blues",
+    "homeTeam": "Futsal Escocia White",
+    "awayTeam": "Tiki Taka Blanco",
+    "match_id": "273141771",
+    "raw_fixture": "Beath High School 9:00 AM Futsal Escocia White V Tiki Taka Blanco",
     "id": "liga6-15"
   },
   {
@@ -8885,10 +8885,10 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School Refurb",
     "time": "11:15 AM",
-    "homeTeam": "Dunipace Ballerz Red",
+    "homeTeam": "ABC 2018",
     "awayTeam": "KSQ Lightning",
     "match_id": "273141766",
-    "raw_fixture": "Beath High School Refurb 11:15 AM Dunipace Ballerz Red V KSQ Lightning",
+    "raw_fixture": "Beath High School Refurb 11:15 AM ABC 2018 V KSQ Lightning",
     "id": "liga6-18"
   },
   {
@@ -8898,10 +8898,10 @@
     "iso_date": "2026-11-14",
     "venue": "Balwearie High School",
     "time": "11:15 AM",
-    "homeTeam": "Futsal Escocia White",
-    "awayTeam": "Tiki Taka Blanco",
-    "match_id": "273141771",
-    "raw_fixture": "Balwearie High School 11:15 AM Futsal Escocia White V Tiki Taka Blanco",
+    "homeTeam": "Tiki Taka Negra",
+    "awayTeam": "Greig Park Blues",
+    "match_id": "273141765",
+    "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Negra V Greig Park Blues",
     "id": "liga6-19"
   },
   {
@@ -9028,10 +9028,10 @@
     "iso_date": "2026-11-21",
     "venue": "Beath High School",
     "time": "9:00 AM",
-    "homeTeam": "Swifts Lightnings 2019",
-    "awayTeam": "Crossgates Blue",
-    "match_id": "273141781",
-    "raw_fixture": "Beath High School 9:00 AM Swifts Lightnings 2019 V Crossgates Blue",
+    "homeTeam": "Crossgates Blue",
+    "awayTeam": "Futsal Escocia White",
+    "match_id": "273141786",
+    "raw_fixture": "Beath High School 9:00 AM Crossgates Blue V Futsal Escocia White",
     "id": "liga6-29"
   },
   {
@@ -9042,9 +9042,9 @@
     "venue": "Beath High School",
     "time": "9:45 AM",
     "homeTeam": "Futsal Escocia Turquoise",
-    "awayTeam": "Dunipace Ballerz Red",
+    "awayTeam": "ABC 2018",
     "match_id": "273141773",
-    "raw_fixture": "Beath High School 9:45 AM Futsal Escocia Turquoise V Dunipace Ballerz Red",
+    "raw_fixture": "Beath High School 9:45 AM Futsal Escocia Turquoise V ABC 2018",
     "id": "liga6-30"
   },
   {
@@ -9054,10 +9054,10 @@
     "iso_date": "2026-11-21",
     "venue": "Balwearie High School",
     "time": "10:30 AM",
-    "homeTeam": "Greig Park Blues",
-    "awayTeam": "Futsal Escocia White",
-    "match_id": "273141786",
-    "raw_fixture": "Balwearie High School 10:30 AM Greig Park Blues V Futsal Escocia White",
+    "homeTeam": "Swifts Lightnings 2019",
+    "awayTeam": "Greig Park Blues",
+    "match_id": "273141781",
+    "raw_fixture": "Balwearie High School 10:30 AM Swifts Lightnings 2019 V Greig Park Blues",
     "id": "liga6-31"
   },
   {
@@ -9106,10 +9106,10 @@
     "iso_date": "2026-11-21",
     "venue": "Balwearie High School",
     "time": "12:00 PM",
-    "homeTeam": "Tiki Taka Neranja",
-    "awayTeam": "Rosyth Blacks 2017",
-    "match_id": "273141784",
-    "raw_fixture": "Balwearie High School 12:00 PM Tiki Taka Neranja V Rosyth Blacks 2017",
+    "homeTeam": "Tiki Taka Blanco",
+    "awayTeam": "Duloch Juniors",
+    "match_id": "273141783",
+    "raw_fixture": "Balwearie High School 12:00 PM Tiki Taka Blanco V Duloch Juniors",
     "id": "liga6-35"
   },
   {
@@ -9158,10 +9158,10 @@
     "iso_date": "2026-11-21",
     "venue": "Balwearie High School",
     "time": "1:30 PM",
-    "homeTeam": "Tiki Taka Blanco",
-    "awayTeam": "Duloch Juniors",
-    "match_id": "273141783",
-    "raw_fixture": "Balwearie High School 1:30 PM Tiki Taka Blanco V Duloch Juniors",
+    "homeTeam": "Tiki Taka Neranja",
+    "awayTeam": "Rosyth Blacks 2017",
+    "match_id": "273141784",
+    "raw_fixture": "Balwearie High School 1:30 PM Tiki Taka Neranja V Rosyth Blacks 2017",
     "id": "liga6-39"
   },
   {
@@ -9327,10 +9327,10 @@
     "iso_date": "2026-11-28",
     "venue": "Beath High School Refurb",
     "time": "1:30 PM",
-    "homeTeam": "Dunipace Ballerz Red",
+    "homeTeam": "ABC 2018",
     "awayTeam": "Swifts Lightnings 2019",
     "match_id": "273141793",
-    "raw_fixture": "Beath High School Refurb 1:30 PM Dunipace Ballerz Red V Swifts Lightnings 2019",
+    "raw_fixture": "Beath High School Refurb 1:30 PM ABC 2018 V Swifts Lightnings 2019",
     "id": "liga6-52"
   },
   {
@@ -9392,10 +9392,10 @@
     "iso_date": "2026-12-05",
     "venue": "Beath High School",
     "time": "9:00 AM",
-    "homeTeam": "Kelty Hearts",
-    "awayTeam": "Duloch Juniors",
-    "match_id": "273141812",
-    "raw_fixture": "Beath High School 9:00 AM Kelty Hearts V Duloch Juniors",
+    "homeTeam": "Tiki Taka Negra",
+    "awayTeam": "Futsal Escocia White",
+    "match_id": "273141810",
+    "raw_fixture": "Beath High School 9:00 AM Tiki Taka Negra V Futsal Escocia White",
     "id": "liga6-57"
   },
   {
@@ -9470,10 +9470,10 @@
     "iso_date": "2026-12-05",
     "venue": "Balwearie High School",
     "time": "12:00 PM",
-    "homeTeam": "Tiki Taka Negra",
-    "awayTeam": "Futsal Escocia White",
-    "match_id": "273141810",
-    "raw_fixture": "Balwearie High School 12:00 PM Tiki Taka Negra V Futsal Escocia White",
+    "homeTeam": "KSQ Thunder",
+    "awayTeam": "ABC 2018",
+    "match_id": "273141805",
+    "raw_fixture": "Balwearie High School 12:00 PM KSQ Thunder V ABC 2018",
     "id": "liga6-63"
   },
   {
@@ -9561,10 +9561,10 @@
     "iso_date": "2026-12-05",
     "venue": "Beath High School Refurb",
     "time": "3:00 PM",
-    "homeTeam": "KSQ Thunder",
-    "awayTeam": "Dunipace Ballerz Red",
-    "match_id": "273141805",
-    "raw_fixture": "Beath High School Refurb 3:00 PM KSQ Thunder V Dunipace Ballerz Red",
+    "homeTeam": "Kelty Hearts",
+    "awayTeam": "Duloch Juniors",
+    "match_id": "273141812",
+    "raw_fixture": "Beath High School Refurb 3:00 PM Kelty Hearts V Duloch Juniors",
     "id": "liga6-70"
   },
   {
@@ -9587,10 +9587,10 @@
     "iso_date": "2026-12-12",
     "venue": "Beath High School",
     "time": "9:00 AM",
-    "homeTeam": "Rosyth Reds 2018",
-    "awayTeam": "Swifts Lightnings 2019",
-    "match_id": "273141831",
-    "raw_fixture": "Beath High School 9:00 AM Rosyth Reds 2018 V Swifts Lightnings 2019",
+    "homeTeam": "Duloch Juniors City",
+    "awayTeam": "Futsal Escocia Turquoise",
+    "match_id": "273141819",
+    "raw_fixture": "Beath High School 9:00 AM Duloch Juniors City V Futsal Escocia Turquoise",
     "id": "liga6-72"
   },
   {
@@ -9652,10 +9652,10 @@
     "iso_date": "2026-12-12",
     "venue": "Beath High School Refurb",
     "time": "12:00 PM",
-    "homeTeam": "Duloch Juniors City",
-    "awayTeam": "Futsal Escocia Turquoise",
-    "match_id": "273141819",
-    "raw_fixture": "Beath High School Refurb 12:00 PM Duloch Juniors City V Futsal Escocia Turquoise",
+    "homeTeam": "Rosyth Reds 2018",
+    "awayTeam": "Swifts Lightnings 2019",
+    "match_id": "273141831",
+    "raw_fixture": "Beath High School Refurb 12:00 PM Rosyth Reds 2018 V Swifts Lightnings 2019",
     "id": "liga6-77"
   },
   {
@@ -9678,10 +9678,10 @@
     "iso_date": "2026-12-12",
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
-    "homeTeam": "Dunipace Ballerz Red",
+    "homeTeam": "ABC 2018",
     "awayTeam": "KSQ Astros",
     "match_id": "273141822",
-    "raw_fixture": "Beath High School Refurb 12:45 PM Dunipace Ballerz Red V KSQ Astros",
+    "raw_fixture": "Beath High School Refurb 12:45 PM ABC 2018 V KSQ Astros",
     "id": "liga6-79"
   },
   {
@@ -9821,10 +9821,10 @@
     "iso_date": "2026-12-19",
     "venue": "Beath High School Refurb",
     "time": "11:15 AM",
-    "homeTeam": "KSQ Thunder",
-    "awayTeam": "Rosyth Reds 2018",
-    "match_id": "273141842",
-    "raw_fixture": "Beath High School Refurb 11:15 AM KSQ Thunder V Rosyth Reds 2018",
+    "homeTeam": "Swifts Lightnings 2019",
+    "awayTeam": "Duloch Juniors City",
+    "match_id": "273141840",
+    "raw_fixture": "Beath High School Refurb 11:15 AM Swifts Lightnings 2019 V Duloch Juniors City",
     "id": "liga6-90"
   },
   {
@@ -9847,10 +9847,10 @@
     "iso_date": "2026-12-19",
     "venue": "Beath High School Refurb",
     "time": "12:00 PM",
-    "homeTeam": "Swifts Lightnings 2019",
-    "awayTeam": "Duloch Juniors City",
-    "match_id": "273141840",
-    "raw_fixture": "Beath High School Refurb 12:00 PM Swifts Lightnings 2019 V Duloch Juniors City",
+    "homeTeam": "KSQ Thunder",
+    "awayTeam": "Rosyth Reds 2018",
+    "match_id": "273141842",
+    "raw_fixture": "Beath High School Refurb 12:00 PM KSQ Thunder V Rosyth Reds 2018",
     "id": "liga6-92"
   },
   {
@@ -9860,10 +9860,10 @@
     "iso_date": "2026-12-19",
     "venue": "Balwearie High School",
     "time": "12:00 PM",
-    "homeTeam": "Greig Park Blues",
-    "awayTeam": "Rosyth Blacks 2017",
-    "match_id": "273141844",
-    "raw_fixture": "Balwearie High School 12:00 PM Greig Park Blues V Rosyth Blacks 2017",
+    "homeTeam": "DACC Whites",
+    "awayTeam": "Tiki Taka Blanco",
+    "match_id": "273141839",
+    "raw_fixture": "Balwearie High School 12:00 PM DACC Whites V Tiki Taka Blanco",
     "id": "liga6-93"
   },
   {
@@ -9912,10 +9912,10 @@
     "iso_date": "2026-12-19",
     "venue": "Balwearie High School",
     "time": "1:30 PM",
-    "homeTeam": "DACC Whites",
-    "awayTeam": "Tiki Taka Blanco",
-    "match_id": "273141839",
-    "raw_fixture": "Balwearie High School 1:30 PM DACC Whites V Tiki Taka Blanco",
+    "homeTeam": "Greig Park Blues",
+    "awayTeam": "Rosyth Blacks 2017",
+    "match_id": "273141844",
+    "raw_fixture": "Balwearie High School 1:30 PM Greig Park Blues V Rosyth Blacks 2017",
     "id": "liga6-97"
   },
   {
@@ -9952,9 +9952,9 @@
     "venue": "Beath High School Refurb",
     "time": "3:00 PM",
     "homeTeam": "Crossgates Yellow",
-    "awayTeam": "Dunipace Ballerz Red",
+    "awayTeam": "ABC 2018",
     "match_id": "273141836",
-    "raw_fixture": "Beath High School Refurb 3:00 PM Crossgates Yellow V Dunipace Ballerz Red",
+    "raw_fixture": "Beath High School Refurb 3:00 PM Crossgates Yellow V ABC 2018",
     "id": "liga6-100"
   },
   {
@@ -10003,10 +10003,10 @@
     "iso_date": "2027-01-09",
     "venue": "Balwearie High School",
     "time": "10:30 AM",
-    "homeTeam": "Dunipace Ballerz Red",
+    "homeTeam": "ABC 2018",
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141847",
-    "raw_fixture": "Balwearie High School 10:30 AM Dunipace Ballerz Red V Tiki Taka Gris",
+    "raw_fixture": "Balwearie High School 10:30 AM ABC 2018 V Tiki Taka Gris",
     "id": "liga6-104"
   },
   {
@@ -10316,9 +10316,9 @@
     "venue": "Beath High School Refurb",
     "time": "2:15 PM",
     "homeTeam": "Glenrothes Strollers",
-    "awayTeam": "Dunipace Ballerz Red",
+    "awayTeam": "ABC 2018",
     "match_id": "273141875",
-    "raw_fixture": "Beath High School Refurb 2:15 PM Glenrothes Strollers V Dunipace Ballerz Red",
+    "raw_fixture": "Beath High School Refurb 2:15 PM Glenrothes Strollers V ABC 2018",
     "id": "liga6-128"
   },
   {
@@ -10406,10 +10406,10 @@
     "iso_date": "2027-01-23",
     "venue": "Beath High School Refurb",
     "time": "11:15 AM",
-    "homeTeam": "Dunipace Ballerz Red",
+    "homeTeam": "ABC 2018",
     "awayTeam": "Cairneyhill Ath Blues",
     "match_id": "273141878",
-    "raw_fixture": "Beath High School Refurb 11:15 AM Dunipace Ballerz Red V Cairneyhill Ath Blues",
+    "raw_fixture": "Beath High School Refurb 11:15 AM ABC 2018 V Cairneyhill Ath Blues",
     "id": "liga6-135"
   },
   {
@@ -10706,9 +10706,9 @@
     "venue": "Beath High School Refurb",
     "time": "2:15 PM",
     "homeTeam": "KSQ 2018 Rapids",
-    "awayTeam": "Dunipace Ballerz Red",
+    "awayTeam": "ABC 2018",
     "match_id": "273141902",
-    "raw_fixture": "Beath High School Refurb 2:15 PM KSQ 2018 Rapids V Dunipace Ballerz Red",
+    "raw_fixture": "Beath High School Refurb 2:15 PM KSQ 2018 Rapids V ABC 2018",
     "id": "liga6-158"
   },
   {
@@ -10796,10 +10796,10 @@
     "iso_date": "2027-02-06",
     "venue": "Beath High School Refurb",
     "time": "11:15 AM",
-    "homeTeam": "Dunipace Ballerz Red",
+    "homeTeam": "ABC 2018",
     "awayTeam": "Crossgates Blue",
     "match_id": "273141914",
-    "raw_fixture": "Beath High School Refurb 11:15 AM Dunipace Ballerz Red V Crossgates Blue",
+    "raw_fixture": "Beath High School Refurb 11:15 AM ABC 2018 V Crossgates Blue",
     "id": "liga6-165"
   },
   {
@@ -10966,9 +10966,9 @@
     "venue": "Beath High School",
     "time": "9:45 AM",
     "homeTeam": "Rosyth Blacks 2018",
-    "awayTeam": "Dunipace Ballerz Red",
+    "awayTeam": "ABC 2018",
     "match_id": "273141927",
-    "raw_fixture": "Beath High School 9:45 AM Rosyth Blacks 2018 V Dunipace Ballerz Red",
+    "raw_fixture": "Beath High School 9:45 AM Rosyth Blacks 2018 V ABC 2018",
     "id": "liga6-178"
   },
   {
@@ -11330,9 +11330,9 @@
     "venue": "Beath High School Refurb",
     "time": "3:45 PM",
     "homeTeam": "Blue Brazil Blue 2019",
-    "awayTeam": "Dunipace Ballerz Red",
+    "awayTeam": "ABC 2018",
     "match_id": "273141939",
-    "raw_fixture": "Beath High School Refurb 3:45 PM Blue Brazil Blue 2019 V Dunipace Ballerz Red",
+    "raw_fixture": "Beath High School Refurb 3:45 PM Blue Brazil Blue 2019 V ABC 2018",
     "id": "liga6-206"
   },
   {
@@ -11355,10 +11355,10 @@
     "iso_date": "2027-02-27",
     "venue": "Beath High School",
     "time": "9:45 AM",
-    "homeTeam": "Dunipace Ballerz Red",
+    "homeTeam": "ABC 2018",
     "awayTeam": "Rosyth Reds 2018",
     "match_id": "273141956",
-    "raw_fixture": "Beath High School 9:45 AM Dunipace Ballerz Red V Rosyth Reds 2018",
+    "raw_fixture": "Beath High School 9:45 AM ABC 2018 V Rosyth Reds 2018",
     "id": "liga6-208"
   },
   {
