@@ -5,8 +5,11 @@ on:
   # hourly across Wed, Thu and Fri. Friday is the safety net: a tab that slips
   # a day would otherwise go unseen until the following week, by which point
   # the Saturday has gone.
+  # Minute 17, not 0: GitHub drops scheduled runs when busy, worst on the
+  # hour. On 29 Oct 2026 it skipped most hourly runs, and a published week
+  # sat unseen for over three hours.
   schedule:
-    - cron: '0 * * * 3,4,5'
+    - cron: '17 * * * 3,4,5'
   workflow_dispatch:
 
 permissions:

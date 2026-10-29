@@ -1,8 +1,10 @@
 name: Futsal Fixtures Scraper
 
 on:
+  # Minute 43, not 0: GitHub drops scheduled runs when busy, worst on the
+  # hour, and 43 keeps clear of the 7s check at 17.
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '43 */4 * * *'
   workflow_dispatch:
 
 permissions:
