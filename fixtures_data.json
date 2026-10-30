@@ -19,10 +19,10 @@
     "iso_date": "2026-11-08",
     "venue": "Dunfermline Learning Campus",
     "time": "9:45 AM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "DACC Athletic",
-    "match_id": "272354211",
-    "raw_fixture": "Dunfermline Learning Campus 9:45 AM Futsal Escocia V DACC Athletic",
+    "homeTeam": "Swifts Chargers 2017",
+    "awayTeam": "Templehall Utd",
+    "match_id": "272354220",
+    "raw_fixture": "Dunfermline Learning Campus 9:45 AM Swifts Chargers 2017 V Templehall Utd",
     "id": "liga3-2"
   },
   {
@@ -58,10 +58,10 @@
     "iso_date": "2026-11-08",
     "venue": "Dunfermline Learning Campus",
     "time": "12:00 PM",
-    "homeTeam": "Swifts Chargers 2017",
-    "awayTeam": "Templehall Utd",
-    "match_id": "272354220",
-    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Swifts Chargers 2017 V Templehall Utd",
+    "homeTeam": "Futsal Escocia",
+    "awayTeam": "DACC Athletic",
+    "match_id": "272354211",
+    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Futsal Escocia V DACC Athletic",
     "id": "liga3-5"
   },
   {
@@ -71,10 +71,10 @@
     "iso_date": "2026-11-08",
     "venue": "Dunfermline Learning Campus",
     "time": "12:45 PM",
-    "homeTeam": "Dunnfermline Athletic Community Club",
-    "awayTeam": "Letham Tangies",
-    "match_id": "272354209",
-    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Dunnfermline Athletic Community Club V Letham Tangies",
+    "homeTeam": "DACC Pars",
+    "awayTeam": "Blue Brazil White",
+    "match_id": "272354216",
+    "raw_fixture": "Dunfermline Learning Campus 12:45 PM DACC Pars V Blue Brazil White",
     "id": "liga3-6"
   },
   {
@@ -97,10 +97,10 @@
     "iso_date": "2026-11-08",
     "venue": "Caledonia High School, Rosyth",
     "time": "1:30 PM",
-    "homeTeam": "DACC Pars",
-    "awayTeam": "Blue Brazil White",
-    "match_id": "272354216",
-    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM DACC Pars V Blue Brazil White",
+    "homeTeam": "Dunnfermline Athletic Community Club",
+    "awayTeam": "Letham Tangies",
+    "match_id": "272354209",
+    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Dunnfermline Athletic Community Club V Letham Tangies",
     "id": "liga3-8"
   },
   {
@@ -214,10 +214,10 @@
     "iso_date": "2026-11-15",
     "venue": "Dunfermline Learning Campus",
     "time": "11:15 AM",
-    "homeTeam": "TBC",
-    "awayTeam": "DACC Pars",
-    "match_id": "272354236",
-    "raw_fixture": "Dunfermline Learning Campus 11:15 AM TBC V DACC Pars",
+    "homeTeam": "Swifts Bulls",
+    "awayTeam": "Futsal Escocia Navy",
+    "match_id": "272354227",
+    "raw_fixture": "Dunfermline Learning Campus 11:15 AM Swifts Bulls V Futsal Escocia Navy",
     "id": "liga3-17"
   },
   {
@@ -227,10 +227,10 @@
     "iso_date": "2026-11-15",
     "venue": "Dunfermline Learning Campus",
     "time": "12:00 PM",
-    "homeTeam": "Swifts Bulls",
-    "awayTeam": "Futsal Escocia Navy",
-    "match_id": "272354227",
-    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Swifts Bulls V Futsal Escocia Navy",
+    "homeTeam": "TBC",
+    "awayTeam": "DACC Pars",
+    "match_id": "272354236",
+    "raw_fixture": "Dunfermline Learning Campus 12:00 PM TBC V DACC Pars",
     "id": "liga3-18"
   },
   {
@@ -344,10 +344,10 @@
     "iso_date": "2026-11-22",
     "venue": "Dunfermline Learning Campus",
     "time": "9:00 AM",
-    "homeTeam": "Futsal Escocia Navy",
-    "awayTeam": "Kelty Hearts Blacks",
-    "match_id": "272354247",
-    "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia Navy V Kelty Hearts Blacks",
+    "homeTeam": "Glenrothes Athletic (Oranges)",
+    "awayTeam": "Blue Brazil White",
+    "match_id": "272354248",
+    "raw_fixture": "Dunfermline Learning Campus 9:00 AM Glenrothes Athletic (Oranges) V Blue Brazil White",
     "id": "liga3-27"
   },
   {
@@ -396,10 +396,10 @@
     "iso_date": "2026-11-22",
     "venue": "Dunfermline Learning Campus",
     "time": "12:00 PM",
-    "homeTeam": "Glenrothes Athletic (Oranges)",
-    "awayTeam": "Blue Brazil White",
-    "match_id": "272354248",
-    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Glenrothes Athletic (Oranges) V Blue Brazil White",
+    "homeTeam": "Templehall Utd",
+    "awayTeam": "Letham Tangies",
+    "match_id": "272354250",
+    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Templehall Utd V Letham Tangies",
     "id": "liga3-31"
   },
   {
@@ -409,10 +409,10 @@
     "iso_date": "2026-11-22",
     "venue": "Dunfermline Learning Campus",
     "time": "12:45 PM",
-    "homeTeam": "Templehall Utd",
-    "awayTeam": "Letham Tangies",
-    "match_id": "272354250",
-    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Templehall Utd V Letham Tangies",
+    "homeTeam": "Futsal Escocia Navy",
+    "awayTeam": "Kelty Hearts Blacks",
+    "match_id": "272354247",
+    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Futsal Escocia Navy V Kelty Hearts Blacks",
     "id": "liga3-32"
   },
   {
@@ -461,10 +461,10 @@
     "iso_date": "2026-11-22",
     "venue": "Caledonia High School, Rosyth",
     "time": "2:15 PM",
-    "homeTeam": "Kelty Heart Maroons",
-    "awayTeam": "Salveson FC Colts",
-    "match_id": "272354241",
-    "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Kelty Heart Maroons V Salveson FC Colts",
+    "homeTeam": "Swifts Chargers 2017",
+    "awayTeam": "Glenrothes Athletic (Blues)",
+    "match_id": "272354238",
+    "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Swifts Chargers 2017 V Glenrothes Athletic (Blues)",
     "id": "liga3-36"
   },
   {
@@ -487,10 +487,10 @@
     "iso_date": "2026-11-22",
     "venue": "Beath High School Refurb",
     "time": "3:00 PM",
-    "homeTeam": "Swifts Chargers 2017",
-    "awayTeam": "Glenrothes Athletic (Blues)",
-    "match_id": "272354238",
-    "raw_fixture": "Beath High School Refurb 3:00 PM Swifts Chargers 2017 V Glenrothes Athletic (Blues)",
+    "homeTeam": "Kelty Heart Maroons",
+    "awayTeam": "Salveson FC Colts",
+    "match_id": "272354241",
+    "raw_fixture": "Beath High School Refurb 3:00 PM Kelty Heart Maroons V Salveson FC Colts",
     "id": "liga3-38"
   },
   {
@@ -514,9 +514,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "9:00 AM",
     "homeTeam": "Futsal Escocia White",
-    "awayTeam": "Kelty Heart Maroons",
+    "awayTeam": "Swifts Bulls",
     "match_id": "272354258",
-    "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia White V Kelty Heart Maroons",
+    "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia White V Swifts Bulls",
     "id": "liga3-40"
   },
   {
@@ -539,10 +539,10 @@
     "iso_date": "2026-11-29",
     "venue": "Dunfermline Learning Campus",
     "time": "10:30 AM",
-    "homeTeam": "Kelty Hearts Blacks",
+    "homeTeam": "TBC",
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "272354259",
-    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Kelty Hearts Blacks V Futsal Escocia Turquoise",
+    "raw_fixture": "Dunfermline Learning Campus 10:30 AM TBC V Futsal Escocia Turquoise",
     "id": "liga3-42"
   },
   {
@@ -643,10 +643,10 @@
     "iso_date": "2026-11-29",
     "venue": "Beath High School",
     "time": "3:00 PM",
-    "homeTeam": "TBC",
+    "homeTeam": "Kelty Hearts Blacks",
     "awayTeam": "Glenrothes Athletic (Oranges)",
     "match_id": "272354255",
-    "raw_fixture": "Beath High School 3:00 PM TBC V Glenrothes Athletic (Oranges)",
+    "raw_fixture": "Beath High School 3:00 PM Kelty Hearts Blacks V Glenrothes Athletic (Oranges)",
     "id": "liga3-50"
   },
   {
@@ -656,10 +656,10 @@
     "iso_date": "2026-11-29",
     "venue": "Dunfermline Learning Campus",
     "time": "3:00 PM",
-    "homeTeam": "Swifts Bulls",
+    "homeTeam": "Kelty Heart Maroons",
     "awayTeam": "Swifts Chargers 2017",
     "match_id": "272354261",
-    "raw_fixture": "Dunfermline Learning Campus 3:00 PM Swifts Bulls V Swifts Chargers 2017",
+    "raw_fixture": "Dunfermline Learning Campus 3:00 PM Kelty Heart Maroons V Swifts Chargers 2017",
     "id": "liga3-51"
   },
   {
@@ -6168,10 +6168,10 @@
     "iso_date": "2026-11-14",
     "venue": "Caledonia High School, Rosyth",
     "time": "10:30 AM",
-    "homeTeam": "KSQ 2018 Galaxy",
-    "awayTeam": "Swifts Falcons 2017",
-    "match_id": "273142239",
-    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM KSQ 2018 Galaxy V Swifts Falcons 2017",
+    "homeTeam": "DACC Girls Blacks",
+    "awayTeam": "Bowhill United Yellows",
+    "match_id": "273142243",
+    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM DACC Girls Blacks V Bowhill United Yellows",
     "id": "liga5-18"
   },
   {
@@ -6181,10 +6181,10 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School",
     "time": "11:15 AM",
-    "homeTeam": "Bayside Barcas",
-    "awayTeam": "Bowhill United Blacks",
-    "match_id": "273142242",
-    "raw_fixture": "Beath High School 11:15 AM Bayside Barcas V Bowhill United Blacks",
+    "homeTeam": "KSQ 2018 Galaxy",
+    "awayTeam": "Swifts Falcons 2017",
+    "match_id": "273142239",
+    "raw_fixture": "Beath High School 11:15 AM KSQ 2018 Galaxy V Swifts Falcons 2017",
     "id": "liga5-19"
   },
   {
@@ -6285,10 +6285,10 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School",
     "time": "2:15 PM",
-    "homeTeam": "DACC Girls Blacks",
-    "awayTeam": "Bowhill United Yellows",
-    "match_id": "273142243",
-    "raw_fixture": "Beath High School 2:15 PM DACC Girls Blacks V Bowhill United Yellows",
+    "homeTeam": "Bayside Barcas",
+    "awayTeam": "Bowhill United Blacks",
+    "match_id": "273142242",
+    "raw_fixture": "Beath High School 2:15 PM Bayside Barcas V Bowhill United Blacks",
     "id": "liga5-27"
   },
   {
