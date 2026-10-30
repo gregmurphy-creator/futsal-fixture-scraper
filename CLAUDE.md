@@ -88,7 +88,9 @@ pushed — including a match simply removed.
 busy, worst at minute 0. On 29 Oct 2026 it skipped most hourly 7s checks and a
 published week went unseen for three hours. The 7s check runs at :17 and
 futsal at :43; keep them off :00 and apart. A gap in the run list is GitHub,
-not the scraper — a manual **Run workflow** fills it.
+not the scraper — a manual **Run workflow** fills it. Moving off :00 did not
+fix it, so Claude Routines now press **Run workflow** on a timer as the main
+trigger; GitHub's schedule stays as a backup. Details in `HANDOVER.md`.
 
 **Excel stores 9am as `0.375`.** Kick-offs are day fractions. Pitches are not
 always numbers — some read `1 - New Astro`.

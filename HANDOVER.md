@@ -18,11 +18,28 @@ the thing between accounts.
 Nothing runs on anyone's computer. Everything happens in GitHub Actions, so
 whoever owns the repository owns the system.
 
-## Moving between Claude accounts: nothing to do
+## Moving between Claude accounts: one thing to recreate
 
-A Claude account and a GitHub account are unrelated, so switching to a
-different Claude account needs no change here at all: the repository, the
+A Claude account and a GitHub account are unrelated, so the repository, the
 secrets, the DNS and Pages all stay exactly as they are.
+
+**The exception, since 30 Oct 2026: the hourly check starter.** GitHub's own
+scheduler was skipping most runs, so two Claude Routines on Greg's Claude
+account press "Run workflow" on a timer:
+
+- `ttfixtures: start 7s check` — :23 past every hour, Wed/Thu/Fri (UK time)
+- `ttfixtures: start futsal check` — :49 past every 4th hour, every day
+
+Both fire into one helper session, "ttfixtures: hourly check starter", which
+runs on Haiku, has this repository attached, and only runs
+`gh workflow run <file> --repo gregmurphy-creator/futsal-fixture-scraper`.
+A Routine that opens a fresh session each time does **not** work: a new
+session has no access to the repository and fails with a 403.
+
+These live on the Claude account, not in GitHub. If the Claude account
+changes, recreate them, or the site falls back to GitHub's unreliable
+schedule alone (still in the workflow files, so nothing breaks outright).
+To pause them: claude.ai → Routines.
 
 All a new Claude session needs is this repository and a prompt pointing it at
 `CLAUDE.md`.
