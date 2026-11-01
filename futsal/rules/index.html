@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liga Rules - Winter Futsal 2026/27</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen">
+  <div class="max-w-2xl mx-auto px-4 py-6 pb-24">
+
+    <!-- Header -->
+    <header class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 mb-4">
+      <a href="../" class="text-xs font-bold text-[#FF6600] hover:text-[#e05a00]">&larr; Back to fixtures</a>
+      <h1 class="text-2xl font-black tracking-tight text-gray-900 mt-2">Liga Rules</h1>
+      <p class="text-sm text-gray-500 font-medium">Futsal Escocia Youth Winter League 2024/25</p>
+    </header>
+
+    <!-- Rules are from the 2024/25 handbook; see note in the page -->
+    <div class="bg-orange-50 border border-orange-200 text-orange-900 rounded-2xl p-4 mb-4 text-sm">
+      These rules are from the 2024/25 handbook. Check with the league that they still apply for 2026/27.
+    </div>
+
+    <!-- League picker -->
+    <div id="leagueChips" class="flex flex-wrap gap-2 mb-4"></div>
+
+    <!-- What differs for the chosen league -->
+    <section class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 mb-4">
+      <h2 class="text-lg font-black text-gray-900 mb-2">Liga <span id="leagueName">3</span>: what's different</h2>
+      <ul id="diffs" class="space-y-1.5 text-sm text-gray-800"></ul>
+    </section>
+
+    <!-- Rule cards -->
+    <div id="rules" class="space-y-3"></div>
+
+    <p class="text-xs text-gray-500 mt-6">
+      Liga 1 and 2 rules are not shown. Rules marked "All leagues" apply in Liga 3 to 7.
+    </p>
+  </div>
+
+  <script>
+    const LEAGUES = ["Liga 3", "Liga 4", "Liga 5", "Liga 6", "Liga 7"];
+
+    // Each rule applies to every league, or only to the leagues in `only`.
+    // `extra` is a line that only one league gets. Text is from the 2024/25 rules handbook.
+    const RULES = [
+      { title: "Ball", text: "Liga 3 to 7 play with a size 3 futsal. Balls stay at the venue: leave them there at the end of the match and the day." },
+      { title: "Kit", text: "Trainers only, no football boots. Every player wears shinpads. Bring your own bibs in case of a colour clash." },
+      { title: "Squad", text: "Up to 10 players can be used in a match (9 advised), with 5 on the pitch at any time." },
+      { title: "Start of play", text: "Restart from the centre with one player. The ball goes back to the centre at the start and after every goal. No shooting direct from kick-off." },
+      { title: "Substitutions", text: "Subs can be made at any time. Players enter and leave from their own defending half, and the player coming off must have left before the sub comes on." },
+      { title: "Retreat line", only: ["Liga 5", "Liga 6", "Liga 7"], text: "Once the goalkeeper has the ball, the other team must retreat behind the red line, a third of the court away. The keeper can counter quickly before they do.", offNote: "Liga 3 and 4 have no retreat line." },
+      { title: "Kick-ins", text: "Take it as near as possible to where the ball left play, with the ball stationary. You have 4 seconds once in possession, or the other team gets it. Opponents stand 5 metres back. No goal can be scored direct from a kick-in.", extra: { "Liga 7": "Liga 7 teams can dribble in from where the ball went out." } },
+      { title: "Corners", text: "4 seconds once in possession. Opponents stand 5 metres away. Goals can be scored from corners.", extra: { "Liga 7": "Liga 7 teams can dribble in from corners." } },
+      { title: "Goalkeepers", text: "Keepers can leave the penalty area but cannot handle the ball outside it. Goal kicks are thrown or rolled, never kicked from hand, with 4 seconds once in possession. In Liga 3 to 7 a keeper cannot throw the ball straight into the opponents' half: if it lands there untouched, the other team gets an indirect free kick on the halfway line." },
+      { title: "Pass-backs", text: "A keeper cannot pick up a deliberate pass-back, at any age. It is an indirect free kick. Liga 3 to 7 have unlimited use of the keeper for pass-backs." },
+      { title: "Accumulated fouls", text: "Each team can give away 5 direct free kicks per half. The 6th and any after it is a penalty for the other team." },
+      { title: "Penalties", text: "Any foul in the penalty area is a penalty kick. The keeper stays on the line, and all other players stay behind the taker." },
+      { title: "Match length", text: "2 halves of 20 minutes. Teams stay in the same half for both halves, so there is no advantage. Subs are made in your defending half." },
+      { title: "Head height", text: "No head-height restriction, but teams are encouraged to keep the ball on the ground." },
+      { title: "Uneven matches", text: "At 5 goals between the teams, the losing side may add a player, or the winning side may remove one. Removing a player is recommended, to keep the games even." },
+      { title: "Cautions", text: "Coaches should take off any player who makes a bad challenge or uses bad language. Cards should not be needed; use common sense." },
+      { title: "Referees", text: "A coach from each team referees each half. In the first few weeks, be lenient and help the children learn the rules." },
+      { title: "Coaches checklist", checklist: ["Bibs for substitutes, in case of a colour clash", "Arrive 15 minutes before kick-off", "Follow venue guidelines", "Keep to your allocated fixture time", "Trainers and shinpads for all players", "Enjoy the matches and respect your opponent"] },
+    ];
+
+    let current = "Liga 3";
+
+    const chipsEl = document.getElementById("leagueChips");
+    const diffsEl = document.getElementById("diffs");
+    const rulesEl = document.getElementById("rules");
+    const leagueNameEl = document.getElementById("leagueName");
+
+    const appliesTo = (rule, league) => !rule.only || rule.only.includes(league);
+
+    function rangeLabel(list) {
+      const nums = list.map(l => l.replace("Liga ", ""));
+      return nums.length > 1 ? `Liga ${nums[0]} to ${nums[nums.length - 1]}` : list[0];
+    }
+
+    function renderChips() {
+      chipsEl.innerHTML = "";
+      LEAGUES.forEach(league => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.textContent = league;
+        b.setAttribute("aria-pressed", String(league === current));
+        b.className = "px-4 py-2 rounded-xl text-xs font-bold shadow-sm " +
+          (league === current
+            ? "bg-[#FF6600] text-white"
+            : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200");
+        b.addEventListener("click", () => { current = league; render(); });
+        chipsEl.appendChild(b);
+      });
+    }
+
+    function renderDiffs() {
+      leagueNameEl.textContent = current.replace("Liga ", "");
+      const lines = [];
+      RULES.forEach(rule => {
+        if (rule.only) {
+          const yes = appliesTo(rule, current);
+          lines.push(`<li><b>${rule.title}:</b> ${yes ? `applies (${rangeLabel(rule.only)})` : "not used in this league"}</li>`);
+        }
+        if (rule.extra && rule.extra[current]) {
+          lines.push(`<li><b>${rule.title}:</b> <span class="text-[#FF6600] font-semibold">${rule.extra[current]}</span></li>`);
+        }
+      });
+      diffsEl.innerHTML = lines.length ? lines.join("") : "<li>Same rules as every other league.</li>";
+    }
+
+    function renderRules() {
+      rulesEl.innerHTML = "";
+      RULES.forEach(rule => {
+        const yes = appliesTo(rule, current);
+        const card = document.createElement("article");
+        card.className = "bg-white rounded-2xl shadow-sm border border-gray-200 p-4 " + (yes ? "" : "opacity-60");
+
+        const top = document.createElement("div");
+        top.className = "flex flex-wrap items-baseline justify-between gap-2";
+        const h = document.createElement("h3");
+        h.className = "text-base font-black text-gray-900 uppercase";
+        h.textContent = rule.title;
+        const tag = document.createElement("span");
+        tag.className = "text-xs font-bold px-2 py-0.5 rounded-full whitespace-nowrap " +
+          (rule.only && yes ? "bg-orange-100 text-[#FF6600]" : "bg-gray-100 text-gray-500");
+        tag.textContent = rule.only ? rangeLabel(rule.only) : "All leagues";
+        top.append(h, tag);
+        card.appendChild(top);
+
+        if (rule.checklist) {
+          const ul = document.createElement("ul");
+          ul.className = "list-disc pl-5 mt-2 text-sm text-gray-800 space-y-0.5";
+          rule.checklist.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            ul.appendChild(li);
+          });
+          card.appendChild(ul);
+        } else {
+          const p = document.createElement("p");
+          p.className = "mt-2 text-sm text-gray-800";
+          p.textContent = rule.text;
+          card.appendChild(p);
+        }
+
+        if (yes && rule.extra && rule.extra[current]) {
+          const e = document.createElement("p");
+          e.className = "mt-2 text-sm font-semibold text-[#FF6600]";
+          e.textContent = rule.extra[current];
+          card.appendChild(e);
+        }
+        if (!yes && rule.offNote) {
+          const n = document.createElement("p");
+          n.className = "mt-2 text-sm text-gray-500";
+          n.textContent = rule.offNote;
+          card.appendChild(n);
+        }
+        rulesEl.appendChild(card);
+      });
+    }
+
+    function render() {
+      renderChips();
+      renderDiffs();
+      renderRules();
+    }
+
+    render();
+  </script>
+</body>
+</html>
