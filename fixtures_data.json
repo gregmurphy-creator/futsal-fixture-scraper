@@ -33,9 +33,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "10:30 AM",
     "homeTeam": "Futsal Escocia White",
-    "awayTeam": "Tiki Taka Azul",
+    "awayTeam": "Templehall Utd",
     "match_id": "272354219",
-    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Futsal Escocia White V Tiki Taka Azul",
+    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Futsal Escocia White V Templehall Utd",
     "id": "liga3-3"
   },
   {
@@ -150,10 +150,11 @@
     "venue": "Beath High School Refurb",
     "time": "3:00 PM",
     "homeTeam": "Kelty Heart Maroons",
-    "awayTeam": "TBC",
+    "awayTeam": "Tiki Taka Azul",
     "match_id": "272354212",
-    "raw_fixture": "Beath High School Refurb 3:00 PM Kelty Heart Maroons V TBC",
-    "id": "liga3-12"
+    "raw_fixture": "Beath High School Refurb 3:00 PM Kelty Heart Maroons V Tiki Taka Azul",
+    "id": "liga3-12",
+    "updated": "now Kelty Heart Maroons v Tiki Taka Azul"
   },
   {
     "league": "Liga 3",
@@ -7020,10 +7021,10 @@
     "iso_date": "2026-12-12",
     "venue": "Beath High School",
     "time": "3:45 PM",
-    "homeTeam": "Duloch City 2018s",
+    "homeTeam": "TBC",
     "awayTeam": "Dunipace Ballerz White",
     "match_id": "273142304",
-    "raw_fixture": "Beath High School 3:45 PM Duloch City 2018s V Dunipace Ballerz White",
+    "raw_fixture": "Beath High School 3:45 PM TBC V Dunipace Ballerz White",
     "id": "liga5-83"
   },
   {
