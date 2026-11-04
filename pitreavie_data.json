@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T16:03:19+00:00",
+  "updated": "2026-11-04T00:23:51+00:00",
   "week_tab": "Week 31 - 31st October",
   "heading": "Week 31 - 31st October",
   "fixture_date": "2026-10-31",
@@ -435,5 +435,14 @@
       }
     ]
   },
-  "upcoming": null
+  "upcoming": {
+    "week_label": "Week 32 7th Nov",
+    "date": "2026-11-07",
+    "teams": {
+      "Tiki Taka Negra": "N",
+      "Tiki Taka Amarillo": "No Form",
+      "Tiki Taka Blanco": "No Form",
+      "Tiki Taka Neranja": "Y"
+    }
+  }
 }
