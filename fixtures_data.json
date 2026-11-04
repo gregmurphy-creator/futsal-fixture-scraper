@@ -6,10 +6,10 @@
     "iso_date": "2026-11-08",
     "venue": "Dunfermline Learning Campus",
     "time": "9:00 AM",
-    "homeTeam": "Futsal Escocia Navy",
+    "homeTeam": "Futsal Escocia White",
     "awayTeam": "Glenrothes Athletic (Blues)",
     "match_id": "272354217",
-    "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia Navy V Glenrothes Athletic (Blues)",
+    "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia White V Glenrothes Athletic (Blues)",
     "id": "liga3-1"
   },
   {
@@ -31,25 +31,12 @@
     "date": "Sun 8th Nov 2026",
     "iso_date": "2026-11-08",
     "venue": "Dunfermline Learning Campus",
-    "time": "10:30 AM",
-    "homeTeam": "Futsal Escocia White",
-    "awayTeam": "Templehall Utd",
-    "match_id": "272354219",
-    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Futsal Escocia White V Templehall Utd",
-    "id": "liga3-3"
-  },
-  {
-    "league": "Liga 3",
-    "round": 1,
-    "date": "Sun 8th Nov 2026",
-    "iso_date": "2026-11-08",
-    "venue": "Dunfermline Learning Campus",
     "time": "11:15 AM",
     "homeTeam": "Futsal Escocia Turquoise",
     "awayTeam": "Futsal South 2016s",
     "match_id": "272354214",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM Futsal Escocia Turquoise V Futsal South 2016s",
-    "id": "liga3-4"
+    "id": "liga3-3"
   },
   {
     "league": "Liga 3",
@@ -62,7 +49,7 @@
     "awayTeam": "DACC Athletic",
     "match_id": "272354211",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM Futsal Escocia V DACC Athletic",
-    "id": "liga3-5"
+    "id": "liga3-4"
   },
   {
     "league": "Liga 3",
@@ -75,7 +62,7 @@
     "awayTeam": "Blue Brazil White",
     "match_id": "272354216",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM DACC Pars V Blue Brazil White",
-    "id": "liga3-6"
+    "id": "liga3-5"
   },
   {
     "league": "Liga 3",
@@ -88,7 +75,7 @@
     "awayTeam": "Kelty Hearts Blacks",
     "match_id": "272354210",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM KSQ Rapids 2015 V Kelty Hearts Blacks",
-    "id": "liga3-7"
+    "id": "liga3-6"
   },
   {
     "league": "Liga 3",
@@ -101,7 +88,7 @@
     "awayTeam": "Letham Tangies",
     "match_id": "272354209",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Dunnfermline Athletic Community Club V Letham Tangies",
-    "id": "liga3-8"
+    "id": "liga3-7"
   },
   {
     "league": "Liga 3",
@@ -114,7 +101,7 @@
     "awayTeam": "KSQ Galaxy 2015",
     "match_id": "272354222",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Bayside Athletics V KSQ Galaxy 2015",
-    "id": "liga3-9"
+    "id": "liga3-8"
   },
   {
     "league": "Liga 3",
@@ -127,7 +114,7 @@
     "awayTeam": "Swifts Bulls",
     "match_id": "272354215",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Glenrothes Athletic (Oranges) V Swifts Bulls",
-    "id": "liga3-10"
+    "id": "liga3-9"
   },
   {
     "league": "Liga 3",
@@ -140,7 +127,7 @@
     "awayTeam": "Rapid Fire",
     "match_id": "272354221",
     "raw_fixture": "Beath High School 3:00 PM Raith Rovers Reds V Rapid Fire",
-    "id": "liga3-11"
+    "id": "liga3-10"
   },
   {
     "league": "Liga 3",
@@ -153,7 +140,7 @@
     "awayTeam": "Tiki Taka Azul",
     "match_id": "272354212",
     "raw_fixture": "Beath High School Refurb 3:00 PM Kelty Heart Maroons V Tiki Taka Azul",
-    "id": "liga3-12",
+    "id": "liga3-11",
     "updated": "now Kelty Heart Maroons v Tiki Taka Azul"
   },
   {
@@ -167,7 +154,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354218",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM Salveson FC Colts V Tiki Taka Negra",
-    "id": "liga3-13"
+    "id": "liga3-12"
   },
   {
     "league": "Liga 3",
@@ -180,7 +167,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "272354235",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Glenrothes Athletic (Blues) V Futsal Escocia Turquoise",
-    "id": "liga3-14"
+    "id": "liga3-13"
   },
   {
     "league": "Liga 3",
@@ -193,7 +180,7 @@
     "awayTeam": "Dunnfermline Athletic Community Club",
     "match_id": "272354223",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Templehall Utd V Dunnfermline Athletic Community Club",
-    "id": "liga3-15"
+    "id": "liga3-14"
   },
   {
     "league": "Liga 3",
@@ -206,7 +193,7 @@
     "awayTeam": "Futsal Escocia",
     "match_id": "272354228",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM Letham Tangies V Futsal Escocia",
-    "id": "liga3-16"
+    "id": "liga3-15"
   },
   {
     "league": "Liga 3",
@@ -215,11 +202,11 @@
     "iso_date": "2026-11-15",
     "venue": "Dunfermline Learning Campus",
     "time": "11:15 AM",
-    "homeTeam": "Swifts Bulls",
-    "awayTeam": "Futsal Escocia Navy",
-    "match_id": "272354227",
-    "raw_fixture": "Dunfermline Learning Campus 11:15 AM Swifts Bulls V Futsal Escocia Navy",
-    "id": "liga3-17"
+    "homeTeam": "Raith Rovers Reds",
+    "awayTeam": "Kelty Heart Maroons",
+    "match_id": "272354233",
+    "raw_fixture": "Dunfermline Learning Campus 11:15 AM Raith Rovers Reds V Kelty Heart Maroons",
+    "id": "liga3-16"
   },
   {
     "league": "Liga 3",
@@ -232,7 +219,7 @@
     "awayTeam": "Salveson FC Colts",
     "match_id": "272354234",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM Futsal South 2016s V Salveson FC Colts",
-    "id": "liga3-18"
+    "id": "liga3-17"
   },
   {
     "league": "Liga 3",
@@ -245,7 +232,7 @@
     "awayTeam": "Glenrothes Athletic (Oranges)",
     "match_id": "272354226",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Kelty Hearts Blacks V Glenrothes Athletic (Oranges)",
-    "id": "liga3-19"
+    "id": "liga3-18"
   },
   {
     "league": "Liga 3",
@@ -254,11 +241,11 @@
     "iso_date": "2026-11-15",
     "venue": "Dunfermline Learning Campus",
     "time": "1:30 PM",
-    "homeTeam": "Raith Rovers Reds",
-    "awayTeam": "Kelty Heart Maroons",
-    "match_id": "272354233",
-    "raw_fixture": "Dunfermline Learning Campus 1:30 PM Raith Rovers Reds V Kelty Heart Maroons",
-    "id": "liga3-20"
+    "homeTeam": "Swifts Bulls",
+    "awayTeam": "DACC Pars",
+    "match_id": "272354236",
+    "raw_fixture": "Dunfermline Learning Campus 1:30 PM Swifts Bulls V DACC Pars",
+    "id": "liga3-19"
   },
   {
     "league": "Liga 3",
@@ -271,7 +258,7 @@
     "awayTeam": "KSQ Rapids 2015",
     "match_id": "272354232",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Blue Brazil White V KSQ Rapids 2015",
-    "id": "liga3-21"
+    "id": "liga3-20"
   },
   {
     "league": "Liga 3",
@@ -280,11 +267,11 @@
     "iso_date": "2026-11-15",
     "venue": "Dunfermline Learning Campus",
     "time": "2:15 PM",
-    "homeTeam": "TBC",
-    "awayTeam": "DACC Pars",
-    "match_id": "272354236",
-    "raw_fixture": "Dunfermline Learning Campus 2:15 PM TBC V DACC Pars",
-    "id": "liga3-22"
+    "homeTeam": "DACC Athletic",
+    "awayTeam": "Swifts Chargers 2017",
+    "match_id": "272354224",
+    "raw_fixture": "Dunfermline Learning Campus 2:15 PM DACC Athletic V Swifts Chargers 2017",
+    "id": "liga3-21"
   },
   {
     "league": "Liga 3",
@@ -297,7 +284,7 @@
     "awayTeam": "Rapid Fire",
     "match_id": "272354229",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM KSQ Galaxy 2015 V Rapid Fire",
-    "id": "liga3-23"
+    "id": "liga3-22"
   },
   {
     "league": "Liga 3",
@@ -310,7 +297,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "272354231",
     "raw_fixture": "Beath High School 3:00 PM Tiki Taka Negra V Futsal Escocia White",
-    "id": "liga3-24",
+    "id": "liga3-23",
     "updated": "9:45 AM -> 3:00 PM, Dunfermline Learning Campus -> Beath High School"
   },
   {
@@ -324,20 +311,7 @@
     "awayTeam": "Bayside Athletics",
     "match_id": "272354225",
     "raw_fixture": "Beath High School Refurb 3:00 PM Tiki Taka Azul V Bayside Athletics",
-    "id": "liga3-25"
-  },
-  {
-    "league": "Liga 3",
-    "round": 2,
-    "date": "Sun 15th Nov 2026",
-    "iso_date": "2026-11-15",
-    "venue": "Dunfermline Learning Campus",
-    "time": "3:00 PM",
-    "homeTeam": "DACC Athletic",
-    "awayTeam": "Swifts Chargers 2017",
-    "match_id": "272354224",
-    "raw_fixture": "Dunfermline Learning Campus 3:00 PM DACC Athletic V Swifts Chargers 2017",
-    "id": "liga3-26"
+    "id": "liga3-24"
   },
   {
     "league": "Liga 3",
@@ -350,7 +324,7 @@
     "awayTeam": "Blue Brazil White",
     "match_id": "272354248",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Glenrothes Athletic (Oranges) V Blue Brazil White",
-    "id": "liga3-27"
+    "id": "liga3-25"
   },
   {
     "league": "Liga 3",
@@ -363,7 +337,7 @@
     "awayTeam": "Swifts Bulls",
     "match_id": "272354237",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Futsal Escocia Turquoise V Swifts Bulls",
-    "id": "liga3-28"
+    "id": "liga3-26"
   },
   {
     "league": "Liga 3",
@@ -372,11 +346,11 @@
     "iso_date": "2026-11-22",
     "venue": "Dunfermline Learning Campus",
     "time": "10:30 AM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "TBC",
-    "match_id": "272354245",
-    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Futsal Escocia V TBC",
-    "id": "liga3-29"
+    "homeTeam": "Swifts Chargers 2017",
+    "awayTeam": "Glenrothes Athletic (Blues)",
+    "match_id": "272354238",
+    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Swifts Chargers 2017 V Glenrothes Athletic (Blues)",
+    "id": "liga3-27"
   },
   {
     "league": "Liga 3",
@@ -389,7 +363,7 @@
     "awayTeam": "Futsal South 2016s",
     "match_id": "272354242",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM Futsal Escocia White V Futsal South 2016s",
-    "id": "liga3-30"
+    "id": "liga3-28"
   },
   {
     "league": "Liga 3",
@@ -402,7 +376,7 @@
     "awayTeam": "Letham Tangies",
     "match_id": "272354250",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM Templehall Utd V Letham Tangies",
-    "id": "liga3-31"
+    "id": "liga3-29"
   },
   {
     "league": "Liga 3",
@@ -411,11 +385,11 @@
     "iso_date": "2026-11-22",
     "venue": "Dunfermline Learning Campus",
     "time": "12:45 PM",
-    "homeTeam": "Futsal Escocia Navy",
+    "homeTeam": "Futsal Escocia",
     "awayTeam": "Kelty Hearts Blacks",
     "match_id": "272354247",
-    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Futsal Escocia Navy V Kelty Hearts Blacks",
-    "id": "liga3-32"
+    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Futsal Escocia V Kelty Hearts Blacks",
+    "id": "liga3-30"
   },
   {
     "league": "Liga 3",
@@ -428,7 +402,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354249",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Bayside Athletics V Tiki Taka Negra",
-    "id": "liga3-33",
+    "id": "liga3-31",
     "updated": "2:15 PM -> 1:30 PM"
   },
   {
@@ -442,7 +416,7 @@
     "awayTeam": "Tiki Taka Azul",
     "match_id": "272354239",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Rapid Fire V Tiki Taka Azul",
-    "id": "liga3-34"
+    "id": "liga3-32"
   },
   {
     "league": "Liga 3",
@@ -455,7 +429,7 @@
     "awayTeam": "DACC Athletic",
     "match_id": "272354240",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Dunnfermline Athletic Community Club V DACC Athletic",
-    "id": "liga3-35"
+    "id": "liga3-33"
   },
   {
     "league": "Liga 3",
@@ -464,24 +438,11 @@
     "iso_date": "2026-11-22",
     "venue": "Caledonia High School, Rosyth",
     "time": "2:15 PM",
-    "homeTeam": "Swifts Chargers 2017",
-    "awayTeam": "Glenrothes Athletic (Blues)",
-    "match_id": "272354238",
-    "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Swifts Chargers 2017 V Glenrothes Athletic (Blues)",
-    "id": "liga3-36"
-  },
-  {
-    "league": "Liga 3",
-    "round": 3,
-    "date": "Sun 22nd Nov 2026",
-    "iso_date": "2026-11-22",
-    "venue": "Beath High School",
-    "time": "3:00 PM",
     "homeTeam": "KSQ Rapids 2015",
     "awayTeam": "KSQ Galaxy 2015",
     "match_id": "272354243",
-    "raw_fixture": "Beath High School 3:00 PM KSQ Rapids 2015 V KSQ Galaxy 2015",
-    "id": "liga3-37"
+    "raw_fixture": "Caledonia High School, Rosyth 2:15 PM KSQ Rapids 2015 V KSQ Galaxy 2015",
+    "id": "liga3-34"
   },
   {
     "league": "Liga 3",
@@ -494,7 +455,7 @@
     "awayTeam": "Salveson FC Colts",
     "match_id": "272354241",
     "raw_fixture": "Beath High School Refurb 3:00 PM Kelty Heart Maroons V Salveson FC Colts",
-    "id": "liga3-38"
+    "id": "liga3-35"
   },
   {
     "league": "Liga 3",
@@ -507,7 +468,7 @@
     "awayTeam": "Raith Rovers Reds",
     "match_id": "272354244",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM DACC Pars V Raith Rovers Reds",
-    "id": "liga3-39"
+    "id": "liga3-36"
   },
   {
     "league": "Liga 3",
@@ -520,7 +481,7 @@
     "awayTeam": "Swifts Bulls",
     "match_id": "272354258",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia White V Swifts Bulls",
-    "id": "liga3-40"
+    "id": "liga3-37"
   },
   {
     "league": "Liga 3",
@@ -533,7 +494,7 @@
     "awayTeam": "Templehall Utd",
     "match_id": "272354254",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Glenrothes Athletic (Blues) V Templehall Utd",
-    "id": "liga3-41"
+    "id": "liga3-38"
   },
   {
     "league": "Liga 3",
@@ -542,11 +503,11 @@
     "iso_date": "2026-11-29",
     "venue": "Dunfermline Learning Campus",
     "time": "10:30 AM",
-    "homeTeam": "TBC",
+    "homeTeam": "Blue Brazil White",
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "272354259",
-    "raw_fixture": "Dunfermline Learning Campus 10:30 AM TBC V Futsal Escocia Turquoise",
-    "id": "liga3-42"
+    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Blue Brazil White V Futsal Escocia Turquoise",
+    "id": "liga3-39"
   },
   {
     "league": "Liga 3",
@@ -555,11 +516,11 @@
     "iso_date": "2026-11-29",
     "venue": "Dunfermline Learning Campus",
     "time": "11:15 AM",
-    "homeTeam": "Blue Brazil White",
-    "awayTeam": "Futsal Escocia Navy",
-    "match_id": "272354252",
-    "raw_fixture": "Dunfermline Learning Campus 11:15 AM Blue Brazil White V Futsal Escocia Navy",
-    "id": "liga3-43"
+    "homeTeam": "Kelty Heart Maroons",
+    "awayTeam": "Swifts Chargers 2017",
+    "match_id": "272354261",
+    "raw_fixture": "Dunfermline Learning Campus 11:15 AM Kelty Heart Maroons V Swifts Chargers 2017",
+    "id": "liga3-40"
   },
   {
     "league": "Liga 3",
@@ -572,7 +533,7 @@
     "awayTeam": "Bayside Athletics",
     "match_id": "272354260",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM Futsal South 2016s V Bayside Athletics",
-    "id": "liga3-44"
+    "id": "liga3-41"
   },
   {
     "league": "Liga 3",
@@ -585,7 +546,7 @@
     "awayTeam": "Letham Tangies",
     "match_id": "272354257",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM KSQ Galaxy 2015 V Letham Tangies",
-    "id": "liga3-45"
+    "id": "liga3-42"
   },
   {
     "league": "Liga 3",
@@ -598,7 +559,7 @@
     "awayTeam": "DACC Athletic",
     "match_id": "272354253",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Dunnfermline Athletic Community Club V DACC Athletic",
-    "id": "liga3-46"
+    "id": "liga3-43"
   },
   {
     "league": "Liga 3",
@@ -611,7 +572,7 @@
     "awayTeam": "Rapid Fire",
     "match_id": "272354256",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Tiki Taka Negra V Rapid Fire",
-    "id": "liga3-47"
+    "id": "liga3-44"
   },
   {
     "league": "Liga 3",
@@ -624,7 +585,7 @@
     "awayTeam": "DACC Pars",
     "match_id": "272354251",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Salveson FC Colts V DACC Pars",
-    "id": "liga3-48"
+    "id": "liga3-45"
   },
   {
     "league": "Liga 3",
@@ -637,7 +598,7 @@
     "awayTeam": "KSQ Rapids 2015",
     "match_id": "272354264",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Raith Rovers Reds V KSQ Rapids 2015",
-    "id": "liga3-49"
+    "id": "liga3-46"
   },
   {
     "league": "Liga 3",
@@ -650,7 +611,7 @@
     "awayTeam": "Glenrothes Athletic (Oranges)",
     "match_id": "272354255",
     "raw_fixture": "Beath High School 3:00 PM Kelty Hearts Blacks V Glenrothes Athletic (Oranges)",
-    "id": "liga3-50"
+    "id": "liga3-47"
   },
   {
     "league": "Liga 3",
@@ -663,21 +624,8 @@
     "awayTeam": "Futsal Escocia",
     "match_id": "272354262",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM Tiki Taka Azul V Futsal Escocia",
-    "id": "liga3-51",
+    "id": "liga3-48",
     "updated": "9:45 AM -> 3:00 PM"
-  },
-  {
-    "league": "Liga 3",
-    "round": 4,
-    "date": "Sun 29th Nov 2026",
-    "iso_date": "2026-11-29",
-    "venue": "Beath High School Refurb",
-    "time": "3:45 PM",
-    "homeTeam": "Kelty Heart Maroons",
-    "awayTeam": "Swifts Chargers 2017",
-    "match_id": "272354261",
-    "raw_fixture": "Beath High School Refurb 3:45 PM Kelty Heart Maroons V Swifts Chargers 2017",
-    "id": "liga3-52"
   },
   {
     "league": "Liga 3",
@@ -690,7 +638,7 @@
     "awayTeam": "Bayside Bulls",
     "match_id": "272354277",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia Navy V Bayside Bulls",
-    "id": "liga3-53"
+    "id": "liga3-49"
   },
   {
     "league": "Liga 3",
@@ -703,7 +651,7 @@
     "awayTeam": "Blue Brazil White",
     "match_id": "272354270",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Futsal Escocia Turquoise V Blue Brazil White",
-    "id": "liga3-54"
+    "id": "liga3-50"
   },
   {
     "league": "Liga 3",
@@ -716,7 +664,7 @@
     "awayTeam": "Kelty Hearts Blacks",
     "match_id": "272354266",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM Swifts Chargers 2017 V Kelty Hearts Blacks",
-    "id": "liga3-55"
+    "id": "liga3-51"
   },
   {
     "league": "Liga 3",
@@ -729,7 +677,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "272354276",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM DACC Pars V Futsal Escocia White",
-    "id": "liga3-56"
+    "id": "liga3-52"
   },
   {
     "league": "Liga 3",
@@ -742,7 +690,7 @@
     "awayTeam": "KSQ Galaxy 2015",
     "match_id": "272354275",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM DACC Athletic V KSQ Galaxy 2015",
-    "id": "liga3-57"
+    "id": "liga3-53"
   },
   {
     "league": "Liga 3",
@@ -755,7 +703,7 @@
     "awayTeam": "DACC Whites United",
     "match_id": "272354269",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Dunnfermline Athletic Community Club V DACC Whites United",
-    "id": "liga3-58"
+    "id": "liga3-54"
   },
   {
     "league": "Liga 3",
@@ -768,7 +716,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354272",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Futsal Escocia V Tiki Taka Negra",
-    "id": "liga3-59",
+    "id": "liga3-55",
     "updated": "10:30 AM -> 1:30 PM"
   },
   {
@@ -782,7 +730,7 @@
     "awayTeam": "Futsal South 2016s",
     "match_id": "272354274",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Rapid Fire V Futsal South 2016s",
-    "id": "liga3-60"
+    "id": "liga3-56"
   },
   {
     "league": "Liga 3",
@@ -795,7 +743,7 @@
     "awayTeam": "Salveson FC Colts",
     "match_id": "272354273",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM KSQ Rapids 2015 V Salveson FC Colts",
-    "id": "liga3-61"
+    "id": "liga3-57"
   },
   {
     "league": "Liga 3",
@@ -808,7 +756,7 @@
     "awayTeam": "Bayside Athletics",
     "match_id": "272354271",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Kelty Heart Maroons V Bayside Athletics",
-    "id": "liga3-62"
+    "id": "liga3-58"
   },
   {
     "league": "Liga 3",
@@ -821,7 +769,7 @@
     "awayTeam": "Raith Rovers Reds",
     "match_id": "272354278",
     "raw_fixture": "Beath High School 3:00 PM Glenrothes Athletic (Oranges) V Raith Rovers Reds",
-    "id": "liga3-63"
+    "id": "liga3-59"
   },
   {
     "league": "Liga 3",
@@ -834,7 +782,7 @@
     "awayTeam": "Glenrothes Athletic (Blues)",
     "match_id": "272354267",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM DACC Whites Athletic V Glenrothes Athletic (Blues)",
-    "id": "liga3-64"
+    "id": "liga3-60"
   },
   {
     "league": "Liga 3",
@@ -847,7 +795,7 @@
     "awayTeam": "Tiki Taka Azul",
     "match_id": "272354265",
     "raw_fixture": "Beath High School 3:45 PM Letham Tangies V Tiki Taka Azul",
-    "id": "liga3-65"
+    "id": "liga3-61"
   },
   {
     "league": "Liga 3",
@@ -860,7 +808,7 @@
     "awayTeam": "Swifts Bulls",
     "match_id": "272354268",
     "raw_fixture": "Beath High School Refurb 3:45 PM Templehall Utd V Swifts Bulls",
-    "id": "liga3-66"
+    "id": "liga3-62"
   },
   {
     "league": "Liga 3",
@@ -873,7 +821,7 @@
     "awayTeam": "Futsal Escocia Navy",
     "match_id": "272354289",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Raith Rovers Reds V Futsal Escocia Navy",
-    "id": "liga3-67"
+    "id": "liga3-63"
   },
   {
     "league": "Liga 3",
@@ -886,7 +834,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "272354288",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Bayside Bulls V Futsal Escocia Turquoise",
-    "id": "liga3-68"
+    "id": "liga3-64"
   },
   {
     "league": "Liga 3",
@@ -899,7 +847,7 @@
     "awayTeam": "Futsal Escocia",
     "match_id": "272354283",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM Futsal South 2016s V Futsal Escocia",
-    "id": "liga3-69"
+    "id": "liga3-65"
   },
   {
     "league": "Liga 3",
@@ -912,7 +860,7 @@
     "awayTeam": "KSQ Rapids 2015",
     "match_id": "272354279",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM Futsal Escocia White V KSQ Rapids 2015",
-    "id": "liga3-70"
+    "id": "liga3-66"
   },
   {
     "league": "Liga 3",
@@ -925,7 +873,7 @@
     "awayTeam": "DACC Whites Athletic",
     "match_id": "272354290",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM Swifts Bulls V DACC Whites Athletic",
-    "id": "liga3-71"
+    "id": "liga3-67"
   },
   {
     "league": "Liga 3",
@@ -938,7 +886,7 @@
     "awayTeam": "DACC Athletic",
     "match_id": "272354284",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Tiki Taka Azul V DACC Athletic",
-    "id": "liga3-72"
+    "id": "liga3-68"
   },
   {
     "league": "Liga 3",
@@ -951,7 +899,7 @@
     "awayTeam": "DACC Pars",
     "match_id": "272354286",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Bayside Athletics V DACC Pars",
-    "id": "liga3-73"
+    "id": "liga3-69"
   },
   {
     "league": "Liga 3",
@@ -964,7 +912,7 @@
     "awayTeam": "Letham Tangies",
     "match_id": "272354287",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Tiki Taka Negra V Letham Tangies",
-    "id": "liga3-74",
+    "id": "liga3-70",
     "updated": "12:00 PM -> 1:30 PM, Dunfermline Learning Campus -> Caledonia High School, Rosyth"
   },
   {
@@ -978,7 +926,7 @@
     "awayTeam": "Dunnfermline Athletic Community Club",
     "match_id": "272354280",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Glenrothes Athletic (Blues) V Dunnfermline Athletic Community Club",
-    "id": "liga3-75"
+    "id": "liga3-71"
   },
   {
     "league": "Liga 3",
@@ -991,7 +939,7 @@
     "awayTeam": "Kelty Heart Maroons",
     "match_id": "272354281",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Rapid Fire V Kelty Heart Maroons",
-    "id": "liga3-76"
+    "id": "liga3-72"
   },
   {
     "league": "Liga 3",
@@ -1004,7 +952,7 @@
     "awayTeam": "DACC Whites United",
     "match_id": "272354291",
     "raw_fixture": "Beath High School 3:00 PM KSQ Galaxy 2015 V DACC Whites United",
-    "id": "liga3-77"
+    "id": "liga3-73"
   },
   {
     "league": "Liga 3",
@@ -1017,7 +965,7 @@
     "awayTeam": "Glenrothes Athletic (Oranges)",
     "match_id": "272354282",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM Salveson FC Colts V Glenrothes Athletic (Oranges)",
-    "id": "liga3-78"
+    "id": "liga3-74"
   },
   {
     "league": "Liga 3",
@@ -1030,7 +978,7 @@
     "awayTeam": "Swifts Chargers 2017",
     "match_id": "272354292",
     "raw_fixture": "Beath High School 3:45 PM Blue Brazil White V Swifts Chargers 2017",
-    "id": "liga3-79"
+    "id": "liga3-75"
   },
   {
     "league": "Liga 3",
@@ -1043,7 +991,7 @@
     "awayTeam": "Templehall Utd",
     "match_id": "272354285",
     "raw_fixture": "Beath High School Refurb 3:45 PM Kelty Hearts Blacks V Templehall Utd",
-    "id": "liga3-80"
+    "id": "liga3-76"
   },
   {
     "league": "Liga 3",
@@ -1056,7 +1004,7 @@
     "awayTeam": "Salveson FC Colts",
     "match_id": "272354298",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia Navy V Salveson FC Colts",
-    "id": "liga3-81"
+    "id": "liga3-77"
   },
   {
     "league": "Liga 3",
@@ -1069,7 +1017,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "272354294",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Glenrothes Athletic (Oranges) V Futsal Escocia White",
-    "id": "liga3-82"
+    "id": "liga3-78"
   },
   {
     "league": "Liga 3",
@@ -1082,7 +1030,7 @@
     "awayTeam": "Futsal Escocia",
     "match_id": "272354304",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM Kelty Heart Maroons V Futsal Escocia",
-    "id": "liga3-83"
+    "id": "liga3-79"
   },
   {
     "league": "Liga 3",
@@ -1095,7 +1043,7 @@
     "awayTeam": "Raith Rovers Reds",
     "match_id": "272354295",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM Futsal Escocia Turquoise V Raith Rovers Reds",
-    "id": "liga3-84"
+    "id": "liga3-80"
   },
   {
     "league": "Liga 3",
@@ -1108,7 +1056,7 @@
     "awayTeam": "Bayside Athletics",
     "match_id": "272354300",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM KSQ Rapids 2015 V Bayside Athletics",
-    "id": "liga3-85"
+    "id": "liga3-81"
   },
   {
     "league": "Liga 3",
@@ -1121,7 +1069,7 @@
     "awayTeam": "Futsal South 2016s",
     "match_id": "272354301",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Letham Tangies V Futsal South 2016s",
-    "id": "liga3-86"
+    "id": "liga3-82"
   },
   {
     "league": "Liga 3",
@@ -1134,7 +1082,7 @@
     "awayTeam": "Tiki Taka Azul",
     "match_id": "272354296",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM DACC Whites United V Tiki Taka Azul",
-    "id": "liga3-87"
+    "id": "liga3-83"
   },
   {
     "league": "Liga 3",
@@ -1147,7 +1095,7 @@
     "awayTeam": "Bayside Bulls",
     "match_id": "272354297",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Swifts Chargers 2017 V Bayside Bulls",
-    "id": "liga3-88"
+    "id": "liga3-84"
   },
   {
     "league": "Liga 3",
@@ -1160,7 +1108,7 @@
     "awayTeam": "Kelty Hearts Blacks",
     "match_id": "272354302",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM DACC Whites Athletic V Kelty Hearts Blacks",
-    "id": "liga3-89"
+    "id": "liga3-85"
   },
   {
     "league": "Liga 3",
@@ -1173,7 +1121,7 @@
     "awayTeam": "Swifts Bulls",
     "match_id": "272354303",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Glenrothes Athletic (Blues) V Swifts Bulls",
-    "id": "liga3-90"
+    "id": "liga3-86"
   },
   {
     "league": "Liga 3",
@@ -1186,7 +1134,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354299",
     "raw_fixture": "Beath High School 3:00 PM DACC Athletic V Tiki Taka Negra",
-    "id": "liga3-91",
+    "id": "liga3-87",
     "updated": "12:45 PM -> 3:00 PM, Dunfermline Learning Campus -> Beath High School"
   },
   {
@@ -1200,7 +1148,7 @@
     "awayTeam": "KSQ Galaxy 2015",
     "match_id": "272354306",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM Dunnfermline Athletic Community Club V KSQ Galaxy 2015",
-    "id": "liga3-92"
+    "id": "liga3-88"
   },
   {
     "league": "Liga 3",
@@ -1213,7 +1161,7 @@
     "awayTeam": "Rapid Fire",
     "match_id": "272354305",
     "raw_fixture": "Beath High School 3:45 PM DACC Pars V Rapid Fire",
-    "id": "liga3-93"
+    "id": "liga3-89"
   },
   {
     "league": "Liga 3",
@@ -1226,7 +1174,7 @@
     "awayTeam": "Blue Brazil White",
     "match_id": "272354293",
     "raw_fixture": "Beath High School Refurb 3:45 PM Templehall Utd V Blue Brazil White",
-    "id": "liga3-94"
+    "id": "liga3-90"
   },
   {
     "league": "Liga 3",
@@ -1239,7 +1187,7 @@
     "awayTeam": "DACC Athletic",
     "match_id": "272354314",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal South 2016s V DACC Athletic",
-    "id": "liga3-95"
+    "id": "liga3-91"
   },
   {
     "league": "Liga 3",
@@ -1252,7 +1200,7 @@
     "awayTeam": "Glenrothes Athletic (Blues)",
     "match_id": "272354311",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Kelty Hearts Blacks V Glenrothes Athletic (Blues)",
-    "id": "liga3-96"
+    "id": "liga3-92"
   },
   {
     "league": "Liga 3",
@@ -1265,7 +1213,7 @@
     "awayTeam": "Templehall Utd",
     "match_id": "272354319",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM Bayside Bulls V Templehall Utd",
-    "id": "liga3-97"
+    "id": "liga3-93"
   },
   {
     "league": "Liga 3",
@@ -1278,7 +1226,7 @@
     "awayTeam": "KSQ Rapids 2015",
     "match_id": "272354309",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM Rapid Fire V KSQ Rapids 2015",
-    "id": "liga3-98"
+    "id": "liga3-94"
   },
   {
     "league": "Liga 3",
@@ -1291,7 +1239,7 @@
     "awayTeam": "DACC Whites United",
     "match_id": "272354308",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM Tiki Taka Negra V DACC Whites United",
-    "id": "liga3-99"
+    "id": "liga3-95"
   },
   {
     "league": "Liga 3",
@@ -1304,7 +1252,7 @@
     "awayTeam": "Futsal Escocia Navy",
     "match_id": "272354320",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Futsal Escocia White V Futsal Escocia Navy",
-    "id": "liga3-100"
+    "id": "liga3-96"
   },
   {
     "league": "Liga 3",
@@ -1317,7 +1265,7 @@
     "awayTeam": "DACC Pars",
     "match_id": "272354310",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Futsal Escocia V DACC Pars",
-    "id": "liga3-101"
+    "id": "liga3-97"
   },
   {
     "league": "Liga 3",
@@ -1330,7 +1278,7 @@
     "awayTeam": "Dunnfermline Athletic Community Club",
     "match_id": "272354317",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Swifts Bulls V Dunnfermline Athletic Community Club",
-    "id": "liga3-102"
+    "id": "liga3-98"
   },
   {
     "league": "Liga 3",
@@ -1343,7 +1291,7 @@
     "awayTeam": "DACC Whites Athletic",
     "match_id": "272354316",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Blue Brazil White V DACC Whites Athletic",
-    "id": "liga3-103"
+    "id": "liga3-99"
   },
   {
     "league": "Liga 3",
@@ -1356,7 +1304,7 @@
     "awayTeam": "Glenrothes Athletic (Oranges)",
     "match_id": "272354318",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Bayside Athletics V Glenrothes Athletic (Oranges)",
-    "id": "liga3-104"
+    "id": "liga3-100"
   },
   {
     "league": "Liga 3",
@@ -1369,7 +1317,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "272354307",
     "raw_fixture": "Beath High School 3:00 PM Salveson FC Colts V Futsal Escocia Turquoise",
-    "id": "liga3-105"
+    "id": "liga3-101"
   },
   {
     "league": "Liga 3",
@@ -1382,7 +1330,7 @@
     "awayTeam": "Swifts Chargers 2017",
     "match_id": "272354313",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM Raith Rovers Reds V Swifts Chargers 2017",
-    "id": "liga3-106"
+    "id": "liga3-102"
   },
   {
     "league": "Liga 3",
@@ -1395,7 +1343,7 @@
     "awayTeam": "Kelty Heart Maroons",
     "match_id": "272354312",
     "raw_fixture": "Beath High School 3:45 PM Letham Tangies V Kelty Heart Maroons",
-    "id": "liga3-107"
+    "id": "liga3-103"
   },
   {
     "league": "Liga 3",
@@ -1408,7 +1356,7 @@
     "awayTeam": "KSQ Galaxy 2015",
     "match_id": "272354315",
     "raw_fixture": "Beath High School Refurb 3:45 PM Tiki Taka Azul V KSQ Galaxy 2015",
-    "id": "liga3-108"
+    "id": "liga3-104"
   },
   {
     "league": "Liga 3",
@@ -1421,7 +1369,7 @@
     "awayTeam": "DACC Athletic",
     "match_id": "272354323",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Kelty Heart Maroons V DACC Athletic",
-    "id": "liga3-109"
+    "id": "liga3-105"
   },
   {
     "league": "Liga 3",
@@ -1434,7 +1382,7 @@
     "awayTeam": "Rapid Fire",
     "match_id": "272354331",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Glenrothes Athletic (Oranges) V Rapid Fire",
-    "id": "liga3-110"
+    "id": "liga3-106"
   },
   {
     "league": "Liga 3",
@@ -1447,7 +1395,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354325",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM KSQ Galaxy 2015 V Tiki Taka Negra",
-    "id": "liga3-111"
+    "id": "liga3-107"
   },
   {
     "league": "Liga 3",
@@ -1460,7 +1408,7 @@
     "awayTeam": "Futsal South 2016s",
     "match_id": "272354333",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM DACC Whites United V Futsal South 2016s",
-    "id": "liga3-112"
+    "id": "liga3-108"
   },
   {
     "league": "Liga 3",
@@ -1473,7 +1421,7 @@
     "awayTeam": "Salveson FC Colts",
     "match_id": "272354321",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM Swifts Chargers 2017 V Salveson FC Colts",
-    "id": "liga3-113"
+    "id": "liga3-109"
   },
   {
     "league": "Liga 3",
@@ -1486,7 +1434,7 @@
     "awayTeam": "Kelty Hearts Blacks",
     "match_id": "272354324",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Swifts Bulls V Kelty Hearts Blacks",
-    "id": "liga3-114"
+    "id": "liga3-110"
   },
   {
     "league": "Liga 3",
@@ -1499,7 +1447,7 @@
     "awayTeam": "Bayside Athletics",
     "match_id": "272354332",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Futsal Escocia Navy V Bayside Athletics",
-    "id": "liga3-115"
+    "id": "liga3-111"
   },
   {
     "league": "Liga 3",
@@ -1512,7 +1460,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "272354334",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Futsal Escocia Turquoise V Futsal Escocia White",
-    "id": "liga3-116"
+    "id": "liga3-112"
   },
   {
     "league": "Liga 3",
@@ -1525,7 +1473,7 @@
     "awayTeam": "Tiki Taka Azul",
     "match_id": "272354329",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Dunnfermline Athletic Community Club V Tiki Taka Azul",
-    "id": "liga3-117"
+    "id": "liga3-113"
   },
   {
     "league": "Liga 3",
@@ -1538,7 +1486,7 @@
     "awayTeam": "Letham Tangies",
     "match_id": "272354326",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM DACC Pars V Letham Tangies",
-    "id": "liga3-118"
+    "id": "liga3-114"
   },
   {
     "league": "Liga 3",
@@ -1551,7 +1499,7 @@
     "awayTeam": "Raith Rovers Reds",
     "match_id": "272354327",
     "raw_fixture": "Beath High School 3:00 PM Templehall Utd V Raith Rovers Reds",
-    "id": "liga3-119"
+    "id": "liga3-115"
   },
   {
     "league": "Liga 3",
@@ -1564,7 +1512,7 @@
     "awayTeam": "Blue Brazil White",
     "match_id": "272354328",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM Glenrothes Athletic (Blues) V Blue Brazil White",
-    "id": "liga3-120"
+    "id": "liga3-116"
   },
   {
     "league": "Liga 3",
@@ -1577,7 +1525,7 @@
     "awayTeam": "Bayside Bulls",
     "match_id": "272354322",
     "raw_fixture": "Beath High School 3:45 PM DACC Whites Athletic V Bayside Bulls",
-    "id": "liga3-121"
+    "id": "liga3-117"
   },
   {
     "league": "Liga 3",
@@ -1590,7 +1538,7 @@
     "awayTeam": "Futsal Escocia",
     "match_id": "272354330",
     "raw_fixture": "Beath High School Refurb 3:45 PM KSQ Rapids 2015 V Futsal Escocia",
-    "id": "liga3-122"
+    "id": "liga3-118"
   },
   {
     "league": "Liga 3",
@@ -1603,7 +1551,7 @@
     "awayTeam": "Tiki Taka Azul",
     "match_id": "272354338",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Tiki Taka Negra V Tiki Taka Azul",
-    "id": "liga3-123"
+    "id": "liga3-119"
   },
   {
     "league": "Liga 3",
@@ -1616,7 +1564,7 @@
     "awayTeam": "KSQ Rapids 2015",
     "match_id": "272354341",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Letham Tangies V KSQ Rapids 2015",
-    "id": "liga3-124"
+    "id": "liga3-120"
   },
   {
     "league": "Liga 3",
@@ -1629,7 +1577,7 @@
     "awayTeam": "Dunnfermline Athletic Community Club",
     "match_id": "272354335",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM Kelty Hearts Blacks V Dunnfermline Athletic Community Club",
-    "id": "liga3-125"
+    "id": "liga3-121"
   },
   {
     "league": "Liga 3",
@@ -1642,7 +1590,7 @@
     "awayTeam": "Swifts Bulls",
     "match_id": "272354343",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM Blue Brazil White V Swifts Bulls",
-    "id": "liga3-126"
+    "id": "liga3-122"
   },
   {
     "league": "Liga 3",
@@ -1655,7 +1603,7 @@
     "awayTeam": "DACC Pars",
     "match_id": "272354345",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM DACC Athletic V DACC Pars",
-    "id": "liga3-127"
+    "id": "liga3-123"
   },
   {
     "league": "Liga 3",
@@ -1668,7 +1616,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "272354347",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Bayside Athletics V Futsal Escocia Turquoise",
-    "id": "liga3-128"
+    "id": "liga3-124"
   },
   {
     "league": "Liga 3",
@@ -1681,7 +1629,7 @@
     "awayTeam": "KSQ Galaxy 2015",
     "match_id": "272354348",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Futsal South 2016s V KSQ Galaxy 2015",
-    "id": "liga3-129"
+    "id": "liga3-125"
   },
   {
     "league": "Liga 3",
@@ -1694,7 +1642,7 @@
     "awayTeam": "Glenrothes Athletic (Oranges)",
     "match_id": "272354342",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Futsal Escocia V Glenrothes Athletic (Oranges)",
-    "id": "liga3-130"
+    "id": "liga3-126"
   },
   {
     "league": "Liga 3",
@@ -1707,7 +1655,7 @@
     "awayTeam": "Futsal Escocia Navy",
     "match_id": "272354337",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Rapid Fire V Futsal Escocia Navy",
-    "id": "liga3-131"
+    "id": "liga3-127"
   },
   {
     "league": "Liga 3",
@@ -1720,7 +1668,7 @@
     "awayTeam": "Templehall Utd",
     "match_id": "272354336",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Salveson FC Colts V Templehall Utd",
-    "id": "liga3-132"
+    "id": "liga3-128"
   },
   {
     "league": "Liga 3",
@@ -1733,7 +1681,7 @@
     "awayTeam": "Swifts Chargers 2017",
     "match_id": "272354339",
     "raw_fixture": "Beath High School 3:00 PM Futsal Escocia White V Swifts Chargers 2017",
-    "id": "liga3-133"
+    "id": "liga3-129"
   },
   {
     "league": "Liga 3",
@@ -1746,7 +1694,7 @@
     "awayTeam": "Kelty Heart Maroons",
     "match_id": "272354340",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM DACC Whites United V Kelty Heart Maroons",
-    "id": "liga3-134"
+    "id": "liga3-130"
   },
   {
     "league": "Liga 3",
@@ -1759,7 +1707,7 @@
     "awayTeam": "Glenrothes Athletic (Blues)",
     "match_id": "272354346",
     "raw_fixture": "Beath High School 3:45 PM Bayside Bulls V Glenrothes Athletic (Blues)",
-    "id": "liga3-135"
+    "id": "liga3-131"
   },
   {
     "league": "Liga 3",
@@ -1772,7 +1720,7 @@
     "awayTeam": "DACC Whites Athletic",
     "match_id": "272354344",
     "raw_fixture": "Beath High School Refurb 3:45 PM Raith Rovers Reds V DACC Whites Athletic",
-    "id": "liga3-136"
+    "id": "liga3-132"
   },
   {
     "league": "Liga 3",
@@ -1785,7 +1733,7 @@
     "awayTeam": "Blue Brazil White",
     "match_id": "272354355",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Kelty Hearts Blacks V Blue Brazil White",
-    "id": "liga3-137"
+    "id": "liga3-133"
   },
   {
     "league": "Liga 3",
@@ -1798,7 +1746,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "272354350",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Templehall Utd V Futsal Escocia White",
-    "id": "liga3-138"
+    "id": "liga3-134"
   },
   {
     "league": "Liga 3",
@@ -1811,7 +1759,7 @@
     "awayTeam": "Futsal South 2016s",
     "match_id": "272354356",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM Tiki Taka Azul V Futsal South 2016s",
-    "id": "liga3-139"
+    "id": "liga3-135"
   },
   {
     "league": "Liga 3",
@@ -1824,7 +1772,7 @@
     "awayTeam": "Salveson FC Colts",
     "match_id": "272354352",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM DACC Whites Athletic V Salveson FC Colts",
-    "id": "liga3-140"
+    "id": "liga3-136"
   },
   {
     "league": "Liga 3",
@@ -1837,7 +1785,7 @@
     "awayTeam": "Bayside Bulls",
     "match_id": "272354359",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM Swifts Bulls V Bayside Bulls",
-    "id": "liga3-141"
+    "id": "liga3-137"
   },
   {
     "league": "Liga 3",
@@ -1850,7 +1798,7 @@
     "awayTeam": "Bayside Athletics",
     "match_id": "272354357",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Swifts Chargers 2017 V Bayside Athletics",
-    "id": "liga3-142"
+    "id": "liga3-138"
   },
   {
     "league": "Liga 3",
@@ -1863,7 +1811,7 @@
     "awayTeam": "Futsal Escocia",
     "match_id": "272354362",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Futsal Escocia Navy V Futsal Escocia",
-    "id": "liga3-143"
+    "id": "liga3-139"
   },
   {
     "league": "Liga 3",
@@ -1876,7 +1824,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354354",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Dunnfermline Athletic Community Club V Tiki Taka Negra",
-    "id": "liga3-144"
+    "id": "liga3-140"
   },
   {
     "league": "Liga 3",
@@ -1889,7 +1837,7 @@
     "awayTeam": "DACC Whites United",
     "match_id": "272354351",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM DACC Pars V DACC Whites United",
-    "id": "liga3-145"
+    "id": "liga3-141"
   },
   {
     "league": "Liga 3",
@@ -1902,7 +1850,7 @@
     "awayTeam": "Raith Rovers Reds",
     "match_id": "272354361",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Glenrothes Athletic (Blues) V Raith Rovers Reds",
-    "id": "liga3-146"
+    "id": "liga3-142"
   },
   {
     "league": "Liga 3",
@@ -1915,7 +1863,7 @@
     "awayTeam": "Letham Tangies",
     "match_id": "272354360",
     "raw_fixture": "Beath High School 3:00 PM Glenrothes Athletic (Oranges) V Letham Tangies",
-    "id": "liga3-147"
+    "id": "liga3-143"
   },
   {
     "league": "Liga 3",
@@ -1928,7 +1876,7 @@
     "awayTeam": "DACC Athletic",
     "match_id": "272354358",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM KSQ Rapids 2015 V DACC Athletic",
-    "id": "liga3-148"
+    "id": "liga3-144"
   },
   {
     "league": "Liga 3",
@@ -1941,7 +1889,7 @@
     "awayTeam": "KSQ Galaxy 2015",
     "match_id": "272354349",
     "raw_fixture": "Beath High School 3:45 PM Kelty Heart Maroons V KSQ Galaxy 2015",
-    "id": "liga3-149"
+    "id": "liga3-145"
   },
   {
     "league": "Liga 3",
@@ -1954,7 +1902,7 @@
     "awayTeam": "Rapid Fire",
     "match_id": "272354353",
     "raw_fixture": "Beath High School Refurb 3:45 PM Futsal Escocia Turquoise V Rapid Fire",
-    "id": "liga3-150"
+    "id": "liga3-146"
   },
   {
     "league": "Liga 3",
@@ -1967,7 +1915,7 @@
     "awayTeam": "Kelty Hearts Blacks",
     "match_id": "272354376",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Bayside Bulls V Kelty Hearts Blacks",
-    "id": "liga3-151"
+    "id": "liga3-147"
   },
   {
     "league": "Liga 3",
@@ -1980,7 +1928,7 @@
     "awayTeam": "Dunnfermline Athletic Community Club",
     "match_id": "272354364",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Blue Brazil White V Dunnfermline Athletic Community Club",
-    "id": "liga3-152"
+    "id": "liga3-148"
   },
   {
     "league": "Liga 3",
@@ -1993,7 +1941,7 @@
     "awayTeam": "DACC Whites Athletic",
     "match_id": "272354371",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM Futsal Escocia White V DACC Whites Athletic",
-    "id": "liga3-153"
+    "id": "liga3-149"
   },
   {
     "league": "Liga 3",
@@ -2006,7 +1954,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354363",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM Futsal South 2016s V Tiki Taka Negra",
-    "id": "liga3-154"
+    "id": "liga3-150"
   },
   {
     "league": "Liga 3",
@@ -2019,7 +1967,7 @@
     "awayTeam": "DACC Pars",
     "match_id": "272354366",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM KSQ Galaxy 2015 V DACC Pars",
-    "id": "liga3-155"
+    "id": "liga3-151"
   },
   {
     "league": "Liga 3",
@@ -2032,7 +1980,7 @@
     "awayTeam": "Glenrothes Athletic (Blues)",
     "match_id": "272354365",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Salveson FC Colts V Glenrothes Athletic (Blues)",
-    "id": "liga3-156"
+    "id": "liga3-152"
   },
   {
     "league": "Liga 3",
@@ -2045,7 +1993,7 @@
     "awayTeam": "Futsal Escocia Navy",
     "match_id": "272354370",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Letham Tangies V Futsal Escocia Navy",
-    "id": "liga3-157"
+    "id": "liga3-153"
   },
   {
     "league": "Liga 3",
@@ -2058,7 +2006,7 @@
     "awayTeam": "Glenrothes Athletic (Oranges)",
     "match_id": "272354375",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM DACC Athletic V Glenrothes Athletic (Oranges)",
-    "id": "liga3-158"
+    "id": "liga3-154"
   },
   {
     "league": "Liga 3",
@@ -2071,7 +2019,7 @@
     "awayTeam": "Swifts Bulls",
     "match_id": "272354369",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Raith Rovers Reds V Swifts Bulls",
-    "id": "liga3-159"
+    "id": "liga3-155"
   },
   {
     "league": "Liga 3",
@@ -2084,7 +2032,7 @@
     "awayTeam": "Kelty Heart Maroons",
     "match_id": "272354373",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Tiki Taka Azul V Kelty Heart Maroons",
-    "id": "liga3-160"
+    "id": "liga3-156"
   },
   {
     "league": "Liga 3",
@@ -2097,7 +2045,7 @@
     "awayTeam": "Swifts Chargers 2017",
     "match_id": "272354374",
     "raw_fixture": "Beath High School 3:00 PM Rapid Fire V Swifts Chargers 2017",
-    "id": "liga3-161"
+    "id": "liga3-157"
   },
   {
     "league": "Liga 3",
@@ -2110,7 +2058,7 @@
     "awayTeam": "Templehall Utd",
     "match_id": "272354367",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM Bayside Athletics V Templehall Utd",
-    "id": "liga3-162"
+    "id": "liga3-158"
   },
   {
     "league": "Liga 3",
@@ -2123,7 +2071,7 @@
     "awayTeam": "KSQ Rapids 2015",
     "match_id": "272354372",
     "raw_fixture": "Beath High School 3:45 PM DACC Whites United V KSQ Rapids 2015",
-    "id": "liga3-163"
+    "id": "liga3-159"
   },
   {
     "league": "Liga 3",
@@ -2136,7 +2084,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "272354368",
     "raw_fixture": "Beath High School Refurb 3:45 PM Futsal Escocia V Futsal Escocia Turquoise",
-    "id": "liga3-164"
+    "id": "liga3-160"
   },
   {
     "league": "Liga 3",
@@ -2149,7 +2097,7 @@
     "awayTeam": "Tiki Taka Azul",
     "match_id": "272354377",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM DACC Pars V Tiki Taka Azul",
-    "id": "liga3-165"
+    "id": "liga3-161"
   },
   {
     "league": "Liga 3",
@@ -2162,7 +2110,7 @@
     "awayTeam": "Salveson FC Colts",
     "match_id": "272354381",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Swifts Bulls V Salveson FC Colts",
-    "id": "liga3-166"
+    "id": "liga3-162"
   },
   {
     "league": "Liga 3",
@@ -2175,7 +2123,7 @@
     "awayTeam": "KSQ Galaxy 2015",
     "match_id": "272354384",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM KSQ Rapids 2015 V KSQ Galaxy 2015",
-    "id": "liga3-167"
+    "id": "liga3-163"
   },
   {
     "league": "Liga 3",
@@ -2188,7 +2136,7 @@
     "awayTeam": "Futsal Escocia",
     "match_id": "272354389",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM Swifts Chargers 2017 V Futsal Escocia",
-    "id": "liga3-168"
+    "id": "liga3-164"
   },
   {
     "league": "Liga 3",
@@ -2201,7 +2149,7 @@
     "awayTeam": "DACC Athletic",
     "match_id": "272354380",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM Futsal Escocia Navy V DACC Athletic",
-    "id": "liga3-169"
+    "id": "liga3-165"
   },
   {
     "league": "Liga 3",
@@ -2214,7 +2162,7 @@
     "awayTeam": "Futsal South 2016s",
     "match_id": "272354386",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Dunnfermline Athletic Community Club V Futsal South 2016s",
-    "id": "liga3-170"
+    "id": "liga3-166"
   },
   {
     "league": "Liga 3",
@@ -2227,7 +2175,7 @@
     "awayTeam": "Letham Tangies",
     "match_id": "272354383",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Futsal Escocia Turquoise V Letham Tangies",
-    "id": "liga3-171"
+    "id": "liga3-167"
   },
   {
     "league": "Liga 3",
@@ -2240,7 +2188,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "272354387",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Glenrothes Athletic (Blues) V Futsal Escocia White",
-    "id": "liga3-172"
+    "id": "liga3-168"
   },
   {
     "league": "Liga 3",
@@ -2253,7 +2201,7 @@
     "awayTeam": "DACC Whites United",
     "match_id": "272354388",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Glenrothes Athletic (Oranges) V DACC Whites United",
-    "id": "liga3-173"
+    "id": "liga3-169"
   },
   {
     "league": "Liga 3",
@@ -2266,7 +2214,7 @@
     "awayTeam": "Bayside Bulls",
     "match_id": "272354379",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Blue Brazil White V Bayside Bulls",
-    "id": "liga3-174"
+    "id": "liga3-170"
   },
   {
     "league": "Liga 3",
@@ -2279,7 +2227,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354378",
     "raw_fixture": "Beath High School 3:00 PM Kelty Heart Maroons V Tiki Taka Negra",
-    "id": "liga3-175"
+    "id": "liga3-171"
   },
   {
     "league": "Liga 3",
@@ -2292,7 +2240,7 @@
     "awayTeam": "Rapid Fire",
     "match_id": "272354385",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM Templehall Utd V Rapid Fire",
-    "id": "liga3-176"
+    "id": "liga3-172"
   },
   {
     "league": "Liga 3",
@@ -2305,7 +2253,7 @@
     "awayTeam": "Bayside Athletics",
     "match_id": "272354390",
     "raw_fixture": "Beath High School 3:45 PM DACC Whites Athletic V Bayside Athletics",
-    "id": "liga3-177"
+    "id": "liga3-173"
   },
   {
     "league": "Liga 3",
@@ -2318,7 +2266,7 @@
     "awayTeam": "Raith Rovers Reds",
     "match_id": "272354382",
     "raw_fixture": "Beath High School Refurb 3:45 PM Kelty Hearts Blacks V Raith Rovers Reds",
-    "id": "liga3-178"
+    "id": "liga3-174"
   },
   {
     "league": "Liga 3",
@@ -2331,7 +2279,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "272354403",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM DACC Athletic V Futsal Escocia Turquoise",
-    "id": "liga3-179"
+    "id": "liga3-175"
   },
   {
     "league": "Liga 3",
@@ -2344,7 +2292,7 @@
     "awayTeam": "Kelty Hearts Blacks",
     "match_id": "272354402",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM Salveson FC Colts V Kelty Hearts Blacks",
-    "id": "liga3-180"
+    "id": "liga3-176"
   },
   {
     "league": "Liga 3",
@@ -2357,7 +2305,7 @@
     "awayTeam": "Futsal Escocia Navy",
     "match_id": "272354398",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM DACC Whites United V Futsal Escocia Navy",
-    "id": "liga3-181"
+    "id": "liga3-177"
   },
   {
     "league": "Liga 3",
@@ -2370,7 +2318,7 @@
     "awayTeam": "DACC Pars",
     "match_id": "272354395",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM Tiki Taka Negra V DACC Pars",
-    "id": "liga3-182"
+    "id": "liga3-178"
   },
   {
     "league": "Liga 3",
@@ -2383,7 +2331,7 @@
     "awayTeam": "Glenrothes Athletic (Oranges)",
     "match_id": "272354404",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM KSQ Galaxy 2015 V Glenrothes Athletic (Oranges)",
-    "id": "liga3-183"
+    "id": "liga3-179"
   },
   {
     "league": "Liga 3",
@@ -2396,7 +2344,7 @@
     "awayTeam": "Blue Brazil White",
     "match_id": "272354396",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM Raith Rovers Reds V Blue Brazil White",
-    "id": "liga3-184"
+    "id": "liga3-180"
   },
   {
     "league": "Liga 3",
@@ -2409,7 +2357,7 @@
     "awayTeam": "Swifts Chargers 2017",
     "match_id": "272354393",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Letham Tangies V Swifts Chargers 2017",
-    "id": "liga3-185"
+    "id": "liga3-181"
   },
   {
     "league": "Liga 3",
@@ -2422,7 +2370,7 @@
     "awayTeam": "DACC Whites Athletic",
     "match_id": "272354394",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Rapid Fire V DACC Whites Athletic",
-    "id": "liga3-186"
+    "id": "liga3-182"
   },
   {
     "league": "Liga 3",
@@ -2435,7 +2383,7 @@
     "awayTeam": "Kelty Heart Maroons",
     "match_id": "272354401",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Futsal South 2016s V Kelty Heart Maroons",
-    "id": "liga3-187"
+    "id": "liga3-183"
   },
   {
     "league": "Liga 3",
@@ -2448,7 +2396,7 @@
     "awayTeam": "Templehall Utd",
     "match_id": "272354400",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Futsal Escocia V Templehall Utd",
-    "id": "liga3-188"
+    "id": "liga3-184"
   },
   {
     "league": "Liga 3",
@@ -2461,7 +2409,7 @@
     "awayTeam": "KSQ Rapids 2015",
     "match_id": "272354391",
     "raw_fixture": "Beath High School 3:00 PM Tiki Taka Azul V KSQ Rapids 2015",
-    "id": "liga3-189"
+    "id": "liga3-185"
   },
   {
     "league": "Liga 3",
@@ -2474,7 +2422,7 @@
     "awayTeam": "Dunnfermline Athletic Community Club",
     "match_id": "272354392",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM Bayside Bulls V Dunnfermline Athletic Community Club",
-    "id": "liga3-190"
+    "id": "liga3-186"
   },
   {
     "league": "Liga 3",
@@ -2487,7 +2435,7 @@
     "awayTeam": "Glenrothes Athletic (Blues)",
     "match_id": "272354397",
     "raw_fixture": "Beath High School 3:45 PM Bayside Athletics V Glenrothes Athletic (Blues)",
-    "id": "liga3-191"
+    "id": "liga3-187"
   },
   {
     "league": "Liga 3",
@@ -2500,7 +2448,7 @@
     "awayTeam": "Swifts Bulls",
     "match_id": "272354399",
     "raw_fixture": "Beath High School Refurb 3:45 PM Futsal Escocia White V Swifts Bulls",
-    "id": "liga3-192"
+    "id": "liga3-188"
   },
   {
     "league": "Liga 3",
@@ -2513,7 +2461,7 @@
     "awayTeam": "KSQ Galaxy 2015",
     "match_id": "272354409",
     "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia Navy V KSQ Galaxy 2015",
-    "id": "liga3-193"
+    "id": "liga3-189"
   },
   {
     "league": "Liga 3",
@@ -2526,7 +2474,7 @@
     "awayTeam": "Futsal South 2016s",
     "match_id": "272354416",
     "raw_fixture": "Dunfermline Learning Campus 9:45 AM DACC Pars V Futsal South 2016s",
-    "id": "liga3-194"
+    "id": "liga3-190"
   },
   {
     "league": "Liga 3",
@@ -2539,7 +2487,7 @@
     "awayTeam": "DACC Athletic",
     "match_id": "272354413",
     "raw_fixture": "Dunfermline Learning Campus 10:30 AM Swifts Chargers 2017 V DACC Athletic",
-    "id": "liga3-195"
+    "id": "liga3-191"
   },
   {
     "league": "Liga 3",
@@ -2552,7 +2500,7 @@
     "awayTeam": "Bayside Athletics",
     "match_id": "272354410",
     "raw_fixture": "Dunfermline Learning Campus 11:15 AM Swifts Bulls V Bayside Athletics",
-    "id": "liga3-196"
+    "id": "liga3-192"
   },
   {
     "league": "Liga 3",
@@ -2565,7 +2513,7 @@
     "awayTeam": "Salveson FC Colts",
     "match_id": "272354405",
     "raw_fixture": "Dunfermline Learning Campus 12:00 PM Blue Brazil White V Salveson FC Colts",
-    "id": "liga3-197"
+    "id": "liga3-193"
   },
   {
     "league": "Liga 3",
@@ -2578,7 +2526,7 @@
     "awayTeam": "Futsal Escocia",
     "match_id": "272354418",
     "raw_fixture": "Dunfermline Learning Campus 12:45 PM DACC Whites Athletic V Futsal Escocia",
-    "id": "liga3-198"
+    "id": "liga3-194"
   },
   {
     "league": "Liga 3",
@@ -2591,7 +2539,7 @@
     "awayTeam": "DACC Whites United",
     "match_id": "272354414",
     "raw_fixture": "Dunfermline Learning Campus 1:30 PM Futsal Escocia Turquoise V DACC Whites United",
-    "id": "liga3-199"
+    "id": "liga3-195"
   },
   {
     "league": "Liga 3",
@@ -2604,7 +2552,7 @@
     "awayTeam": "Dunnfermline Athletic Community Club",
     "match_id": "272354408",
     "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Kelty Heart Maroons V Dunnfermline Athletic Community Club",
-    "id": "liga3-200"
+    "id": "liga3-196"
   },
   {
     "league": "Liga 3",
@@ -2617,7 +2565,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "272354415",
     "raw_fixture": "Dunfermline Learning Campus 2:15 PM Kelty Hearts Blacks V Futsal Escocia White",
-    "id": "liga3-201"
+    "id": "liga3-197"
   },
   {
     "league": "Liga 3",
@@ -2630,7 +2578,7 @@
     "awayTeam": "Raith Rovers Reds",
     "match_id": "272354411",
     "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Bayside Bulls V Raith Rovers Reds",
-    "id": "liga3-202"
+    "id": "liga3-198"
   },
   {
     "league": "Liga 3",
@@ -2643,7 +2591,7 @@
     "awayTeam": "Tiki Taka Azul",
     "match_id": "272354412",
     "raw_fixture": "Beath High School 3:00 PM Glenrothes Athletic (Oranges) V Tiki Taka Azul",
-    "id": "liga3-203"
+    "id": "liga3-199"
   },
   {
     "league": "Liga 3",
@@ -2656,7 +2604,7 @@
     "awayTeam": "Letham Tangies",
     "match_id": "272354407",
     "raw_fixture": "Dunfermline Learning Campus 3:00 PM Templehall Utd V Letham Tangies",
-    "id": "liga3-204"
+    "id": "liga3-200"
   },
   {
     "league": "Liga 3",
@@ -2669,7 +2617,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354406",
     "raw_fixture": "Beath High School 3:45 PM KSQ Rapids 2015 V Tiki Taka Negra",
-    "id": "liga3-205"
+    "id": "liga3-201"
   },
   {
     "league": "Liga 3",
@@ -2682,7 +2630,7 @@
     "awayTeam": "Rapid Fire",
     "match_id": "272354417",
     "raw_fixture": "Beath High School Refurb 3:45 PM Glenrothes Athletic (Blues) V Rapid Fire",
-    "id": "liga3-206"
+    "id": "liga3-202"
   },
   {
     "league": "Liga 4",
@@ -2731,9 +2679,9 @@
     "venue": "Beath High School Refurb",
     "time": "9:45 AM",
     "homeTeam": "Swifts Hawks 2017",
-    "awayTeam": "DACC Girls 2015",
+    "awayTeam": "GS - Zidane",
     "match_id": "272353854",
-    "raw_fixture": "Beath High School Refurb 9:45 AM Swifts Hawks 2017 V DACC Girls 2015",
+    "raw_fixture": "Beath High School Refurb 9:45 AM Swifts Hawks 2017 V GS - Zidane",
     "id": "liga4-4"
   },
   {
@@ -2834,10 +2782,10 @@
     "iso_date": "2026-11-08",
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
-    "homeTeam": "GS - Zidane",
+    "homeTeam": "DACC Girls 2015",
     "awayTeam": "Pitreavie Blacks 2017s",
     "match_id": "272353857",
-    "raw_fixture": "Beath High School Refurb 12:45 PM GS - Zidane V Pitreavie Blacks 2017s",
+    "raw_fixture": "Beath High School Refurb 12:45 PM DACC Girls 2015 V Pitreavie Blacks 2017s",
     "id": "liga4-12"
   },
   {
