@@ -77,6 +77,12 @@
       </div>
     </div>
 
+    <!-- Venue Filter (buttons built from the fixtures by renderVenueFilters) -->
+    <div id="venueFilterCard" class="hidden bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
+      <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">Venues</div>
+      <div class="flex flex-wrap items-center gap-2" id="venueFilters"></div>
+    </div>
+
     <!-- Week Selector -->
     <div id="weekSelectorCard" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-3 mb-4">
       <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">Match Weeks</div>
@@ -138,6 +144,7 @@
     let allFixtures = [];
     let searchQuery = "";
     let selectedLeague = "ALL";
+    let selectedVenue = "ALL";
     let selectedDateFilter = "ALL";
     let onlyTikiTaka = true;
     let selectedPlayerId = null;
@@ -626,6 +633,47 @@
         </div>`;
     }
 
+    // Shorter names so the buttons fit two to a row on a phone. A venue not
+    // listed here still gets a button, under its full name.
+    const VENUE_LABELS = {
+      "Beath High School": "Beath",
+      "Beath High School Refurb": "Beath Refurb",
+      "Dunfermline Learning Campus": "Dunfermline LC",
+      "Caledonia High School, Rosyth": "Caledonia, Rosyth",
+      "Balwearie High School": "Balwearie",
+    };
+
+    function renderVenueFilters() {
+      const host = document.getElementById("venueFilters");
+      const card = document.getElementById("venueFilterCard");
+      if (!host) return;
+
+      // Built from the fixtures rather than fixed, so a venue the league adds
+      // mid-season appears without a page change.
+      const venues = [...new Set(allFixtures.map(item => item.venue).filter(Boolean))]
+        .sort((a, b) => (VENUE_LABELS[a] || a).localeCompare(VENUE_LABELS[b] || b));
+      if (selectedVenue !== "ALL" && !venues.includes(selectedVenue)) selectedVenue = "ALL";
+
+      if (card) card.classList.toggle("hidden", venues.length < 2);
+
+      const chip = (active) => active
+        ? "venue-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#FF6600] text-white shadow-sm flex-shrink-0"
+        : "venue-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 flex-shrink-0";
+
+      host.innerHTML = ["ALL", ...venues].map(venue => `
+        <button data-venue="${escapeHtml(venue)}" title="${venue === "ALL" ? "All venues" : escapeHtml(venue)}"
+                class="${chip(venue === selectedVenue)}">${venue === "ALL" ? "All" : escapeHtml(VENUE_LABELS[venue] || venue)}</button>`
+      ).join("");
+
+      host.querySelectorAll(".venue-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          selectedVenue = btn.dataset.venue;
+          renderVenueFilters();
+          renderFixtures();
+        });
+      });
+    }
+
     function renderRoundFilters() {
       const host = document.getElementById("roundFilters");
       const card = document.getElementById("weekSelectorCard");
@@ -930,6 +978,7 @@
         const league = item.league || "";
 
         const matchLeague = selectedLeague === "ALL" || league === selectedLeague;
+        const matchVenue = selectedVenue === "ALL" || venue === selectedVenue;
         const containsTiki = isTiki(home) || isTiki(away);
         
         const matchesSearch = !q || (
@@ -953,6 +1002,7 @@
         }
 
         if (!matchLeague) return false;
+        if (!matchVenue) return false;
         if (activeTikiFilter && !activePlayer && !containsTiki) return false;
         if (!matchesSearch) return false;
         if (!matchesPlayer) return false;
@@ -1121,6 +1171,7 @@
 
     window.resetFilters = function() {
       selectedLeague = "ALL";
+      selectedVenue = "ALL";
       selectedDateFilter = "ALL";
       selectedPlayerId = null;
       selectedRound = null;
@@ -1131,6 +1182,7 @@
         toggleTikiBtn.textContent = "All Teams";
         toggleTikiBtn.className = "py-2 px-3 text-xs font-bold rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 flex-shrink-0 transition-all";
       }
+      renderVenueFilters();
       renderRoundFilters();
       renderPlayerPills();
       renderFixtures();
@@ -1266,6 +1318,7 @@
       .then(data => {
         allFixtures = processFixtures(Array.isArray(data) ? data : []);
         refreshClashes();
+        renderVenueFilters();
         renderRoundFilters();
         renderPlayerPills();
         renderFixtures();
@@ -1276,6 +1329,7 @@
           .then(data => {
             allFixtures = processFixtures(Array.isArray(data) ? data : []);
             refreshClashes();
+            renderVenueFilters();
             renderRoundFilters();
             renderPlayerPills();
             renderFixtures();
