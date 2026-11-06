@@ -84,10 +84,10 @@
     "iso_date": "2026-11-08",
     "venue": "Caledonia High School, Rosyth",
     "time": "1:30 PM",
-    "homeTeam": "Dunnfermline Athletic Community Club",
+    "homeTeam": "DACC 2016s",
     "awayTeam": "Letham Tangies",
     "match_id": "272354209",
-    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Dunnfermline Athletic Community Club V Letham Tangies",
+    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM DACC 2016s V Letham Tangies",
     "id": "liga3-7"
   },
   {
@@ -177,9 +177,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "9:45 AM",
     "homeTeam": "Templehall Utd",
-    "awayTeam": "Dunnfermline Athletic Community Club",
+    "awayTeam": "DACC 2016s",
     "match_id": "272354223",
-    "raw_fixture": "Dunfermline Learning Campus 9:45 AM Templehall Utd V Dunnfermline Athletic Community Club",
+    "raw_fixture": "Dunfermline Learning Campus 9:45 AM Templehall Utd V DACC 2016s",
     "id": "liga3-14"
   },
   {
@@ -425,10 +425,10 @@
     "iso_date": "2026-11-22",
     "venue": "Dunfermline Learning Campus",
     "time": "2:15 PM",
-    "homeTeam": "Dunnfermline Athletic Community Club",
+    "homeTeam": "DACC 2016s",
     "awayTeam": "DACC Athletic",
     "match_id": "272354240",
-    "raw_fixture": "Dunfermline Learning Campus 2:15 PM Dunnfermline Athletic Community Club V DACC Athletic",
+    "raw_fixture": "Dunfermline Learning Campus 2:15 PM DACC 2016s V DACC Athletic",
     "id": "liga3-33"
   },
   {
@@ -555,10 +555,10 @@
     "iso_date": "2026-11-29",
     "venue": "Dunfermline Learning Campus",
     "time": "1:30 PM",
-    "homeTeam": "Dunnfermline Athletic Community Club",
+    "homeTeam": "DACC 2016s",
     "awayTeam": "DACC Athletic",
     "match_id": "272354253",
-    "raw_fixture": "Dunfermline Learning Campus 1:30 PM Dunnfermline Athletic Community Club V DACC Athletic",
+    "raw_fixture": "Dunfermline Learning Campus 1:30 PM DACC 2016s V DACC Athletic",
     "id": "liga3-43"
   },
   {
@@ -699,10 +699,10 @@
     "iso_date": "2026-12-06",
     "venue": "Dunfermline Learning Campus",
     "time": "12:45 PM",
-    "homeTeam": "Dunnfermline Athletic Community Club",
+    "homeTeam": "DACC 2016s",
     "awayTeam": "DACC Whites United",
     "match_id": "272354269",
-    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Dunnfermline Athletic Community Club V DACC Whites United",
+    "raw_fixture": "Dunfermline Learning Campus 12:45 PM DACC 2016s V DACC Whites United",
     "id": "liga3-54"
   },
   {
@@ -923,9 +923,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "2:15 PM",
     "homeTeam": "Glenrothes Athletic (Blues)",
-    "awayTeam": "Dunnfermline Athletic Community Club",
+    "awayTeam": "DACC 2016s",
     "match_id": "272354280",
-    "raw_fixture": "Dunfermline Learning Campus 2:15 PM Glenrothes Athletic (Blues) V Dunnfermline Athletic Community Club",
+    "raw_fixture": "Dunfermline Learning Campus 2:15 PM Glenrothes Athletic (Blues) V DACC 2016s",
     "id": "liga3-71"
   },
   {
@@ -1144,10 +1144,10 @@
     "iso_date": "2026-12-20",
     "venue": "Dunfermline Learning Campus",
     "time": "3:00 PM",
-    "homeTeam": "Dunnfermline Athletic Community Club",
+    "homeTeam": "DACC 2016s",
     "awayTeam": "KSQ Galaxy 2015",
     "match_id": "272354306",
-    "raw_fixture": "Dunfermline Learning Campus 3:00 PM Dunnfermline Athletic Community Club V KSQ Galaxy 2015",
+    "raw_fixture": "Dunfermline Learning Campus 3:00 PM DACC 2016s V KSQ Galaxy 2015",
     "id": "liga3-88"
   },
   {
@@ -1275,9 +1275,9 @@
     "venue": "Caledonia High School, Rosyth",
     "time": "1:30 PM",
     "homeTeam": "Swifts Bulls",
-    "awayTeam": "Dunnfermline Athletic Community Club",
+    "awayTeam": "DACC 2016s",
     "match_id": "272354317",
-    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Swifts Bulls V Dunnfermline Athletic Community Club",
+    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Swifts Bulls V DACC 2016s",
     "id": "liga3-98"
   },
   {
@@ -1469,11 +1469,12 @@
     "iso_date": "2027-01-17",
     "venue": "Dunfermline Learning Campus",
     "time": "2:15 PM",
-    "homeTeam": "Dunnfermline Athletic Community Club",
+    "homeTeam": "DACC 2016s",
     "awayTeam": "Tiki Taka Azul",
     "match_id": "272354329",
-    "raw_fixture": "Dunfermline Learning Campus 2:15 PM Dunnfermline Athletic Community Club V Tiki Taka Azul",
-    "id": "liga3-113"
+    "raw_fixture": "Dunfermline Learning Campus 2:15 PM DACC 2016s V Tiki Taka Azul",
+    "id": "liga3-113",
+    "updated": "now DACC 2016s v Tiki Taka Azul"
   },
   {
     "league": "Liga 3",
@@ -1574,9 +1575,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "10:30 AM",
     "homeTeam": "Kelty Hearts Blacks",
-    "awayTeam": "Dunnfermline Athletic Community Club",
+    "awayTeam": "DACC 2016s",
     "match_id": "272354335",
-    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Kelty Hearts Blacks V Dunnfermline Athletic Community Club",
+    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Kelty Hearts Blacks V DACC 2016s",
     "id": "liga3-121"
   },
   {
@@ -1820,11 +1821,12 @@
     "iso_date": "2027-01-31",
     "venue": "Caledonia High School, Rosyth",
     "time": "1:30 PM",
-    "homeTeam": "Dunnfermline Athletic Community Club",
+    "homeTeam": "DACC 2016s",
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354354",
-    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Dunnfermline Athletic Community Club V Tiki Taka Negra",
-    "id": "liga3-140"
+    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM DACC 2016s V Tiki Taka Negra",
+    "id": "liga3-140",
+    "updated": "now DACC 2016s v Tiki Taka Negra"
   },
   {
     "league": "Liga 3",
@@ -1925,9 +1927,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "9:45 AM",
     "homeTeam": "Blue Brazil White",
-    "awayTeam": "Dunnfermline Athletic Community Club",
+    "awayTeam": "DACC 2016s",
     "match_id": "272354364",
-    "raw_fixture": "Dunfermline Learning Campus 9:45 AM Blue Brazil White V Dunnfermline Athletic Community Club",
+    "raw_fixture": "Dunfermline Learning Campus 9:45 AM Blue Brazil White V DACC 2016s",
     "id": "liga3-148"
   },
   {
@@ -2158,10 +2160,10 @@
     "iso_date": "2027-02-14",
     "venue": "Dunfermline Learning Campus",
     "time": "12:45 PM",
-    "homeTeam": "Dunnfermline Athletic Community Club",
+    "homeTeam": "DACC 2016s",
     "awayTeam": "Futsal South 2016s",
     "match_id": "272354386",
-    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Dunnfermline Athletic Community Club V Futsal South 2016s",
+    "raw_fixture": "Dunfermline Learning Campus 12:45 PM DACC 2016s V Futsal South 2016s",
     "id": "liga3-166"
   },
   {
@@ -2419,9 +2421,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "3:00 PM",
     "homeTeam": "Bayside Bulls",
-    "awayTeam": "Dunnfermline Athletic Community Club",
+    "awayTeam": "DACC 2016s",
     "match_id": "272354392",
-    "raw_fixture": "Dunfermline Learning Campus 3:00 PM Bayside Bulls V Dunnfermline Athletic Community Club",
+    "raw_fixture": "Dunfermline Learning Campus 3:00 PM Bayside Bulls V DACC 2016s",
     "id": "liga3-186"
   },
   {
@@ -2549,9 +2551,9 @@
     "venue": "Caledonia High School, Rosyth",
     "time": "1:30 PM",
     "homeTeam": "Kelty Heart Maroons",
-    "awayTeam": "Dunnfermline Athletic Community Club",
+    "awayTeam": "DACC 2016s",
     "match_id": "272354408",
-    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Kelty Heart Maroons V Dunnfermline Athletic Community Club",
+    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Kelty Heart Maroons V DACC 2016s",
     "id": "liga3-196"
   },
   {
