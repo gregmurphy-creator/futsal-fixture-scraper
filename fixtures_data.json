@@ -6141,10 +6141,10 @@
     "iso_date": "2026-11-14",
     "venue": "Caledonia High School, Rosyth",
     "time": "10:30 AM",
-    "homeTeam": "DACC Girls Blacks",
-    "awayTeam": "Bowhill United Yellows",
-    "match_id": "273142243",
-    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM DACC Girls Blacks V Bowhill United Yellows",
+    "homeTeam": "Crossgates Primrose 2016s Blues",
+    "awayTeam": "KSQ 2018 Galaxy",
+    "match_id": "273142244",
+    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Crossgates Primrose 2016s Blues V KSQ 2018 Galaxy",
     "id": "liga5-18"
   },
   {
@@ -6180,10 +6180,10 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School",
     "time": "12:00 PM",
-    "homeTeam": "Crossgates Primrose 2016s Blues",
-    "awayTeam": "KSQ 2018 Galaxy",
-    "match_id": "273142244",
-    "raw_fixture": "Beath High School 12:00 PM Crossgates Primrose 2016s Blues V KSQ 2018 Galaxy",
+    "homeTeam": "Greig Park Greens",
+    "awayTeam": "Duloch Juniors - Reds",
+    "match_id": "273142240",
+    "raw_fixture": "Beath High School 12:00 PM Greig Park Greens V Duloch Juniors - Reds",
     "id": "liga5-21"
   },
   {
@@ -6206,12 +6206,11 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School",
     "time": "12:45 PM",
-    "homeTeam": "Tiki Taka Negra",
-    "awayTeam": "DACC Blacks",
-    "match_id": "273142239",
-    "raw_fixture": "Beath High School 12:45 PM Tiki Taka Negra V DACC Blacks",
-    "id": "liga5-23",
-    "updated": "11:15 AM -> 12:45 PM, now Tiki Taka Negra v DACC Blacks"
+    "homeTeam": "DACC Girls Blacks",
+    "awayTeam": "Bowhill United Yellows",
+    "match_id": "273142243",
+    "raw_fixture": "Beath High School 12:45 PM DACC Girls Blacks V Bowhill United Yellows",
+    "id": "liga5-23"
   },
   {
     "league": "Liga 5",
@@ -6246,11 +6245,12 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School",
     "time": "1:30 PM",
-    "homeTeam": "Greig Park Greens",
-    "awayTeam": "Duloch Juniors - Reds",
-    "match_id": "273142240",
-    "raw_fixture": "Beath High School 1:30 PM Greig Park Greens V Duloch Juniors - Reds",
-    "id": "liga5-26"
+    "homeTeam": "Tiki Taka Negra",
+    "awayTeam": "DACC Blacks",
+    "match_id": "273142239",
+    "raw_fixture": "Beath High School 1:30 PM Tiki Taka Negra V DACC Blacks",
+    "id": "liga5-26",
+    "updated": "12:45 PM -> 1:30 PM"
   },
   {
     "league": "Liga 5",
@@ -6312,10 +6312,10 @@
     "iso_date": "2026-11-21",
     "venue": "Beath High School",
     "time": "10:30 AM",
-    "homeTeam": "KSQ 2018 Galaxy",
-    "awayTeam": "DACC Girls Blacks",
-    "match_id": "273142261",
-    "raw_fixture": "Beath High School 10:30 AM KSQ 2018 Galaxy V DACC Girls Blacks",
+    "homeTeam": "Templehall United Yellows 2018",
+    "awayTeam": "Bowhill United Blacks",
+    "match_id": "273142254",
+    "raw_fixture": "Beath High School 10:30 AM Templehall United Yellows 2018 V Bowhill United Blacks",
     "id": "liga5-31"
   },
   {
@@ -6390,10 +6390,10 @@
     "iso_date": "2026-11-21",
     "venue": "Beath High School",
     "time": "12:45 PM",
-    "homeTeam": "Templehall United Yellows 2018",
-    "awayTeam": "Bowhill United Blacks",
-    "match_id": "273142254",
-    "raw_fixture": "Beath High School 12:45 PM Templehall United Yellows 2018 V Bowhill United Blacks",
+    "homeTeam": "KSQ 2018 Galaxy",
+    "awayTeam": "DACC Girls Blacks",
+    "match_id": "273142261",
+    "raw_fixture": "Beath High School 12:45 PM KSQ 2018 Galaxy V DACC Girls Blacks",
     "id": "liga5-37"
   },
   {
@@ -9551,11 +9551,12 @@
     "iso_date": "2026-12-12",
     "venue": "Beath High School",
     "time": "9:00 AM",
-    "homeTeam": "Duloch Juniors City",
-    "awayTeam": "Futsal Escocia Turquoise",
-    "match_id": "273141819",
-    "raw_fixture": "Beath High School 9:00 AM Duloch Juniors City V Futsal Escocia Turquoise",
-    "id": "liga6-72"
+    "homeTeam": "Tiki Taka Neranja",
+    "awayTeam": "Blue Brazil 2018",
+    "match_id": "273141820",
+    "raw_fixture": "Beath High School 9:00 AM Tiki Taka Neranja V Blue Brazil 2018",
+    "id": "liga6-72",
+    "updated": "2:15 PM -> 9:00 AM, Balwearie High School -> Beath High School"
   },
   {
     "league": "Liga 6",
@@ -9603,10 +9604,10 @@
     "iso_date": "2026-12-12",
     "venue": "Balwearie High School",
     "time": "11:15 AM",
-    "homeTeam": "Swifts Thunder 2018",
-    "awayTeam": "Greig Park Blues",
-    "match_id": "273141825",
-    "raw_fixture": "Balwearie High School 11:15 AM Swifts Thunder 2018 V Greig Park Blues",
+    "homeTeam": "ABC 2018",
+    "awayTeam": "KSQ Astros",
+    "match_id": "273141822",
+    "raw_fixture": "Balwearie High School 11:15 AM ABC 2018 V KSQ Astros",
     "id": "liga6-76"
   },
   {
@@ -9642,10 +9643,10 @@
     "iso_date": "2026-12-12",
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
-    "homeTeam": "ABC 2018",
-    "awayTeam": "KSQ Astros",
-    "match_id": "273141822",
-    "raw_fixture": "Beath High School Refurb 12:45 PM ABC 2018 V KSQ Astros",
+    "homeTeam": "Duloch Juniors City",
+    "awayTeam": "Futsal Escocia Turquoise",
+    "match_id": "273141819",
+    "raw_fixture": "Beath High School Refurb 12:45 PM Duloch Juniors City V Futsal Escocia Turquoise",
     "id": "liga6-79"
   },
   {
@@ -9707,10 +9708,10 @@
     "iso_date": "2026-12-12",
     "venue": "Balwearie High School",
     "time": "2:15 PM",
-    "homeTeam": "Tiki Taka Neranja",
-    "awayTeam": "Blue Brazil 2018",
-    "match_id": "273141820",
-    "raw_fixture": "Balwearie High School 2:15 PM Tiki Taka Neranja V Blue Brazil 2018",
+    "homeTeam": "Swifts Thunder 2018",
+    "awayTeam": "Greig Park Blues",
+    "match_id": "273141825",
+    "raw_fixture": "Balwearie High School 2:15 PM Swifts Thunder 2018 V Greig Park Blues",
     "id": "liga6-84"
   },
   {
