@@ -2745,10 +2745,10 @@
     "iso_date": "2026-11-08",
     "venue": "Beath High School",
     "time": "12:00 PM",
-    "homeTeam": "Bayside FC",
+    "homeTeam": "TBC",
     "awayTeam": "Swifts Sambas (A)",
     "match_id": "272353865",
-    "raw_fixture": "Beath High School 12:00 PM Bayside FC V Swifts Sambas (A)",
+    "raw_fixture": "Beath High School 12:00 PM TBC V Swifts Sambas (A)",
     "id": "liga4-9"
   },
   {
@@ -2864,9 +2864,9 @@
     "venue": "Beath High School Refurb",
     "time": "9:00 AM",
     "homeTeam": "Pitreavie Blacks 2017s",
-    "awayTeam": "Bayside FC",
+    "awayTeam": "TBC",
     "match_id": "272353867",
-    "raw_fixture": "Beath High School Refurb 9:00 AM Pitreavie Blacks 2017s V Bayside FC",
+    "raw_fixture": "Beath High School Refurb 9:00 AM Pitreavie Blacks 2017s V TBC",
     "id": "liga4-18"
   },
   {
@@ -3176,10 +3176,10 @@
     "iso_date": "2026-11-22",
     "venue": "Beath High School Refurb",
     "time": "12:00 PM",
-    "homeTeam": "Bayside FC",
+    "homeTeam": "TBC",
     "awayTeam": "Bayside Broncos 2017s",
     "match_id": "272353888",
-    "raw_fixture": "Beath High School Refurb 12:00 PM Bayside FC V Bayside Broncos 2017s",
+    "raw_fixture": "Beath High School Refurb 12:00 PM TBC V Bayside Broncos 2017s",
     "id": "liga4-42"
   },
   {
@@ -3415,10 +3415,11 @@
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
     "homeTeam": "Tiki Taka Neranja",
-    "awayTeam": "Bayside FC",
+    "awayTeam": "TBC",
     "match_id": "272353904",
-    "raw_fixture": "Beath High School Refurb 12:45 PM Tiki Taka Neranja V Bayside FC",
-    "id": "liga4-60"
+    "raw_fixture": "Beath High School Refurb 12:45 PM Tiki Taka Neranja V TBC",
+    "id": "liga4-60",
+    "updated": "now Tiki Taka Neranja v TBC"
   },
   {
     "league": "Liga 4",
@@ -3506,10 +3507,10 @@
     "iso_date": "2026-12-06",
     "venue": "Beath High School",
     "time": "9:45 AM",
-    "homeTeam": "Bayside FC",
+    "homeTeam": "TBC",
     "awayTeam": "Futsal Escocia White",
     "match_id": "272353917",
-    "raw_fixture": "Beath High School 9:45 AM Bayside FC V Futsal Escocia White",
+    "raw_fixture": "Beath High School 9:45 AM TBC V Futsal Escocia White",
     "id": "liga4-67"
   },
   {
@@ -3862,9 +3863,9 @@
     "venue": "Beath High School",
     "time": "1:30 PM",
     "homeTeam": "Rosyth Reds",
-    "awayTeam": "Bayside FC",
+    "awayTeam": "TBC",
     "match_id": "272353948",
-    "raw_fixture": "Beath High School 1:30 PM Rosyth Reds V Bayside FC",
+    "raw_fixture": "Beath High School 1:30 PM Rosyth Reds V TBC",
     "id": "liga4-94"
   },
   {
@@ -3965,10 +3966,10 @@
     "iso_date": "2026-12-20",
     "venue": "Beath High School Refurb",
     "time": "9:45 AM",
-    "homeTeam": "Bayside FC",
+    "homeTeam": "TBC",
     "awayTeam": "Bowhill Retros",
     "match_id": "272353961",
-    "raw_fixture": "Beath High School Refurb 9:45 AM Bayside FC V Bowhill Retros",
+    "raw_fixture": "Beath High School Refurb 9:45 AM TBC V Bowhill Retros",
     "id": "liga4-102"
   },
   {
@@ -4228,9 +4229,9 @@
     "venue": "Beath High School",
     "time": "11:15 AM",
     "homeTeam": "Swifts Sambas (B)",
-    "awayTeam": "Bayside FC",
+    "awayTeam": "TBC",
     "match_id": "272353975",
-    "raw_fixture": "Beath High School 11:15 AM Swifts Sambas (B) V Bayside FC",
+    "raw_fixture": "Beath High School 11:15 AM Swifts Sambas (B) V TBC",
     "id": "liga4-122"
   },
   {
@@ -4409,10 +4410,10 @@
     "iso_date": "2027-01-17",
     "venue": "Beath High School Refurb",
     "time": "9:45 AM",
-    "homeTeam": "Bayside FC",
+    "homeTeam": "TBC",
     "awayTeam": "Luncarty FC",
     "match_id": "272353986",
-    "raw_fixture": "Beath High School Refurb 9:45 AM Bayside FC V Luncarty FC",
+    "raw_fixture": "Beath High School Refurb 9:45 AM TBC V Luncarty FC",
     "id": "liga4-136"
   },
   {
@@ -4787,9 +4788,9 @@
     "venue": "Beath High School Refurb",
     "time": "2:15 PM",
     "homeTeam": "Pitreavie Reds 2017s",
-    "awayTeam": "Bayside FC",
+    "awayTeam": "TBC",
     "match_id": "272354002",
-    "raw_fixture": "Beath High School Refurb 2:15 PM Pitreavie Reds 2017s V Bayside FC",
+    "raw_fixture": "Beath High School Refurb 2:15 PM Pitreavie Reds 2017s V TBC",
     "id": "liga4-165"
   },
   {
@@ -4851,11 +4852,12 @@
     "iso_date": "2027-01-31",
     "venue": "Beath High School Refurb",
     "time": "9:45 AM",
-    "homeTeam": "Bayside FC",
+    "homeTeam": "TBC",
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354025",
-    "raw_fixture": "Beath High School Refurb 9:45 AM Bayside FC V Tiki Taka Negra",
-    "id": "liga4-170"
+    "raw_fixture": "Beath High School Refurb 9:45 AM TBC V Tiki Taka Negra",
+    "id": "liga4-170",
+    "updated": "now TBC v Tiki Taka Negra"
   },
   {
     "league": "Liga 4",
@@ -5099,9 +5101,9 @@
     "venue": "Beath High School Refurb",
     "time": "10:30 AM",
     "homeTeam": "KSQ Comets",
-    "awayTeam": "Bayside FC",
+    "awayTeam": "TBC",
     "match_id": "272354040",
-    "raw_fixture": "Beath High School Refurb 10:30 AM KSQ Comets V Bayside FC",
+    "raw_fixture": "Beath High School Refurb 10:30 AM KSQ Comets V TBC",
     "id": "liga4-189"
   },
   {
@@ -5423,10 +5425,10 @@
     "iso_date": "2027-02-14",
     "venue": "Beath High School Refurb",
     "time": "1:30 PM",
-    "homeTeam": "Bayside FC",
+    "homeTeam": "TBC",
     "awayTeam": "Futsal Escocia Navy",
     "match_id": "272354063",
-    "raw_fixture": "Beath High School Refurb 1:30 PM Bayside FC V Futsal Escocia Navy",
+    "raw_fixture": "Beath High School Refurb 1:30 PM TBC V Futsal Escocia Navy",
     "id": "liga4-214"
   },
   {
@@ -5606,9 +5608,9 @@
     "venue": "Beath High School",
     "time": "12:45 PM",
     "homeTeam": "GS - Ronaldinho",
-    "awayTeam": "Bayside FC",
+    "awayTeam": "TBC",
     "match_id": "272354084",
-    "raw_fixture": "Beath High School 12:45 PM GS - Ronaldinho V Bayside FC",
+    "raw_fixture": "Beath High School 12:45 PM GS - Ronaldinho V TBC",
     "id": "liga4-228"
   },
   {
@@ -5839,10 +5841,10 @@
     "iso_date": "2027-02-28",
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
-    "homeTeam": "Bayside FC",
+    "homeTeam": "TBC",
     "awayTeam": "DACC Girls 2015",
     "match_id": "272354099",
-    "raw_fixture": "Beath High School Refurb 12:45 PM Bayside FC V DACC Girls 2015",
+    "raw_fixture": "Beath High School Refurb 12:45 PM TBC V DACC Girls 2015",
     "id": "liga4-246"
   },
   {
@@ -6152,10 +6154,10 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School",
     "time": "11:15 AM",
-    "homeTeam": "KSQ 2018 Galaxy",
-    "awayTeam": "Swifts Falcons 2017",
-    "match_id": "273142239",
-    "raw_fixture": "Beath High School 11:15 AM KSQ 2018 Galaxy V Swifts Falcons 2017",
+    "homeTeam": "Bowhill United Blacks",
+    "awayTeam": "Bayside Bullets 2017s",
+    "match_id": "273142236",
+    "raw_fixture": "Beath High School 11:15 AM Bowhill United Blacks V Bayside Bullets 2017s",
     "id": "liga5-19"
   },
   {
@@ -6165,10 +6167,10 @@
     "iso_date": "2026-11-14",
     "venue": "Caledonia High School, Rosyth",
     "time": "11:15 AM",
-    "homeTeam": "Inverkeithing United",
+    "homeTeam": "Bayside Barcas",
     "awayTeam": "Templehall United Yellows 2018",
     "match_id": "273142245",
-    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Inverkeithing United V Templehall United Yellows 2018",
+    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Bayside Barcas V Templehall United Yellows 2018",
     "id": "liga5-20"
   },
   {
@@ -6179,9 +6181,9 @@
     "venue": "Beath High School",
     "time": "12:00 PM",
     "homeTeam": "Crossgates Primrose 2016s Blues",
-    "awayTeam": "Tiki Taka Negra",
+    "awayTeam": "KSQ 2018 Galaxy",
     "match_id": "273142244",
-    "raw_fixture": "Beath High School 12:00 PM Crossgates Primrose 2016s Blues V Tiki Taka Negra",
+    "raw_fixture": "Beath High School 12:00 PM Crossgates Primrose 2016s Blues V KSQ 2018 Galaxy",
     "id": "liga5-21"
   },
   {
@@ -6192,9 +6194,9 @@
     "venue": "Caledonia High School, Rosyth",
     "time": "12:00 PM",
     "homeTeam": "Bayside Barcas",
-    "awayTeam": "Bowhill United Blacks",
+    "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142242",
-    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Bayside Barcas V Bowhill United Blacks",
+    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Bayside Barcas V Cairneyhill Ath Maroons",
     "id": "liga5-22"
   },
   {
@@ -6204,11 +6206,12 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School",
     "time": "12:45 PM",
-    "homeTeam": "Cairneyhill Ath Maroons",
-    "awayTeam": "Bayside Bullets 2017s",
-    "match_id": "273142236",
-    "raw_fixture": "Beath High School 12:45 PM Cairneyhill Ath Maroons V Bayside Bullets 2017s",
-    "id": "liga5-23"
+    "homeTeam": "Tiki Taka Negra",
+    "awayTeam": "DACC Blacks",
+    "match_id": "273142239",
+    "raw_fixture": "Beath High School 12:45 PM Tiki Taka Negra V DACC Blacks",
+    "id": "liga5-23",
+    "updated": "11:15 AM -> 12:45 PM, now Tiki Taka Negra v DACC Blacks"
   },
   {
     "league": "Liga 5",
@@ -6217,10 +6220,10 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
-    "homeTeam": "DACC Blacks",
+    "homeTeam": "Swifts Falcons 2017",
     "awayTeam": "Liga 6 Team",
     "match_id": "273274843",
-    "raw_fixture": "Beath High School Refurb 12:45 PM DACC Blacks V Liga 6 Team",
+    "raw_fixture": "Beath High School Refurb 12:45 PM Swifts Falcons 2017 V Liga 6 Team",
     "id": "liga5-24"
   },
   {
@@ -6323,9 +6326,9 @@
     "venue": "Caledonia High School, Rosyth",
     "time": "10:30 AM",
     "homeTeam": "Duloch Juniors - Blacks",
-    "awayTeam": "Inverkeithing United",
+    "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142259",
-    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Duloch Juniors - Blacks V Inverkeithing United",
+    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Duloch Juniors - Blacks V Cairneyhill Ath Maroons",
     "id": "liga5-32"
   },
   {
@@ -6398,26 +6401,13 @@
     "round": 3,
     "date": "Sat 21st Nov 2026",
     "iso_date": "2026-11-21",
-    "venue": "Beath High School Refurb",
-    "time": "12:45 PM",
-    "homeTeam": "Cairneyhill Ath Maroons",
-    "awayTeam": "Liga 6 Team",
-    "match_id": "273275034",
-    "raw_fixture": "Beath High School Refurb 12:45 PM Cairneyhill Ath Maroons V Liga 6 Team",
-    "id": "liga5-38"
-  },
-  {
-    "league": "Liga 5",
-    "round": 3,
-    "date": "Sat 21st Nov 2026",
-    "iso_date": "2026-11-21",
     "venue": "Caledonia High School, Rosyth",
     "time": "12:45 PM",
     "homeTeam": "Dunipace Ballerz White",
     "awayTeam": "DACC Blacks",
     "match_id": "273142250",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Dunipace Ballerz White V DACC Blacks",
-    "id": "liga5-39"
+    "id": "liga5-38"
   },
   {
     "league": "Liga 5",
@@ -6430,7 +6420,7 @@
     "awayTeam": "Greig Park Greens",
     "match_id": "273142260",
     "raw_fixture": "Beath High School 1:30 PM WLFA V Greig Park Greens",
-    "id": "liga5-40"
+    "id": "liga5-39"
   },
   {
     "league": "Liga 5",
@@ -6443,7 +6433,7 @@
     "awayTeam": "KSQ Galaxy",
     "match_id": "273142255",
     "raw_fixture": "Beath High School 2:15 PM Bayside Bullets 2017s V KSQ Galaxy",
-    "id": "liga5-41"
+    "id": "liga5-40"
   },
   {
     "league": "Liga 5",
@@ -6456,7 +6446,7 @@
     "awayTeam": "DACC Boys 17",
     "match_id": "273142262",
     "raw_fixture": "Beath High School 3:00 PM Dunipace Ballerz Black V DACC Boys 17",
-    "id": "liga5-42"
+    "id": "liga5-41"
   },
   {
     "league": "Liga 5",
@@ -6469,7 +6459,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273142272",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM DACC Girls 2017 Whites V Futsal Escocia White",
-    "id": "liga5-43"
+    "id": "liga5-42"
   },
   {
     "league": "Liga 5",
@@ -6482,7 +6472,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142274",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Futsal Escocia Turquoise V Tiki Taka Blanco",
-    "id": "liga5-44"
+    "id": "liga5-43"
   },
   {
     "league": "Liga 5",
@@ -6495,7 +6485,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142264",
     "raw_fixture": "Beath High School 10:30 AM Greig Park Greens V Tiki Taka Negra",
-    "id": "liga5-45"
+    "id": "liga5-44"
   },
   {
     "league": "Liga 5",
@@ -6508,7 +6498,7 @@
     "awayTeam": "Templehall United Yellows 2018",
     "match_id": "273142266",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Duloch Juniors - Reds V Templehall United Yellows 2018",
-    "id": "liga5-46"
+    "id": "liga5-45"
   },
   {
     "league": "Liga 5",
@@ -6521,7 +6511,7 @@
     "awayTeam": "Bayside Bullets 2017s",
     "match_id": "273142269",
     "raw_fixture": "Beath High School 11:15 AM DACC Boys 17 V Bayside Bullets 2017s",
-    "id": "liga5-47"
+    "id": "liga5-46"
   },
   {
     "league": "Liga 5",
@@ -6530,10 +6520,23 @@
     "iso_date": "2026-11-28",
     "venue": "Caledonia High School, Rosyth",
     "time": "11:15 AM",
+    "homeTeam": "TBC",
+    "awayTeam": "Crossgates Primrose 2016s Blues",
+    "match_id": "273142263",
+    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM TBC V Crossgates Primrose 2016s Blues",
+    "id": "liga5-47"
+  },
+  {
+    "league": "Liga 5",
+    "round": 4,
+    "date": "Sat 28th Nov 2026",
+    "iso_date": "2026-11-28",
+    "venue": "Beath High School",
+    "time": "12:00 PM",
     "homeTeam": "Dunipace Ballerz Black",
     "awayTeam": "DACC Blacks",
     "match_id": "273142267",
-    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Dunipace Ballerz Black V DACC Blacks",
+    "raw_fixture": "Beath High School 12:00 PM Dunipace Ballerz Black V DACC Blacks",
     "id": "liga5-48"
   },
   {
@@ -6541,25 +6544,26 @@
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Beath High School",
+    "venue": "Caledonia High School, Rosyth",
     "time": "12:00 PM",
     "homeTeam": "Tiki Taka Neranja",
     "awayTeam": "KSQ 2018 Galaxy",
     "match_id": "273142271",
-    "raw_fixture": "Beath High School 12:00 PM Tiki Taka Neranja V KSQ 2018 Galaxy",
-    "id": "liga5-49"
+    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Tiki Taka Neranja V KSQ 2018 Galaxy",
+    "id": "liga5-49",
+    "updated": "Beath High School -> Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Caledonia High School, Rosyth",
-    "time": "12:00 PM",
-    "homeTeam": "Inverkeithing United",
-    "awayTeam": "Crossgates Primrose 2016s Blues",
-    "match_id": "273142263",
-    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Inverkeithing United V Crossgates Primrose 2016s Blues",
+    "venue": "Beath High School",
+    "time": "12:45 PM",
+    "homeTeam": "KSQ Galaxy",
+    "awayTeam": "Dunipace Ballerz White",
+    "match_id": "273142270",
+    "raw_fixture": "Beath High School 12:45 PM KSQ Galaxy V Dunipace Ballerz White",
     "id": "liga5-50"
   },
   {
@@ -6567,26 +6571,13 @@
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Beath High School",
+    "venue": "Caledonia High School, Rosyth",
     "time": "12:45 PM",
     "homeTeam": "Bayside Barcas",
     "awayTeam": "WLFA",
     "match_id": "273142275",
-    "raw_fixture": "Beath High School 12:45 PM Bayside Barcas V WLFA",
+    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Bayside Barcas V WLFA",
     "id": "liga5-51"
-  },
-  {
-    "league": "Liga 5",
-    "round": 4,
-    "date": "Sat 28th Nov 2026",
-    "iso_date": "2026-11-28",
-    "venue": "Caledonia High School, Rosyth",
-    "time": "12:45 PM",
-    "homeTeam": "KSQ Galaxy",
-    "awayTeam": "Dunipace Ballerz White",
-    "match_id": "273142270",
-    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM KSQ Galaxy V Dunipace Ballerz White",
-    "id": "liga5-52"
   },
   {
     "league": "Liga 5",
@@ -6599,7 +6590,7 @@
     "awayTeam": "Swifts Falcons 2017",
     "match_id": "273142273",
     "raw_fixture": "Beath High School 1:30 PM DACC Girls Blacks V Swifts Falcons 2017",
-    "id": "liga5-53"
+    "id": "liga5-52"
   },
   {
     "league": "Liga 5",
@@ -6612,7 +6603,7 @@
     "awayTeam": "Duloch Juniors - Blacks",
     "match_id": "273142276",
     "raw_fixture": "Beath High School 2:15 PM Bowhill United Blacks V Duloch Juniors - Blacks",
-    "id": "liga5-54"
+    "id": "liga5-53"
   },
   {
     "league": "Liga 5",
@@ -6625,7 +6616,7 @@
     "awayTeam": "Bowhill United Yellows",
     "match_id": "273142265",
     "raw_fixture": "Beath High School 3:00 PM Cairneyhill Ath Maroons V Bowhill United Yellows",
-    "id": "liga5-55"
+    "id": "liga5-54"
   },
   {
     "league": "Liga 5",
@@ -6638,7 +6629,7 @@
     "awayTeam": "Crossgates Primrose 2016s Blues",
     "match_id": "273142278",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Futsal Escocia White V Crossgates Primrose 2016s Blues",
-    "id": "liga5-56"
+    "id": "liga5-55"
   },
   {
     "league": "Liga 5",
@@ -6651,7 +6642,7 @@
     "awayTeam": "WLFA",
     "match_id": "273142285",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Templehall United Yellows 2018 V WLFA",
-    "id": "liga5-57"
+    "id": "liga5-56"
   },
   {
     "league": "Liga 5",
@@ -6664,7 +6655,7 @@
     "awayTeam": "DACC Boys 17",
     "match_id": "273142281",
     "raw_fixture": "Beath High School 10:30 AM Dunipace Ballerz White V DACC Boys 17",
-    "id": "liga5-58"
+    "id": "liga5-57"
   },
   {
     "league": "Liga 5",
@@ -6677,7 +6668,7 @@
     "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142287",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM KSQ 2018 Galaxy V Cairneyhill Ath Maroons",
-    "id": "liga5-59"
+    "id": "liga5-58"
   },
   {
     "league": "Liga 5",
@@ -6690,7 +6681,7 @@
     "awayTeam": "DACC Girls 2017 Whites",
     "match_id": "273142277",
     "raw_fixture": "Beath High School 11:15 AM Swifts Falcons 2017 V DACC Girls 2017 Whites",
-    "id": "liga5-60"
+    "id": "liga5-59"
   },
   {
     "league": "Liga 5",
@@ -6703,7 +6694,7 @@
     "awayTeam": "Bowhill United Blacks",
     "match_id": "273142288",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM DACC Blacks V Bowhill United Blacks",
-    "id": "liga5-61"
+    "id": "liga5-60"
   },
   {
     "league": "Liga 5",
@@ -6716,7 +6707,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142283",
     "raw_fixture": "Beath High School 12:00 PM DACC Girls Blacks V Tiki Taka Neranja",
-    "id": "liga5-62"
+    "id": "liga5-61"
   },
   {
     "league": "Liga 5",
@@ -6729,7 +6720,7 @@
     "awayTeam": "KSQ Galaxy",
     "match_id": "273142284",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Bowhill United Yellows V KSQ Galaxy",
-    "id": "liga5-63"
+    "id": "liga5-62"
   },
   {
     "league": "Liga 5",
@@ -6742,7 +6733,7 @@
     "awayTeam": "Duloch Juniors - Reds",
     "match_id": "273142289",
     "raw_fixture": "Beath High School 12:45 PM Duloch Juniors - Blacks V Duloch Juniors - Reds",
-    "id": "liga5-64"
+    "id": "liga5-63"
   },
   {
     "league": "Liga 5",
@@ -6755,7 +6746,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273142280",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Swifts Raiders 2018 V Futsal Escocia Turquoise",
-    "id": "liga5-65"
+    "id": "liga5-64"
   },
   {
     "league": "Liga 5",
@@ -6768,7 +6759,7 @@
     "awayTeam": "Duloch City 2018s",
     "match_id": "273142286",
     "raw_fixture": "Beath High School 1:30 PM Bayside Bullets 2017s V Duloch City 2018s",
-    "id": "liga5-66"
+    "id": "liga5-65"
   },
   {
     "league": "Liga 5",
@@ -6781,7 +6772,7 @@
     "awayTeam": "Bayside Barcas",
     "match_id": "273142282",
     "raw_fixture": "Beath High School 2:15 PM Tiki Taka Negra V Bayside Barcas",
-    "id": "liga5-67"
+    "id": "liga5-66"
   },
   {
     "league": "Liga 5",
@@ -6794,7 +6785,7 @@
     "awayTeam": "Inverkeithing United",
     "match_id": "273142290",
     "raw_fixture": "Beath High School 3:00 PM Dunipace Ballerz Black V Inverkeithing United",
-    "id": "liga5-68"
+    "id": "liga5-67"
   },
   {
     "league": "Liga 5",
@@ -6807,7 +6798,7 @@
     "awayTeam": "Greig Park Greens",
     "match_id": "273142279",
     "raw_fixture": "Beath High School 3:45 PM Tiki Taka Blanco V Greig Park Greens",
-    "id": "liga5-69"
+    "id": "liga5-68"
   },
   {
     "league": "Liga 5",
@@ -6820,7 +6811,7 @@
     "awayTeam": "DACC Blacks",
     "match_id": "273142298",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Duloch Juniors - Reds V DACC Blacks",
-    "id": "liga5-70"
+    "id": "liga5-69"
   },
   {
     "league": "Liga 5",
@@ -6833,7 +6824,7 @@
     "awayTeam": "Duloch Juniors - Blacks",
     "match_id": "273142301",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM WLFA V Duloch Juniors - Blacks",
-    "id": "liga5-71"
+    "id": "liga5-70"
   },
   {
     "league": "Liga 5",
@@ -6846,7 +6837,7 @@
     "awayTeam": "Swifts Raiders 2018",
     "match_id": "273142293",
     "raw_fixture": "Beath High School 10:30 AM Greig Park Greens V Swifts Raiders 2018",
-    "id": "liga5-72"
+    "id": "liga5-71"
   },
   {
     "league": "Liga 5",
@@ -6859,7 +6850,7 @@
     "awayTeam": "Templehall United Yellows 2018",
     "match_id": "273142295",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Tiki Taka Negra V Templehall United Yellows 2018",
-    "id": "liga5-73"
+    "id": "liga5-72"
   },
   {
     "league": "Liga 5",
@@ -6872,7 +6863,7 @@
     "awayTeam": "Swifts Falcons 2017",
     "match_id": "273142291",
     "raw_fixture": "Beath High School 11:15 AM Tiki Taka Neranja V Swifts Falcons 2017",
-    "id": "liga5-74"
+    "id": "liga5-73"
   },
   {
     "league": "Liga 5",
@@ -6885,7 +6876,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273142292",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Futsal Escocia Turquoise V Futsal Escocia White",
-    "id": "liga5-75"
+    "id": "liga5-74"
   },
   {
     "league": "Liga 5",
@@ -6898,7 +6889,7 @@
     "awayTeam": "KSQ 2018 Galaxy",
     "match_id": "273142297",
     "raw_fixture": "Beath High School 12:00 PM KSQ Galaxy V KSQ 2018 Galaxy",
-    "id": "liga5-76"
+    "id": "liga5-75"
   },
   {
     "league": "Liga 5",
@@ -6911,7 +6902,7 @@
     "awayTeam": "Bowhill United Yellows",
     "match_id": "273142294",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM DACC Boys 17 V Bowhill United Yellows",
-    "id": "liga5-77"
+    "id": "liga5-76"
   },
   {
     "league": "Liga 5",
@@ -6924,7 +6915,7 @@
     "awayTeam": "Bayside Bullets 2017s",
     "match_id": "273142299",
     "raw_fixture": "Beath High School 12:45 PM Inverkeithing United V Bayside Bullets 2017s",
-    "id": "liga5-78"
+    "id": "liga5-77"
   },
   {
     "league": "Liga 5",
@@ -6937,7 +6928,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142300",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Bayside Barcas V Tiki Taka Blanco",
-    "id": "liga5-79"
+    "id": "liga5-78"
   },
   {
     "league": "Liga 5",
@@ -6950,7 +6941,7 @@
     "awayTeam": "Dunipace Ballerz Black",
     "match_id": "273142303",
     "raw_fixture": "Beath High School 1:30 PM Bowhill United Blacks V Dunipace Ballerz Black",
-    "id": "liga5-80"
+    "id": "liga5-79"
   },
   {
     "league": "Liga 5",
@@ -6963,7 +6954,7 @@
     "awayTeam": "DACC Girls 2017 Whites",
     "match_id": "273142296",
     "raw_fixture": "Beath High School 2:15 PM Crossgates Primrose 2016s Blues V DACC Girls 2017 Whites",
-    "id": "liga5-81"
+    "id": "liga5-80"
   },
   {
     "league": "Liga 5",
@@ -6976,7 +6967,7 @@
     "awayTeam": "DACC Girls Blacks",
     "match_id": "273142302",
     "raw_fixture": "Beath High School 3:00 PM Cairneyhill Ath Maroons V DACC Girls Blacks",
-    "id": "liga5-82"
+    "id": "liga5-81"
   },
   {
     "league": "Liga 5",
@@ -6989,7 +6980,7 @@
     "awayTeam": "Dunipace Ballerz White",
     "match_id": "273142304",
     "raw_fixture": "Beath High School 3:45 PM TBC V Dunipace Ballerz White",
-    "id": "liga5-83"
+    "id": "liga5-82"
   },
   {
     "league": "Liga 5",
@@ -7002,7 +6993,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273142307",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM DACC Girls 2017 Whites V Futsal Escocia Turquoise",
-    "id": "liga5-84"
+    "id": "liga5-83"
   },
   {
     "league": "Liga 5",
@@ -7015,7 +7006,7 @@
     "awayTeam": "WLFA",
     "match_id": "273142314",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM DACC Blacks V WLFA",
-    "id": "liga5-85"
+    "id": "liga5-84"
   },
   {
     "league": "Liga 5",
@@ -7028,7 +7019,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142311",
     "raw_fixture": "Beath High School 10:30 AM Duloch Juniors - Blacks V Tiki Taka Negra",
-    "id": "liga5-86"
+    "id": "liga5-85"
   },
   {
     "league": "Liga 5",
@@ -7041,7 +7032,7 @@
     "awayTeam": "Duloch City 2018s",
     "match_id": "273142316",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Bowhill United Yellows V Duloch City 2018s",
-    "id": "liga5-87"
+    "id": "liga5-86"
   },
   {
     "league": "Liga 5",
@@ -7054,7 +7045,7 @@
     "awayTeam": "Duloch Juniors - Reds",
     "match_id": "273142317",
     "raw_fixture": "Beath High School 11:15 AM Dunipace Ballerz Black V Duloch Juniors - Reds",
-    "id": "liga5-88"
+    "id": "liga5-87"
   },
   {
     "league": "Liga 5",
@@ -7067,7 +7058,7 @@
     "awayTeam": "KSQ Galaxy",
     "match_id": "273142315",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM DACC Girls Blacks V KSQ Galaxy",
-    "id": "liga5-89"
+    "id": "liga5-88"
   },
   {
     "league": "Liga 5",
@@ -7080,7 +7071,7 @@
     "awayTeam": "Bowhill United Blacks",
     "match_id": "273142306",
     "raw_fixture": "Beath High School 12:00 PM Bayside Bullets 2017s V Bowhill United Blacks",
-    "id": "liga5-90"
+    "id": "liga5-89"
   },
   {
     "league": "Liga 5",
@@ -7093,7 +7084,7 @@
     "awayTeam": "Crossgates Primrose 2016s Blues",
     "match_id": "273142318",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Swifts Falcons 2017 V Crossgates Primrose 2016s Blues",
-    "id": "liga5-91"
+    "id": "liga5-90"
   },
   {
     "league": "Liga 5",
@@ -7106,7 +7097,7 @@
     "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142305",
     "raw_fixture": "Beath High School 12:45 PM Tiki Taka Neranja V Cairneyhill Ath Maroons",
-    "id": "liga5-92"
+    "id": "liga5-91"
   },
   {
     "league": "Liga 5",
@@ -7119,7 +7110,7 @@
     "awayTeam": "Greig Park Greens",
     "match_id": "273142313",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Futsal Escocia White V Greig Park Greens",
-    "id": "liga5-93"
+    "id": "liga5-92"
   },
   {
     "league": "Liga 5",
@@ -7132,7 +7123,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142309",
     "raw_fixture": "Beath High School 1:30 PM Templehall United Yellows 2018 V Tiki Taka Blanco",
-    "id": "liga5-94"
+    "id": "liga5-93"
   },
   {
     "league": "Liga 5",
@@ -7145,7 +7136,7 @@
     "awayTeam": "Inverkeithing United",
     "match_id": "273142308",
     "raw_fixture": "Beath High School 2:15 PM Dunipace Ballerz White V Inverkeithing United",
-    "id": "liga5-95"
+    "id": "liga5-94"
   },
   {
     "league": "Liga 5",
@@ -7158,7 +7149,7 @@
     "awayTeam": "DACC Boys 17",
     "match_id": "273142310",
     "raw_fixture": "Beath High School 3:00 PM KSQ 2018 Galaxy V DACC Boys 17",
-    "id": "liga5-96"
+    "id": "liga5-95"
   },
   {
     "league": "Liga 5",
@@ -7171,7 +7162,7 @@
     "awayTeam": "Bayside Barcas",
     "match_id": "273142312",
     "raw_fixture": "Beath High School 3:45 PM Swifts Raiders 2018 V Bayside Barcas",
-    "id": "liga5-97"
+    "id": "liga5-96"
   },
   {
     "league": "Liga 5",
@@ -7184,7 +7175,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273142325",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Bayside Barcas V Futsal Escocia White",
-    "id": "liga5-98"
+    "id": "liga5-97"
   },
   {
     "league": "Liga 5",
@@ -7197,7 +7188,7 @@
     "awayTeam": "Bayside Bullets 2017s",
     "match_id": "273142332",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Duloch Juniors - Reds V Bayside Bullets 2017s",
-    "id": "liga5-99"
+    "id": "liga5-98"
   },
   {
     "league": "Liga 5",
@@ -7210,7 +7201,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142324",
     "raw_fixture": "Beath High School 10:30 AM KSQ Galaxy V Tiki Taka Neranja",
-    "id": "liga5-100"
+    "id": "liga5-99"
   },
   {
     "league": "Liga 5",
@@ -7223,7 +7214,7 @@
     "awayTeam": "Crossgates Primrose 2016s Blues",
     "match_id": "273142323",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Futsal Escocia Turquoise V Crossgates Primrose 2016s Blues",
-    "id": "liga5-101"
+    "id": "liga5-100"
   },
   {
     "league": "Liga 5",
@@ -7236,7 +7227,7 @@
     "awayTeam": "KSQ 2018 Galaxy",
     "match_id": "273142330",
     "raw_fixture": "Beath High School 11:15 AM Duloch City 2018s V KSQ 2018 Galaxy",
-    "id": "liga5-102"
+    "id": "liga5-101"
   },
   {
     "league": "Liga 5",
@@ -7249,7 +7240,7 @@
     "awayTeam": "DACC Girls 2017 Whites",
     "match_id": "273142320",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Greig Park Greens V DACC Girls 2017 Whites",
-    "id": "liga5-103"
+    "id": "liga5-102"
   },
   {
     "league": "Liga 5",
@@ -7262,7 +7253,7 @@
     "awayTeam": "Bowhill United Yellows",
     "match_id": "273142321",
     "raw_fixture": "Beath High School 12:00 PM Inverkeithing United V Bowhill United Yellows",
-    "id": "liga5-104"
+    "id": "liga5-103"
   },
   {
     "league": "Liga 5",
@@ -7275,7 +7266,7 @@
     "awayTeam": "Swifts Falcons 2017",
     "match_id": "273142331",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Cairneyhill Ath Maroons V Swifts Falcons 2017",
-    "id": "liga5-105"
+    "id": "liga5-104"
   },
   {
     "league": "Liga 5",
@@ -7288,7 +7279,7 @@
     "awayTeam": "Dunipace Ballerz White",
     "match_id": "273142328",
     "raw_fixture": "Beath High School 12:45 PM Bowhill United Blacks V Dunipace Ballerz White",
-    "id": "liga5-106"
+    "id": "liga5-105"
   },
   {
     "league": "Liga 5",
@@ -7301,7 +7292,7 @@
     "awayTeam": "DACC Blacks",
     "match_id": "273142319",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Tiki Taka Negra V DACC Blacks",
-    "id": "liga5-107"
+    "id": "liga5-106"
   },
   {
     "league": "Liga 5",
@@ -7314,7 +7305,7 @@
     "awayTeam": "DACC Girls Blacks",
     "match_id": "273142322",
     "raw_fixture": "Beath High School 1:30 PM DACC Boys 17 V DACC Girls Blacks",
-    "id": "liga5-108"
+    "id": "liga5-107"
   },
   {
     "league": "Liga 5",
@@ -7327,7 +7318,7 @@
     "awayTeam": "Dunipace Ballerz Black",
     "match_id": "273142327",
     "raw_fixture": "Beath High School 2:15 PM WLFA V Dunipace Ballerz Black",
-    "id": "liga5-109"
+    "id": "liga5-108"
   },
   {
     "league": "Liga 5",
@@ -7340,7 +7331,7 @@
     "awayTeam": "Duloch Juniors - Blacks",
     "match_id": "273142326",
     "raw_fixture": "Beath High School 3:00 PM Tiki Taka Blanco V Duloch Juniors - Blacks",
-    "id": "liga5-110"
+    "id": "liga5-109"
   },
   {
     "league": "Liga 5",
@@ -7353,7 +7344,7 @@
     "awayTeam": "Templehall United Yellows 2018",
     "match_id": "273142329",
     "raw_fixture": "Beath High School 3:45 PM Swifts Raiders 2018 V Templehall United Yellows 2018",
-    "id": "liga5-111"
+    "id": "liga5-110"
   },
   {
     "league": "Liga 5",
@@ -7366,7 +7357,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273142338",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Templehall United Yellows 2018 V Futsal Escocia White",
-    "id": "liga5-112"
+    "id": "liga5-111"
   },
   {
     "league": "Liga 5",
@@ -7379,7 +7370,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142339",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM DACC Blacks V Tiki Taka Blanco",
-    "id": "liga5-113"
+    "id": "liga5-112"
   },
   {
     "league": "Liga 5",
@@ -7392,7 +7383,7 @@
     "awayTeam": "Duloch Juniors - Reds",
     "match_id": "273142335",
     "raw_fixture": "Beath High School 10:30 AM Dunipace Ballerz White V Duloch Juniors - Reds",
-    "id": "liga5-114"
+    "id": "liga5-113"
   },
   {
     "league": "Liga 5",
@@ -7405,7 +7396,7 @@
     "awayTeam": "Swifts Raiders 2018",
     "match_id": "273142333",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Duloch Juniors - Blacks V Swifts Raiders 2018",
-    "id": "liga5-115"
+    "id": "liga5-114"
   },
   {
     "league": "Liga 5",
@@ -7418,7 +7409,7 @@
     "awayTeam": "KSQ Galaxy",
     "match_id": "273142336",
     "raw_fixture": "Beath High School 11:15 AM Cairneyhill Ath Maroons V KSQ Galaxy",
-    "id": "liga5-116"
+    "id": "liga5-115"
   },
   {
     "league": "Liga 5",
@@ -7431,7 +7422,7 @@
     "awayTeam": "DACC Boys 17",
     "match_id": "273142334",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Tiki Taka Neranja V DACC Boys 17",
-    "id": "liga5-117"
+    "id": "liga5-116"
   },
   {
     "league": "Liga 5",
@@ -7444,7 +7435,7 @@
     "awayTeam": "Bowhill United Blacks",
     "match_id": "273142343",
     "raw_fixture": "Beath High School 12:00 PM Bowhill United Yellows V Bowhill United Blacks",
-    "id": "liga5-118"
+    "id": "liga5-117"
   },
   {
     "league": "Liga 5",
@@ -7457,7 +7448,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273142346",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Swifts Falcons 2017 V Futsal Escocia Turquoise",
-    "id": "liga5-119"
+    "id": "liga5-118"
   },
   {
     "league": "Liga 5",
@@ -7470,7 +7461,7 @@
     "awayTeam": "Bayside Barcas",
     "match_id": "273142344",
     "raw_fixture": "Beath High School 12:45 PM DACC Girls 2017 Whites V Bayside Barcas",
-    "id": "liga5-120"
+    "id": "liga5-119"
   },
   {
     "league": "Liga 5",
@@ -7483,7 +7474,7 @@
     "awayTeam": "Greig Park Greens",
     "match_id": "273142342",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Crossgates Primrose 2016s Blues V Greig Park Greens",
-    "id": "liga5-121"
+    "id": "liga5-120"
   },
   {
     "league": "Liga 5",
@@ -7496,7 +7487,7 @@
     "awayTeam": "Inverkeithing United",
     "match_id": "273142340",
     "raw_fixture": "Beath High School 1:30 PM KSQ 2018 Galaxy V Inverkeithing United",
-    "id": "liga5-122"
+    "id": "liga5-121"
   },
   {
     "league": "Liga 5",
@@ -7509,7 +7500,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142345",
     "raw_fixture": "Beath High School 2:15 PM Dunipace Ballerz Black V Tiki Taka Negra",
-    "id": "liga5-123"
+    "id": "liga5-122"
   },
   {
     "league": "Liga 5",
@@ -7522,7 +7513,7 @@
     "awayTeam": "Duloch City 2018s",
     "match_id": "273142341",
     "raw_fixture": "Beath High School 3:00 PM DACC Girls Blacks V Duloch City 2018s",
-    "id": "liga5-124"
+    "id": "liga5-123"
   },
   {
     "league": "Liga 5",
@@ -7535,7 +7526,7 @@
     "awayTeam": "WLFA",
     "match_id": "273142337",
     "raw_fixture": "Beath High School 3:45 PM Bayside Bullets 2017s V WLFA",
-    "id": "liga5-125"
+    "id": "liga5-124"
   },
   {
     "league": "Liga 5",
@@ -7548,7 +7539,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273142347",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Greig Park Greens V Futsal Escocia Turquoise",
-    "id": "liga5-126"
+    "id": "liga5-125"
   },
   {
     "league": "Liga 5",
@@ -7561,7 +7552,7 @@
     "awayTeam": "DACC Blacks",
     "match_id": "273142354",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Swifts Raiders 2018 V DACC Blacks",
-    "id": "liga5-127"
+    "id": "liga5-126"
   },
   {
     "league": "Liga 5",
@@ -7574,7 +7565,7 @@
     "awayTeam": "Dunipace Ballerz White",
     "match_id": "273142355",
     "raw_fixture": "Beath High School 10:30 AM WLFA V Dunipace Ballerz White",
-    "id": "liga5-128"
+    "id": "liga5-127"
   },
   {
     "league": "Liga 5",
@@ -7587,7 +7578,7 @@
     "awayTeam": "Duloch Juniors - Blacks",
     "match_id": "273142356",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Futsal Escocia White V Duloch Juniors - Blacks",
-    "id": "liga5-129"
+    "id": "liga5-128"
   },
   {
     "league": "Liga 5",
@@ -7600,7 +7591,7 @@
     "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142349",
     "raw_fixture": "Beath High School 11:15 AM DACC Boys 17 V Cairneyhill Ath Maroons",
-    "id": "liga5-130"
+    "id": "liga5-129"
   },
   {
     "league": "Liga 5",
@@ -7613,7 +7604,7 @@
     "awayTeam": "Crossgates Primrose 2016s Blues",
     "match_id": "273142358",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Bayside Barcas V Crossgates Primrose 2016s Blues",
-    "id": "liga5-131"
+    "id": "liga5-130"
   },
   {
     "league": "Liga 5",
@@ -7626,7 +7617,7 @@
     "awayTeam": "Swifts Falcons 2017",
     "match_id": "273142360",
     "raw_fixture": "Beath High School 12:00 PM KSQ Galaxy V Swifts Falcons 2017",
-    "id": "liga5-132"
+    "id": "liga5-131"
   },
   {
     "league": "Liga 5",
@@ -7639,7 +7630,7 @@
     "awayTeam": "Bowhill United Yellows",
     "match_id": "273142357",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Duloch Juniors - Reds V Bowhill United Yellows",
-    "id": "liga5-133"
+    "id": "liga5-132"
   },
   {
     "league": "Liga 5",
@@ -7652,7 +7643,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142350",
     "raw_fixture": "Beath High School 12:45 PM Duloch City 2018s V Tiki Taka Neranja",
-    "id": "liga5-134"
+    "id": "liga5-133"
   },
   {
     "league": "Liga 5",
@@ -7665,7 +7656,7 @@
     "awayTeam": "KSQ 2018 Galaxy",
     "match_id": "273142359",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Bowhill United Blacks V KSQ 2018 Galaxy",
-    "id": "liga5-135"
+    "id": "liga5-134"
   },
   {
     "league": "Liga 5",
@@ -7678,7 +7669,7 @@
     "awayTeam": "Templehall United Yellows 2018",
     "match_id": "273142353",
     "raw_fixture": "Beath High School 1:30 PM DACC Girls 2017 Whites V Templehall United Yellows 2018",
-    "id": "liga5-136"
+    "id": "liga5-135"
   },
   {
     "league": "Liga 5",
@@ -7691,7 +7682,7 @@
     "awayTeam": "Dunipace Ballerz Black",
     "match_id": "273142348",
     "raw_fixture": "Beath High School 2:15 PM Tiki Taka Blanco V Dunipace Ballerz Black",
-    "id": "liga5-137"
+    "id": "liga5-136"
   },
   {
     "league": "Liga 5",
@@ -7704,7 +7695,7 @@
     "awayTeam": "Bayside Bullets 2017s",
     "match_id": "273142352",
     "raw_fixture": "Beath High School 3:00 PM Tiki Taka Negra V Bayside Bullets 2017s",
-    "id": "liga5-138"
+    "id": "liga5-137"
   },
   {
     "league": "Liga 5",
@@ -7717,7 +7708,7 @@
     "awayTeam": "DACC Girls Blacks",
     "match_id": "273142351",
     "raw_fixture": "Beath High School 3:45 PM Inverkeithing United V DACC Girls Blacks",
-    "id": "liga5-139"
+    "id": "liga5-138"
   },
   {
     "league": "Liga 5",
@@ -7730,7 +7721,7 @@
     "awayTeam": "Bayside Barcas",
     "match_id": "273142374",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Futsal Escocia Turquoise V Bayside Barcas",
-    "id": "liga5-140"
+    "id": "liga5-139"
   },
   {
     "league": "Liga 5",
@@ -7743,7 +7734,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273142366",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM DACC Blacks V Futsal Escocia White",
-    "id": "liga5-141"
+    "id": "liga5-140"
   },
   {
     "league": "Liga 5",
@@ -7756,7 +7747,7 @@
     "awayTeam": "Greig Park Greens",
     "match_id": "273142362",
     "raw_fixture": "Beath High School 10:30 AM Swifts Falcons 2017 V Greig Park Greens",
-    "id": "liga5-142"
+    "id": "liga5-141"
   },
   {
     "league": "Liga 5",
@@ -7769,7 +7760,7 @@
     "awayTeam": "Duloch City 2018s",
     "match_id": "273142371",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Cairneyhill Ath Maroons V Duloch City 2018s",
-    "id": "liga5-143"
+    "id": "liga5-142"
   },
   {
     "league": "Liga 5",
@@ -7782,7 +7773,7 @@
     "awayTeam": "Duloch Juniors - Reds",
     "match_id": "273142368",
     "raw_fixture": "Beath High School 11:15 AM KSQ 2018 Galaxy V Duloch Juniors - Reds",
-    "id": "liga5-144"
+    "id": "liga5-143"
   },
   {
     "league": "Liga 5",
@@ -7795,7 +7786,7 @@
     "awayTeam": "Inverkeithing United",
     "match_id": "273142370",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Tiki Taka Neranja V Inverkeithing United",
-    "id": "liga5-145"
+    "id": "liga5-144"
   },
   {
     "league": "Liga 5",
@@ -7808,7 +7799,7 @@
     "awayTeam": "DACC Boys 17",
     "match_id": "273142361",
     "raw_fixture": "Beath High School 12:00 PM KSQ Galaxy V DACC Boys 17",
-    "id": "liga5-146"
+    "id": "liga5-145"
   },
   {
     "league": "Liga 5",
@@ -7821,7 +7812,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142369",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Bayside Bullets 2017s V Tiki Taka Blanco",
-    "id": "liga5-147"
+    "id": "liga5-146"
   },
   {
     "league": "Liga 5",
@@ -7834,7 +7825,7 @@
     "awayTeam": "Crossgates Primrose 2016s Blues",
     "match_id": "273142373",
     "raw_fixture": "Beath High School 12:45 PM Templehall United Yellows 2018 V Crossgates Primrose 2016s Blues",
-    "id": "liga5-148"
+    "id": "liga5-147"
   },
   {
     "league": "Liga 5",
@@ -7847,7 +7838,7 @@
     "awayTeam": "Swifts Raiders 2018",
     "match_id": "273142364",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Dunipace Ballerz Black V Swifts Raiders 2018",
-    "id": "liga5-149"
+    "id": "liga5-148"
   },
   {
     "league": "Liga 5",
@@ -7860,7 +7851,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142367",
     "raw_fixture": "Beath High School 1:30 PM Dunipace Ballerz White V Tiki Taka Negra",
-    "id": "liga5-150"
+    "id": "liga5-149"
   },
   {
     "league": "Liga 5",
@@ -7873,7 +7864,7 @@
     "awayTeam": "WLFA",
     "match_id": "273142365",
     "raw_fixture": "Beath High School 2:15 PM Bowhill United Yellows V WLFA",
-    "id": "liga5-151"
+    "id": "liga5-150"
   },
   {
     "league": "Liga 5",
@@ -7886,7 +7877,7 @@
     "awayTeam": "Bowhill United Blacks",
     "match_id": "273142372",
     "raw_fixture": "Beath High School 3:00 PM DACC Girls Blacks V Bowhill United Blacks",
-    "id": "liga5-152"
+    "id": "liga5-151"
   },
   {
     "league": "Liga 5",
@@ -7899,7 +7890,7 @@
     "awayTeam": "DACC Girls 2017 Whites",
     "match_id": "273142363",
     "raw_fixture": "Beath High School 3:45 PM Duloch Juniors - Blacks V DACC Girls 2017 Whites",
-    "id": "liga5-153"
+    "id": "liga5-152"
   },
   {
     "league": "Liga 5",
@@ -7912,7 +7903,7 @@
     "awayTeam": "Bowhill United Yellows",
     "match_id": "273142379",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Tiki Taka Negra V Bowhill United Yellows",
-    "id": "liga5-154"
+    "id": "liga5-153"
   },
   {
     "league": "Liga 5",
@@ -7925,7 +7916,7 @@
     "awayTeam": "Greig Park Greens",
     "match_id": "273142382",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Bayside Barcas V Greig Park Greens",
-    "id": "liga5-155"
+    "id": "liga5-154"
   },
   {
     "league": "Liga 5",
@@ -7938,7 +7929,7 @@
     "awayTeam": "DACC Blacks",
     "match_id": "273142387",
     "raw_fixture": "Beath High School 10:30 AM DACC Girls 2017 Whites V DACC Blacks",
-    "id": "liga5-156"
+    "id": "liga5-155"
   },
   {
     "league": "Liga 5",
@@ -7951,7 +7942,7 @@
     "awayTeam": "Dunipace Ballerz Black",
     "match_id": "273142386",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Futsal Escocia White V Dunipace Ballerz Black",
-    "id": "liga5-157"
+    "id": "liga5-156"
   },
   {
     "league": "Liga 5",
@@ -7964,7 +7955,7 @@
     "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142375",
     "raw_fixture": "Beath High School 11:15 AM Inverkeithing United V Cairneyhill Ath Maroons",
-    "id": "liga5-158"
+    "id": "liga5-157"
   },
   {
     "league": "Liga 5",
@@ -7977,7 +7968,7 @@
     "awayTeam": "Swifts Falcons 2017",
     "match_id": "273142377",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM DACC Boys 17 V Swifts Falcons 2017",
-    "id": "liga5-159"
+    "id": "liga5-158"
   },
   {
     "league": "Liga 5",
@@ -7990,7 +7981,7 @@
     "awayTeam": "Duloch Juniors - Blacks",
     "match_id": "273142385",
     "raw_fixture": "Beath High School 12:00 PM Crossgates Primrose 2016s Blues V Duloch Juniors - Blacks",
-    "id": "liga5-160"
+    "id": "liga5-159"
   },
   {
     "league": "Liga 5",
@@ -8003,7 +7994,7 @@
     "awayTeam": "Templehall United Yellows 2018",
     "match_id": "273142384",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Futsal Escocia Turquoise V Templehall United Yellows 2018",
-    "id": "liga5-161"
+    "id": "liga5-160"
   },
   {
     "league": "Liga 5",
@@ -8016,7 +8007,7 @@
     "awayTeam": "Dunipace Ballerz White",
     "match_id": "273142383",
     "raw_fixture": "Beath High School 12:45 PM Tiki Taka Blanco V Dunipace Ballerz White",
-    "id": "liga5-162"
+    "id": "liga5-161"
   },
   {
     "league": "Liga 5",
@@ -8029,7 +8020,7 @@
     "awayTeam": "KSQ Galaxy",
     "match_id": "273142378",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM TBC V KSQ Galaxy",
-    "id": "liga5-163"
+    "id": "liga5-162"
   },
   {
     "league": "Liga 5",
@@ -8042,7 +8033,7 @@
     "awayTeam": "DACC Girls Blacks",
     "match_id": "273142381",
     "raw_fixture": "Beath High School 1:30 PM Duloch Juniors - Reds V DACC Girls Blacks",
-    "id": "liga5-164"
+    "id": "liga5-163"
   },
   {
     "league": "Liga 5",
@@ -8055,7 +8046,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142388",
     "raw_fixture": "Beath High School 2:15 PM Bowhill United Blacks V Tiki Taka Neranja",
-    "id": "liga5-165"
+    "id": "liga5-164"
   },
   {
     "league": "Liga 5",
@@ -8068,7 +8059,7 @@
     "awayTeam": "Bayside Bullets 2017s",
     "match_id": "273142380",
     "raw_fixture": "Beath High School 3:00 PM Swifts Raiders 2018 V Bayside Bullets 2017s",
-    "id": "liga5-166"
+    "id": "liga5-165"
   },
   {
     "league": "Liga 5",
@@ -8081,7 +8072,7 @@
     "awayTeam": "KSQ 2018 Galaxy",
     "match_id": "273142376",
     "raw_fixture": "Beath High School 3:45 PM WLFA V KSQ 2018 Galaxy",
-    "id": "liga5-167"
+    "id": "liga5-166"
   },
   {
     "league": "Liga 5",
@@ -8094,7 +8085,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273142401",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Bayside Bullets 2017s V Futsal Escocia White",
-    "id": "liga5-168"
+    "id": "liga5-167"
   },
   {
     "league": "Liga 5",
@@ -8107,7 +8098,7 @@
     "awayTeam": "Greig Park Greens",
     "match_id": "273142400",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Templehall United Yellows 2018 V Greig Park Greens",
-    "id": "liga5-169"
+    "id": "liga5-168"
   },
   {
     "league": "Liga 5",
@@ -8120,7 +8111,7 @@
     "awayTeam": "DACC Girls 2017 Whites",
     "match_id": "273142391",
     "raw_fixture": "Beath High School 10:30 AM Dunipace Ballerz Black V DACC Girls 2017 Whites",
-    "id": "liga5-170"
+    "id": "liga5-169"
   },
   {
     "league": "Liga 5",
@@ -8133,7 +8124,7 @@
     "awayTeam": "Duloch Juniors - Reds",
     "match_id": "273142389",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Tiki Taka Neranja V Duloch Juniors - Reds",
-    "id": "liga5-171"
+    "id": "liga5-170"
   },
   {
     "league": "Liga 5",
@@ -8146,7 +8137,7 @@
     "awayTeam": "WLFA",
     "match_id": "273142402",
     "raw_fixture": "Beath High School 11:15 AM DACC Girls Blacks V WLFA",
-    "id": "liga5-172"
+    "id": "liga5-171"
   },
   {
     "league": "Liga 5",
@@ -8159,7 +8150,7 @@
     "awayTeam": "Swifts Raiders 2018",
     "match_id": "273142399",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Dunipace Ballerz White V Swifts Raiders 2018",
-    "id": "liga5-173"
+    "id": "liga5-172"
   },
   {
     "league": "Liga 5",
@@ -8172,7 +8163,7 @@
     "awayTeam": "Bayside Barcas",
     "match_id": "273142397",
     "raw_fixture": "Beath High School 12:00 PM Swifts Falcons 2017 V Bayside Barcas",
-    "id": "liga5-174"
+    "id": "liga5-173"
   },
   {
     "league": "Liga 5",
@@ -8185,7 +8176,7 @@
     "awayTeam": "Crossgates Primrose 2016s Blues",
     "match_id": "273142390",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM DACC Blacks V Crossgates Primrose 2016s Blues",
-    "id": "liga5-175"
+    "id": "liga5-174"
   },
   {
     "league": "Liga 5",
@@ -8198,7 +8189,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142396",
     "raw_fixture": "Beath High School 12:45 PM Bowhill United Yellows V Tiki Taka Blanco",
-    "id": "liga5-176"
+    "id": "liga5-175"
   },
   {
     "league": "Liga 5",
@@ -8211,7 +8202,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273142398",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Duloch Juniors - Blacks V Futsal Escocia Turquoise",
-    "id": "liga5-177"
+    "id": "liga5-176"
   },
   {
     "league": "Liga 5",
@@ -8224,7 +8215,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142393",
     "raw_fixture": "Beath High School 1:30 PM KSQ 2018 Galaxy V Tiki Taka Negra",
-    "id": "liga5-178"
+    "id": "liga5-177"
   },
   {
     "league": "Liga 5",
@@ -8237,7 +8228,7 @@
     "awayTeam": "TBC",
     "match_id": "273142392",
     "raw_fixture": "Beath High School 2:15 PM DACC Boys 17 V TBC",
-    "id": "liga5-179"
+    "id": "liga5-178"
   },
   {
     "league": "Liga 5",
@@ -8250,7 +8241,7 @@
     "awayTeam": "Inverkeithing United",
     "match_id": "273142394",
     "raw_fixture": "Beath High School 3:00 PM KSQ Galaxy V Inverkeithing United",
-    "id": "liga5-180"
+    "id": "liga5-179"
   },
   {
     "league": "Liga 5",
@@ -8263,7 +8254,7 @@
     "awayTeam": "Bowhill United Blacks",
     "match_id": "273142395",
     "raw_fixture": "Beath High School 3:45 PM Cairneyhill Ath Maroons V Bowhill United Blacks",
-    "id": "liga5-181"
+    "id": "liga5-180"
   },
   {
     "league": "Liga 5",
@@ -8276,7 +8267,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142416",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM WLFA V Tiki Taka Neranja",
-    "id": "liga5-182"
+    "id": "liga5-181"
   },
   {
     "league": "Liga 5",
@@ -8289,7 +8280,7 @@
     "awayTeam": "DACC Girls Blacks",
     "match_id": "273142408",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Tiki Taka Negra V DACC Girls Blacks",
-    "id": "liga5-183"
+    "id": "liga5-182"
   },
   {
     "league": "Liga 5",
@@ -8302,7 +8293,7 @@
     "awayTeam": "Dunipace Ballerz Black",
     "match_id": "273142409",
     "raw_fixture": "Beath High School 10:30 AM Crossgates Primrose 2016s Blues V Dunipace Ballerz Black",
-    "id": "liga5-184"
+    "id": "liga5-183"
   },
   {
     "league": "Liga 5",
@@ -8315,7 +8306,7 @@
     "awayTeam": "Dunipace Ballerz White",
     "match_id": "273142404",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Futsal Escocia White V Dunipace Ballerz White",
-    "id": "liga5-185"
+    "id": "liga5-184"
   },
   {
     "league": "Liga 5",
@@ -8328,7 +8319,7 @@
     "awayTeam": "Templehall United Yellows 2018",
     "match_id": "273142406",
     "raw_fixture": "Beath High School 11:15 AM Bayside Barcas V Templehall United Yellows 2018",
-    "id": "liga5-186"
+    "id": "liga5-185"
   },
   {
     "league": "Liga 5",
@@ -8341,7 +8332,7 @@
     "awayTeam": "KSQ 2018 Galaxy",
     "match_id": "273142411",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Tiki Taka Blanco V KSQ 2018 Galaxy",
-    "id": "liga5-187"
+    "id": "liga5-186"
   },
   {
     "league": "Liga 5",
@@ -8354,7 +8345,7 @@
     "awayTeam": "Swifts Falcons 2017",
     "match_id": "273142407",
     "raw_fixture": "Beath High School 12:00 PM Duloch City 2018s V Swifts Falcons 2017",
-    "id": "liga5-188"
+    "id": "liga5-187"
   },
   {
     "league": "Liga 5",
@@ -8367,7 +8358,7 @@
     "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142405",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Duloch Juniors - Reds V Cairneyhill Ath Maroons",
-    "id": "liga5-189"
+    "id": "liga5-188"
   },
   {
     "league": "Liga 5",
@@ -8380,7 +8371,7 @@
     "awayTeam": "Duloch Juniors - Blacks",
     "match_id": "273142415",
     "raw_fixture": "Beath High School 12:45 PM Greig Park Greens V Duloch Juniors - Blacks",
-    "id": "liga5-190"
+    "id": "liga5-189"
   },
   {
     "league": "Liga 5",
@@ -8393,7 +8384,7 @@
     "awayTeam": "DACC Blacks",
     "match_id": "273142410",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Futsal Escocia Turquoise V DACC Blacks",
-    "id": "liga5-191"
+    "id": "liga5-190"
   },
   {
     "league": "Liga 5",
@@ -8406,7 +8397,7 @@
     "awayTeam": "Bowhill United Yellows",
     "match_id": "273142414",
     "raw_fixture": "Beath High School 1:30 PM Swifts Raiders 2018 V Bowhill United Yellows",
-    "id": "liga5-192"
+    "id": "liga5-191"
   },
   {
     "league": "Liga 5",
@@ -8419,7 +8410,7 @@
     "awayTeam": "Bayside Bullets 2017s",
     "match_id": "273142412",
     "raw_fixture": "Beath High School 2:15 PM DACC Girls 2017 Whites V Bayside Bullets 2017s",
-    "id": "liga5-193"
+    "id": "liga5-192"
   },
   {
     "league": "Liga 5",
@@ -8432,7 +8423,7 @@
     "awayTeam": "DACC Boys 17",
     "match_id": "273142413",
     "raw_fixture": "Beath High School 3:00 PM Inverkeithing United V DACC Boys 17",
-    "id": "liga5-194"
+    "id": "liga5-193"
   },
   {
     "league": "Liga 5",
@@ -8445,7 +8436,7 @@
     "awayTeam": "KSQ Galaxy",
     "match_id": "273142403",
     "raw_fixture": "Beath High School 3:45 PM Bowhill United Blacks V KSQ Galaxy",
-    "id": "liga5-195"
+    "id": "liga5-194"
   },
   {
     "league": "Liga 5",
@@ -8458,7 +8449,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273142420",
     "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Bowhill United Yellows V Futsal Escocia White",
-    "id": "liga5-196"
+    "id": "liga5-195"
   },
   {
     "league": "Liga 5",
@@ -8471,7 +8462,7 @@
     "awayTeam": "Greig Park Greens",
     "match_id": "273142423",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM DACC Blacks V Greig Park Greens",
-    "id": "liga5-197"
+    "id": "liga5-196"
   },
   {
     "league": "Liga 5",
@@ -8484,7 +8475,7 @@
     "awayTeam": "DACC Girls 2017 Whites",
     "match_id": "273142425",
     "raw_fixture": "Beath High School 10:30 AM Dunipace Ballerz White V DACC Girls 2017 Whites",
-    "id": "liga5-198"
+    "id": "liga5-197"
   },
   {
     "league": "Liga 5",
@@ -8497,7 +8488,7 @@
     "awayTeam": "Bayside Barcas",
     "match_id": "273142430",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Duloch Juniors - Blacks V Bayside Barcas",
-    "id": "liga5-199"
+    "id": "liga5-198"
   },
   {
     "league": "Liga 5",
@@ -8510,7 +8501,7 @@
     "awayTeam": "Swifts Falcons 2017",
     "match_id": "273142421",
     "raw_fixture": "Beath High School 11:15 AM Templehall United Yellows 2018 V Swifts Falcons 2017",
-    "id": "liga5-200"
+    "id": "liga5-199"
   },
   {
     "league": "Liga 5",
@@ -8523,7 +8514,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273142422",
     "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Dunipace Ballerz Black V Futsal Escocia Turquoise",
-    "id": "liga5-201"
+    "id": "liga5-200"
   },
   {
     "league": "Liga 5",
@@ -8536,7 +8527,7 @@
     "awayTeam": "Duloch Juniors - Reds",
     "match_id": "273142419",
     "raw_fixture": "Beath High School 12:00 PM KSQ Galaxy V Duloch Juniors - Reds",
-    "id": "liga5-202"
+    "id": "liga5-201"
   },
   {
     "league": "Liga 5",
@@ -8549,7 +8540,7 @@
     "awayTeam": "Inverkeithing United",
     "match_id": "273142418",
     "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Duloch City 2018s V Inverkeithing United",
-    "id": "liga5-203"
+    "id": "liga5-202"
   },
   {
     "league": "Liga 5",
@@ -8562,7 +8553,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273142429",
     "raw_fixture": "Beath High School 12:45 PM Tiki Taka Neranja V Tiki Taka Negra",
-    "id": "liga5-204"
+    "id": "liga5-203"
   },
   {
     "league": "Liga 5",
@@ -8575,7 +8566,7 @@
     "awayTeam": "Bowhill United Blacks",
     "match_id": "273142424",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM DACC Boys 17 V Bowhill United Blacks",
-    "id": "liga5-205"
+    "id": "liga5-204"
   },
   {
     "league": "Liga 5",
@@ -8588,7 +8579,7 @@
     "awayTeam": "WLFA",
     "match_id": "273142426",
     "raw_fixture": "Beath High School 1:30 PM Cairneyhill Ath Maroons V WLFA",
-    "id": "liga5-206"
+    "id": "liga5-205"
   },
   {
     "league": "Liga 5",
@@ -8601,7 +8592,7 @@
     "awayTeam": "Crossgates Primrose 2016s Blues",
     "match_id": "273142428",
     "raw_fixture": "Beath High School 2:15 PM Bayside Bullets 2017s V Crossgates Primrose 2016s Blues",
-    "id": "liga5-207"
+    "id": "liga5-206"
   },
   {
     "league": "Liga 5",
@@ -8614,7 +8605,7 @@
     "awayTeam": "Swifts Raiders 2018",
     "match_id": "273142427",
     "raw_fixture": "Beath High School 3:00 PM KSQ 2018 Galaxy V Swifts Raiders 2018",
-    "id": "liga5-208"
+    "id": "liga5-207"
   },
   {
     "league": "Liga 5",
@@ -8627,7 +8618,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142417",
     "raw_fixture": "Beath High School 3:45 PM DACC Girls Blacks V Tiki Taka Blanco",
-    "id": "liga5-209"
+    "id": "liga5-208"
   },
   {
     "league": "Liga 6",
@@ -9091,10 +9082,10 @@
     "iso_date": "2026-11-21",
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
-    "homeTeam": "Liga 5 Team",
+    "homeTeam": "Glenrothes Strollers",
     "awayTeam": "Duloch Juniors City",
     "match_id": "273141772",
-    "raw_fixture": "Beath High School Refurb 12:45 PM Liga 5 Team V Duloch Juniors City",
+    "raw_fixture": "Beath High School Refurb 12:45 PM Glenrothes Strollers V Duloch Juniors City",
     "id": "liga6-36"
   },
   {
@@ -9260,11 +9251,12 @@
     "iso_date": "2026-11-28",
     "venue": "Balwearie High School",
     "time": "12:00 PM",
-    "homeTeam": "TBC",
+    "homeTeam": "Tiki Taka Gris",
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141794",
-    "raw_fixture": "Balwearie High School 12:00 PM TBC V Templehall Utd Blacks",
-    "id": "liga6-49"
+    "raw_fixture": "Balwearie High School 12:00 PM Tiki Taka Gris V Templehall Utd Blacks",
+    "id": "liga6-49",
+    "updated": "now Tiki Taka Gris v Templehall Utd Blacks"
   },
   {
     "league": "Liga 6",
