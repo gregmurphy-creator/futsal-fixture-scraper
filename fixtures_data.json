@@ -8809,10 +8809,11 @@
     "venue": "Beath High School",
     "time": "9:00 AM",
     "homeTeam": "Futsal Escocia White",
-    "awayTeam": "Tiki Taka Blanco",
+    "awayTeam": "Tiki Taka Negra",
     "match_id": "273141771",
-    "raw_fixture": "Beath High School 9:00 AM Futsal Escocia White V Tiki Taka Blanco",
-    "id": "liga6-15"
+    "raw_fixture": "Beath High School 9:00 AM Futsal Escocia White V Tiki Taka Negra",
+    "id": "liga6-15",
+    "updated": "now Futsal Escocia White v Tiki Taka Negra"
   },
   {
     "league": "Liga 6",
@@ -8860,11 +8861,12 @@
     "iso_date": "2026-11-14",
     "venue": "Balwearie High School",
     "time": "11:15 AM",
-    "homeTeam": "Tiki Taka Negra",
+    "homeTeam": "Tiki Taka Blanco",
     "awayTeam": "Greig Park Blues",
     "match_id": "273141765",
-    "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Negra V Greig Park Blues",
-    "id": "liga6-19"
+    "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Blanco V Greig Park Blues",
+    "id": "liga6-19",
+    "updated": "now Tiki Taka Blanco v Greig Park Blues"
   },
   {
     "league": "Liga 6",
