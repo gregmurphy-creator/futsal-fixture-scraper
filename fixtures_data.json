@@ -2861,10 +2861,10 @@
     "iso_date": "2026-11-15",
     "venue": "Beath High School Refurb",
     "time": "9:00 AM",
-    "homeTeam": "Swifts Bears",
-    "awayTeam": "Futsal Escocia Mix",
-    "match_id": "272353867",
-    "raw_fixture": "Beath High School Refurb 9:00 AM Swifts Bears V Futsal Escocia Mix",
+    "homeTeam": "Swifts Sambas (B)",
+    "awayTeam": "Greig Park Rangers",
+    "match_id": "272353881",
+    "raw_fixture": "Beath High School Refurb 9:00 AM Swifts Sambas (B) V Greig Park Rangers",
     "id": "liga4-18"
   },
   {
@@ -2874,10 +2874,10 @@
     "iso_date": "2026-11-15",
     "venue": "Beath High School",
     "time": "9:45 AM",
-    "homeTeam": "Futsal Escocia Navy",
-    "awayTeam": "Crossgates Primrose 2016s Yellows",
-    "match_id": "272353878",
-    "raw_fixture": "Beath High School 9:45 AM Futsal Escocia Navy V Crossgates Primrose 2016s Yellows",
+    "homeTeam": "Swifts Bears",
+    "awayTeam": "Futsal Escocia Mix",
+    "match_id": "272353867",
+    "raw_fixture": "Beath High School 9:45 AM Swifts Bears V Futsal Escocia Mix",
     "id": "liga4-19"
   },
   {
@@ -2900,10 +2900,10 @@
     "iso_date": "2026-11-15",
     "venue": "Beath High School",
     "time": "10:30 AM",
-    "homeTeam": "Swifts Sambas (B)",
-    "awayTeam": "Greig Park Rangers",
-    "match_id": "272353881",
-    "raw_fixture": "Beath High School 10:30 AM Swifts Sambas (B) V Greig Park Rangers",
+    "homeTeam": "Futsal Escocia Navy",
+    "awayTeam": "Crossgates Primrose 2016s Yellows",
+    "match_id": "272353878",
+    "raw_fixture": "Beath High School 10:30 AM Futsal Escocia Navy V Crossgates Primrose 2016s Yellows",
     "id": "liga4-21"
   },
   {
@@ -6230,11 +6230,12 @@
     "iso_date": "2026-11-14",
     "venue": "Caledonia High School, Rosyth",
     "time": "12:45 PM",
-    "homeTeam": "KSQ Galaxy",
-    "awayTeam": "Dunipace Ballerz Black",
-    "match_id": "273142246",
-    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM KSQ Galaxy V Dunipace Ballerz Black",
-    "id": "liga5-25"
+    "homeTeam": "Tiki Taka Negra",
+    "awayTeam": "DACC Blacks",
+    "match_id": "273142239",
+    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Tiki Taka Negra V DACC Blacks",
+    "id": "liga5-25",
+    "updated": "1:30 PM -> 12:45 PM, Beath High School -> Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -6243,12 +6244,11 @@
     "iso_date": "2026-11-14",
     "venue": "Beath High School",
     "time": "1:30 PM",
-    "homeTeam": "Tiki Taka Negra",
-    "awayTeam": "DACC Blacks",
-    "match_id": "273142239",
-    "raw_fixture": "Beath High School 1:30 PM Tiki Taka Negra V DACC Blacks",
-    "id": "liga5-26",
-    "updated": "12:45 PM -> 1:30 PM"
+    "homeTeam": "KSQ Galaxy",
+    "awayTeam": "Dunipace Ballerz Black",
+    "match_id": "273142246",
+    "raw_fixture": "Beath High School 1:30 PM KSQ Galaxy V Dunipace Ballerz Black",
+    "id": "liga5-26"
   },
   {
     "league": "Liga 5",
