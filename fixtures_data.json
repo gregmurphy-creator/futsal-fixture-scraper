@@ -201,10 +201,10 @@
     "iso_date": "2026-11-15",
     "venue": "Dunfermline Learning Campus",
     "time": "11:15 AM",
-    "homeTeam": "DACC Athletic",
-    "awayTeam": "Swifts Chargers 2017",
-    "match_id": "272354224",
-    "raw_fixture": "Dunfermline Learning Campus 11:15 AM DACC Athletic V Swifts Chargers 2017",
+    "homeTeam": "Kelty Hearts Blacks",
+    "awayTeam": "Glenrothes Athletic (Oranges)",
+    "match_id": "272354226",
+    "raw_fixture": "Dunfermline Learning Campus 11:15 AM Kelty Hearts Blacks V Glenrothes Athletic (Oranges)",
     "id": "liga3-16"
   },
   {
@@ -227,10 +227,10 @@
     "iso_date": "2026-11-15",
     "venue": "Dunfermline Learning Campus",
     "time": "12:45 PM",
-    "homeTeam": "Kelty Hearts Blacks",
-    "awayTeam": "Glenrothes Athletic (Oranges)",
-    "match_id": "272354226",
-    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Kelty Hearts Blacks V Glenrothes Athletic (Oranges)",
+    "homeTeam": "DACC Athletic",
+    "awayTeam": "Swifts Chargers 2017",
+    "match_id": "272354224",
+    "raw_fixture": "Dunfermline Learning Campus 12:45 PM DACC Athletic V Swifts Chargers 2017",
     "id": "liga3-18"
   },
   {
@@ -816,10 +816,10 @@
     "iso_date": "2026-12-13",
     "venue": "Dunfermline Learning Campus",
     "time": "9:00 AM",
-    "homeTeam": "Raith Rovers Reds",
-    "awayTeam": "Futsal Escocia Navy",
-    "match_id": "272354289",
-    "raw_fixture": "Dunfermline Learning Campus 9:00 AM Raith Rovers Reds V Futsal Escocia Navy",
+    "homeTeam": "Futsal South 2016s",
+    "awayTeam": "Futsal Escocia",
+    "match_id": "272354283",
+    "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal South 2016s V Futsal Escocia",
     "id": "liga3-63"
   },
   {
@@ -842,10 +842,10 @@
     "iso_date": "2026-12-13",
     "venue": "Dunfermline Learning Campus",
     "time": "10:30 AM",
-    "homeTeam": "Futsal South 2016s",
-    "awayTeam": "Futsal Escocia",
-    "match_id": "272354283",
-    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Futsal South 2016s V Futsal Escocia",
+    "homeTeam": "Raith Rovers Reds",
+    "awayTeam": "Futsal Escocia Navy",
+    "match_id": "272354289",
+    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Raith Rovers Reds V Futsal Escocia Navy",
     "id": "liga3-65"
   },
   {
@@ -868,10 +868,10 @@
     "iso_date": "2026-12-13",
     "venue": "Dunfermline Learning Campus",
     "time": "12:00 PM",
-    "homeTeam": "Swifts Bulls",
-    "awayTeam": "DACC Whites Athletic",
-    "match_id": "272354290",
-    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Swifts Bulls V DACC Whites Athletic",
+    "homeTeam": "Glenrothes Athletic (Blues)",
+    "awayTeam": "DACC 2016s",
+    "match_id": "272354280",
+    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Glenrothes Athletic (Blues) V DACC 2016s",
     "id": "liga3-67"
   },
   {
@@ -921,10 +921,10 @@
     "iso_date": "2026-12-13",
     "venue": "Dunfermline Learning Campus",
     "time": "2:15 PM",
-    "homeTeam": "Glenrothes Athletic (Blues)",
-    "awayTeam": "DACC 2016s",
-    "match_id": "272354280",
-    "raw_fixture": "Dunfermline Learning Campus 2:15 PM Glenrothes Athletic (Blues) V DACC 2016s",
+    "homeTeam": "Swifts Bulls",
+    "awayTeam": "DACC Whites Athletic",
+    "match_id": "272354290",
+    "raw_fixture": "Dunfermline Learning Campus 2:15 PM Swifts Bulls V DACC Whites Athletic",
     "id": "liga3-71"
   },
   {
@@ -3740,10 +3740,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School Refurb",
     "time": "9:45 AM",
-    "homeTeam": "Swifts Sirens",
-    "awayTeam": "Swifts Rams",
-    "match_id": "272353940",
-    "raw_fixture": "Beath High School Refurb 9:45 AM Swifts Sirens V Swifts Rams",
+    "homeTeam": "GS - Ronaldinho",
+    "awayTeam": "Inverkeithing United",
+    "match_id": "272353947",
+    "raw_fixture": "Beath High School Refurb 9:45 AM GS - Ronaldinho V Inverkeithing United",
     "id": "liga4-85"
   },
   {
@@ -3766,10 +3766,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School Refurb",
     "time": "10:30 AM",
-    "homeTeam": "Letham Titans",
-    "awayTeam": "Swifts Hawks 2017",
-    "match_id": "272353942",
-    "raw_fixture": "Beath High School Refurb 10:30 AM Letham Titans V Swifts Hawks 2017",
+    "homeTeam": "Pitreavie Reds 2017s",
+    "awayTeam": "Pitreavie Blacks 2017s",
+    "match_id": "272353950",
+    "raw_fixture": "Beath High School Refurb 10:30 AM Pitreavie Reds 2017s V Pitreavie Blacks 2017s",
     "id": "liga4-87"
   },
   {
@@ -3820,10 +3820,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School Refurb",
     "time": "12:00 PM",
-    "homeTeam": "Swifts Bears",
-    "awayTeam": "Hutchison Vale FC 2016",
-    "match_id": "272353944",
-    "raw_fixture": "Beath High School Refurb 12:00 PM Swifts Bears V Hutchison Vale FC 2016",
+    "homeTeam": "Bayside Blitz",
+    "awayTeam": "Greig Park Rangers",
+    "match_id": "272353946",
+    "raw_fixture": "Beath High School Refurb 12:00 PM Bayside Blitz V Greig Park Rangers",
     "id": "liga4-91"
   },
   {
@@ -3847,10 +3847,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
-    "homeTeam": "GS - Ronaldinho",
-    "awayTeam": "Inverkeithing United",
-    "match_id": "272353947",
-    "raw_fixture": "Beath High School Refurb 12:45 PM GS - Ronaldinho V Inverkeithing United",
+    "homeTeam": "Bayside Bullets",
+    "awayTeam": "Crossgates Primrose 2016s Yellows",
+    "match_id": "272353936",
+    "raw_fixture": "Beath High School Refurb 12:45 PM Bayside Bullets V Crossgates Primrose 2016s Yellows",
     "id": "liga4-93"
   },
   {
@@ -3873,10 +3873,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School Refurb",
     "time": "1:30 PM",
-    "homeTeam": "Pitreavie Reds 2017s",
-    "awayTeam": "Pitreavie Blacks 2017s",
-    "match_id": "272353950",
-    "raw_fixture": "Beath High School Refurb 1:30 PM Pitreavie Reds 2017s V Pitreavie Blacks 2017s",
+    "homeTeam": "Letham Titans",
+    "awayTeam": "Swifts Hawks 2017",
+    "match_id": "272353942",
+    "raw_fixture": "Beath High School Refurb 1:30 PM Letham Titans V Swifts Hawks 2017",
     "id": "liga4-95"
   },
   {
@@ -3886,10 +3886,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School",
     "time": "2:15 PM",
-    "homeTeam": "Bayside Blitz",
-    "awayTeam": "Greig Park Rangers",
-    "match_id": "272353946",
-    "raw_fixture": "Beath High School 2:15 PM Bayside Blitz V Greig Park Rangers",
+    "homeTeam": "Swifts Bears",
+    "awayTeam": "Hutchison Vale FC 2016",
+    "match_id": "272353944",
+    "raw_fixture": "Beath High School 2:15 PM Swifts Bears V Hutchison Vale FC 2016",
     "id": "liga4-96"
   },
   {
@@ -3912,10 +3912,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School Refurb",
     "time": "3:00 PM",
-    "homeTeam": "Bayside Bullets",
-    "awayTeam": "Crossgates Primrose 2016s Yellows",
-    "match_id": "272353936",
-    "raw_fixture": "Beath High School Refurb 3:00 PM Bayside Bullets V Crossgates Primrose 2016s Yellows",
+    "homeTeam": "Swifts Sirens",
+    "awayTeam": "Swifts Rams",
+    "match_id": "272353940",
+    "raw_fixture": "Beath High School Refurb 3:00 PM Swifts Sirens V Swifts Rams",
     "id": "liga4-98"
   },
   {
@@ -8820,25 +8820,26 @@
     "round": 2,
     "date": "Sat 14th Nov 2026",
     "iso_date": "2026-11-14",
-    "venue": "Beath High School",
-    "time": "9:45 AM",
-    "homeTeam": "Crossgates Blue",
-    "awayTeam": "Futsal Escocia Turquoise",
-    "match_id": "273141757",
-    "raw_fixture": "Beath High School 9:45 AM Crossgates Blue V Futsal Escocia Turquoise",
-    "id": "liga6-16"
+    "venue": "Balwearie High School",
+    "time": "9:00 AM",
+    "homeTeam": "Swift Hurricanes 2019",
+    "awayTeam": "Tiki Taka Neranja",
+    "match_id": "273141761",
+    "raw_fixture": "Balwearie High School 9:00 AM Swift Hurricanes 2019 V Tiki Taka Neranja",
+    "id": "liga6-16",
+    "updated": "10:30 AM -> 9:00 AM"
   },
   {
     "league": "Liga 6",
     "round": 2,
     "date": "Sat 14th Nov 2026",
     "iso_date": "2026-11-14",
-    "venue": "Balwearie High School",
-    "time": "10:30 AM",
-    "homeTeam": "Swift Hurricanes 2019",
-    "awayTeam": "Tiki Taka Neranja",
-    "match_id": "273141761",
-    "raw_fixture": "Balwearie High School 10:30 AM Swift Hurricanes 2019 V Tiki Taka Neranja",
+    "venue": "Beath High School",
+    "time": "9:45 AM",
+    "homeTeam": "Crossgates Blue",
+    "awayTeam": "Futsal Escocia Turquoise",
+    "match_id": "273141757",
+    "raw_fixture": "Beath High School 9:45 AM Crossgates Blue V Futsal Escocia Turquoise",
     "id": "liga6-17"
   },
   {
@@ -11580,26 +11581,13 @@
     "round": 2,
     "date": "Sat 14th Nov 2026",
     "iso_date": "2026-11-14",
-    "venue": "Balwearie High School",
-    "time": "9:00 AM",
-    "homeTeam": "Kennoway Star Hearts 2019's B",
-    "awayTeam": "Swifts Typhoons",
-    "match_id": "272349876",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Swifts Typhoons",
-    "id": "liga7-7"
-  },
-  {
-    "league": "Liga 7",
-    "round": 2,
-    "date": "Sat 14th Nov 2026",
-    "iso_date": "2026-11-14",
     "venue": "Beath High School Refurb",
     "time": "9:45 AM",
     "homeTeam": "Bayside Girls 2018s",
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "272349880",
     "raw_fixture": "Beath High School Refurb 9:45 AM Bayside Girls 2018s V Tiki Taka Blanco",
-    "id": "liga7-8"
+    "id": "liga7-7"
   },
   {
     "league": "Liga 7",
@@ -11612,7 +11600,7 @@
     "awayTeam": "Swifts Tornadoes",
     "match_id": "272349878",
     "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Swifts Tornadoes",
-    "id": "liga7-9"
+    "id": "liga7-8"
   },
   {
     "league": "Liga 7",
@@ -11625,6 +11613,19 @@
     "awayTeam": "Duloch Juniors United",
     "match_id": "272349879",
     "raw_fixture": "Beath High School Refurb 10:30 AM KSQ Knights V Duloch Juniors United",
+    "id": "liga7-9"
+  },
+  {
+    "league": "Liga 7",
+    "round": 2,
+    "date": "Sat 14th Nov 2026",
+    "iso_date": "2026-11-14",
+    "venue": "Balwearie High School",
+    "time": "10:30 AM",
+    "homeTeam": "Kennoway Star Hearts 2019's B",
+    "awayTeam": "Swifts Typhoons",
+    "match_id": "272349876",
+    "raw_fixture": "Balwearie High School 10:30 AM Kennoway Star Hearts 2019's B V Swifts Typhoons",
     "id": "liga7-10"
   },
   {
