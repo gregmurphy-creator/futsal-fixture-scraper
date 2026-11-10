@@ -2901,9 +2901,9 @@
     "venue": "Beath High School",
     "time": "10:30 AM",
     "homeTeam": "Futsal Escocia Navy",
-    "awayTeam": "Crossgates Primrose 2016s Yellows",
+    "awayTeam": "Bayside Broncos 2017s",
     "match_id": "272353878",
-    "raw_fixture": "Beath High School 10:30 AM Futsal Escocia Navy V Crossgates Primrose 2016s Yellows",
+    "raw_fixture": "Beath High School 10:30 AM Futsal Escocia Navy V Bayside Broncos 2017s",
     "id": "liga4-21"
   },
   {
@@ -3005,10 +3005,10 @@
     "iso_date": "2026-11-15",
     "venue": "Beath High School",
     "time": "1:30 PM",
-    "homeTeam": "Bayside Broncos 2017s",
+    "homeTeam": "Crossgates Primrose 2016s Yellows",
     "awayTeam": "Swifts Sambas (A)",
     "match_id": "272353868",
-    "raw_fixture": "Beath High School 1:30 PM Bayside Broncos 2017s V Swifts Sambas (A)",
+    "raw_fixture": "Beath High School 1:30 PM Crossgates Primrose 2016s Yellows V Swifts Sambas (A)",
     "id": "liga4-29"
   },
   {
@@ -8822,12 +8822,12 @@
     "iso_date": "2026-11-14",
     "venue": "Balwearie High School",
     "time": "9:00 AM",
-    "homeTeam": "Swift Hurricanes 2019",
+    "homeTeam": "Greig Park Blues",
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141761",
-    "raw_fixture": "Balwearie High School 9:00 AM Swift Hurricanes 2019 V Tiki Taka Neranja",
+    "raw_fixture": "Balwearie High School 9:00 AM Greig Park Blues V Tiki Taka Neranja",
     "id": "liga6-16",
-    "updated": "10:30 AM -> 9:00 AM"
+    "updated": "now Greig Park Blues v Tiki Taka Neranja"
   },
   {
     "league": "Liga 6",
@@ -8863,11 +8863,11 @@
     "venue": "Balwearie High School",
     "time": "11:15 AM",
     "homeTeam": "Tiki Taka Negra",
-    "awayTeam": "Greig Park Blues",
+    "awayTeam": "Swift Hurricanes 2019",
     "match_id": "273141765",
-    "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Negra V Greig Park Blues",
+    "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Negra V Swift Hurricanes 2019",
     "id": "liga6-19",
-    "updated": "now Tiki Taka Negra v Greig Park Blues"
+    "updated": "now Tiki Taka Negra v Swift Hurricanes 2019"
   },
   {
     "league": "Liga 6",
