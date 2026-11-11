@@ -2965,11 +2965,12 @@
     "iso_date": "2026-11-15",
     "venue": "Beath High School Refurb",
     "time": "12:00 PM",
-    "homeTeam": "GS - Ronaldinho",
+    "homeTeam": "Luncarty FC",
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "272353869",
-    "raw_fixture": "Beath High School Refurb 12:00 PM GS - Ronaldinho V Tiki Taka Blanco",
-    "id": "liga4-26"
+    "raw_fixture": "Beath High School Refurb 12:00 PM Luncarty FC V Tiki Taka Blanco",
+    "id": "liga4-26",
+    "updated": "now Luncarty FC v Tiki Taka Blanco"
   },
   {
     "league": "Liga 4",
@@ -3031,10 +3032,10 @@
     "iso_date": "2026-11-15",
     "venue": "Beath High School",
     "time": "2:15 PM",
-    "homeTeam": "Luncarty FC",
+    "homeTeam": "GS - Ronaldinho",
     "awayTeam": "Hutchison Vale FC 2016",
     "match_id": "272353872",
-    "raw_fixture": "Beath High School 2:15 PM Luncarty FC V Hutchison Vale FC 2016",
+    "raw_fixture": "Beath High School 2:15 PM GS - Ronaldinho V Hutchison Vale FC 2016",
     "id": "liga4-31"
   },
   {
