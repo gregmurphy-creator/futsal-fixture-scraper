@@ -3136,10 +3136,10 @@
     "iso_date": "2026-11-22",
     "venue": "Beath High School",
     "time": "11:15 AM",
-    "homeTeam": "GS - Zidane",
-    "awayTeam": "Rosyth Reds",
-    "match_id": "272353889",
-    "raw_fixture": "Beath High School 11:15 AM GS - Zidane V Rosyth Reds",
+    "homeTeam": "Crossgates Primrose 2016s Yellows",
+    "awayTeam": "DACC Girls 2015",
+    "match_id": "272353894",
+    "raw_fixture": "Beath High School 11:15 AM Crossgates Primrose 2016s Yellows V DACC Girls 2015",
     "id": "liga4-39"
   },
   {
@@ -3149,10 +3149,10 @@
     "iso_date": "2026-11-22",
     "venue": "Beath High School Refurb",
     "time": "11:15 AM",
-    "homeTeam": "Crossgates Primrose 2016s Yellows",
-    "awayTeam": "DACC Girls 2015",
-    "match_id": "272353894",
-    "raw_fixture": "Beath High School Refurb 11:15 AM Crossgates Primrose 2016s Yellows V DACC Girls 2015",
+    "homeTeam": "GS - Zidane",
+    "awayTeam": "Rosyth Reds",
+    "match_id": "272353889",
+    "raw_fixture": "Beath High School Refurb 11:15 AM GS - Zidane V Rosyth Reds",
     "id": "liga4-40"
   },
   {
@@ -3308,10 +3308,10 @@
     "iso_date": "2026-11-29",
     "venue": "Beath High School Refurb",
     "time": "9:45 AM",
-    "homeTeam": "DACC Girls 2015",
-    "awayTeam": "Swifts Rams",
-    "match_id": "272353907",
-    "raw_fixture": "Beath High School Refurb 9:45 AM DACC Girls 2015 V Swifts Rams",
+    "homeTeam": "GS - Ronaldinho",
+    "awayTeam": "Duloch Juniors United",
+    "match_id": "272353901",
+    "raw_fixture": "Beath High School Refurb 9:45 AM GS - Ronaldinho V Duloch Juniors United",
     "id": "liga4-52"
   },
   {
@@ -3334,10 +3334,10 @@
     "iso_date": "2026-11-29",
     "venue": "Beath High School Refurb",
     "time": "10:30 AM",
-    "homeTeam": "GS - Ronaldinho",
-    "awayTeam": "Duloch Juniors United",
-    "match_id": "272353901",
-    "raw_fixture": "Beath High School Refurb 10:30 AM GS - Ronaldinho V Duloch Juniors United",
+    "homeTeam": "DACC Girls 2015",
+    "awayTeam": "Swifts Rams",
+    "match_id": "272353907",
+    "raw_fixture": "Beath High School Refurb 10:30 AM DACC Girls 2015 V Swifts Rams",
     "id": "liga4-54"
   },
   {
@@ -3493,10 +3493,10 @@
     "iso_date": "2026-12-06",
     "venue": "Beath High School Refurb",
     "time": "9:00 AM",
-    "homeTeam": "GS - Zidane",
-    "awayTeam": "Pitreavie Reds 2017s",
-    "match_id": "272353921",
-    "raw_fixture": "Beath High School Refurb 9:00 AM GS - Zidane V Pitreavie Reds 2017s",
+    "homeTeam": "Crossgates Primrose 2016s Yellows",
+    "awayTeam": "Swifts Sirens",
+    "match_id": "272353933",
+    "raw_fixture": "Beath High School Refurb 9:00 AM Crossgates Primrose 2016s Yellows V Swifts Sirens",
     "id": "liga4-66"
   },
   {
@@ -3584,10 +3584,10 @@
     "iso_date": "2026-12-06",
     "venue": "Beath High School",
     "time": "12:00 PM",
-    "homeTeam": "Crossgates Primrose 2016s Yellows",
-    "awayTeam": "Swifts Sirens",
-    "match_id": "272353933",
-    "raw_fixture": "Beath High School 12:00 PM Crossgates Primrose 2016s Yellows V Swifts Sirens",
+    "homeTeam": "Inverkeithing United",
+    "awayTeam": "KSQ Comets",
+    "match_id": "272353927",
+    "raw_fixture": "Beath High School 12:00 PM Inverkeithing United V KSQ Comets",
     "id": "liga4-73"
   },
   {
@@ -3636,10 +3636,10 @@
     "iso_date": "2026-12-06",
     "venue": "Beath High School",
     "time": "1:30 PM",
-    "homeTeam": "Inverkeithing United",
-    "awayTeam": "KSQ Comets",
-    "match_id": "272353927",
-    "raw_fixture": "Beath High School 1:30 PM Inverkeithing United V KSQ Comets",
+    "homeTeam": "GS - Zidane",
+    "awayTeam": "Pitreavie Reds 2017s",
+    "match_id": "272353921",
+    "raw_fixture": "Beath High School 1:30 PM GS - Zidane V Pitreavie Reds 2017s",
     "id": "liga4-77"
   },
   {
@@ -3741,10 +3741,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School Refurb",
     "time": "9:45 AM",
-    "homeTeam": "GS - Ronaldinho",
-    "awayTeam": "Inverkeithing United",
-    "match_id": "272353947",
-    "raw_fixture": "Beath High School Refurb 9:45 AM GS - Ronaldinho V Inverkeithing United",
+    "homeTeam": "Pitreavie Reds 2017s",
+    "awayTeam": "Pitreavie Blacks 2017s",
+    "match_id": "272353950",
+    "raw_fixture": "Beath High School Refurb 9:45 AM Pitreavie Reds 2017s V Pitreavie Blacks 2017s",
     "id": "liga4-85"
   },
   {
@@ -3767,10 +3767,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School Refurb",
     "time": "10:30 AM",
-    "homeTeam": "Pitreavie Reds 2017s",
-    "awayTeam": "Pitreavie Blacks 2017s",
-    "match_id": "272353950",
-    "raw_fixture": "Beath High School Refurb 10:30 AM Pitreavie Reds 2017s V Pitreavie Blacks 2017s",
+    "homeTeam": "GS - Ronaldinho",
+    "awayTeam": "Inverkeithing United",
+    "match_id": "272353947",
+    "raw_fixture": "Beath High School Refurb 10:30 AM GS - Ronaldinho V Inverkeithing United",
     "id": "liga4-87"
   },
   {
@@ -4044,9 +4044,9 @@
     "venue": "Beath High School Refurb",
     "time": "12:00 PM",
     "homeTeam": "GS - Zidane",
-    "awayTeam": "GS - Ronaldinho",
+    "awayTeam": "Swifts Sambas (B)",
     "match_id": "272353954",
-    "raw_fixture": "Beath High School Refurb 12:00 PM GS - Zidane V GS - Ronaldinho",
+    "raw_fixture": "Beath High School Refurb 12:00 PM GS - Zidane V Swifts Sambas (B)",
     "id": "liga4-108"
   },
   {
@@ -4070,9 +4070,9 @@
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
     "homeTeam": "Rosyth Reds",
-    "awayTeam": "Swifts Sambas (B)",
+    "awayTeam": "GS - Ronaldinho",
     "match_id": "272353965",
-    "raw_fixture": "Beath High School Refurb 12:45 PM Rosyth Reds V Swifts Sambas (B)",
+    "raw_fixture": "Beath High School Refurb 12:45 PM Rosyth Reds V GS - Ronaldinho",
     "id": "liga4-110"
   },
   {
