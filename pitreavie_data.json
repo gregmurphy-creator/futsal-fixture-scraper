@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T12:24:30+00:00",
+  "updated": "2026-11-13T00:24:23+00:00",
   "week_tab": "Week 33 - 14th November",
   "heading": "Week 33 - 14th November",
   "fixture_date": "2026-11-14",
@@ -174,7 +174,7 @@
       "time": "11:00 AM",
       "pitch": "2 - New Astro",
       "tier": "",
-      "homeTeam": "Raith Rovers Whites T3",
+      "homeTeam": "Raith Rovers Whites",
       "awayTeam": "IUFC Blues",
       "lastPlayed": "Wk 13",
       "isOurs": false
@@ -184,7 +184,7 @@
       "time": "11:00 AM",
       "pitch": "3 - New Astro",
       "tier": "",
-      "homeTeam": "Clunie Royal Hearts Yellows T3",
+      "homeTeam": "Clunie Royal Hearts Yellows",
       "awayTeam": "Rosyth Reds",
       "lastPlayed": "NP",
       "isOurs": false
@@ -194,7 +194,7 @@
       "time": "12:00 PM",
       "pitch": "1",
       "tier": "",
-      "homeTeam": "Raith Rovers Blues T1",
+      "homeTeam": "Raith Rovers Blues",
       "awayTeam": "Duloch Utd",
       "lastPlayed": "Wk 25",
       "isOurs": false
