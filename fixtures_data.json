@@ -6286,10 +6286,10 @@
     "iso_date": "2026-11-21",
     "venue": "Caledonia High School, Rosyth",
     "time": "9:00 AM",
-    "homeTeam": "Tiki Taka Blanco",
+    "homeTeam": "Duloch Juniors - Blacks",
     "awayTeam": "Crossgates Primrose 2016s Blues",
     "match_id": "273142252",
-    "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Tiki Taka Blanco V Crossgates Primrose 2016s Blues",
+    "raw_fixture": "Caledonia High School, Rosyth 9:00 AM Duloch Juniors - Blacks V Crossgates Primrose 2016s Blues",
     "id": "liga5-29"
   },
   {
@@ -6299,11 +6299,12 @@
     "iso_date": "2026-11-21",
     "venue": "Caledonia High School, Rosyth",
     "time": "9:45 AM",
-    "homeTeam": "Duloch Juniors - Reds",
-    "awayTeam": "Bayside Barcas",
-    "match_id": "273142258",
-    "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Duloch Juniors - Reds V Bayside Barcas",
-    "id": "liga5-30"
+    "homeTeam": "Bowhill United Yellows",
+    "awayTeam": "Tiki Taka Neranja",
+    "match_id": "273142257",
+    "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Bowhill United Yellows V Tiki Taka Neranja",
+    "id": "liga5-30",
+    "updated": "11:15 AM -> 9:45 AM, Beath High School -> Caledonia High School, Rosyth"
   },
   {
     "league": "Liga 5",
@@ -6325,11 +6326,12 @@
     "iso_date": "2026-11-21",
     "venue": "Caledonia High School, Rosyth",
     "time": "10:30 AM",
-    "homeTeam": "Duloch Juniors - Blacks",
+    "homeTeam": "Tiki Taka Blanco",
     "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142259",
-    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Duloch Juniors - Blacks V Cairneyhill Ath Maroons",
-    "id": "liga5-32"
+    "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Tiki Taka Blanco V Cairneyhill Ath Maroons",
+    "id": "liga5-32",
+    "updated": "now Tiki Taka Blanco v Cairneyhill Ath Maroons"
   },
   {
     "league": "Liga 5",
@@ -6338,12 +6340,11 @@
     "iso_date": "2026-11-21",
     "venue": "Beath High School",
     "time": "11:15 AM",
-    "homeTeam": "Bowhill United Yellows",
-    "awayTeam": "Tiki Taka Neranja",
-    "match_id": "273142257",
-    "raw_fixture": "Beath High School 11:15 AM Bowhill United Yellows V Tiki Taka Neranja",
-    "id": "liga5-33",
-    "updated": "12:00 PM -> 11:15 AM"
+    "homeTeam": "Duloch Juniors - Reds",
+    "awayTeam": "Bayside Barcas",
+    "match_id": "273142258",
+    "raw_fixture": "Beath High School 11:15 AM Duloch Juniors - Reds V Bayside Barcas",
+    "id": "liga5-33"
   },
   {
     "league": "Liga 5",
@@ -6404,10 +6405,10 @@
     "iso_date": "2026-11-21",
     "venue": "Caledonia High School, Rosyth",
     "time": "12:45 PM",
-    "homeTeam": "Dunipace Ballerz White",
-    "awayTeam": "DACC Blacks",
-    "match_id": "273142250",
-    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Dunipace Ballerz White V DACC Blacks",
+    "homeTeam": "WLFA",
+    "awayTeam": "Greig Park Greens",
+    "match_id": "273142260",
+    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM WLFA V Greig Park Greens",
     "id": "liga5-38"
   },
   {
@@ -6417,10 +6418,10 @@
     "iso_date": "2026-11-21",
     "venue": "Beath High School",
     "time": "1:30 PM",
-    "homeTeam": "WLFA",
-    "awayTeam": "Greig Park Greens",
-    "match_id": "273142260",
-    "raw_fixture": "Beath High School 1:30 PM WLFA V Greig Park Greens",
+    "homeTeam": "Dunipace Ballerz White",
+    "awayTeam": "DACC Blacks",
+    "match_id": "273142250",
+    "raw_fixture": "Beath High School 1:30 PM Dunipace Ballerz White V DACC Blacks",
     "id": "liga5-39"
   },
   {
