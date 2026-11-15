@@ -6130,8 +6130,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273142235",
     "raw_fixture": "Beath High School 10:30 AM Greig Park Greens V Tiki Taka Blanco",
-    "id": "liga5-17",
-    "updated": "now Greig Park Greens v Tiki Taka Blanco"
+    "id": "liga5-17"
   },
   {
     "league": "Liga 5",
@@ -6157,8 +6156,7 @@
     "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142236",
     "raw_fixture": "Beath High School 11:15 AM Tiki Taka Blanco V Cairneyhill Ath Maroons",
-    "id": "liga5-19",
-    "updated": "now Tiki Taka Blanco v Cairneyhill Ath Maroons"
+    "id": "liga5-19"
   },
   {
     "league": "Liga 5",
@@ -6236,8 +6234,7 @@
     "awayTeam": "DACC Blacks",
     "match_id": "273142239",
     "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Tiki Taka Negra V DACC Blacks",
-    "id": "liga5-25",
-    "updated": "1:30 PM -> 12:45 PM, Beath High School -> Caledonia High School, Rosyth"
+    "id": "liga5-25"
   },
   {
     "league": "Liga 5",
@@ -6263,8 +6260,7 @@
     "awayTeam": "Dunipace Ballerz White",
     "match_id": "273142237",
     "raw_fixture": "Beath High School 2:15 PM Tiki Taka Neranja V Dunipace Ballerz White",
-    "id": "liga5-27",
-    "updated": "12:00 PM -> 2:15 PM, Caledonia High School, Rosyth -> Beath High School"
+    "id": "liga5-27"
   },
   {
     "league": "Liga 5",
@@ -8815,8 +8811,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141771",
     "raw_fixture": "Beath High School 9:00 AM Futsal Escocia White V Tiki Taka Blanco",
-    "id": "liga6-15",
-    "updated": "now Futsal Escocia White v Tiki Taka Blanco"
+    "id": "liga6-15"
   },
   {
     "league": "Liga 6",
@@ -8829,8 +8824,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141761",
     "raw_fixture": "Balwearie High School 9:00 AM Greig Park Blues V Tiki Taka Neranja",
-    "id": "liga6-16",
-    "updated": "now Greig Park Blues v Tiki Taka Neranja"
+    "id": "liga6-16"
   },
   {
     "league": "Liga 6",
@@ -8869,8 +8863,7 @@
     "awayTeam": "Swift Hurricanes 2019",
     "match_id": "273141765",
     "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Negra V Swift Hurricanes 2019",
-    "id": "liga6-19",
-    "updated": "now Tiki Taka Negra v Swift Hurricanes 2019"
+    "id": "liga6-19"
   },
   {
     "league": "Liga 6",
@@ -8896,8 +8889,7 @@
     "awayTeam": "Duloch Juniors City",
     "match_id": "273141758",
     "raw_fixture": "Balwearie High School 12:00 PM Blue Brazil Blue 2019 V Duloch Juniors City",
-    "id": "liga6-21",
-    "updated": "1:30 PM -> 12:00 PM, Beath High School Refurb -> Balwearie High School, now Tiki Taka Negra v Duloch Juniors City"
+    "id": "liga6-21"
   },
   {
     "league": "Liga 6",
