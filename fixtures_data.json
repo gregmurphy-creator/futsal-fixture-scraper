@@ -149,10 +149,10 @@
     "iso_date": "2026-11-08",
     "venue": "Dunfermline Learning Campus",
     "time": "3:00 PM",
-    "homeTeam": "Salveson FC Colts",
+    "homeTeam": "SPARE",
     "awayTeam": "Tiki Taka Negra",
     "match_id": "272354218",
-    "raw_fixture": "Dunfermline Learning Campus 3:00 PM Salveson FC Colts V Tiki Taka Negra",
+    "raw_fixture": "Dunfermline Learning Campus 3:00 PM SPARE V Tiki Taka Negra",
     "id": "liga3-12"
   },
   {
@@ -215,9 +215,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "12:00 PM",
     "homeTeam": "Futsal South 2016s",
-    "awayTeam": "Salveson FC Colts",
+    "awayTeam": "SPARE",
     "match_id": "272354234",
-    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Futsal South 2016s V Salveson FC Colts",
+    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Futsal South 2016s V SPARE",
     "id": "liga3-17"
   },
   {
@@ -451,9 +451,9 @@
     "venue": "Beath High School Refurb",
     "time": "3:00 PM",
     "homeTeam": "Kelty Heart Maroons",
-    "awayTeam": "Salveson FC Colts",
+    "awayTeam": "SPARE",
     "match_id": "272354241",
-    "raw_fixture": "Beath High School Refurb 3:00 PM Kelty Heart Maroons V Salveson FC Colts",
+    "raw_fixture": "Beath High School Refurb 3:00 PM Kelty Heart Maroons V SPARE",
     "id": "liga3-35"
   },
   {
@@ -580,10 +580,10 @@
     "iso_date": "2026-11-29",
     "venue": "Dunfermline Learning Campus",
     "time": "2:15 PM",
-    "homeTeam": "Salveson FC Colts",
+    "homeTeam": "SPARE",
     "awayTeam": "DACC Pars",
     "match_id": "272354251",
-    "raw_fixture": "Dunfermline Learning Campus 2:15 PM Salveson FC Colts V DACC Pars",
+    "raw_fixture": "Dunfermline Learning Campus 2:15 PM SPARE V DACC Pars",
     "id": "liga3-45"
   },
   {
@@ -739,9 +739,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "2:15 PM",
     "homeTeam": "KSQ Rapids 2015",
-    "awayTeam": "Salveson FC Colts",
+    "awayTeam": "SPARE",
     "match_id": "272354273",
-    "raw_fixture": "Dunfermline Learning Campus 2:15 PM KSQ Rapids 2015 V Salveson FC Colts",
+    "raw_fixture": "Dunfermline Learning Campus 2:15 PM KSQ Rapids 2015 V SPARE",
     "id": "liga3-57"
   },
   {
@@ -960,10 +960,10 @@
     "iso_date": "2026-12-13",
     "venue": "Dunfermline Learning Campus",
     "time": "3:00 PM",
-    "homeTeam": "Salveson FC Colts",
+    "homeTeam": "SPARE",
     "awayTeam": "Glenrothes Athletic (Oranges)",
     "match_id": "272354282",
-    "raw_fixture": "Dunfermline Learning Campus 3:00 PM Salveson FC Colts V Glenrothes Athletic (Oranges)",
+    "raw_fixture": "Dunfermline Learning Campus 3:00 PM SPARE V Glenrothes Athletic (Oranges)",
     "id": "liga3-74"
   },
   {
@@ -1000,9 +1000,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "9:00 AM",
     "homeTeam": "Futsal Escocia Navy",
-    "awayTeam": "Salveson FC Colts",
+    "awayTeam": "SPARE",
     "match_id": "272354298",
-    "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia Navy V Salveson FC Colts",
+    "raw_fixture": "Dunfermline Learning Campus 9:00 AM Futsal Escocia Navy V SPARE",
     "id": "liga3-77"
   },
   {
@@ -1312,10 +1312,10 @@
     "iso_date": "2027-01-10",
     "venue": "Beath High School",
     "time": "3:00 PM",
-    "homeTeam": "Salveson FC Colts",
+    "homeTeam": "SPARE",
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "272354307",
-    "raw_fixture": "Beath High School 3:00 PM Salveson FC Colts V Futsal Escocia Turquoise",
+    "raw_fixture": "Beath High School 3:00 PM SPARE V Futsal Escocia Turquoise",
     "id": "liga3-101"
   },
   {
@@ -1417,9 +1417,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "12:00 PM",
     "homeTeam": "Swifts Chargers 2017",
-    "awayTeam": "Salveson FC Colts",
+    "awayTeam": "SPARE",
     "match_id": "272354321",
-    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Swifts Chargers 2017 V Salveson FC Colts",
+    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Swifts Chargers 2017 V SPARE",
     "id": "liga3-109"
   },
   {
@@ -1664,10 +1664,10 @@
     "iso_date": "2027-01-24",
     "venue": "Caledonia High School, Rosyth",
     "time": "2:15 PM",
-    "homeTeam": "Salveson FC Colts",
+    "homeTeam": "SPARE",
     "awayTeam": "Templehall Utd",
     "match_id": "272354336",
-    "raw_fixture": "Caledonia High School, Rosyth 2:15 PM Salveson FC Colts V Templehall Utd",
+    "raw_fixture": "Caledonia High School, Rosyth 2:15 PM SPARE V Templehall Utd",
     "id": "liga3-128"
   },
   {
@@ -1769,9 +1769,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "11:15 AM",
     "homeTeam": "DACC Whites Athletic",
-    "awayTeam": "Salveson FC Colts",
+    "awayTeam": "SPARE",
     "match_id": "272354352",
-    "raw_fixture": "Dunfermline Learning Campus 11:15 AM DACC Whites Athletic V Salveson FC Colts",
+    "raw_fixture": "Dunfermline Learning Campus 11:15 AM DACC Whites Athletic V SPARE",
     "id": "liga3-136"
   },
   {
@@ -1977,10 +1977,10 @@
     "iso_date": "2027-02-07",
     "venue": "Dunfermline Learning Campus",
     "time": "12:45 PM",
-    "homeTeam": "Salveson FC Colts",
+    "homeTeam": "SPARE",
     "awayTeam": "Glenrothes Athletic (Blues)",
     "match_id": "272354365",
-    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Salveson FC Colts V Glenrothes Athletic (Blues)",
+    "raw_fixture": "Dunfermline Learning Campus 12:45 PM SPARE V Glenrothes Athletic (Blues)",
     "id": "liga3-152"
   },
   {
@@ -2108,9 +2108,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "9:45 AM",
     "homeTeam": "Swifts Bulls",
-    "awayTeam": "Salveson FC Colts",
+    "awayTeam": "SPARE",
     "match_id": "272354381",
-    "raw_fixture": "Dunfermline Learning Campus 9:45 AM Swifts Bulls V Salveson FC Colts",
+    "raw_fixture": "Dunfermline Learning Campus 9:45 AM Swifts Bulls V SPARE",
     "id": "liga3-162"
   },
   {
@@ -2289,10 +2289,10 @@
     "iso_date": "2027-02-21",
     "venue": "Dunfermline Learning Campus",
     "time": "9:45 AM",
-    "homeTeam": "Salveson FC Colts",
+    "homeTeam": "SPARE",
     "awayTeam": "Kelty Hearts Blacks",
     "match_id": "272354402",
-    "raw_fixture": "Dunfermline Learning Campus 9:45 AM Salveson FC Colts V Kelty Hearts Blacks",
+    "raw_fixture": "Dunfermline Learning Campus 9:45 AM SPARE V Kelty Hearts Blacks",
     "id": "liga3-176"
   },
   {
@@ -2511,9 +2511,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "12:00 PM",
     "homeTeam": "Blue Brazil White",
-    "awayTeam": "Salveson FC Colts",
+    "awayTeam": "SPARE",
     "match_id": "272354405",
-    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Blue Brazil White V Salveson FC Colts",
+    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Blue Brazil White V SPARE",
     "id": "liga3-193"
   },
   {
@@ -6375,10 +6375,10 @@
     "iso_date": "2026-11-21",
     "venue": "Caledonia High School, Rosyth",
     "time": "12:00 PM",
-    "homeTeam": "Swifts Falcons 2017",
+    "homeTeam": "KSQ 2018 Galaxy",
     "awayTeam": "Futsal Escocia White",
     "match_id": "273142253",
-    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Swifts Falcons 2017 V Futsal Escocia White",
+    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM KSQ 2018 Galaxy V Futsal Escocia White",
     "id": "liga5-36"
   },
   {
@@ -6388,10 +6388,10 @@
     "iso_date": "2026-11-21",
     "venue": "Beath High School",
     "time": "12:45 PM",
-    "homeTeam": "KSQ 2018 Galaxy",
+    "homeTeam": "Swifts Falcons 2017",
     "awayTeam": "DACC Girls Blacks",
     "match_id": "273142261",
-    "raw_fixture": "Beath High School 12:45 PM KSQ 2018 Galaxy V DACC Girls Blacks",
+    "raw_fixture": "Beath High School 12:45 PM Swifts Falcons 2017 V DACC Girls Blacks",
     "id": "liga5-37"
   },
   {
