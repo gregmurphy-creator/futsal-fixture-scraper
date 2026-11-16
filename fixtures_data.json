@@ -296,8 +296,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "272354231",
     "raw_fixture": "Beath High School 3:00 PM Tiki Taka Negra V Futsal Escocia White",
-    "id": "liga3-23",
-    "updated": "9:45 AM -> 3:00 PM, Dunfermline Learning Campus -> Beath High School"
+    "id": "liga3-23"
   },
   {
     "league": "Liga 3",
@@ -2969,8 +2968,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "272353869",
     "raw_fixture": "Beath High School Refurb 12:00 PM Luncarty FC V Tiki Taka Blanco",
-    "id": "liga4-26",
-    "updated": "now Luncarty FC v Tiki Taka Blanco"
+    "id": "liga4-26"
   },
   {
     "league": "Liga 4",
@@ -2996,8 +2994,7 @@
     "awayTeam": "Swifts Rams",
     "match_id": "272353870",
     "raw_fixture": "Beath High School Refurb 12:45 PM Tiki Taka Negra V Swifts Rams",
-    "id": "liga4-28",
-    "updated": "10:30 AM -> 12:45 PM"
+    "id": "liga4-28"
   },
   {
     "league": "Liga 4",
