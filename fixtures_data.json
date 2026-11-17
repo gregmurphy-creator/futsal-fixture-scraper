@@ -6308,10 +6308,10 @@
     "iso_date": "2026-11-21",
     "venue": "Beath High School",
     "time": "10:30 AM",
-    "homeTeam": "Templehall United Yellows 2018",
+    "homeTeam": "DACC Blacks",
     "awayTeam": "Bowhill United Blacks",
     "match_id": "273142254",
-    "raw_fixture": "Beath High School 10:30 AM Templehall United Yellows 2018 V Bowhill United Blacks",
+    "raw_fixture": "Beath High School 10:30 AM DACC Blacks V Bowhill United Blacks",
     "id": "liga5-31"
   },
   {
@@ -6427,9 +6427,9 @@
     "venue": "Beath High School",
     "time": "2:15 PM",
     "homeTeam": "Dunipace Ballerz White",
-    "awayTeam": "DACC Blacks",
+    "awayTeam": "Templehall United Yellows 2018",
     "match_id": "273142250",
-    "raw_fixture": "Beath High School 2:15 PM Dunipace Ballerz White V DACC Blacks",
+    "raw_fixture": "Beath High School 2:15 PM Dunipace Ballerz White V Templehall United Yellows 2018",
     "id": "liga5-40"
   },
   {
@@ -6688,9 +6688,9 @@
     "venue": "Caledonia High School, Rosyth",
     "time": "11:15 AM",
     "homeTeam": "DACC Blacks",
-    "awayTeam": "Bowhill United Blacks",
+    "awayTeam": "Duloch Juniors - Blacks",
     "match_id": "273142288",
-    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM DACC Blacks V Bowhill United Blacks",
+    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM DACC Blacks V Duloch Juniors - Blacks",
     "id": "liga5-60"
   },
   {
@@ -6726,10 +6726,10 @@
     "iso_date": "2026-12-05",
     "venue": "Beath High School",
     "time": "12:45 PM",
-    "homeTeam": "Duloch Juniors - Blacks",
+    "homeTeam": "Bowhill United Blacks",
     "awayTeam": "Duloch Juniors - Reds",
     "match_id": "273142289",
-    "raw_fixture": "Beath High School 12:45 PM Duloch Juniors - Blacks V Duloch Juniors - Reds",
+    "raw_fixture": "Beath High School 12:45 PM Bowhill United Blacks V Duloch Juniors - Reds",
     "id": "liga5-63"
   },
   {
@@ -7289,10 +7289,11 @@
     "venue": "Caledonia High School, Rosyth",
     "time": "12:45 PM",
     "homeTeam": "Tiki Taka Negra",
-    "awayTeam": "DACC Blacks",
+    "awayTeam": "DACC Boys 17",
     "match_id": "273142319",
-    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Tiki Taka Negra V DACC Blacks",
-    "id": "liga5-106"
+    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Tiki Taka Negra V DACC Boys 17",
+    "id": "liga5-106",
+    "updated": "now Tiki Taka Negra v DACC Boys 17"
   },
   {
     "league": "Liga 5",
@@ -7301,10 +7302,10 @@
     "iso_date": "2027-01-09",
     "venue": "Beath High School",
     "time": "1:30 PM",
-    "homeTeam": "DACC Boys 17",
+    "homeTeam": "DACC Blacks",
     "awayTeam": "DACC Girls Blacks",
     "match_id": "273142322",
-    "raw_fixture": "Beath High School 1:30 PM DACC Boys 17 V DACC Girls Blacks",
+    "raw_fixture": "Beath High School 1:30 PM DACC Blacks V DACC Girls Blacks",
     "id": "liga5-107"
   },
   {
@@ -7951,10 +7952,10 @@
     "iso_date": "2027-02-06",
     "venue": "Beath High School",
     "time": "11:15 AM",
-    "homeTeam": "Inverkeithing United",
+    "homeTeam": "Duloch Juniors - Blacks",
     "awayTeam": "Cairneyhill Ath Maroons",
     "match_id": "273142375",
-    "raw_fixture": "Beath High School 11:15 AM Inverkeithing United V Cairneyhill Ath Maroons",
+    "raw_fixture": "Beath High School 11:15 AM Duloch Juniors - Blacks V Cairneyhill Ath Maroons",
     "id": "liga5-157"
   },
   {
@@ -7978,9 +7979,9 @@
     "venue": "Beath High School",
     "time": "12:00 PM",
     "homeTeam": "Crossgates Primrose 2016s Blues",
-    "awayTeam": "Duloch Juniors - Blacks",
+    "awayTeam": "Inverkeithing United",
     "match_id": "273142385",
-    "raw_fixture": "Beath High School 12:00 PM Crossgates Primrose 2016s Blues V Duloch Juniors - Blacks",
+    "raw_fixture": "Beath High School 12:00 PM Crossgates Primrose 2016s Blues V Inverkeithing United",
     "id": "liga5-159"
   },
   {
@@ -8315,10 +8316,10 @@
     "iso_date": "2027-02-20",
     "venue": "Beath High School",
     "time": "11:15 AM",
-    "homeTeam": "Bayside Barcas",
+    "homeTeam": "Cairneyhill Ath Maroons",
     "awayTeam": "Templehall United Yellows 2018",
     "match_id": "273142406",
-    "raw_fixture": "Beath High School 11:15 AM Bayside Barcas V Templehall United Yellows 2018",
+    "raw_fixture": "Beath High School 11:15 AM Cairneyhill Ath Maroons V Templehall United Yellows 2018",
     "id": "liga5-185"
   },
   {
@@ -8328,10 +8329,10 @@
     "iso_date": "2027-02-20",
     "venue": "Caledonia High School, Rosyth",
     "time": "11:15 AM",
-    "homeTeam": "Tiki Taka Blanco",
+    "homeTeam": "Bayside Barcas",
     "awayTeam": "KSQ 2018 Galaxy",
     "match_id": "273142411",
-    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Tiki Taka Blanco V KSQ 2018 Galaxy",
+    "raw_fixture": "Caledonia High School, Rosyth 11:15 AM Bayside Barcas V KSQ 2018 Galaxy",
     "id": "liga5-186"
   },
   {
@@ -8341,11 +8342,12 @@
     "iso_date": "2027-02-20",
     "venue": "Beath High School",
     "time": "12:00 PM",
-    "homeTeam": "Duloch City 2018s",
-    "awayTeam": "Swifts Falcons 2017",
+    "homeTeam": "Tiki Taka Blanco",
+    "awayTeam": "Duloch City 2018s",
     "match_id": "273142407",
-    "raw_fixture": "Beath High School 12:00 PM Duloch City 2018s V Swifts Falcons 2017",
-    "id": "liga5-187"
+    "raw_fixture": "Beath High School 12:00 PM Tiki Taka Blanco V Duloch City 2018s",
+    "id": "liga5-187",
+    "updated": "now Tiki Taka Blanco v Duloch City 2018s"
   },
   {
     "league": "Liga 5",
@@ -8355,9 +8357,9 @@
     "venue": "Caledonia High School, Rosyth",
     "time": "12:00 PM",
     "homeTeam": "Duloch Juniors - Reds",
-    "awayTeam": "Cairneyhill Ath Maroons",
+    "awayTeam": "Swifts Falcons 2017",
     "match_id": "273142405",
-    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Duloch Juniors - Reds V Cairneyhill Ath Maroons",
+    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Duloch Juniors - Reds V Swifts Falcons 2017",
     "id": "liga5-188"
   },
   {
