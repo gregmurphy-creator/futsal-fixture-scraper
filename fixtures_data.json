@@ -344,10 +344,10 @@
     "iso_date": "2026-11-22",
     "venue": "Dunfermline Learning Campus",
     "time": "10:30 AM",
-    "homeTeam": "Futsal Escocia Turquoise",
-    "awayTeam": "KSQ Galaxy 2015",
-    "match_id": "272354237",
-    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Futsal Escocia Turquoise V KSQ Galaxy 2015",
+    "homeTeam": "Swifts Bulls",
+    "awayTeam": "Letham Tangies",
+    "match_id": "272354250",
+    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Swifts Bulls V Letham Tangies",
     "id": "liga3-27"
   },
   {
@@ -370,10 +370,10 @@
     "iso_date": "2026-11-22",
     "venue": "Dunfermline Learning Campus",
     "time": "12:00 PM",
-    "homeTeam": "Swifts Bulls",
-    "awayTeam": "Letham Tangies",
-    "match_id": "272354250",
-    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Swifts Bulls V Letham Tangies",
+    "homeTeam": "Futsal Escocia",
+    "awayTeam": "Kelty Hearts Blacks",
+    "match_id": "272354247",
+    "raw_fixture": "Dunfermline Learning Campus 12:00 PM Futsal Escocia V Kelty Hearts Blacks",
     "id": "liga3-29"
   },
   {
@@ -383,10 +383,10 @@
     "iso_date": "2026-11-22",
     "venue": "Dunfermline Learning Campus",
     "time": "12:45 PM",
-    "homeTeam": "Futsal Escocia",
-    "awayTeam": "Kelty Hearts Blacks",
-    "match_id": "272354247",
-    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Futsal Escocia V Kelty Hearts Blacks",
+    "homeTeam": "Futsal Escocia Turquoise",
+    "awayTeam": "KSQ Galaxy 2015",
+    "match_id": "272354237",
+    "raw_fixture": "Dunfermline Learning Campus 12:45 PM Futsal Escocia Turquoise V KSQ Galaxy 2015",
     "id": "liga3-30"
   },
   {
