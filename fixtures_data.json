@@ -6466,11 +6466,12 @@
     "iso_date": "2026-11-28",
     "venue": "Caledonia High School, Rosyth",
     "time": "9:45 AM",
-    "homeTeam": "Futsal Escocia Turquoise",
+    "homeTeam": "Bayside Barcas",
     "awayTeam": "Tiki Taka Blanco",
-    "match_id": "273142274",
-    "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Futsal Escocia Turquoise V Tiki Taka Blanco",
-    "id": "liga5-43"
+    "match_id": "273142275",
+    "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Bayside Barcas V Tiki Taka Blanco",
+    "id": "liga5-43",
+    "updated": "12:45 PM -> 9:45 AM, now Bayside Barcas v Tiki Taka Blanco"
   },
   {
     "league": "Liga 5",
@@ -6571,10 +6572,10 @@
     "iso_date": "2026-11-28",
     "venue": "Caledonia High School, Rosyth",
     "time": "12:45 PM",
-    "homeTeam": "Bayside Barcas",
+    "homeTeam": "Futsal Escocia Turquoise",
     "awayTeam": "WLFA",
-    "match_id": "273142275",
-    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Bayside Barcas V WLFA",
+    "match_id": "273142274",
+    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Futsal Escocia Turquoise V WLFA",
     "id": "liga5-51"
   },
   {
@@ -6913,12 +6914,12 @@
     "iso_date": "2026-12-12",
     "venue": "Beath High School",
     "time": "12:45 PM",
-    "homeTeam": "WLFA",
+    "homeTeam": "Tiki Taka Blanco",
     "awayTeam": "Bowhill United Blacks",
     "match_id": "273142301",
-    "raw_fixture": "Beath High School 12:45 PM WLFA V Bowhill United Blacks",
+    "raw_fixture": "Beath High School 12:45 PM Tiki Taka Blanco V Bowhill United Blacks",
     "id": "liga5-77",
-    "updated": "9:45 AM -> 12:45 PM, Caledonia High School, Rosyth -> Beath High School, now WLFA v Tiki Taka Negra"
+    "updated": "now Tiki Taka Blanco v Bowhill United Blacks"
   },
   {
     "league": "Liga 5",
@@ -6928,9 +6929,9 @@
     "venue": "Caledonia High School, Rosyth",
     "time": "12:45 PM",
     "homeTeam": "Bayside Barcas",
-    "awayTeam": "Tiki Taka Blanco",
+    "awayTeam": "WLFA",
     "match_id": "273142300",
-    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Bayside Barcas V Tiki Taka Blanco",
+    "raw_fixture": "Caledonia High School, Rosyth 12:45 PM Bayside Barcas V WLFA",
     "id": "liga5-78"
   },
   {
@@ -9103,10 +9104,10 @@
     "iso_date": "2026-11-21",
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
-    "homeTeam": "Glenrothes Strollers",
-    "awayTeam": "Duloch Juniors City",
-    "match_id": "273141772",
-    "raw_fixture": "Beath High School Refurb 12:45 PM Glenrothes Strollers V Duloch Juniors City",
+    "homeTeam": "Swifts Lightnings 2019",
+    "awayTeam": "Greig Park Blues",
+    "match_id": "273141781",
+    "raw_fixture": "Beath High School Refurb 12:45 PM Swifts Lightnings 2019 V Greig Park Blues",
     "id": "liga6-37"
   },
   {
@@ -9116,10 +9117,10 @@
     "iso_date": "2026-11-21",
     "venue": "Balwearie High School",
     "time": "12:45 PM",
-    "homeTeam": "Swifts Lightnings 2019",
-    "awayTeam": "Greig Park Blues",
-    "match_id": "273141781",
-    "raw_fixture": "Balwearie High School 12:45 PM Swifts Lightnings 2019 V Greig Park Blues",
+    "homeTeam": "Glenrothes Strollers",
+    "awayTeam": "Duloch Juniors City",
+    "match_id": "273141772",
+    "raw_fixture": "Balwearie High School 12:45 PM Glenrothes Strollers V Duloch Juniors City",
     "id": "liga6-38"
   },
   {
