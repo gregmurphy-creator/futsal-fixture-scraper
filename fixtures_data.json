@@ -11647,10 +11647,10 @@
     "iso_date": "2026-11-21",
     "venue": "Beath High School Refurb",
     "time": "9:00 AM",
-    "homeTeam": "Tiki Taka Blanco",
+    "homeTeam": "Bayside Girls 2018s",
     "awayTeam": "Futsal Escocia",
     "match_id": "272349882",
-    "raw_fixture": "Beath High School Refurb 9:00 AM Tiki Taka Blanco V Futsal Escocia",
+    "raw_fixture": "Beath High School Refurb 9:00 AM Bayside Girls 2018s V Futsal Escocia",
     "id": "liga7-11"
   },
   {
@@ -11687,10 +11687,11 @@
     "venue": "Balwearie High School",
     "time": "12:00 PM",
     "homeTeam": "Raith Rovers CC",
-    "awayTeam": "Bayside Girls 2018s",
+    "awayTeam": "Tiki Taka Blanco",
     "match_id": "272349881",
-    "raw_fixture": "Balwearie High School 12:00 PM Raith Rovers CC V Bayside Girls 2018s",
-    "id": "liga7-14"
+    "raw_fixture": "Balwearie High School 12:00 PM Raith Rovers CC V Tiki Taka Blanco",
+    "id": "liga7-14",
+    "updated": "now Raith Rovers CC v Tiki Taka Blanco"
   },
   {
     "league": "Liga 7",
