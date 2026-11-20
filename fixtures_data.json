@@ -566,10 +566,10 @@
     "iso_date": "2026-11-29",
     "venue": "Caledonia High School, Rosyth",
     "time": "1:30 PM",
-    "homeTeam": "Letham Tangies",
+    "homeTeam": "Raith Rovers Reds",
     "awayTeam": "DACC Pars",
     "match_id": "272354251",
-    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Letham Tangies V DACC Pars",
+    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Raith Rovers Reds V DACC Pars",
     "id": "liga3-44"
   },
   {
@@ -9010,14 +9010,14 @@
     "round": 3,
     "date": "Sat 21st Nov 2026",
     "iso_date": "2026-11-21",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "9:00 AM",
     "homeTeam": "Tiki Taka Blanco",
     "awayTeam": "Duloch Juniors",
     "match_id": "273141783",
-    "raw_fixture": "Balwearie High School 9:00 AM Tiki Taka Blanco V Duloch Juniors",
+    "raw_fixture": "Auchmuty High School, Glenrothes 9:00 AM Tiki Taka Blanco V Duloch Juniors",
     "id": "liga6-30",
-    "updated": "12:00 PM -> 9:00 AM"
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9038,12 +9038,12 @@
     "round": 3,
     "date": "Sat 21st Nov 2026",
     "iso_date": "2026-11-21",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "9:45 AM",
     "homeTeam": "Rosyth Blacks 2018",
     "awayTeam": "Futsal Escocia White",
     "match_id": "273141775",
-    "raw_fixture": "Balwearie High School 9:45 AM Rosyth Blacks 2018 V Futsal Escocia White",
+    "raw_fixture": "Auchmuty High School, Glenrothes 9:45 AM Rosyth Blacks 2018 V Futsal Escocia White",
     "id": "liga6-32"
   },
   {
@@ -9051,12 +9051,12 @@
     "round": 3,
     "date": "Sat 21st Nov 2026",
     "iso_date": "2026-11-21",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "10:30 AM",
     "homeTeam": "Blue Brazil 2018",
     "awayTeam": "Rosyth Reds 2018",
     "match_id": "273141776",
-    "raw_fixture": "Balwearie High School 10:30 AM Blue Brazil 2018 V Rosyth Reds 2018",
+    "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM Blue Brazil 2018 V Rosyth Reds 2018",
     "id": "liga6-33"
   },
   {
@@ -9077,12 +9077,12 @@
     "round": 3,
     "date": "Sat 21st Nov 2026",
     "iso_date": "2026-11-21",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "11:15 AM",
     "homeTeam": "Templehall Utd Blacks",
     "awayTeam": "Swift Hurricanes 2019",
     "match_id": "273141785",
-    "raw_fixture": "Balwearie High School 11:15 AM Templehall Utd Blacks V Swift Hurricanes 2019",
+    "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Templehall Utd Blacks V Swift Hurricanes 2019",
     "id": "liga6-35"
   },
   {
@@ -9116,12 +9116,12 @@
     "round": 3,
     "date": "Sat 21st Nov 2026",
     "iso_date": "2026-11-21",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "12:45 PM",
     "homeTeam": "Glenrothes Strollers",
     "awayTeam": "Duloch Juniors City",
     "match_id": "273141772",
-    "raw_fixture": "Balwearie High School 12:45 PM Glenrothes Strollers V Duloch Juniors City",
+    "raw_fixture": "Auchmuty High School, Glenrothes 12:45 PM Glenrothes Strollers V Duloch Juniors City",
     "id": "liga6-38"
   },
   {
@@ -9143,12 +9143,12 @@
     "round": 3,
     "date": "Sat 21st Nov 2026",
     "iso_date": "2026-11-21",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "1:30 PM",
     "homeTeam": "Crossgates Yellow",
     "awayTeam": "Glenrothes Strollers",
     "match_id": "273141774",
-    "raw_fixture": "Balwearie High School 1:30 PM Crossgates Yellow V Glenrothes Strollers",
+    "raw_fixture": "Auchmuty High School, Glenrothes 1:30 PM Crossgates Yellow V Glenrothes Strollers",
     "id": "liga6-40"
   },
   {
@@ -10752,9 +10752,9 @@
     "venue": "Beath High School",
     "time": "9:45 AM",
     "homeTeam": "Greig Park Blues",
-    "awayTeam": "Swifts Lightnings 2019",
+    "awayTeam": "Blue Brazil Blue 2019",
     "match_id": "273141907",
-    "raw_fixture": "Beath High School 9:45 AM Greig Park Blues V Swifts Lightnings 2019",
+    "raw_fixture": "Beath High School 9:45 AM Greig Park Blues V Blue Brazil Blue 2019",
     "id": "liga6-163"
   },
   {
@@ -10816,10 +10816,10 @@
     "iso_date": "2027-02-06",
     "venue": "Balwearie High School",
     "time": "12:00 PM",
-    "homeTeam": "Blue Brazil Blue 2019",
-    "awayTeam": "KSQ 2018 Rapids",
+    "homeTeam": "Swifts Lightnings 2019",
+    "awayTeam": "Glenrothes Strollers",
     "match_id": "273141920",
-    "raw_fixture": "Balwearie High School 12:00 PM Blue Brazil Blue 2019 V KSQ 2018 Rapids",
+    "raw_fixture": "Balwearie High School 12:00 PM Swifts Lightnings 2019 V Glenrothes Strollers",
     "id": "liga6-168"
   },
   {
@@ -10829,10 +10829,10 @@
     "iso_date": "2027-02-06",
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
-    "homeTeam": "Duloch Juniors",
+    "homeTeam": "KSQ 2018 Rapids",
     "awayTeam": "DACC Whites",
     "match_id": "273141921",
-    "raw_fixture": "Beath High School Refurb 12:45 PM Duloch Juniors V DACC Whites",
+    "raw_fixture": "Beath High School Refurb 12:45 PM KSQ 2018 Rapids V DACC Whites",
     "id": "liga6-169"
   },
   {
@@ -10855,10 +10855,10 @@
     "iso_date": "2027-02-06",
     "venue": "Beath High School Refurb",
     "time": "1:30 PM",
-    "homeTeam": "Futsal Escocia White",
-    "awayTeam": "Blue Brazil 2018",
-    "match_id": "273141915",
-    "raw_fixture": "Beath High School Refurb 1:30 PM Futsal Escocia White V Blue Brazil 2018",
+    "homeTeam": "Duloch Juniors City",
+    "awayTeam": "Duloch Juniors",
+    "match_id": "273141911",
+    "raw_fixture": "Beath High School Refurb 1:30 PM Duloch Juniors City V Duloch Juniors",
     "id": "liga6-171"
   },
   {
@@ -10881,10 +10881,10 @@
     "iso_date": "2027-02-06",
     "venue": "Beath High School Refurb",
     "time": "2:15 PM",
-    "homeTeam": "Duloch Juniors City",
-    "awayTeam": "Glenrothes Strollers",
-    "match_id": "273141911",
-    "raw_fixture": "Beath High School Refurb 2:15 PM Duloch Juniors City V Glenrothes Strollers",
+    "homeTeam": "Futsal Escocia White",
+    "awayTeam": "Blue Brazil 2018",
+    "match_id": "273141915",
+    "raw_fixture": "Beath High School Refurb 2:15 PM Futsal Escocia White V Blue Brazil 2018",
     "id": "liga6-173"
   },
   {
@@ -11685,14 +11685,14 @@
     "round": 3,
     "date": "Sat 21st Nov 2026",
     "iso_date": "2026-11-21",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "12:00 PM",
     "homeTeam": "Raith Rovers CC",
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "272349881",
-    "raw_fixture": "Balwearie High School 12:00 PM Raith Rovers CC V Tiki Taka Blanco",
+    "raw_fixture": "Auchmuty High School, Glenrothes 12:00 PM Raith Rovers CC V Tiki Taka Blanco",
     "id": "liga7-14",
-    "updated": "now Raith Rovers CC v Tiki Taka Blanco"
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 7",
