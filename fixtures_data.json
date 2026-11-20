@@ -345,9 +345,9 @@
     "venue": "Dunfermline Learning Campus",
     "time": "10:30 AM",
     "homeTeam": "Swifts Bulls",
-    "awayTeam": "Letham Tangies",
+    "awayTeam": "Futsal Escocia",
     "match_id": "272354250",
-    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Swifts Bulls V Letham Tangies",
+    "raw_fixture": "Dunfermline Learning Campus 10:30 AM Swifts Bulls V Futsal Escocia",
     "id": "liga3-27"
   },
   {
@@ -566,10 +566,10 @@
     "iso_date": "2026-11-29",
     "venue": "Caledonia High School, Rosyth",
     "time": "1:30 PM",
-    "homeTeam": "Tiki Taka Negra",
-    "awayTeam": "Rapid Fire",
-    "match_id": "272354256",
-    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Tiki Taka Negra V Rapid Fire",
+    "homeTeam": "Letham Tangies",
+    "awayTeam": "DACC Pars",
+    "match_id": "272354251",
+    "raw_fixture": "Caledonia High School, Rosyth 1:30 PM Letham Tangies V DACC Pars",
     "id": "liga3-44"
   },
   {
@@ -579,11 +579,12 @@
     "iso_date": "2026-11-29",
     "venue": "Dunfermline Learning Campus",
     "time": "2:15 PM",
-    "homeTeam": "SPARE",
-    "awayTeam": "DACC Pars",
-    "match_id": "272354251",
-    "raw_fixture": "Dunfermline Learning Campus 2:15 PM SPARE V DACC Pars",
-    "id": "liga3-45"
+    "homeTeam": "Tiki Taka Negra",
+    "awayTeam": "Rapid Fire",
+    "match_id": "272354256",
+    "raw_fixture": "Dunfermline Learning Campus 2:15 PM Tiki Taka Negra V Rapid Fire",
+    "id": "liga3-45",
+    "updated": "1:30 PM -> 2:15 PM, Caledonia High School, Rosyth -> Dunfermline Learning Campus"
   },
   {
     "league": "Liga 3",
