@@ -6299,8 +6299,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273142257",
     "raw_fixture": "Caledonia High School, Rosyth 9:45 AM Bowhill United Yellows V Tiki Taka Neranja",
-    "id": "liga5-30",
-    "updated": "11:15 AM -> 9:45 AM, Beath High School -> Caledonia High School, Rosyth"
+    "id": "liga5-30"
   },
   {
     "league": "Liga 5",
@@ -6326,8 +6325,7 @@
     "awayTeam": "Greig Park Greens",
     "match_id": "273142259",
     "raw_fixture": "Caledonia High School, Rosyth 10:30 AM Tiki Taka Blanco V Greig Park Greens",
-    "id": "liga5-32",
-    "updated": "now Tiki Taka Blanco v Greig Park Greens"
+    "id": "liga5-32"
   },
   {
     "league": "Liga 5",
@@ -9016,8 +9014,7 @@
     "awayTeam": "Duloch Juniors",
     "match_id": "273141783",
     "raw_fixture": "Auchmuty High School, Glenrothes 9:00 AM Tiki Taka Blanco V Duloch Juniors",
-    "id": "liga6-30",
-    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
+    "id": "liga6-30"
   },
   {
     "league": "Liga 6",
@@ -9030,8 +9027,7 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141786",
     "raw_fixture": "Beath High School 9:45 AM Cairneyhill Ath Blues V Tiki Taka Gris",
-    "id": "liga6-31",
-    "updated": "9:00 AM -> 9:45 AM, now Cairneyhill Ath Blues v Tiki Taka Gris"
+    "id": "liga6-31"
   },
   {
     "league": "Liga 6",
@@ -9135,8 +9131,7 @@
     "awayTeam": "Rosyth Blacks 2017",
     "match_id": "273141784",
     "raw_fixture": "Beath High School Refurb 1:30 PM Tiki Taka Neranja V Rosyth Blacks 2017",
-    "id": "liga6-39",
-    "updated": "Balwearie High School -> Beath High School Refurb"
+    "id": "liga6-39"
   },
   {
     "league": "Liga 6",
@@ -9162,8 +9157,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141777",
     "raw_fixture": "Beath High School Refurb 2:15 PM Kelty Hearts V Tiki Taka Negra",
-    "id": "liga6-41",
-    "updated": "12:45 PM -> 2:15 PM, Balwearie High School -> Beath High School Refurb"
+    "id": "liga6-41"
   },
   {
     "league": "Liga 6",
@@ -11691,8 +11685,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "272349881",
     "raw_fixture": "Auchmuty High School, Glenrothes 12:00 PM Raith Rovers CC V Tiki Taka Blanco",
-    "id": "liga7-14",
-    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
+    "id": "liga7-14"
   },
   {
     "league": "Liga 7",
