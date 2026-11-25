@@ -6518,10 +6518,10 @@
     "iso_date": "2026-11-28",
     "venue": "Caledonia High School, Rosyth",
     "time": "12:00 PM",
-    "homeTeam": "Bowhill United Yellows",
-    "awayTeam": "WLFA",
-    "match_id": "273142266",
-    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Bowhill United Yellows V WLFA",
+    "homeTeam": "Swifts Falcons 2017",
+    "awayTeam": "Duloch Juniors - Reds",
+    "match_id": "273142265",
+    "raw_fixture": "Caledonia High School, Rosyth 12:00 PM Swifts Falcons 2017 V Duloch Juniors - Reds",
     "id": "liga5-48"
   },
   {
@@ -6570,10 +6570,10 @@
     "iso_date": "2026-11-28",
     "venue": "Beath High School",
     "time": "1:30 PM",
-    "homeTeam": "Swifts Falcons 2017",
-    "awayTeam": "Duloch Juniors - Reds",
-    "match_id": "273142265",
-    "raw_fixture": "Beath High School 1:30 PM Swifts Falcons 2017 V Duloch Juniors - Reds",
+    "homeTeam": "Bowhill United Yellows",
+    "awayTeam": "WLFA",
+    "match_id": "273142266",
+    "raw_fixture": "Beath High School 1:30 PM Bowhill United Yellows V WLFA",
     "id": "liga5-52"
   },
   {
@@ -9191,13 +9191,14 @@
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "10:30 AM",
     "homeTeam": "Swift Hurricanes 2019",
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141789",
-    "raw_fixture": "Balwearie High School 10:30 AM Swift Hurricanes 2019 V Tiki Taka Blanco",
-    "id": "liga6-45"
+    "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM Swift Hurricanes 2019 V Tiki Taka Blanco",
+    "id": "liga6-45",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9218,13 +9219,14 @@
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "11:15 AM",
     "homeTeam": "Glenrothes Strollers",
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141797",
-    "raw_fixture": "Balwearie High School 11:15 AM Glenrothes Strollers V Tiki Taka Gris",
-    "id": "liga6-47"
+    "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Glenrothes Strollers V Tiki Taka Gris",
+    "id": "liga6-47",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9244,14 +9246,14 @@
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "12:00 PM",
     "homeTeam": "Tiki Taka Gris",
     "awayTeam": "Greig Park Blues",
     "match_id": "273141794",
-    "raw_fixture": "Balwearie High School 12:00 PM Tiki Taka Gris V Greig Park Blues",
+    "raw_fixture": "Auchmuty High School, Glenrothes 12:00 PM Tiki Taka Gris V Greig Park Blues",
     "id": "liga6-49",
-    "updated": "now Tiki Taka Gris v Greig Park Blues"
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9271,12 +9273,12 @@
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "12:45 PM",
     "homeTeam": "KSQ 2018 Rapids",
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141795",
-    "raw_fixture": "Balwearie High School 12:45 PM KSQ 2018 Rapids V Templehall Utd Blacks",
+    "raw_fixture": "Auchmuty High School, Glenrothes 12:45 PM KSQ 2018 Rapids V Templehall Utd Blacks",
     "id": "liga6-51"
   },
   {
@@ -9297,14 +9299,14 @@
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "1:30 PM",
     "homeTeam": "Duloch Juniors City",
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141791",
-    "raw_fixture": "Balwearie High School 1:30 PM Duloch Juniors City V Tiki Taka Negra",
+    "raw_fixture": "Auchmuty High School, Glenrothes 1:30 PM Duloch Juniors City V Tiki Taka Negra",
     "id": "liga6-53",
-    "updated": "now Duloch Juniors City v Tiki Taka Negra"
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9363,12 +9365,12 @@
     "round": 5,
     "date": "Sat 5th Dec 2026",
     "iso_date": "2026-12-05",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "10:30 AM",
     "homeTeam": "Greig Park Blues",
     "awayTeam": "Swift Hurricanes 2019",
     "match_id": "273141804",
-    "raw_fixture": "Balwearie High School 10:30 AM Greig Park Blues V Swift Hurricanes 2019",
+    "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM Greig Park Blues V Swift Hurricanes 2019",
     "id": "liga6-58"
   },
   {
@@ -9389,12 +9391,12 @@
     "round": 5,
     "date": "Sat 5th Dec 2026",
     "iso_date": "2026-12-05",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "11:15 AM",
     "homeTeam": "Swifts Lightnings 2019",
     "awayTeam": "Blue Brazil Blue 2019",
     "match_id": "273141815",
-    "raw_fixture": "Balwearie High School 11:15 AM Swifts Lightnings 2019 V Blue Brazil Blue 2019",
+    "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Swifts Lightnings 2019 V Blue Brazil Blue 2019",
     "id": "liga6-60"
   },
   {
@@ -9415,12 +9417,12 @@
     "round": 5,
     "date": "Sat 5th Dec 2026",
     "iso_date": "2026-12-05",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "12:00 PM",
     "homeTeam": "KSQ Thunder",
     "awayTeam": "ABC 2018",
     "match_id": "273141805",
-    "raw_fixture": "Balwearie High School 12:00 PM KSQ Thunder V ABC 2018",
+    "raw_fixture": "Auchmuty High School, Glenrothes 12:00 PM KSQ Thunder V ABC 2018",
     "id": "liga6-62"
   },
   {
@@ -9441,14 +9443,14 @@
     "round": 5,
     "date": "Sat 5th Dec 2026",
     "iso_date": "2026-12-05",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "12:45 PM",
     "homeTeam": "Tiki Taka Gris",
     "awayTeam": "Rosyth Blacks 2017",
     "match_id": "273141803",
-    "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Gris V Rosyth Blacks 2017",
+    "raw_fixture": "Auchmuty High School, Glenrothes 12:45 PM Tiki Taka Gris V Rosyth Blacks 2017",
     "id": "liga6-64",
-    "updated": "11:15 AM -> 12:45 PM, now Tiki Taka Gris v Rosyth Blacks 2017"
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9468,12 +9470,12 @@
     "round": 5,
     "date": "Sat 5th Dec 2026",
     "iso_date": "2026-12-05",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "1:30 PM",
     "homeTeam": "Templehall Utd Blacks",
     "awayTeam": "Crossgates Blue",
     "match_id": "273141816",
-    "raw_fixture": "Balwearie High School 1:30 PM Templehall Utd Blacks V Crossgates Blue",
+    "raw_fixture": "Auchmuty High School, Glenrothes 1:30 PM Templehall Utd Blacks V Crossgates Blue",
     "id": "liga6-66"
   },
   {
@@ -9495,13 +9497,14 @@
     "round": 5,
     "date": "Sat 5th Dec 2026",
     "iso_date": "2026-12-05",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "2:15 PM",
     "homeTeam": "DACC Whites",
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141814",
-    "raw_fixture": "Balwearie High School 2:15 PM DACC Whites V Tiki Taka Neranja",
-    "id": "liga6-68"
+    "raw_fixture": "Auchmuty High School, Glenrothes 2:15 PM DACC Whites V Tiki Taka Neranja",
+    "id": "liga6-68",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9561,12 +9564,12 @@
     "round": 6,
     "date": "Sat 12th Dec 2026",
     "iso_date": "2026-12-12",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "10:30 AM",
     "homeTeam": "DACC Whites",
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141829",
-    "raw_fixture": "Balwearie High School 10:30 AM DACC Whites V Templehall Utd Blacks",
+    "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM DACC Whites V Templehall Utd Blacks",
     "id": "liga6-73"
   },
   {
@@ -9587,12 +9590,12 @@
     "round": 6,
     "date": "Sat 12th Dec 2026",
     "iso_date": "2026-12-12",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "11:15 AM",
     "homeTeam": "Rosyth Blacks 2018",
     "awayTeam": "KSQ Astros",
     "match_id": "273141822",
-    "raw_fixture": "Balwearie High School 11:15 AM Rosyth Blacks 2018 V KSQ Astros",
+    "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Rosyth Blacks 2018 V KSQ Astros",
     "id": "liga6-75"
   },
   {
@@ -9613,13 +9616,14 @@
     "round": 6,
     "date": "Sat 12th Dec 2026",
     "iso_date": "2026-12-12",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "12:00 PM",
     "homeTeam": "Duloch Juniors",
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141830",
-    "raw_fixture": "Balwearie High School 12:00 PM Duloch Juniors V Tiki Taka Negra",
-    "id": "liga6-77"
+    "raw_fixture": "Auchmuty High School, Glenrothes 12:00 PM Duloch Juniors V Tiki Taka Negra",
+    "id": "liga6-77",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9639,13 +9643,14 @@
     "round": 6,
     "date": "Sat 12th Dec 2026",
     "iso_date": "2026-12-12",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "12:45 PM",
     "homeTeam": "Rosyth Blacks 2017",
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141817",
-    "raw_fixture": "Balwearie High School 12:45 PM Rosyth Blacks 2017 V Tiki Taka Blanco",
-    "id": "liga6-79"
+    "raw_fixture": "Auchmuty High School, Glenrothes 12:45 PM Rosyth Blacks 2017 V Tiki Taka Blanco",
+    "id": "liga6-79",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9665,13 +9670,14 @@
     "round": 6,
     "date": "Sat 12th Dec 2026",
     "iso_date": "2026-12-12",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "1:30 PM",
     "homeTeam": "KSQ 2018 Rapids",
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141824",
-    "raw_fixture": "Balwearie High School 1:30 PM KSQ 2018 Rapids V Tiki Taka Gris",
-    "id": "liga6-81"
+    "raw_fixture": "Auchmuty High School, Glenrothes 1:30 PM KSQ 2018 Rapids V Tiki Taka Gris",
+    "id": "liga6-81",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9691,12 +9697,12 @@
     "round": 6,
     "date": "Sat 12th Dec 2026",
     "iso_date": "2026-12-12",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "2:15 PM",
     "homeTeam": "Swifts Thunder 2018",
     "awayTeam": "Greig Park Blues",
     "match_id": "273141825",
-    "raw_fixture": "Balwearie High School 2:15 PM Swifts Thunder 2018 V Greig Park Blues",
+    "raw_fixture": "Auchmuty High School, Glenrothes 2:15 PM Swifts Thunder 2018 V Greig Park Blues",
     "id": "liga6-83"
   },
   {
@@ -9756,13 +9762,14 @@
     "round": 7,
     "date": "Sat 19th Dec 2026",
     "iso_date": "2026-12-19",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "10:30 AM",
     "homeTeam": "KSQ Lightning",
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141837",
-    "raw_fixture": "Balwearie High School 10:30 AM KSQ Lightning V Tiki Taka Neranja",
-    "id": "liga6-88"
+    "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM KSQ Lightning V Tiki Taka Neranja",
+    "id": "liga6-88",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9782,14 +9789,14 @@
     "round": 7,
     "date": "Sat 19th Dec 2026",
     "iso_date": "2026-12-19",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "11:15 AM",
     "homeTeam": "Tiki Taka Negra",
     "awayTeam": "KSQ Astros",
     "match_id": "273141846",
-    "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Negra V KSQ Astros",
+    "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Tiki Taka Negra V KSQ Astros",
     "id": "liga6-90",
-    "updated": "now Tiki Taka Negra v KSQ Astros"
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9809,13 +9816,14 @@
     "round": 7,
     "date": "Sat 19th Dec 2026",
     "iso_date": "2026-12-19",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "12:00 PM",
     "homeTeam": "DACC Whites",
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141839",
-    "raw_fixture": "Balwearie High School 12:00 PM DACC Whites V Tiki Taka Blanco",
-    "id": "liga6-92"
+    "raw_fixture": "Auchmuty High School, Glenrothes 12:00 PM DACC Whites V Tiki Taka Blanco",
+    "id": "liga6-92",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -9835,12 +9843,12 @@
     "round": 7,
     "date": "Sat 19th Dec 2026",
     "iso_date": "2026-12-19",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "12:45 PM",
     "homeTeam": "Blue Brazil 2018",
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141843",
-    "raw_fixture": "Balwearie High School 12:45 PM Blue Brazil 2018 V Templehall Utd Blacks",
+    "raw_fixture": "Auchmuty High School, Glenrothes 12:45 PM Blue Brazil 2018 V Templehall Utd Blacks",
     "id": "liga6-94"
   },
   {
@@ -9861,12 +9869,12 @@
     "round": 7,
     "date": "Sat 19th Dec 2026",
     "iso_date": "2026-12-19",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "1:30 PM",
     "homeTeam": "Greig Park Blues",
     "awayTeam": "Rosyth Blacks 2017",
     "match_id": "273141844",
-    "raw_fixture": "Balwearie High School 1:30 PM Greig Park Blues V Rosyth Blacks 2017",
+    "raw_fixture": "Auchmuty High School, Glenrothes 1:30 PM Greig Park Blues V Rosyth Blacks 2017",
     "id": "liga6-96"
   },
   {
@@ -9887,13 +9895,14 @@
     "round": 7,
     "date": "Sat 19th Dec 2026",
     "iso_date": "2026-12-19",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "2:15 PM",
     "homeTeam": "Tiki Taka Gris",
     "awayTeam": "Crossgates Blue",
     "match_id": "273141832",
-    "raw_fixture": "Balwearie High School 2:15 PM Tiki Taka Gris V Crossgates Blue",
-    "id": "liga6-98"
+    "raw_fixture": "Auchmuty High School, Glenrothes 2:15 PM Tiki Taka Gris V Crossgates Blue",
+    "id": "liga6-98",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 6",
@@ -11681,12 +11690,12 @@
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "9:00 AM",
     "homeTeam": "Kennoway Star Hearts 2019's A",
     "awayTeam": "Futsal Escocia",
     "match_id": "272349888",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's A V Futsal Escocia",
+    "raw_fixture": "Auchmuty High School, Glenrothes 9:00 AM Kennoway Star Hearts 2019's A V Futsal Escocia",
     "id": "liga7-16"
   },
   {
@@ -11707,13 +11716,14 @@
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "9:45 AM",
     "homeTeam": "Kennoway Star Hearts 2019's B",
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "272349889",
-    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's B V Tiki Taka Blanco",
-    "id": "liga7-18"
+    "raw_fixture": "Auchmuty High School, Glenrothes 9:45 AM Kennoway Star Hearts 2019's B V Tiki Taka Blanco",
+    "id": "liga7-18",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 7",
@@ -11746,12 +11756,12 @@
     "round": 5,
     "date": "Sat 5th Dec 2026",
     "iso_date": "2026-12-05",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "9:00 AM",
     "homeTeam": "Duloch Juniors United",
     "awayTeam": "Kennoway Star Hearts 2019's B",
     "match_id": "272349892",
-    "raw_fixture": "Balwearie High School 9:00 AM Duloch Juniors United V Kennoway Star Hearts 2019's B",
+    "raw_fixture": "Auchmuty High School, Glenrothes 9:00 AM Duloch Juniors United V Kennoway Star Hearts 2019's B",
     "id": "liga7-21"
   },
   {
@@ -11772,13 +11782,14 @@
     "round": 5,
     "date": "Sat 5th Dec 2026",
     "iso_date": "2026-12-05",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "9:45 AM",
     "homeTeam": "Tiki Taka Blanco",
     "awayTeam": "Kennoway Star Hearts 2019's A",
     "match_id": "272349895",
-    "raw_fixture": "Balwearie High School 9:45 AM Tiki Taka Blanco V Kennoway Star Hearts 2019's A",
-    "id": "liga7-23"
+    "raw_fixture": "Auchmuty High School, Glenrothes 9:45 AM Tiki Taka Blanco V Kennoway Star Hearts 2019's A",
+    "id": "liga7-23",
+    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
     "league": "Liga 7",
@@ -11811,12 +11822,12 @@
     "round": 6,
     "date": "Sat 12th Dec 2026",
     "iso_date": "2026-12-12",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "9:00 AM",
     "homeTeam": "Kennoway Star Hearts 2019's B",
     "awayTeam": "Swifts Tornadoes",
     "match_id": "272349899",
-    "raw_fixture": "Balwearie High School 9:00 AM Kennoway Star Hearts 2019's B V Swifts Tornadoes",
+    "raw_fixture": "Auchmuty High School, Glenrothes 9:00 AM Kennoway Star Hearts 2019's B V Swifts Tornadoes",
     "id": "liga7-26"
   },
   {
@@ -11837,12 +11848,12 @@
     "round": 6,
     "date": "Sat 12th Dec 2026",
     "iso_date": "2026-12-12",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "9:45 AM",
     "homeTeam": "KSQ Knights",
     "awayTeam": "Bayside Girls 2018s",
     "match_id": "272349897",
-    "raw_fixture": "Balwearie High School 9:45 AM KSQ Knights V Bayside Girls 2018s",
+    "raw_fixture": "Auchmuty High School, Glenrothes 9:45 AM KSQ Knights V Bayside Girls 2018s",
     "id": "liga7-28"
   },
   {
@@ -11876,12 +11887,12 @@
     "round": 7,
     "date": "Sat 19th Dec 2026",
     "iso_date": "2026-12-19",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "9:00 AM",
     "homeTeam": "Raith Rovers CC",
     "awayTeam": "Kennoway Star Hearts 2019's B",
     "match_id": "272349901",
-    "raw_fixture": "Balwearie High School 9:00 AM Raith Rovers CC V Kennoway Star Hearts 2019's B",
+    "raw_fixture": "Auchmuty High School, Glenrothes 9:00 AM Raith Rovers CC V Kennoway Star Hearts 2019's B",
     "id": "liga7-31"
   },
   {
@@ -11902,12 +11913,12 @@
     "round": 7,
     "date": "Sat 19th Dec 2026",
     "iso_date": "2026-12-19",
-    "venue": "Balwearie High School",
+    "venue": "Auchmuty High School, Glenrothes",
     "time": "9:45 AM",
     "homeTeam": "Kennoway Star Hearts 2019's A",
     "awayTeam": "Swifts Typhoons",
     "match_id": "272349905",
-    "raw_fixture": "Balwearie High School 9:45 AM Kennoway Star Hearts 2019's A V Swifts Typhoons",
+    "raw_fixture": "Auchmuty High School, Glenrothes 9:45 AM Kennoway Star Hearts 2019's A V Swifts Typhoons",
     "id": "liga7-33"
   },
   {
