@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T22:24:19+00:00",
+  "updated": "2026-11-25T08:35:01+00:00",
   "week_tab": "Week 34 - 21st November",
   "heading": "Week 34 - 21st November",
   "fixture_date": "2026-11-21",
@@ -72,16 +72,6 @@
     },
     {
       "id": "4",
-      "time": "9:00 AM",
-      "pitch": "4",
-      "tier": "",
-      "homeTeam": "Bayside Broncos",
-      "awayTeam": "Tiki Taka Neranja",
-      "lastPlayed": "Wk 22",
-      "isOurs": true
-    },
-    {
-      "id": "5",
       "time": "10:00 AM",
       "pitch": "1",
       "tier": "",
@@ -91,17 +81,17 @@
       "isOurs": false
     },
     {
-      "id": "6",
+      "id": "5",
       "time": "10:00 AM",
       "pitch": "2",
       "tier": "",
-      "homeTeam": "Clunie Royal Hearts Blue NEW",
+      "homeTeam": "Clunie Royal Hearts Blue",
       "awayTeam": "Rosyth Blacks",
       "lastPlayed": "NP",
       "isOurs": false
     },
     {
-      "id": "7",
+      "id": "6",
       "time": "10:00 AM",
       "pitch": "3",
       "tier": "",
@@ -111,17 +101,18 @@
       "isOurs": false
     },
     {
-      "id": "8",
+      "id": "7",
       "time": "10:00 AM",
       "pitch": "4",
       "tier": "",
-      "homeTeam": "BB Blues",
+      "homeTeam": "Tiki Taka Neranja",
       "awayTeam": "Pitreavie Black",
       "lastPlayed": "Wk 27",
-      "isOurs": false
+      "isOurs": true,
+      "updated": "9:00 AM -> 10:00 AM, now v Pitreavie Black"
     },
     {
-      "id": "9",
+      "id": "8",
       "time": "11:00 AM",
       "pitch": "1",
       "tier": "",
@@ -131,7 +122,7 @@
       "isOurs": false
     },
     {
-      "id": "10",
+      "id": "9",
       "time": "11:00 AM",
       "pitch": "2",
       "tier": "",
@@ -141,7 +132,7 @@
       "isOurs": false
     },
     {
-      "id": "11",
+      "id": "10",
       "time": "11:00 AM",
       "pitch": "3",
       "tier": "",
@@ -151,7 +142,7 @@
       "isOurs": false
     },
     {
-      "id": "12",
+      "id": "11",
       "time": "11:00 AM",
       "pitch": "4",
       "tier": "",
@@ -161,7 +152,7 @@
       "isOurs": false
     },
     {
-      "id": "13",
+      "id": "12",
       "time": "11:00 AM",
       "pitch": "1 - New Astro",
       "tier": "",
@@ -171,7 +162,7 @@
       "isOurs": false
     },
     {
-      "id": "14",
+      "id": "13",
       "time": "11:00 AM",
       "pitch": "3 - New Astro",
       "tier": "",
@@ -181,7 +172,7 @@
       "isOurs": false
     },
     {
-      "id": "15",
+      "id": "14",
       "time": "12:00 PM",
       "pitch": "1",
       "tier": "",
@@ -191,7 +182,7 @@
       "isOurs": false
     },
     {
-      "id": "16",
+      "id": "15",
       "time": "12:00 PM",
       "pitch": "2",
       "tier": "",
@@ -201,7 +192,7 @@
       "isOurs": false
     },
     {
-      "id": "17",
+      "id": "16",
       "time": "12:00 PM",
       "pitch": "3",
       "tier": "",
@@ -211,7 +202,7 @@
       "isOurs": false
     },
     {
-      "id": "18",
+      "id": "17",
       "time": "12:00 PM",
       "pitch": "4",
       "tier": "",
@@ -408,5 +399,14 @@
       }
     ]
   },
-  "upcoming": null
+  "upcoming": {
+    "week_label": "Week 35 28th Nov",
+    "date": "2026-11-28",
+    "teams": {
+      "Tiki Taka Negra": "N",
+      "Tiki Taka Amarillo": "N",
+      "Tiki Taka Blanco": "N",
+      "Tiki Taka Neranja": "Y"
+    }
+  }
 }
