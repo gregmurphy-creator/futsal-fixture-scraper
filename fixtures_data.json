@@ -3697,10 +3697,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School Refurb",
     "time": "9:00 AM",
-    "homeTeam": "Luncarty FC",
-    "awayTeam": "Bayside Broncos 2017s",
-    "match_id": "272353939",
-    "raw_fixture": "Beath High School Refurb 9:00 AM Luncarty FC V Bayside Broncos 2017s",
+    "homeTeam": "GS - Ronaldinho",
+    "awayTeam": "Inverkeithing United",
+    "match_id": "272353947",
+    "raw_fixture": "Beath High School Refurb 9:00 AM GS - Ronaldinho V Inverkeithing United",
     "id": "liga4-82"
   },
   {
@@ -3749,10 +3749,10 @@
     "iso_date": "2026-12-13",
     "venue": "Beath High School Refurb",
     "time": "10:30 AM",
-    "homeTeam": "GS - Ronaldinho",
-    "awayTeam": "Inverkeithing United",
-    "match_id": "272353947",
-    "raw_fixture": "Beath High School Refurb 10:30 AM GS - Ronaldinho V Inverkeithing United",
+    "homeTeam": "Luncarty FC",
+    "awayTeam": "Bayside Broncos 2017s",
+    "match_id": "272353939",
+    "raw_fixture": "Beath High School Refurb 10:30 AM Luncarty FC V Bayside Broncos 2017s",
     "id": "liga4-86"
   },
   {
@@ -3973,10 +3973,10 @@
     "iso_date": "2026-12-20",
     "venue": "Beath High School Refurb",
     "time": "10:30 AM",
-    "homeTeam": "Hutchison Vale FC 2016",
-    "awayTeam": "Swifts Sirens",
-    "match_id": "272353952",
-    "raw_fixture": "Beath High School Refurb 10:30 AM Hutchison Vale FC 2016 V Swifts Sirens",
+    "homeTeam": "Pitreavie Blacks 2017s",
+    "awayTeam": "KSQ Comets",
+    "match_id": "272353956",
+    "raw_fixture": "Beath High School Refurb 10:30 AM Pitreavie Blacks 2017s V KSQ Comets",
     "id": "liga4-103"
   },
   {
@@ -4038,10 +4038,10 @@
     "iso_date": "2026-12-20",
     "venue": "Beath High School",
     "time": "12:45 PM",
-    "homeTeam": "Pitreavie Blacks 2017s",
-    "awayTeam": "KSQ Comets",
-    "match_id": "272353956",
-    "raw_fixture": "Beath High School 12:45 PM Pitreavie Blacks 2017s V KSQ Comets",
+    "homeTeam": "Hutchison Vale FC 2016",
+    "awayTeam": "Swifts Sirens",
+    "match_id": "272353952",
+    "raw_fixture": "Beath High School 12:45 PM Hutchison Vale FC 2016 V Swifts Sirens",
     "id": "liga4-108"
   },
   {
@@ -6662,10 +6662,10 @@
     "iso_date": "2026-12-05",
     "venue": "Beath High School",
     "time": "11:15 AM",
-    "homeTeam": "Swifts Falcons 2017",
-    "awayTeam": "DACC Girls 2017 Whites",
-    "match_id": "273142277",
-    "raw_fixture": "Beath High School 11:15 AM Swifts Falcons 2017 V DACC Girls 2017 Whites",
+    "homeTeam": "Templehall United Yellows 2018",
+    "awayTeam": "DACC Boys 17",
+    "match_id": "273142285",
+    "raw_fixture": "Beath High School 11:15 AM Templehall United Yellows 2018 V DACC Boys 17",
     "id": "liga5-59"
   },
   {
@@ -6753,10 +6753,10 @@
     "iso_date": "2026-12-05",
     "venue": "Beath High School",
     "time": "2:15 PM",
-    "homeTeam": "Templehall United Yellows 2018",
-    "awayTeam": "DACC Boys 17",
-    "match_id": "273142285",
-    "raw_fixture": "Beath High School 2:15 PM Templehall United Yellows 2018 V DACC Boys 17",
+    "homeTeam": "Swifts Falcons 2017",
+    "awayTeam": "DACC Girls 2017 Whites",
+    "match_id": "273142277",
+    "raw_fixture": "Beath High School 2:15 PM Swifts Falcons 2017 V DACC Girls 2017 Whites",
     "id": "liga5-66"
   },
   {
@@ -9354,10 +9354,10 @@
     "iso_date": "2026-12-05",
     "venue": "Beath High School",
     "time": "9:45 AM",
-    "homeTeam": "Futsal Escocia Turquoise",
-    "awayTeam": "Rosyth Reds 2018",
-    "match_id": "273141811",
-    "raw_fixture": "Beath High School 9:45 AM Futsal Escocia Turquoise V Rosyth Reds 2018",
+    "homeTeam": "KSQ Astros",
+    "awayTeam": "Cairneyhill Ath Blues",
+    "match_id": "273141802",
+    "raw_fixture": "Beath High School 9:45 AM KSQ Astros V Cairneyhill Ath Blues",
     "id": "liga6-57"
   },
   {
@@ -9406,10 +9406,10 @@
     "iso_date": "2026-12-05",
     "venue": "Beath High School Refurb",
     "time": "12:00 PM",
-    "homeTeam": "Rosyth Blacks 2018",
-    "awayTeam": "Glenrothes Strollers",
-    "match_id": "273141809",
-    "raw_fixture": "Beath High School Refurb 12:00 PM Rosyth Blacks 2018 V Glenrothes Strollers",
+    "homeTeam": "Futsal Escocia Turquoise",
+    "awayTeam": "Rosyth Reds 2018",
+    "match_id": "273141811",
+    "raw_fixture": "Beath High School Refurb 12:00 PM Futsal Escocia Turquoise V Rosyth Reds 2018",
     "id": "liga6-61"
   },
   {
@@ -9432,10 +9432,10 @@
     "iso_date": "2026-12-05",
     "venue": "Beath High School Refurb",
     "time": "12:45 PM",
-    "homeTeam": "Blue Brazil 2018",
-    "awayTeam": "Swifts Lightening 2018",
-    "match_id": "273141808",
-    "raw_fixture": "Beath High School Refurb 12:45 PM Blue Brazil 2018 V Swifts Lightening 2018",
+    "homeTeam": "Rosyth Blacks 2018",
+    "awayTeam": "Glenrothes Strollers",
+    "match_id": "273141809",
+    "raw_fixture": "Beath High School Refurb 12:45 PM Rosyth Blacks 2018 V Glenrothes Strollers",
     "id": "liga6-63"
   },
   {
@@ -9459,10 +9459,10 @@
     "iso_date": "2026-12-05",
     "venue": "Beath High School Refurb",
     "time": "1:30 PM",
-    "homeTeam": "KSQ Astros",
-    "awayTeam": "Cairneyhill Ath Blues",
-    "match_id": "273141802",
-    "raw_fixture": "Beath High School Refurb 1:30 PM KSQ Astros V Cairneyhill Ath Blues",
+    "homeTeam": "Blue Brazil 2018",
+    "awayTeam": "Swifts Lightening 2018",
+    "match_id": "273141808",
+    "raw_fixture": "Beath High School Refurb 1:30 PM Blue Brazil 2018 V Swifts Lightening 2018",
     "id": "liga6-65"
   },
   {
@@ -9553,10 +9553,10 @@
     "iso_date": "2026-12-12",
     "venue": "Beath High School",
     "time": "9:45 AM",
-    "homeTeam": "Futsal Escocia White",
-    "awayTeam": "ABC 2018",
-    "match_id": "273141827",
-    "raw_fixture": "Beath High School 9:45 AM Futsal Escocia White V ABC 2018",
+    "homeTeam": "Blue Brazil Blue 2019",
+    "awayTeam": "KSQ Thunder",
+    "match_id": "273141826",
+    "raw_fixture": "Beath High School 9:45 AM Blue Brazil Blue 2019 V KSQ Thunder",
     "id": "liga6-72"
   },
   {
@@ -9566,10 +9566,10 @@
     "iso_date": "2026-12-12",
     "venue": "Auchmuty High School, Glenrothes",
     "time": "10:30 AM",
-    "homeTeam": "DACC Whites",
-    "awayTeam": "Templehall Utd Blacks",
-    "match_id": "273141829",
-    "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM DACC Whites V Templehall Utd Blacks",
+    "homeTeam": "Rosyth Blacks 2018",
+    "awayTeam": "KSQ Astros",
+    "match_id": "273141822",
+    "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM Rosyth Blacks 2018 V KSQ Astros",
     "id": "liga6-73"
   },
   {
@@ -9592,10 +9592,10 @@
     "iso_date": "2026-12-12",
     "venue": "Auchmuty High School, Glenrothes",
     "time": "11:15 AM",
-    "homeTeam": "Rosyth Blacks 2018",
-    "awayTeam": "KSQ Astros",
-    "match_id": "273141822",
-    "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Rosyth Blacks 2018 V KSQ Astros",
+    "homeTeam": "Futsal Escocia White",
+    "awayTeam": "ABC 2018",
+    "match_id": "273141827",
+    "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Futsal Escocia White V ABC 2018",
     "id": "liga6-75"
   },
   {
@@ -9725,10 +9725,10 @@
     "iso_date": "2026-12-12",
     "venue": "Beath High School Refurb",
     "time": "3:45 PM",
-    "homeTeam": "Blue Brazil Blue 2019",
-    "awayTeam": "KSQ Thunder",
-    "match_id": "273141826",
-    "raw_fixture": "Beath High School Refurb 3:45 PM Blue Brazil Blue 2019 V KSQ Thunder",
+    "homeTeam": "DACC Whites",
+    "awayTeam": "Templehall Utd Blacks",
+    "match_id": "273141829",
+    "raw_fixture": "Beath High School Refurb 3:45 PM DACC Whites V Templehall Utd Blacks",
     "id": "liga6-85"
   },
   {
@@ -9764,12 +9764,12 @@
     "iso_date": "2026-12-19",
     "venue": "Auchmuty High School, Glenrothes",
     "time": "10:30 AM",
-    "homeTeam": "KSQ Lightning",
-    "awayTeam": "Tiki Taka Neranja",
-    "match_id": "273141837",
-    "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM KSQ Lightning V Tiki Taka Neranja",
+    "homeTeam": "Tiki Taka Negra",
+    "awayTeam": "KSQ Astros",
+    "match_id": "273141846",
+    "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM Tiki Taka Negra V KSQ Astros",
     "id": "liga6-88",
-    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
+    "updated": "11:15 AM -> 10:30 AM"
   },
   {
     "league": "Liga 6",
@@ -9791,12 +9791,12 @@
     "iso_date": "2026-12-19",
     "venue": "Auchmuty High School, Glenrothes",
     "time": "11:15 AM",
-    "homeTeam": "Tiki Taka Negra",
-    "awayTeam": "KSQ Astros",
-    "match_id": "273141846",
-    "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Tiki Taka Negra V KSQ Astros",
+    "homeTeam": "KSQ Lightning",
+    "awayTeam": "Tiki Taka Neranja",
+    "match_id": "273141837",
+    "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM KSQ Lightning V Tiki Taka Neranja",
     "id": "liga6-90",
-    "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
+    "updated": "10:30 AM -> 11:15 AM"
   },
   {
     "league": "Liga 6",
