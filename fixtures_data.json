@@ -9178,26 +9178,13 @@
     "round": 4,
     "date": "Sat 28th Nov 2026",
     "iso_date": "2026-11-28",
-    "venue": "Beath High School",
-    "time": "9:45 AM",
-    "homeTeam": "Blue Brazil Blue 2019",
-    "awayTeam": "Futsal Escocia Turquoise",
-    "match_id": "273141801",
-    "raw_fixture": "Beath High School 9:45 AM Blue Brazil Blue 2019 V Futsal Escocia Turquoise",
-    "id": "liga6-44"
-  },
-  {
-    "league": "Liga 6",
-    "round": 4,
-    "date": "Sat 28th Nov 2026",
-    "iso_date": "2026-11-28",
     "venue": "Auchmuty High School, Glenrothes",
     "time": "10:30 AM",
     "homeTeam": "Swift Hurricanes 2019",
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141789",
     "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM Swift Hurricanes 2019 V Tiki Taka Blanco",
-    "id": "liga6-45",
+    "id": "liga6-44",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9211,7 +9198,7 @@
     "awayTeam": "KSQ Lightning",
     "match_id": "273141796",
     "raw_fixture": "Beath High School Refurb 11:15 AM Tiki Taka Neranja V KSQ Lightning",
-    "id": "liga6-46",
+    "id": "liga6-45",
     "updated": "now Tiki Taka Neranja v KSQ Lightning"
   },
   {
@@ -9225,7 +9212,7 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141797",
     "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Glenrothes Strollers V Tiki Taka Gris",
-    "id": "liga6-47",
+    "id": "liga6-46",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9239,7 +9226,7 @@
     "awayTeam": "Swifts Lightnings 2019",
     "match_id": "273141793",
     "raw_fixture": "Beath High School Refurb 12:00 PM ABC 2018 V Swifts Lightnings 2019",
-    "id": "liga6-48"
+    "id": "liga6-47"
   },
   {
     "league": "Liga 6",
@@ -9252,7 +9239,7 @@
     "awayTeam": "Greig Park Blues",
     "match_id": "273141794",
     "raw_fixture": "Auchmuty High School, Glenrothes 12:00 PM Tiki Taka Gris V Greig Park Blues",
-    "id": "liga6-49",
+    "id": "liga6-48",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9266,7 +9253,7 @@
     "awayTeam": "Crossgates Yellow",
     "match_id": "273141800",
     "raw_fixture": "Beath High School Refurb 12:45 PM Liga 5 Team V Crossgates Yellow",
-    "id": "liga6-50"
+    "id": "liga6-49"
   },
   {
     "league": "Liga 6",
@@ -9279,7 +9266,7 @@
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141795",
     "raw_fixture": "Auchmuty High School, Glenrothes 12:45 PM KSQ 2018 Rapids V Templehall Utd Blacks",
-    "id": "liga6-51"
+    "id": "liga6-50"
   },
   {
     "league": "Liga 6",
@@ -9292,7 +9279,7 @@
     "awayTeam": "KSQ Thunder",
     "match_id": "273141787",
     "raw_fixture": "Beath High School Refurb 1:30 PM Rosyth Blacks 2017 V KSQ Thunder",
-    "id": "liga6-52"
+    "id": "liga6-51"
   },
   {
     "league": "Liga 6",
@@ -9305,7 +9292,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141791",
     "raw_fixture": "Auchmuty High School, Glenrothes 1:30 PM Duloch Juniors City V Tiki Taka Negra",
-    "id": "liga6-53",
+    "id": "liga6-52",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9319,7 +9306,7 @@
     "awayTeam": "Blue Brazil 2018",
     "match_id": "273141798",
     "raw_fixture": "Beath High School Refurb 2:15 PM Crossgates Blue V Blue Brazil 2018",
-    "id": "liga6-54"
+    "id": "liga6-53"
   },
   {
     "league": "Liga 6",
@@ -9332,7 +9319,7 @@
     "awayTeam": "KSQ Astros",
     "match_id": "273141792",
     "raw_fixture": "Beath High School Refurb 3:00 PM Duloch Juniors V KSQ Astros",
-    "id": "liga6-55"
+    "id": "liga6-54"
   },
   {
     "league": "Liga 6",
@@ -9345,7 +9332,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273141810",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Negra V Futsal Escocia White",
-    "id": "liga6-56"
+    "id": "liga6-55"
   },
   {
     "league": "Liga 6",
@@ -9358,7 +9345,7 @@
     "awayTeam": "Cairneyhill Ath Blues",
     "match_id": "273141802",
     "raw_fixture": "Beath High School 9:45 AM KSQ Astros V Cairneyhill Ath Blues",
-    "id": "liga6-57"
+    "id": "liga6-56"
   },
   {
     "league": "Liga 6",
@@ -9371,7 +9358,7 @@
     "awayTeam": "Swift Hurricanes 2019",
     "match_id": "273141804",
     "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM Greig Park Blues V Swift Hurricanes 2019",
-    "id": "liga6-58"
+    "id": "liga6-57"
   },
   {
     "league": "Liga 6",
@@ -9384,7 +9371,7 @@
     "awayTeam": "Duloch Juniors City",
     "match_id": "273141813",
     "raw_fixture": "Beath High School Refurb 11:15 AM KSQ Lightning V Duloch Juniors City",
-    "id": "liga6-59"
+    "id": "liga6-58"
   },
   {
     "league": "Liga 6",
@@ -9397,7 +9384,7 @@
     "awayTeam": "Blue Brazil Blue 2019",
     "match_id": "273141815",
     "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Swifts Lightnings 2019 V Blue Brazil Blue 2019",
-    "id": "liga6-60"
+    "id": "liga6-59"
   },
   {
     "league": "Liga 6",
@@ -9410,7 +9397,7 @@
     "awayTeam": "Rosyth Reds 2018",
     "match_id": "273141811",
     "raw_fixture": "Beath High School Refurb 12:00 PM Futsal Escocia Turquoise V Rosyth Reds 2018",
-    "id": "liga6-61"
+    "id": "liga6-60"
   },
   {
     "league": "Liga 6",
@@ -9423,7 +9410,7 @@
     "awayTeam": "ABC 2018",
     "match_id": "273141805",
     "raw_fixture": "Auchmuty High School, Glenrothes 12:00 PM KSQ Thunder V ABC 2018",
-    "id": "liga6-62"
+    "id": "liga6-61"
   },
   {
     "league": "Liga 6",
@@ -9436,7 +9423,7 @@
     "awayTeam": "Glenrothes Strollers",
     "match_id": "273141809",
     "raw_fixture": "Beath High School Refurb 12:45 PM Rosyth Blacks 2018 V Glenrothes Strollers",
-    "id": "liga6-63"
+    "id": "liga6-62"
   },
   {
     "league": "Liga 6",
@@ -9449,7 +9436,7 @@
     "awayTeam": "Rosyth Blacks 2017",
     "match_id": "273141803",
     "raw_fixture": "Auchmuty High School, Glenrothes 12:45 PM Tiki Taka Gris V Rosyth Blacks 2017",
-    "id": "liga6-64",
+    "id": "liga6-63",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9463,7 +9450,7 @@
     "awayTeam": "Swifts Lightening 2018",
     "match_id": "273141808",
     "raw_fixture": "Beath High School Refurb 1:30 PM Blue Brazil 2018 V Swifts Lightening 2018",
-    "id": "liga6-65"
+    "id": "liga6-64"
   },
   {
     "league": "Liga 6",
@@ -9476,7 +9463,7 @@
     "awayTeam": "Crossgates Blue",
     "match_id": "273141816",
     "raw_fixture": "Auchmuty High School, Glenrothes 1:30 PM Templehall Utd Blacks V Crossgates Blue",
-    "id": "liga6-66"
+    "id": "liga6-65"
   },
   {
     "league": "Liga 6",
@@ -9489,7 +9476,7 @@
     "awayTeam": "Swifts Thunder 2018",
     "match_id": "273141806",
     "raw_fixture": "Beath High School Refurb 2:15 PM Tiki Taka Blanco V Swifts Thunder 2018",
-    "id": "liga6-67",
+    "id": "liga6-66",
     "updated": "11:15 AM -> 2:15 PM, Balwearie High School -> Beath High School Refurb"
   },
   {
@@ -9503,7 +9490,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141814",
     "raw_fixture": "Auchmuty High School, Glenrothes 2:15 PM DACC Whites V Tiki Taka Neranja",
-    "id": "liga6-68",
+    "id": "liga6-67",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9517,7 +9504,7 @@
     "awayTeam": "Duloch Juniors",
     "match_id": "273141812",
     "raw_fixture": "Beath High School Refurb 3:00 PM Kelty Hearts V Duloch Juniors",
-    "id": "liga6-69"
+    "id": "liga6-68"
   },
   {
     "league": "Liga 6",
@@ -9530,7 +9517,7 @@
     "awayTeam": "KSQ 2018 Rapids",
     "match_id": "273141807",
     "raw_fixture": "Beath High School Refurb 3:45 PM Crossgates Yellow V KSQ 2018 Rapids",
-    "id": "liga6-70"
+    "id": "liga6-69"
   },
   {
     "league": "Liga 6",
@@ -9543,7 +9530,7 @@
     "awayTeam": "Blue Brazil 2018",
     "match_id": "273141820",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Neranja V Blue Brazil 2018",
-    "id": "liga6-71",
+    "id": "liga6-70",
     "updated": "2:15 PM -> 9:00 AM, Balwearie High School -> Beath High School"
   },
   {
@@ -9557,7 +9544,7 @@
     "awayTeam": "KSQ Thunder",
     "match_id": "273141826",
     "raw_fixture": "Beath High School 9:45 AM Blue Brazil Blue 2019 V KSQ Thunder",
-    "id": "liga6-72"
+    "id": "liga6-71"
   },
   {
     "league": "Liga 6",
@@ -9570,7 +9557,7 @@
     "awayTeam": "KSQ Astros",
     "match_id": "273141822",
     "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM Rosyth Blacks 2018 V KSQ Astros",
-    "id": "liga6-73"
+    "id": "liga6-72"
   },
   {
     "league": "Liga 6",
@@ -9583,7 +9570,7 @@
     "awayTeam": "KSQ Lightning",
     "match_id": "273141821",
     "raw_fixture": "Beath High School Refurb 11:15 AM Swifts Lightening 2018 V KSQ Lightning",
-    "id": "liga6-74"
+    "id": "liga6-73"
   },
   {
     "league": "Liga 6",
@@ -9596,7 +9583,7 @@
     "awayTeam": "ABC 2018",
     "match_id": "273141827",
     "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM Futsal Escocia White V ABC 2018",
-    "id": "liga6-75"
+    "id": "liga6-74"
   },
   {
     "league": "Liga 6",
@@ -9609,7 +9596,7 @@
     "awayTeam": "Swifts Lightnings 2019",
     "match_id": "273141831",
     "raw_fixture": "Beath High School Refurb 12:00 PM Rosyth Reds 2018 V Swifts Lightnings 2019",
-    "id": "liga6-76"
+    "id": "liga6-75"
   },
   {
     "league": "Liga 6",
@@ -9622,7 +9609,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141830",
     "raw_fixture": "Auchmuty High School, Glenrothes 12:00 PM Duloch Juniors V Tiki Taka Negra",
-    "id": "liga6-77",
+    "id": "liga6-76",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9636,7 +9623,7 @@
     "awayTeam": "Kelty Hearts",
     "match_id": "273141818",
     "raw_fixture": "Beath High School Refurb 12:45 PM Swift Hurricanes 2019 V Kelty Hearts",
-    "id": "liga6-78"
+    "id": "liga6-77"
   },
   {
     "league": "Liga 6",
@@ -9649,7 +9636,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141817",
     "raw_fixture": "Auchmuty High School, Glenrothes 12:45 PM Rosyth Blacks 2017 V Tiki Taka Blanco",
-    "id": "liga6-79",
+    "id": "liga6-78",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9663,7 +9650,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273141819",
     "raw_fixture": "Beath High School Refurb 1:30 PM Duloch Juniors City V Futsal Escocia Turquoise",
-    "id": "liga6-80"
+    "id": "liga6-79"
   },
   {
     "league": "Liga 6",
@@ -9676,7 +9663,7 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141824",
     "raw_fixture": "Auchmuty High School, Glenrothes 1:30 PM KSQ 2018 Rapids V Tiki Taka Gris",
-    "id": "liga6-81",
+    "id": "liga6-80",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9690,7 +9677,7 @@
     "awayTeam": "Crossgates Yellow",
     "match_id": "273141828",
     "raw_fixture": "Beath High School Refurb 2:15 PM Crossgates Blue V Crossgates Yellow",
-    "id": "liga6-82"
+    "id": "liga6-81"
   },
   {
     "league": "Liga 6",
@@ -9703,7 +9690,7 @@
     "awayTeam": "Greig Park Blues",
     "match_id": "273141825",
     "raw_fixture": "Auchmuty High School, Glenrothes 2:15 PM Swifts Thunder 2018 V Greig Park Blues",
-    "id": "liga6-83"
+    "id": "liga6-82"
   },
   {
     "league": "Liga 6",
@@ -9716,7 +9703,7 @@
     "awayTeam": "Glenrothes Strollers",
     "match_id": "273141823",
     "raw_fixture": "Beath High School Refurb 3:00 PM Cairneyhill Ath Blues V Glenrothes Strollers",
-    "id": "liga6-84"
+    "id": "liga6-83"
   },
   {
     "league": "Liga 6",
@@ -9729,7 +9716,7 @@
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141829",
     "raw_fixture": "Beath High School Refurb 3:45 PM DACC Whites V Templehall Utd Blacks",
-    "id": "liga6-85"
+    "id": "liga6-84"
   },
   {
     "league": "Liga 6",
@@ -9742,7 +9729,7 @@
     "awayTeam": "Swifts Lightening 2018",
     "match_id": "273141841",
     "raw_fixture": "Beath High School 9:00 AM Futsal Escocia Turquoise V Swifts Lightening 2018",
-    "id": "liga6-86"
+    "id": "liga6-85"
   },
   {
     "league": "Liga 6",
@@ -9755,7 +9742,7 @@
     "awayTeam": "Duloch Juniors",
     "match_id": "273141838",
     "raw_fixture": "Beath High School 9:45 AM Futsal Escocia White V Duloch Juniors",
-    "id": "liga6-87"
+    "id": "liga6-86"
   },
   {
     "league": "Liga 6",
@@ -9768,7 +9755,7 @@
     "awayTeam": "KSQ Astros",
     "match_id": "273141846",
     "raw_fixture": "Auchmuty High School, Glenrothes 10:30 AM Tiki Taka Negra V KSQ Astros",
-    "id": "liga6-88",
+    "id": "liga6-87",
     "updated": "11:15 AM -> 10:30 AM"
   },
   {
@@ -9782,7 +9769,7 @@
     "awayTeam": "Duloch Juniors City",
     "match_id": "273141840",
     "raw_fixture": "Beath High School Refurb 11:15 AM Swifts Lightnings 2019 V Duloch Juniors City",
-    "id": "liga6-89"
+    "id": "liga6-88"
   },
   {
     "league": "Liga 6",
@@ -9795,7 +9782,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141837",
     "raw_fixture": "Auchmuty High School, Glenrothes 11:15 AM KSQ Lightning V Tiki Taka Neranja",
-    "id": "liga6-90",
+    "id": "liga6-89",
     "updated": "10:30 AM -> 11:15 AM"
   },
   {
@@ -9809,7 +9796,7 @@
     "awayTeam": "Blue Brazil Blue 2019",
     "match_id": "273141833",
     "raw_fixture": "Beath High School Refurb 12:00 PM Swift Hurricanes 2019 V Blue Brazil Blue 2019",
-    "id": "liga6-91"
+    "id": "liga6-90"
   },
   {
     "league": "Liga 6",
@@ -9822,7 +9809,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141839",
     "raw_fixture": "Auchmuty High School, Glenrothes 12:00 PM DACC Whites V Tiki Taka Blanco",
-    "id": "liga6-92",
+    "id": "liga6-91",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9836,7 +9823,7 @@
     "awayTeam": "Rosyth Reds 2018",
     "match_id": "273141842",
     "raw_fixture": "Beath High School Refurb 12:45 PM KSQ Thunder V Rosyth Reds 2018",
-    "id": "liga6-93"
+    "id": "liga6-92"
   },
   {
     "league": "Liga 6",
@@ -9849,7 +9836,7 @@
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141843",
     "raw_fixture": "Auchmuty High School, Glenrothes 12:45 PM Blue Brazil 2018 V Templehall Utd Blacks",
-    "id": "liga6-94"
+    "id": "liga6-93"
   },
   {
     "league": "Liga 6",
@@ -9862,7 +9849,7 @@
     "awayTeam": "Swifts Thunder 2018",
     "match_id": "273141845",
     "raw_fixture": "Beath High School Refurb 1:30 PM Kelty Hearts V Swifts Thunder 2018",
-    "id": "liga6-95"
+    "id": "liga6-94"
   },
   {
     "league": "Liga 6",
@@ -9875,7 +9862,7 @@
     "awayTeam": "Rosyth Blacks 2017",
     "match_id": "273141844",
     "raw_fixture": "Auchmuty High School, Glenrothes 1:30 PM Greig Park Blues V Rosyth Blacks 2017",
-    "id": "liga6-96"
+    "id": "liga6-95"
   },
   {
     "league": "Liga 6",
@@ -9888,7 +9875,7 @@
     "awayTeam": "Cairneyhill Ath Blues",
     "match_id": "273141834",
     "raw_fixture": "Beath High School Refurb 2:15 PM Rosyth Blacks 2018 V Cairneyhill Ath Blues",
-    "id": "liga6-97"
+    "id": "liga6-96"
   },
   {
     "league": "Liga 6",
@@ -9901,7 +9888,7 @@
     "awayTeam": "Crossgates Blue",
     "match_id": "273141832",
     "raw_fixture": "Auchmuty High School, Glenrothes 2:15 PM Tiki Taka Gris V Crossgates Blue",
-    "id": "liga6-98",
+    "id": "liga6-97",
     "updated": "Balwearie High School -> Auchmuty High School, Glenrothes"
   },
   {
@@ -9915,7 +9902,7 @@
     "awayTeam": "ABC 2018",
     "match_id": "273141836",
     "raw_fixture": "Beath High School Refurb 3:00 PM Crossgates Yellow V ABC 2018",
-    "id": "liga6-99"
+    "id": "liga6-98"
   },
   {
     "league": "Liga 6",
@@ -9928,7 +9915,7 @@
     "awayTeam": "KSQ 2018 Rapids",
     "match_id": "273141835",
     "raw_fixture": "Beath High School Refurb 3:45 PM Glenrothes Strollers V KSQ 2018 Rapids",
-    "id": "liga6-100"
+    "id": "liga6-99"
   },
   {
     "league": "Liga 6",
@@ -9941,7 +9928,7 @@
     "awayTeam": "Blue Brazil 2018",
     "match_id": "273141860",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Blanco V Blue Brazil 2018",
-    "id": "liga6-101"
+    "id": "liga6-100"
   },
   {
     "league": "Liga 6",
@@ -9954,7 +9941,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273141851",
     "raw_fixture": "Beath High School 9:45 AM Tiki Taka Neranja V Futsal Escocia Turquoise",
-    "id": "liga6-102"
+    "id": "liga6-101"
   },
   {
     "league": "Liga 6",
@@ -9967,7 +9954,7 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141847",
     "raw_fixture": "Balwearie High School 10:30 AM ABC 2018 V Tiki Taka Gris",
-    "id": "liga6-103"
+    "id": "liga6-102"
   },
   {
     "league": "Liga 6",
@@ -9980,7 +9967,7 @@
     "awayTeam": "Glenrothes Strollers",
     "match_id": "273141855",
     "raw_fixture": "Beath High School Refurb 11:15 AM Crossgates Blue V Glenrothes Strollers",
-    "id": "liga6-104"
+    "id": "liga6-103"
   },
   {
     "league": "Liga 6",
@@ -9993,7 +9980,7 @@
     "awayTeam": "KSQ Astros",
     "match_id": "273141859",
     "raw_fixture": "Balwearie High School 11:15 AM Rosyth Reds 2018 V KSQ Astros",
-    "id": "liga6-105"
+    "id": "liga6-104"
   },
   {
     "league": "Liga 6",
@@ -10006,7 +9993,7 @@
     "awayTeam": "Crossgates Yellow",
     "match_id": "273141853",
     "raw_fixture": "Beath High School Refurb 12:00 PM Blue Brazil Blue 2019 V Crossgates Yellow",
-    "id": "liga6-106"
+    "id": "liga6-105"
   },
   {
     "league": "Liga 6",
@@ -10019,7 +10006,7 @@
     "awayTeam": "Swifts Lightnings 2019",
     "match_id": "273141858",
     "raw_fixture": "Balwearie High School 12:00 PM Swifts Lightening 2018 V Swifts Lightnings 2019",
-    "id": "liga6-107"
+    "id": "liga6-106"
   },
   {
     "league": "Liga 6",
@@ -10032,7 +10019,7 @@
     "awayTeam": "Kelty Hearts",
     "match_id": "273141854",
     "raw_fixture": "Beath High School Refurb 12:45 PM Rosyth Blacks 2017 V Kelty Hearts",
-    "id": "liga6-108"
+    "id": "liga6-107"
   },
   {
     "league": "Liga 6",
@@ -10045,7 +10032,7 @@
     "awayTeam": "KSQ Lightning",
     "match_id": "273141857",
     "raw_fixture": "Balwearie High School 12:45 PM Templehall Utd Blacks V KSQ Lightning",
-    "id": "liga6-109"
+    "id": "liga6-108"
   },
   {
     "league": "Liga 6",
@@ -10058,7 +10045,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273141852",
     "raw_fixture": "Beath High School Refurb 1:30 PM Swift Hurricanes 2019 V Futsal Escocia White",
-    "id": "liga6-110"
+    "id": "liga6-109"
   },
   {
     "league": "Liga 6",
@@ -10071,7 +10058,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141849",
     "raw_fixture": "Balwearie High School 1:30 PM Swifts Thunder 2018 V Tiki Taka Negra",
-    "id": "liga6-111"
+    "id": "liga6-110"
   },
   {
     "league": "Liga 6",
@@ -10084,7 +10071,7 @@
     "awayTeam": "Rosyth Blacks 2018",
     "match_id": "273141856",
     "raw_fixture": "Beath High School Refurb 2:15 PM Duloch Juniors V Rosyth Blacks 2018",
-    "id": "liga6-112"
+    "id": "liga6-111"
   },
   {
     "league": "Liga 6",
@@ -10097,7 +10084,7 @@
     "awayTeam": "DACC Whites",
     "match_id": "273141850",
     "raw_fixture": "Balwearie High School 2:15 PM Greig Park Blues V DACC Whites",
-    "id": "liga6-113"
+    "id": "liga6-112"
   },
   {
     "league": "Liga 6",
@@ -10110,7 +10097,7 @@
     "awayTeam": "KSQ Thunder",
     "match_id": "273141861",
     "raw_fixture": "Beath High School Refurb 3:00 PM Duloch Juniors City V KSQ Thunder",
-    "id": "liga6-114"
+    "id": "liga6-113"
   },
   {
     "league": "Liga 6",
@@ -10123,7 +10110,7 @@
     "awayTeam": "Cairneyhill Ath Blues",
     "match_id": "273141848",
     "raw_fixture": "Beath High School Refurb 3:45 PM KSQ 2018 Rapids V Cairneyhill Ath Blues",
-    "id": "liga6-115"
+    "id": "liga6-114"
   },
   {
     "league": "Liga 6",
@@ -10136,7 +10123,7 @@
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141869",
     "raw_fixture": "Beath High School 9:00 AM Futsal Escocia Turquoise V Templehall Utd Blacks",
-    "id": "liga6-116"
+    "id": "liga6-115"
   },
   {
     "league": "Liga 6",
@@ -10149,7 +10136,7 @@
     "awayTeam": "Swifts Lightening 2018",
     "match_id": "273141871",
     "raw_fixture": "Beath High School 9:45 AM KSQ Thunder V Swifts Lightening 2018",
-    "id": "liga6-117"
+    "id": "liga6-116"
   },
   {
     "league": "Liga 6",
@@ -10162,7 +10149,7 @@
     "awayTeam": "Crossgates Blue",
     "match_id": "273141862",
     "raw_fixture": "Balwearie High School 10:30 AM Cairneyhill Ath Blues V Crossgates Blue",
-    "id": "liga6-118"
+    "id": "liga6-117"
   },
   {
     "league": "Liga 6",
@@ -10175,7 +10162,7 @@
     "awayTeam": "Swift Hurricanes 2019",
     "match_id": "273141876",
     "raw_fixture": "Beath High School Refurb 11:15 AM Duloch Juniors V Swift Hurricanes 2019",
-    "id": "liga6-119"
+    "id": "liga6-118"
   },
   {
     "league": "Liga 6",
@@ -10188,7 +10175,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141865",
     "raw_fixture": "Balwearie High School 11:15 AM Swifts Lightnings 2019 V Tiki Taka Neranja",
-    "id": "liga6-120"
+    "id": "liga6-119"
   },
   {
     "league": "Liga 6",
@@ -10201,7 +10188,7 @@
     "awayTeam": "Swifts Thunder 2018",
     "match_id": "273141863",
     "raw_fixture": "Beath High School Refurb 12:00 PM Futsal Escocia White V Swifts Thunder 2018",
-    "id": "liga6-121"
+    "id": "liga6-120"
   },
   {
     "league": "Liga 6",
@@ -10214,7 +10201,7 @@
     "awayTeam": "Blue Brazil Blue 2019",
     "match_id": "273141870",
     "raw_fixture": "Balwearie High School 12:00 PM Tiki Taka Gris V Blue Brazil Blue 2019",
-    "id": "liga6-122"
+    "id": "liga6-121"
   },
   {
     "league": "Liga 6",
@@ -10227,7 +10214,7 @@
     "awayTeam": "Rosyth Reds 2018",
     "match_id": "273141866",
     "raw_fixture": "Beath High School Refurb 12:45 PM Crossgates Yellow V Rosyth Reds 2018",
-    "id": "liga6-123"
+    "id": "liga6-122"
   },
   {
     "league": "Liga 6",
@@ -10240,7 +10227,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141868",
     "raw_fixture": "Balwearie High School 12:45 PM KSQ Lightning V Tiki Taka Blanco",
-    "id": "liga6-124"
+    "id": "liga6-123"
   },
   {
     "league": "Liga 6",
@@ -10253,7 +10240,7 @@
     "awayTeam": "Duloch Juniors City",
     "match_id": "273141864",
     "raw_fixture": "Beath High School Refurb 1:30 PM KSQ Astros V Duloch Juniors City",
-    "id": "liga6-125"
+    "id": "liga6-124"
   },
   {
     "league": "Liga 6",
@@ -10266,7 +10253,7 @@
     "awayTeam": "Greig Park Blues",
     "match_id": "273141874",
     "raw_fixture": "Balwearie High School 1:30 PM Blue Brazil 2018 V Greig Park Blues",
-    "id": "liga6-126"
+    "id": "liga6-125"
   },
   {
     "league": "Liga 6",
@@ -10279,7 +10266,7 @@
     "awayTeam": "ABC 2018",
     "match_id": "273141875",
     "raw_fixture": "Beath High School Refurb 2:15 PM Glenrothes Strollers V ABC 2018",
-    "id": "liga6-127"
+    "id": "liga6-126"
   },
   {
     "league": "Liga 6",
@@ -10292,7 +10279,7 @@
     "awayTeam": "Rosyth Blacks 2017",
     "match_id": "273141873",
     "raw_fixture": "Balwearie High School 2:15 PM Tiki Taka Negra V Rosyth Blacks 2017",
-    "id": "liga6-128"
+    "id": "liga6-127"
   },
   {
     "league": "Liga 6",
@@ -10305,7 +10292,7 @@
     "awayTeam": "KSQ 2018 Rapids",
     "match_id": "273141872",
     "raw_fixture": "Beath High School Refurb 3:00 PM Rosyth Blacks 2018 V KSQ 2018 Rapids",
-    "id": "liga6-129"
+    "id": "liga6-128"
   },
   {
     "league": "Liga 6",
@@ -10318,7 +10305,7 @@
     "awayTeam": "Kelty Hearts",
     "match_id": "273141867",
     "raw_fixture": "Beath High School Refurb 3:45 PM DACC Whites V Kelty Hearts",
-    "id": "liga6-130"
+    "id": "liga6-129"
   },
   {
     "league": "Liga 6",
@@ -10331,7 +10318,7 @@
     "awayTeam": "DACC Whites",
     "match_id": "273141885",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Negra V DACC Whites",
-    "id": "liga6-131"
+    "id": "liga6-130"
   },
   {
     "league": "Liga 6",
@@ -10344,7 +10331,7 @@
     "awayTeam": "Rosyth Blacks 2018",
     "match_id": "273141881",
     "raw_fixture": "Beath High School 9:45 AM Swift Hurricanes 2019 V Rosyth Blacks 2018",
-    "id": "liga6-132"
+    "id": "liga6-131"
   },
   {
     "league": "Liga 6",
@@ -10357,7 +10344,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273141877",
     "raw_fixture": "Balwearie High School 10:30 AM Rosyth Blacks 2017 V Futsal Escocia White",
-    "id": "liga6-133"
+    "id": "liga6-132"
   },
   {
     "league": "Liga 6",
@@ -10370,7 +10357,7 @@
     "awayTeam": "Cairneyhill Ath Blues",
     "match_id": "273141878",
     "raw_fixture": "Beath High School Refurb 11:15 AM ABC 2018 V Cairneyhill Ath Blues",
-    "id": "liga6-134"
+    "id": "liga6-133"
   },
   {
     "league": "Liga 6",
@@ -10383,7 +10370,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273141888",
     "raw_fixture": "Balwearie High School 11:15 AM Tiki Taka Blanco V Futsal Escocia Turquoise",
-    "id": "liga6-135"
+    "id": "liga6-134"
   },
   {
     "league": "Liga 6",
@@ -10396,7 +10383,7 @@
     "awayTeam": "Glenrothes Strollers",
     "match_id": "273141890",
     "raw_fixture": "Beath High School Refurb 12:00 PM Blue Brazil Blue 2019 V Glenrothes Strollers",
-    "id": "liga6-136"
+    "id": "liga6-135"
   },
   {
     "league": "Liga 6",
@@ -10409,7 +10396,7 @@
     "awayTeam": "Swifts Lightnings 2019",
     "match_id": "273141879",
     "raw_fixture": "Balwearie High School 12:00 PM Templehall Utd Blacks V Swifts Lightnings 2019",
-    "id": "liga6-137"
+    "id": "liga6-136"
   },
   {
     "league": "Liga 6",
@@ -10422,7 +10409,7 @@
     "awayTeam": "KSQ 2018 Rapids",
     "match_id": "273141880",
     "raw_fixture": "Beath High School Refurb 12:45 PM Crossgates Blue V KSQ 2018 Rapids",
-    "id": "liga6-138"
+    "id": "liga6-137"
   },
   {
     "league": "Liga 6",
@@ -10435,7 +10422,7 @@
     "awayTeam": "KSQ Thunder",
     "match_id": "273141887",
     "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Neranja V KSQ Thunder",
-    "id": "liga6-139"
+    "id": "liga6-138"
   },
   {
     "league": "Liga 6",
@@ -10448,7 +10435,7 @@
     "awayTeam": "Duloch Juniors",
     "match_id": "273141883",
     "raw_fixture": "Beath High School Refurb 1:30 PM Swifts Thunder 2018 V Duloch Juniors",
-    "id": "liga6-140"
+    "id": "liga6-139"
   },
   {
     "league": "Liga 6",
@@ -10461,7 +10448,7 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141884",
     "raw_fixture": "Balwearie High School 1:30 PM Rosyth Reds 2018 V Tiki Taka Gris",
-    "id": "liga6-141"
+    "id": "liga6-140"
   },
   {
     "league": "Liga 6",
@@ -10474,7 +10461,7 @@
     "awayTeam": "KSQ Astros",
     "match_id": "273141882",
     "raw_fixture": "Beath High School Refurb 2:15 PM Swifts Lightening 2018 V KSQ Astros",
-    "id": "liga6-142"
+    "id": "liga6-141"
   },
   {
     "league": "Liga 6",
@@ -10487,7 +10474,7 @@
     "awayTeam": "KSQ Lightning",
     "match_id": "273141891",
     "raw_fixture": "Balwearie High School 2:15 PM Greig Park Blues V KSQ Lightning",
-    "id": "liga6-143"
+    "id": "liga6-142"
   },
   {
     "league": "Liga 6",
@@ -10500,7 +10487,7 @@
     "awayTeam": "Crossgates Yellow",
     "match_id": "273141889",
     "raw_fixture": "Beath High School Refurb 3:00 PM Duloch Juniors City V Crossgates Yellow",
-    "id": "liga6-144"
+    "id": "liga6-143"
   },
   {
     "league": "Liga 6",
@@ -10513,7 +10500,7 @@
     "awayTeam": "Blue Brazil 2018",
     "match_id": "273141886",
     "raw_fixture": "Beath High School Refurb 3:45 PM Kelty Hearts V Blue Brazil 2018",
-    "id": "liga6-145"
+    "id": "liga6-144"
   },
   {
     "league": "Liga 6",
@@ -10526,7 +10513,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141903",
     "raw_fixture": "Beath High School 9:00 AM Swifts Lightnings 2019 V Tiki Taka Blanco",
-    "id": "liga6-146"
+    "id": "liga6-145"
   },
   {
     "league": "Liga 6",
@@ -10539,7 +10526,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141895",
     "raw_fixture": "Beath High School 9:45 AM Blue Brazil 2018 V Tiki Taka Negra",
-    "id": "liga6-147"
+    "id": "liga6-146"
   },
   {
     "league": "Liga 6",
@@ -10552,7 +10539,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273141900",
     "raw_fixture": "Balwearie High School 10:30 AM DACC Whites V Futsal Escocia White",
-    "id": "liga6-148"
+    "id": "liga6-147"
   },
   {
     "league": "Liga 6",
@@ -10565,7 +10552,7 @@
     "awayTeam": "Swifts Thunder 2018",
     "match_id": "273141905",
     "raw_fixture": "Beath High School Refurb 11:15 AM Swift Hurricanes 2019 V Swifts Thunder 2018",
-    "id": "liga6-149"
+    "id": "liga6-148"
   },
   {
     "league": "Liga 6",
@@ -10578,7 +10565,7 @@
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141901",
     "raw_fixture": "Balwearie High School 11:15 AM KSQ Thunder V Templehall Utd Blacks",
-    "id": "liga6-150"
+    "id": "liga6-149"
   },
   {
     "league": "Liga 6",
@@ -10591,7 +10578,7 @@
     "awayTeam": "Blue Brazil Blue 2019",
     "match_id": "273141899",
     "raw_fixture": "Beath High School Refurb 12:00 PM Cairneyhill Ath Blues V Blue Brazil Blue 2019",
-    "id": "liga6-151"
+    "id": "liga6-150"
   },
   {
     "league": "Liga 6",
@@ -10604,7 +10591,7 @@
     "awayTeam": "Kelty Hearts",
     "match_id": "273141894",
     "raw_fixture": "Balwearie High School 12:00 PM KSQ Lightning V Kelty Hearts",
-    "id": "liga6-152"
+    "id": "liga6-151"
   },
   {
     "league": "Liga 6",
@@ -10617,7 +10604,7 @@
     "awayTeam": "Swifts Lightening 2018",
     "match_id": "273141896",
     "raw_fixture": "Beath High School Refurb 12:45 PM Crossgates Yellow V Swifts Lightening 2018",
-    "id": "liga6-153"
+    "id": "liga6-152"
   },
   {
     "league": "Liga 6",
@@ -10630,7 +10617,7 @@
     "awayTeam": "Duloch Juniors City",
     "match_id": "273141893",
     "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Gris V Duloch Juniors City",
-    "id": "liga6-154"
+    "id": "liga6-153"
   },
   {
     "league": "Liga 6",
@@ -10643,7 +10630,7 @@
     "awayTeam": "Crossgates Blue",
     "match_id": "273141898",
     "raw_fixture": "Beath High School Refurb 1:30 PM Rosyth Blacks 2018 V Crossgates Blue",
-    "id": "liga6-155"
+    "id": "liga6-154"
   },
   {
     "league": "Liga 6",
@@ -10656,7 +10643,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141904",
     "raw_fixture": "Balwearie High School 1:30 PM KSQ Astros V Tiki Taka Neranja",
-    "id": "liga6-156"
+    "id": "liga6-155"
   },
   {
     "league": "Liga 6",
@@ -10669,7 +10656,7 @@
     "awayTeam": "ABC 2018",
     "match_id": "273141902",
     "raw_fixture": "Beath High School Refurb 2:15 PM KSQ 2018 Rapids V ABC 2018",
-    "id": "liga6-157"
+    "id": "liga6-156"
   },
   {
     "league": "Liga 6",
@@ -10682,7 +10669,7 @@
     "awayTeam": "Greig Park Blues",
     "match_id": "273141892",
     "raw_fixture": "Balwearie High School 2:15 PM Futsal Escocia Turquoise V Greig Park Blues",
-    "id": "liga6-158"
+    "id": "liga6-157"
   },
   {
     "league": "Liga 6",
@@ -10695,7 +10682,7 @@
     "awayTeam": "Rosyth Reds 2018",
     "match_id": "273141906",
     "raw_fixture": "Beath High School Refurb 3:00 PM Glenrothes Strollers V Rosyth Reds 2018",
-    "id": "liga6-159"
+    "id": "liga6-158"
   },
   {
     "league": "Liga 6",
@@ -10708,7 +10695,7 @@
     "awayTeam": "Rosyth Blacks 2017",
     "match_id": "273141897",
     "raw_fixture": "Beath High School Refurb 3:45 PM Duloch Juniors V Rosyth Blacks 2017",
-    "id": "liga6-160"
+    "id": "liga6-159"
   },
   {
     "league": "Liga 6",
@@ -10721,7 +10708,7 @@
     "awayTeam": "KSQ Lightning",
     "match_id": "273141909",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Negra V KSQ Lightning",
-    "id": "liga6-161"
+    "id": "liga6-160"
   },
   {
     "league": "Liga 6",
@@ -10734,7 +10721,7 @@
     "awayTeam": "Blue Brazil Blue 2019",
     "match_id": "273141907",
     "raw_fixture": "Beath High School 9:45 AM Greig Park Blues V Blue Brazil Blue 2019",
-    "id": "liga6-162"
+    "id": "liga6-161"
   },
   {
     "league": "Liga 6",
@@ -10747,7 +10734,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273141917",
     "raw_fixture": "Balwearie High School 10:30 AM Kelty Hearts V Futsal Escocia Turquoise",
-    "id": "liga6-163"
+    "id": "liga6-162"
   },
   {
     "league": "Liga 6",
@@ -10760,7 +10747,7 @@
     "awayTeam": "Crossgates Blue",
     "match_id": "273141914",
     "raw_fixture": "Beath High School Refurb 11:15 AM ABC 2018 V Crossgates Blue",
-    "id": "liga6-164"
+    "id": "liga6-163"
   },
   {
     "league": "Liga 6",
@@ -10773,7 +10760,7 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141912",
     "raw_fixture": "Balwearie High School 11:15 AM Swifts Lightening 2018 V Tiki Taka Gris",
-    "id": "liga6-165"
+    "id": "liga6-164"
   },
   {
     "league": "Liga 6",
@@ -10786,7 +10773,7 @@
     "awayTeam": "Swift Hurricanes 2019",
     "match_id": "273141908",
     "raw_fixture": "Beath High School Refurb 12:00 PM Rosyth Blacks 2017 V Swift Hurricanes 2019",
-    "id": "liga6-166"
+    "id": "liga6-165"
   },
   {
     "league": "Liga 6",
@@ -10799,7 +10786,7 @@
     "awayTeam": "Glenrothes Strollers",
     "match_id": "273141920",
     "raw_fixture": "Balwearie High School 12:00 PM Swifts Lightnings 2019 V Glenrothes Strollers",
-    "id": "liga6-167"
+    "id": "liga6-166"
   },
   {
     "league": "Liga 6",
@@ -10812,7 +10799,7 @@
     "awayTeam": "DACC Whites",
     "match_id": "273141921",
     "raw_fixture": "Beath High School Refurb 12:45 PM KSQ 2018 Rapids V DACC Whites",
-    "id": "liga6-168"
+    "id": "liga6-167"
   },
   {
     "league": "Liga 6",
@@ -10825,7 +10812,7 @@
     "awayTeam": "Crossgates Yellow",
     "match_id": "273141916",
     "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Neranja V Crossgates Yellow",
-    "id": "liga6-169"
+    "id": "liga6-168"
   },
   {
     "league": "Liga 6",
@@ -10838,7 +10825,7 @@
     "awayTeam": "Duloch Juniors",
     "match_id": "273141911",
     "raw_fixture": "Beath High School Refurb 1:30 PM Duloch Juniors City V Duloch Juniors",
-    "id": "liga6-170"
+    "id": "liga6-169"
   },
   {
     "league": "Liga 6",
@@ -10851,7 +10838,7 @@
     "awayTeam": "KSQ Astros",
     "match_id": "273141913",
     "raw_fixture": "Balwearie High School 1:30 PM Templehall Utd Blacks V KSQ Astros",
-    "id": "liga6-171"
+    "id": "liga6-170"
   },
   {
     "league": "Liga 6",
@@ -10864,7 +10851,7 @@
     "awayTeam": "Blue Brazil 2018",
     "match_id": "273141915",
     "raw_fixture": "Beath High School Refurb 2:15 PM Futsal Escocia White V Blue Brazil 2018",
-    "id": "liga6-172"
+    "id": "liga6-171"
   },
   {
     "league": "Liga 6",
@@ -10877,7 +10864,7 @@
     "awayTeam": "KSQ Thunder",
     "match_id": "273141918",
     "raw_fixture": "Balwearie High School 2:15 PM Tiki Taka Blanco V KSQ Thunder",
-    "id": "liga6-173"
+    "id": "liga6-172"
   },
   {
     "league": "Liga 6",
@@ -10890,7 +10877,7 @@
     "awayTeam": "Rosyth Blacks 2018",
     "match_id": "273141910",
     "raw_fixture": "Beath High School Refurb 3:00 PM Swifts Thunder 2018 V Rosyth Blacks 2018",
-    "id": "liga6-174"
+    "id": "liga6-173"
   },
   {
     "league": "Liga 6",
@@ -10903,7 +10890,7 @@
     "awayTeam": "Cairneyhill Ath Blues",
     "match_id": "273141919",
     "raw_fixture": "Beath High School Refurb 3:45 PM Rosyth Reds 2018 V Cairneyhill Ath Blues",
-    "id": "liga6-175"
+    "id": "liga6-174"
   },
   {
     "league": "Liga 6",
@@ -10916,7 +10903,7 @@
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141922",
     "raw_fixture": "Beath High School 9:00 AM Crossgates Yellow V Templehall Utd Blacks",
-    "id": "liga6-176"
+    "id": "liga6-175"
   },
   {
     "league": "Liga 6",
@@ -10929,7 +10916,7 @@
     "awayTeam": "ABC 2018",
     "match_id": "273141927",
     "raw_fixture": "Beath High School 9:45 AM Rosyth Blacks 2018 V ABC 2018",
-    "id": "liga6-177"
+    "id": "liga6-176"
   },
   {
     "league": "Liga 6",
@@ -10942,7 +10929,7 @@
     "awayTeam": "Swifts Lightening 2018",
     "match_id": "273141936",
     "raw_fixture": "Balwearie High School 10:30 AM Glenrothes Strollers V Swifts Lightening 2018",
-    "id": "liga6-178"
+    "id": "liga6-177"
   },
   {
     "league": "Liga 6",
@@ -10955,7 +10942,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273141934",
     "raw_fixture": "Beath High School Refurb 11:15 AM KSQ Lightning V Futsal Escocia White",
-    "id": "liga6-179"
+    "id": "liga6-178"
   },
   {
     "league": "Liga 6",
@@ -10968,7 +10955,7 @@
     "awayTeam": "Greig Park Blues",
     "match_id": "273141928",
     "raw_fixture": "Balwearie High School 11:15 AM KSQ Thunder V Greig Park Blues",
-    "id": "liga6-180"
+    "id": "liga6-179"
   },
   {
     "league": "Liga 6",
@@ -10981,7 +10968,7 @@
     "awayTeam": "Duloch Juniors",
     "match_id": "273141926",
     "raw_fixture": "Beath High School Refurb 12:00 PM Blue Brazil 2018 V Duloch Juniors",
-    "id": "liga6-181"
+    "id": "liga6-180"
   },
   {
     "league": "Liga 6",
@@ -10994,7 +10981,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141923",
     "raw_fixture": "Balwearie High School 12:00 PM KSQ Astros V Tiki Taka Blanco",
-    "id": "liga6-182"
+    "id": "liga6-181"
   },
   {
     "league": "Liga 6",
@@ -11007,7 +10994,7 @@
     "awayTeam": "Rosyth Reds 2018",
     "match_id": "273141935",
     "raw_fixture": "Beath High School Refurb 12:45 PM KSQ 2018 Rapids V Rosyth Reds 2018",
-    "id": "liga6-183"
+    "id": "liga6-182"
   },
   {
     "league": "Liga 6",
@@ -11020,7 +11007,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141925",
     "raw_fixture": "Balwearie High School 12:45 PM Tiki Taka Gris V Tiki Taka Neranja",
-    "id": "liga6-184"
+    "id": "liga6-183"
   },
   {
     "league": "Liga 6",
@@ -11033,7 +11020,7 @@
     "awayTeam": "Duloch Juniors City",
     "match_id": "273141931",
     "raw_fixture": "Beath High School Refurb 1:30 PM Cairneyhill Ath Blues V Duloch Juniors City",
-    "id": "liga6-185"
+    "id": "liga6-184"
   },
   {
     "league": "Liga 6",
@@ -11046,7 +11033,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141933",
     "raw_fixture": "Balwearie High School 1:30 PM Futsal Escocia Turquoise V Tiki Taka Negra",
-    "id": "liga6-186"
+    "id": "liga6-185"
   },
   {
     "league": "Liga 6",
@@ -11059,7 +11046,7 @@
     "awayTeam": "Swift Hurricanes 2019",
     "match_id": "273141929",
     "raw_fixture": "Beath High School Refurb 2:15 PM DACC Whites V Swift Hurricanes 2019",
-    "id": "liga6-187"
+    "id": "liga6-186"
   },
   {
     "league": "Liga 6",
@@ -11072,7 +11059,7 @@
     "awayTeam": "Blue Brazil Blue 2019",
     "match_id": "273141924",
     "raw_fixture": "Balwearie High School 2:15 PM Crossgates Blue V Blue Brazil Blue 2019",
-    "id": "liga6-188"
+    "id": "liga6-187"
   },
   {
     "league": "Liga 6",
@@ -11085,7 +11072,7 @@
     "awayTeam": "Rosyth Blacks 2017",
     "match_id": "273141932",
     "raw_fixture": "Beath High School Refurb 3:00 PM Swifts Thunder 2018 V Rosyth Blacks 2017",
-    "id": "liga6-189"
+    "id": "liga6-188"
   },
   {
     "league": "Liga 6",
@@ -11098,7 +11085,7 @@
     "awayTeam": "Kelty Hearts",
     "match_id": "273141930",
     "raw_fixture": "Beath High School Refurb 3:45 PM Swifts Lightnings 2019 V Kelty Hearts",
-    "id": "liga6-190"
+    "id": "liga6-189"
   },
   {
     "league": "Liga 6",
@@ -11111,7 +11098,7 @@
     "awayTeam": "Crossgates Yellow",
     "match_id": "273141946",
     "raw_fixture": "Beath High School 9:00 AM Tiki Taka Blanco V Crossgates Yellow",
-    "id": "liga6-191"
+    "id": "liga6-190"
   },
   {
     "league": "Liga 6",
@@ -11124,7 +11111,7 @@
     "awayTeam": "KSQ Astros",
     "match_id": "273141941",
     "raw_fixture": "Beath High School 9:45 AM Greig Park Blues V KSQ Astros",
-    "id": "liga6-192"
+    "id": "liga6-191"
   },
   {
     "league": "Liga 6",
@@ -11137,7 +11124,7 @@
     "awayTeam": "Glenrothes Strollers",
     "match_id": "273141950",
     "raw_fixture": "Balwearie High School 10:30 AM Tiki Taka Neranja V Glenrothes Strollers",
-    "id": "liga6-193"
+    "id": "liga6-192"
   },
   {
     "league": "Liga 6",
@@ -11150,7 +11137,7 @@
     "awayTeam": "Futsal Escocia Turquoise",
     "match_id": "273141951",
     "raw_fixture": "Beath High School Refurb 11:15 AM Futsal Escocia White V Futsal Escocia Turquoise",
-    "id": "liga6-194"
+    "id": "liga6-193"
   },
   {
     "league": "Liga 6",
@@ -11163,7 +11150,7 @@
     "awayTeam": "Crossgates Blue",
     "match_id": "273141948",
     "raw_fixture": "Balwearie High School 11:15 AM Rosyth Reds 2018 V Crossgates Blue",
-    "id": "liga6-195"
+    "id": "liga6-194"
   },
   {
     "league": "Liga 6",
@@ -11176,7 +11163,7 @@
     "awayTeam": "Rosyth Blacks 2018",
     "match_id": "273141940",
     "raw_fixture": "Beath High School Refurb 12:00 PM Rosyth Blacks 2017 V Rosyth Blacks 2018",
-    "id": "liga6-196"
+    "id": "liga6-195"
   },
   {
     "league": "Liga 6",
@@ -11189,7 +11176,7 @@
     "awayTeam": "Swifts Lightnings 2019",
     "match_id": "273141945",
     "raw_fixture": "Balwearie High School 12:00 PM Tiki Taka Negra V Swifts Lightnings 2019",
-    "id": "liga6-197"
+    "id": "liga6-196"
   },
   {
     "league": "Liga 6",
@@ -11202,7 +11189,7 @@
     "awayTeam": "DACC Whites",
     "match_id": "273141943",
     "raw_fixture": "Beath High School Refurb 12:45 PM Swifts Thunder 2018 V DACC Whites",
-    "id": "liga6-198"
+    "id": "liga6-197"
   },
   {
     "league": "Liga 6",
@@ -11215,7 +11202,7 @@
     "awayTeam": "KSQ Lightning",
     "match_id": "273141938",
     "raw_fixture": "Balwearie High School 12:45 PM Duloch Juniors V KSQ Lightning",
-    "id": "liga6-199"
+    "id": "liga6-198"
   },
   {
     "league": "Liga 6",
@@ -11228,7 +11215,7 @@
     "awayTeam": "Blue Brazil 2018",
     "match_id": "273141949",
     "raw_fixture": "Beath High School Refurb 1:30 PM Swift Hurricanes 2019 V Blue Brazil 2018",
-    "id": "liga6-200"
+    "id": "liga6-199"
   },
   {
     "league": "Liga 6",
@@ -11241,7 +11228,7 @@
     "awayTeam": "Tiki Taka Gris",
     "match_id": "273141944",
     "raw_fixture": "Balwearie High School 1:30 PM Templehall Utd Blacks V Tiki Taka Gris",
-    "id": "liga6-201"
+    "id": "liga6-200"
   },
   {
     "league": "Liga 6",
@@ -11254,7 +11241,7 @@
     "awayTeam": "KSQ Thunder",
     "match_id": "273141942",
     "raw_fixture": "Beath High School Refurb 2:15 PM Kelty Hearts V KSQ Thunder",
-    "id": "liga6-202"
+    "id": "liga6-201"
   },
   {
     "league": "Liga 6",
@@ -11267,7 +11254,7 @@
     "awayTeam": "KSQ 2018 Rapids",
     "match_id": "273141947",
     "raw_fixture": "Balwearie High School 2:15 PM Duloch Juniors City V KSQ 2018 Rapids",
-    "id": "liga6-203"
+    "id": "liga6-202"
   },
   {
     "league": "Liga 6",
@@ -11280,7 +11267,7 @@
     "awayTeam": "Cairneyhill Ath Blues",
     "match_id": "273141937",
     "raw_fixture": "Beath High School Refurb 3:00 PM Swifts Lightening 2018 V Cairneyhill Ath Blues",
-    "id": "liga6-204"
+    "id": "liga6-203"
   },
   {
     "league": "Liga 6",
@@ -11293,7 +11280,7 @@
     "awayTeam": "ABC 2018",
     "match_id": "273141939",
     "raw_fixture": "Beath High School Refurb 3:45 PM Blue Brazil Blue 2019 V ABC 2018",
-    "id": "liga6-205"
+    "id": "liga6-204"
   },
   {
     "league": "Liga 6",
@@ -11306,7 +11293,7 @@
     "awayTeam": "Blue Brazil Blue 2019",
     "match_id": "273141959",
     "raw_fixture": "Beath High School 9:00 AM Rosyth Blacks 2018 V Blue Brazil Blue 2019",
-    "id": "liga6-206"
+    "id": "liga6-205"
   },
   {
     "league": "Liga 6",
@@ -11319,7 +11306,7 @@
     "awayTeam": "Rosyth Reds 2018",
     "match_id": "273141956",
     "raw_fixture": "Beath High School 9:45 AM ABC 2018 V Rosyth Reds 2018",
-    "id": "liga6-207"
+    "id": "liga6-206"
   },
   {
     "league": "Liga 6",
@@ -11332,7 +11319,7 @@
     "awayTeam": "Tiki Taka Negra",
     "match_id": "273141952",
     "raw_fixture": "Balwearie High School 10:30 AM KSQ Thunder V Tiki Taka Negra",
-    "id": "liga6-208"
+    "id": "liga6-207"
   },
   {
     "league": "Liga 6",
@@ -11345,7 +11332,7 @@
     "awayTeam": "Duloch Juniors",
     "match_id": "273141953",
     "raw_fixture": "Beath High School Refurb 11:15 AM Futsal Escocia Turquoise V Duloch Juniors",
-    "id": "liga6-209"
+    "id": "liga6-208"
   },
   {
     "league": "Liga 6",
@@ -11358,7 +11345,7 @@
     "awayTeam": "Templehall Utd Blacks",
     "match_id": "273141966",
     "raw_fixture": "Balwearie High School 11:15 AM Glenrothes Strollers V Templehall Utd Blacks",
-    "id": "liga6-210"
+    "id": "liga6-209"
   },
   {
     "league": "Liga 6",
@@ -11371,7 +11358,7 @@
     "awayTeam": "Rosyth Blacks 2017",
     "match_id": "273141954",
     "raw_fixture": "Beath High School Refurb 12:00 PM DACC Whites V Rosyth Blacks 2017",
-    "id": "liga6-211"
+    "id": "liga6-210"
   },
   {
     "league": "Liga 6",
@@ -11384,7 +11371,7 @@
     "awayTeam": "Kelty Hearts",
     "match_id": "273141964",
     "raw_fixture": "Balwearie High School 12:00 PM KSQ Astros V Kelty Hearts",
-    "id": "liga6-212"
+    "id": "liga6-211"
   },
   {
     "league": "Liga 6",
@@ -11397,7 +11384,7 @@
     "awayTeam": "Futsal Escocia White",
     "match_id": "273141955",
     "raw_fixture": "Beath High School Refurb 12:45 PM Swifts Lightnings 2019 V Futsal Escocia White",
-    "id": "liga6-213"
+    "id": "liga6-212"
   },
   {
     "league": "Liga 6",
@@ -11410,7 +11397,7 @@
     "awayTeam": "Tiki Taka Neranja",
     "match_id": "273141962",
     "raw_fixture": "Balwearie High School 12:45 PM Cairneyhill Ath Blues V Tiki Taka Neranja",
-    "id": "liga6-214"
+    "id": "liga6-213"
   },
   {
     "league": "Liga 6",
@@ -11423,7 +11410,7 @@
     "awayTeam": "Duloch Juniors City",
     "match_id": "273141960",
     "raw_fixture": "Beath High School Refurb 1:30 PM Crossgates Blue V Duloch Juniors City",
-    "id": "liga6-215"
+    "id": "liga6-214"
   },
   {
     "league": "Liga 6",
@@ -11436,7 +11423,7 @@
     "awayTeam": "Tiki Taka Blanco",
     "match_id": "273141961",
     "raw_fixture": "Balwearie High School 1:30 PM Tiki Taka Gris V Tiki Taka Blanco",
-    "id": "liga6-216"
+    "id": "liga6-215"
   },
   {
     "league": "Liga 6",
@@ -11449,7 +11436,7 @@
     "awayTeam": "Swifts Thunder 2018",
     "match_id": "273141965",
     "raw_fixture": "Beath High School Refurb 2:15 PM Blue Brazil 2018 V Swifts Thunder 2018",
-    "id": "liga6-217"
+    "id": "liga6-216"
   },
   {
     "league": "Liga 6",
@@ -11462,7 +11449,7 @@
     "awayTeam": "Greig Park Blues",
     "match_id": "273141958",
     "raw_fixture": "Balwearie High School 2:15 PM Crossgates Yellow V Greig Park Blues",
-    "id": "liga6-218"
+    "id": "liga6-217"
   },
   {
     "league": "Liga 6",
@@ -11475,7 +11462,7 @@
     "awayTeam": "Swift Hurricanes 2019",
     "match_id": "273141963",
     "raw_fixture": "Beath High School Refurb 3:00 PM KSQ Lightning V Swift Hurricanes 2019",
-    "id": "liga6-219"
+    "id": "liga6-218"
   },
   {
     "league": "Liga 6",
@@ -11488,7 +11475,7 @@
     "awayTeam": "Swifts Lightening 2018",
     "match_id": "273141957",
     "raw_fixture": "Beath High School Refurb 3:45 PM KSQ 2018 Rapids V Swifts Lightening 2018",
-    "id": "liga6-220"
+    "id": "liga6-219"
   },
   {
     "league": "Liga 7",
